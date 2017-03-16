@@ -1,1 +1,1 @@
-# sweatshop
+# sweatshop.tech
