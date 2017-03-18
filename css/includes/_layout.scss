@@ -1,0 +1,121 @@
+html,
+body {
+  background-color: #333;
+}
+
+.slides {
+   position: absolute;
+   display: block;
+   top: 0;
+   left: 0;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    height: 100%;
+}
+
+.carousel-caption h1 {
+  width: 100%;
+  font-size: 50px;
+  text-shadow: 2px 2px #333;
+}
+
+.item {
+  width: 100%;
+  height: 95vh;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.item img {
+  -webkit-filter: blur(3px) opacity(60%);
+  filter: blur(3px) opacity(60%);
+}
+
+.gradient-bg {
+  height: 100%;
+  background-image: linear-gradient(#41295a, #333399);
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+}
+
+nav .home-logo {
+  background: url(http://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png) center / contain no-repeat;
+  width: 200px;
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+}
+
+body {
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+}
+
+.navbar {
+   background-color: transparent;
+   border-color: transparent;
+}
+
+@media (max-width: 767px) {
+   .navbar-collapse {
+       background-color: #111;
+   }
+}
+
+.inner {
+  padding: 10rem;
+}
+
+body {
+  font-family: "Lucida Grande";
+}
+h1 {
+  color: #FFF;
+}
+
+.lead {
+  color: #AAA;
+}
+
+.btn-outline-secondary:hover {
+  color: #FFF;
+  opacity: 0.4;
+}
+
+p {
+  color: #AAA;
+}
+
+.outro {
+  background-color: #000;
+  color: #FFF;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ddd;
+}
+
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #DDD;
+    background-color: #048;
+}
