@@ -126,6 +126,14 @@ p {
     width: auto;
 }
 
+.logo--image {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 24px 0% 12px 0%;
+}
+
+
 .member-group {
     width: auto;
     height: auto;
