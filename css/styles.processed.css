@@ -114,10 +114,16 @@ p {
 }
 
 .profile--image {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
     border-radius: 50%;
-    max-width: 200px; 
-    max-height: 200px;
     margin: 24px 0% 12px 0%;
+}
+
+.profile--image landscape {
+    height: 100%;
+    width: auto;
 }
 
 .member-group {
@@ -133,7 +139,8 @@ p {
     margin-right: 5%;
     margin-top: 10px;
     margin-bottom: 24px;
-    max-width: 300px;
+    max-width: 350px;
+    min-width: 330px;
 }
 
 .member-info {
@@ -142,20 +149,20 @@ p {
 }
 
 member-name {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     text-align: center;
 }
 
 member-header {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
+    text-transform: uppercase;
 }
 
 member-body {
-    font-size: 12px;
-    text-align: left;
+    font-size: 14px;
     word-wrap: normal;
-    font-family: "Lato";
+    font-family: 'Open Sans';
 }
