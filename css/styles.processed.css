@@ -137,16 +137,17 @@ p {
 .member-group {
     width: auto;
     height: auto;
-    margin: auto;
     color: #FFF;
+    overflow: hidden;
+    margin: 0px 0% 0px 0%;
+    top: 50%;
 }
 
 .member {
     display: inline-block;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 10px;
-    margin-bottom: 24px;
+    vertical-align: top;
+    margin: 10px 5% 24px 5%;
+    position: relative;
     max-width: 350px;
     min-width: 330px;
 }
