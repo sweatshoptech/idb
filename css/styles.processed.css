@@ -63,7 +63,6 @@ body {
 }
 
 .navbar {
-  background-color: transparent;
   border-color: transparent;
 }
 
@@ -112,4 +111,51 @@ p {
 .navbar-inverse .navbar-nav>.active>a:focus {
   color: #DDD;
   background-color: #048;
+}
+
+.profile--image {
+    border-radius: 50%;
+    max-width: 200px; 
+    max-height: 200px;
+    margin: 24px 0% 12px 0%;
+}
+
+.member-group {
+    width: auto;
+    height: auto;
+    margin: auto;
+    color: #FFF;
+}
+
+.member {
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    margin-bottom: 24px;
+    max-width: 300px;
+}
+
+.member-info {
+    width: auto;
+    margin: 10px 2.5% 24px 2.5%;
+}
+
+member-name {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+member-header {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+member-body {
+    font-size: 12px;
+    text-align: left;
+    word-wrap: normal;
+    font-family: "Lato";
 }
