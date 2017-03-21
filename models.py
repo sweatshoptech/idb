@@ -5,9 +5,10 @@ SWEatshop Database Models
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from enum import Enum
+import config
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://flask:SWEatshop@sweatshop.cvsgdbsefofi.us-east-1.rds.amazonaws.com:5432/db1'
+app.config['SQLALCHEMY_DATABASE_URI'] = config.SQLALCHEMY_DATABASE_URI
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
