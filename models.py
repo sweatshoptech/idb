@@ -47,7 +47,7 @@ class Company(db.Model):
     ownership_type = db.Column(db.Enum(Ownership), nullable=True)
     funding = db.Column(db.Integer, nullable=True)
     description = db.Column(db.String(350), nullable=True)
-    ceo_id = db.Column(db.Integer, ForeignKey('person.id'), nullable=True)
+    ceo_id = db.Column(db.Integer, ForeignKey('person.idnum'), nullable=True)
     image_url = db.Column(db.String(512), nullable=True)
     size = db.Column(db.Integer, nullable=True)
     website = db.Column(db.String(512), nullable=True)
@@ -76,8 +76,8 @@ class School(db.Model):
     name = db.Column(db.String(50), nullable=False)
     location = db.Column(db.String(50), nullable=True)
     description = db.Column(db.String(350), nullable=True)
-    image_url = db.Column(db.String(512), nullable=True)
     size = db.Column(db.Integer, nullable=True)
+    image_url = db.Column(db.String(512), nullable=True)
     website = db.Column(db.String(512), nullable=True)
 
     def __init__(self, name, location, description, image_url, size, website):
@@ -111,4 +111,41 @@ class Investor(db.Model):
     def __repr__(self):
         return '<Investor %r>' % self.name
 
+class Category(db.Model):
+    """Categories"""
+    __tablename__ = 'category'
+    idnum = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+
+    def __init__(self, name):
+	self.name = name
+
+    def __repr__(self):
+        return '<Category %r>' % self.name
+
+employment = db.Table('employment',
+    db.Column('person_id', db.Integer, db.ForeignKey('person.idnum')),
+    db.Column('company_id', db.Integer, db.ForeignKey('company.idnum'))
+    #TODO: add title here instead of in person
+)
+
+education = db.Table('education',
+    db.Column('person_id', db.Integer, db.ForeignKey('person.idnum')),
+    db.Column('school_id', db.Integer, db.ForeignKey('school.idnum'))
+)
+
+investment = db.Table('investment',
+    db.Column('company_id', db.Integer, db.ForeignKey('company.idnum')),
+    db.Column('investor_id', db.Integer, db.ForeignKey('investor.idnum'))
+)
+
+company_category = db.Table('company_category',
+    db.Column('category_id', db.Integer, db.ForeignKey('category.idnum')),
+    db.Column('company_id', db.Integer, db.ForeignKey('company.idnum'))
+)
+
+investor_category = db.Table('investor_category',
+    db.Column('category_id', db.Integer, db.ForeignKey('category.idnum')),
+    db.Column('investor_id', db.Integer, db.ForeignKey('investor.idnum'))
+)
 
