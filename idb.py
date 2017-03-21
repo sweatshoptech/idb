@@ -50,6 +50,11 @@ def investors():
 def people():
     return render_template('people.html')
 
+@app.route('/implementation')
+@app.route('/implementation.html')
+def implementation():
+    return render_template('implementation.html')
+
 @app.route('/tester/<input_str>')
 def tester(input_str):
     return str(db.Model.metadata.tables)#str(Company.query.get(1))
