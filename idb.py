@@ -5,18 +5,13 @@ from flask_sqlalchemy import SQLAlchemy
 from application import db
 from application.models import Data
 from application.forms import EnterDBInfo, RetrieveDBInfo
+import config
 
 app = Flask(__name__)
 app.debug= True
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://flask:SWEatshop@sweatshop.cvsgdbsefofi.us-east-1.rds.amazonaws.com/db1'
+app.config['SQLALCHEMY_DATABASE_URI'] = config.SQLALCHEMY_DATABASE_URI
 db = SQLAlchemy(app)
-'''
-class Company(db.Model):
-    __table__ = db.Model.metadata.tables['COMPANY']
 
-    def __repr__(self):
-        return self.NAME
-'''
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
 @app.route('/index.html', methods=['GET', 'POST'])
