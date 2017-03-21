@@ -68,3 +68,25 @@ class Company(db.Model):
 
     def __repr__(self):
         return '<Company %r>' % self.name
+
+class School(db.Model):
+    """School Model"""
+    __tablename__ = 'school'
+    idnum = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    location = db.Column(db.String(50), nullable=True)
+    description = db.Column(db.String(350), nullable=True)
+    image_url = db.Column(db.String(512), nullable=True)
+    size = db.Column(db.Integer, nullable=True)
+    website = db.Column(db.String(512), nullable=True)
+
+    def __init__(self, name, location, description, image_url, size, website):
+	self.name = name
+        self.location = location
+        self.description = description
+	self.image_url = image_url
+	self.size = size
+	self.website = website
+
+    def __repr__(self):
+        return '<School %r>' % self.name
