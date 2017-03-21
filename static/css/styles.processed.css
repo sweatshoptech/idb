@@ -84,6 +84,10 @@ h1 {
   color: #FFF;
 }
 
+h4 {
+  color: #AAA;;
+}
+
 .lead {
   color: #AAA;
 }
@@ -155,6 +159,20 @@ p {
 .member-info {
     width: auto;
     margin: 10px 2.5% 24px 2.5%;
+}
+
+.report-title {
+  color: #FFF;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.report-paragraph {
+  max-width: 1300px;
+  margin-left: 20px;
+  text-align: left;
+  color: #FFF;
+  font-size: 18px;
 }
 
 member-name {
