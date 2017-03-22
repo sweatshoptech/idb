@@ -164,29 +164,6 @@ p {
     margin: 10px 2.5% 24px 2.5%;
 }
 
-.report-title {
-  color: #FFF;
-  text-align: left;
-  margin-left: 20px;
-}
-
-.report-paragraph {
-  max-width: 1300px;
-  margin-left: 20px;
-  text-align: left;
-  color: #FFF;
-  font-size: 18px;
-}
-
-side-menu {
-  min-width: 200px;
-  position: absolute;
-  right: 20px;
-  top: 400px;
-  background-color: #333399;
-  color: #FFF;
-}
-
 member-name {
     font-size: 24px;
     font-weight: bold;
