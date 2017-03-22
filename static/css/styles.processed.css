@@ -38,10 +38,6 @@ body {
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 
-.inner {
-  padding: 10rem;
-}
-
 .paragraph {
   padding-left: 10rem;
   padding-right: 10rem;
@@ -75,47 +71,42 @@ p {
 }
 
 .profile--image {
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin: 24px 0% 12px 0%;
-}
-
-.profile--image landscape {
-    height: 100%;
-    width: auto;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 24px 0% 12px 0%;
 }
 
 .logo--image {
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    margin: 24px 0% 12px 0%;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin: 24px 0% 12px 0%;
 }
 
 
 .member-group {
-    width: auto;
-    height: auto;
-    color: #FFF;
-    overflow: hidden;
-    margin: 0px 0% 0px 0%;
-    top: 50%;
+  width: auto;
+  height: auto;
+  color: #FFF;
+  overflow: hidden;
+  top: 50%;
 }
 
 .member {
-    display: inline-block;
-    vertical-align: top;
-    margin: 10px 5% 24px 5%;
-    position: relative;
-    max-width: 350px;
-    min-width: 330px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 5% 24px 5%;
+  position: relative;
+  max-width: 350px;
+  min-width: 330px;
+  word-wrap: normal;
 }
 
 .member-info {
-    width: auto;
-    margin: 10px 2.5% 24px 2.5%;
+  width: auto;
+  margin: 10px 2.5% 24px 2.5%;
 }
 
 .report-title {
@@ -142,37 +133,36 @@ side-menu {
 }
 
 member-name {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
 }
 
 member-header {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 member-body {
-    font-size: 14px;
-    word-wrap: normal;
-    font-family: 'Open Sans';
+  font-size: 14px;
+  font-family: 'Open Sans';
 }
 
 th, td {
-    border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .row {
-    width: 100%;
-    left: 0;
-    right: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 
 .col-xs-12 {
-    margin: auto;
-    width: 98%;
+  margin: auto;
+  width: 98%;
 }
 
 .carousel-caption {
@@ -182,7 +172,6 @@ th, td {
   -ms-flex-align: center;
   align-items: center;
   height: 100%;
-  bottom: 0;
 }
 
 .carousel img {
@@ -197,11 +186,17 @@ th, td {
 }
 
 .carousel-caption p {
+  top: 70;
   overflow: hidden;
   word-wrap: normal;
   color: white;
   font-size: 200%;
   width: 100%;
-  height: 100%;
+}
+
+.carousel-body {
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
   vertical-align: bottom;
 }
