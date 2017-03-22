@@ -7,6 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_table import Table, Col
 import models
 
+
 class CompanyTable(Table):
     name = Col('Company')
     website = Col('Website')
@@ -16,16 +17,19 @@ class CompanyTable(Table):
     size = Col('Size')
     location = Col('Location')
 
+
 class SchoolTable(Table):
     name = Col('School')
     website = Col('Website')
     size = Col('Size')
     location = Col('Location')
 
+
 class InvestorTable(Table):
     name = Col('Investor')
     website = Col('Website')
     location = Col('Location')
+
 
 class PersonTable(Table):
     name = Col('Person')
@@ -34,7 +38,10 @@ class PersonTable(Table):
     dob = Col('Date of Birth')
     location = Col('Location')
 
-table_mappings = {models.Company : CompanyTable, models.Person : PersonTable, models.Investor : InvestorTable, models.School : SchoolTable}
+table_mappings = {models.Company: CompanyTable, models.Person:
+                  PersonTable, models.Investor: InvestorTable, models.School: SchoolTable}
+
+
 def get_table_html(model):
     companies = model.query.all()
     table = table_mappings[model](companies)
