@@ -58,6 +58,12 @@ body {
   padding: 10rem;
 }
 
+.paragraph {
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-top: 3rem;
+}
+
 body {
   font-family: "Lucida Grande";
 }
