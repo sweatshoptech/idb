@@ -48,7 +48,7 @@ class Company(db.Model):
     ownership_type = db.Column(db.Enum(Ownership), nullable=True)
     funding = db.Column(db.Integer, nullable=True)
     description = db.Column(db.String(350), nullable=True)
-    ceo_id = db.Column(db.Integer, ForeignKey('person.idnum'), nullable=True)
+    ceo_id = db.Column(db.Integer, db.ForeignKey('person.idnum'), nullable=True)
     image_url = db.Column(db.String(512), nullable=True)
     size = db.Column(db.Integer, nullable=True)
     website = db.Column(db.String(512), nullable=True)
@@ -124,10 +124,10 @@ class Category(db.Model):
     def __repr__(self):
         return '<Category %r>' % self.name
 
+#TODO: for phase 2, add title here instead of in person
 employment = db.Table('employment',
     db.Column('person_id', db.Integer, db.ForeignKey('person.idnum')),
     db.Column('company_id', db.Integer, db.ForeignKey('company.idnum'))
-    #TODO: add title here instead of in person
 )
 
 education = db.Table('education',
