@@ -14,22 +14,6 @@ body {
   width: 100%;
 }
 
-.carousel-caption {
-  position: absolute;
-  top: 0;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.carousel-caption h1 {
-  width: 100%;
-  font-size: 50px;
-  text-shadow: 2px 2px #333;
-}
-
 .item {
   width: 100%;
   height: 95vh;
@@ -44,7 +28,7 @@ body {
 
 .gradient-bg {
   height: 100%;
-  background-image: linear-gradient(#403B4A, #E7E9BB);
+  background-image: linear-gradient(#403B4A, #222123);
   text-align: center;
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
@@ -64,6 +48,12 @@ body {
   padding-top: 3rem;
 }
 
+.paragraph-text {
+    font-size: 14px;
+    word-wrap: normal;
+    font-family: 'Open Sans';
+}
+
 body {
   font-family: "Lucida Grande";
 }
@@ -79,41 +69,11 @@ h4 {
 .lead {
   color: #AAA;
 }
-/*
-.navbar {
-  border-color: transparent;
-}
 
-nav .home-logo {
-  background: url(http://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png) center/contain no-repeat;
-  width: 200px;
-  transform: translateX(-50%);
-  left: 50%;
-  position: absolute;
-}
-
-
-@media (max-width: 767px) {
-  .navbar-collapse {
-    background-color: #111;
-  }
-}
-
-
-.navbar-inverse .navbar-nav>li>a {
-  color: #ddd;
-}
-
-.navbar-inverse .navbar-nav>.active>a,
-.navbar-inverse .navbar-nav>.active>a:hover,
-.navbar-inverse .navbar-nav>.active>a:focus {
-  color: #DDD;
-  background-color: #048;
-}
-*/
 .outro {
   background-color: #000;
   color: #FFF;
+  height: 13vh;
 }
 
 p {
@@ -164,29 +124,6 @@ p {
     margin: 10px 2.5% 24px 2.5%;
 }
 
-.report-title {
-  color: #FFF;
-  text-align: left;
-  margin-left: 20px;
-}
-
-.report-paragraph {
-  max-width: 1300px;
-  margin-left: 20px;
-  text-align: left;
-  color: #FFF;
-  font-size: 18px;
-}
-
-side-menu {
-  min-width: 200px;
-  position: absolute;
-  right: 20px;
-  top: 400px;
-  background-color: #333399;
-  color: #FFF;
-}
-
 member-name {
     font-size: 24px;
     font-weight: bold;
@@ -221,6 +158,16 @@ th, td {
     width: 98%;
 }
 
+.carousel-caption {
+  position: absolute;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  bottom: 0;
+}
+
 .carousel img {
   overflow: hidden;
   position: relative;
@@ -232,7 +179,7 @@ th, td {
   min-width: 100%;
 }
 
-.carousel p {
+.carousel-caption p {
   overflow: hidden;
   word-wrap: normal;
   color: white;
@@ -240,17 +187,4 @@ th, td {
   width: 100%;
   height: 100%;
   vertical-align: bottom;
-}
-
-.carousel-group {
-  height: auto;
-  color: #FFF;
-  overflow: hidden;
-  margin: 0px 0% 0px 0%;
-  top: 50%;
-  max-height: 75%;
-  max-width: 69%;
-  vertical-align: middle;
-  display: inline-block;
-  vertical-align: middle;
 }
