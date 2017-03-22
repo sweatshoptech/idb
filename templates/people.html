@@ -44,9 +44,6 @@
         <li class="nav-item">
           <a class="nav-link" href="schools.html">Schools</a>
         </li>
-        <li class="new-item">
-          <a class="nav-link" href="implementation.html">Implementation</a>
-        </li>
       </ul>
     </div>
   </nav>
@@ -68,6 +65,11 @@
       $(document).ready(function() {
         $('#example').DataTable();
       });
+     jQuery(document).ready(function($) {
+        $(".clickable-row").click(function() {
+          window.location = $(this).data("href");
+        });
+      }); 
     </script>
     </div>
   </div>

@@ -8,7 +8,6 @@ Note: Pylint does not work well with SQLAlchemy since it is
 # pylint: disable=too-many-arguments
 # pylint: disable=too-few-public-methods
 # pylint: disable=too-many-instance-attributes
-# pylint: disable=undefined-variable
 # pylint: disable=invalid-name
 
 from enum import Enum
@@ -53,6 +52,10 @@ class Person(db.Model):
     def __repr__(self):
         return '<Person %r>' % self.name
 
+    def get_all_rows(self):
+        """Get all person rows"""
+        return self.query.all()
+
 
 class Company(db.Model):
 
@@ -74,7 +77,6 @@ class Company(db.Model):
                  ceo_id, image_url, size, website):
         """Initializes Company, ceo as foreign key and ownership as enum"""
         self.name = name
-        self.title = title
         self.location = location
         self.ownership_type = ownership_type
         self.funding = funding
@@ -86,6 +88,10 @@ class Company(db.Model):
 
     def __repr__(self):
         return '<Company %r>' % self.name
+
+    def get_all_rows(self):
+        """Get all company rows"""
+        return self.query.all()
 
 
 class School(db.Model):
@@ -111,6 +117,10 @@ class School(db.Model):
     def __repr__(self):
         return '<School %r>' % self.name
 
+    def get_all_rows(self):
+        """Get all school rows"""
+        return self.query.all()
+
 
 class Investor(db.Model):
 
@@ -133,6 +143,10 @@ class Investor(db.Model):
     def __repr__(self):
         return '<Investor %r>' % self.name
 
+    def get_all_rows(self):
+        """Get all investor rows"""
+        return self.query.all()
+
 
 class Category(db.Model):
 
@@ -146,6 +160,11 @@ class Category(db.Model):
 
     def __repr__(self):
         return '<Category %r>' % self.name
+
+    def get_all_rows(self):
+        """Get all category rows"""
+        return self.query.all()
+
 
 employment = db.Table(
     'employment',
