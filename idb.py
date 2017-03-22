@@ -38,5 +38,10 @@ def investors():
 def people():
     return render_template('people.html', people=tables.get_table_html(models.Person))
 
+@app.route('/implementation')
+@app.route('/implementation.html')
+def implementation():
+    return render_template('implementation.html')
+
 if __name__ == '__main__':
   app.run()
