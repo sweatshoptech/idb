@@ -44,17 +44,9 @@ body {
 
 .gradient-bg {
   height: 100%;
-  background-image: linear-gradient(#41295a, #333399);
+  background-image: linear-gradient(#403B4A, #E7E9BB);
   text-align: center;
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
-}
-
-nav .home-logo {
-  background: url(http://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png) center/contain no-repeat;
-  width: 200px;
-  transform: translateX(-50%);
-  left: 50%;
-  position: absolute;
 }
 
 body {
@@ -62,18 +54,14 @@ body {
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 
-.navbar {
-  border-color: transparent;
-}
-
-@media (max-width: 767px) {
-  .navbar-collapse {
-    background-color: #111;
-  }
-}
-
 .inner {
   padding: 10rem;
+}
+
+.paragraph {
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-top: 3rem;
 }
 
 body {
@@ -84,23 +72,33 @@ h1 {
   color: #FFF;
 }
 
+h4 {
+  color: #AAA;;
+}
+
 .lead {
   color: #AAA;
 }
-
-.btn-outline-secondary:hover {
-  color: #FFF;
-  opacity: 0.4;
+/*
+.navbar {
+  border-color: transparent;
 }
 
-p {
-  color: #AAA;
+nav .home-logo {
+  background: url(http://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png) center/contain no-repeat;
+  width: 200px;
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
 }
 
-.outro {
-  background-color: #000;
-  color: #FFF;
+
+@media (max-width: 767px) {
+  .navbar-collapse {
+    background-color: #111;
+  }
 }
+
 
 .navbar-inverse .navbar-nav>li>a {
   color: #ddd;
@@ -111,6 +109,15 @@ p {
 .navbar-inverse .navbar-nav>.active>a:focus {
   color: #DDD;
   background-color: #048;
+}
+*/
+.outro {
+  background-color: #000;
+  color: #FFF;
+}
+
+p {
+  color: #AAA;
 }
 
 .profile--image {
@@ -157,6 +164,29 @@ p {
     margin: 10px 2.5% 24px 2.5%;
 }
 
+.report-title {
+  color: #FFF;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.report-paragraph {
+  max-width: 1300px;
+  margin-left: 20px;
+  text-align: left;
+  color: #FFF;
+  font-size: 18px;
+}
+
+side-menu {
+  min-width: 200px;
+  position: absolute;
+  right: 20px;
+  top: 400px;
+  background-color: #333399;
+  color: #FFF;
+}
+
 member-name {
     font-size: 24px;
     font-weight: bold;
@@ -174,4 +204,19 @@ member-body {
     font-size: 14px;
     word-wrap: normal;
     font-family: 'Open Sans';
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+.row {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.col-xs-12 {
+    margin: auto;
+    width: 98%;
 }

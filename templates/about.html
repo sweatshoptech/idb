@@ -10,7 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"></script>
-  <link rel="stylesheet" href="css/styles.processed.css">
+  <link rel="stylesheet" href="../static/css/styles.processed.css">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img alt="Brand" src="http://vishnut.me/assets/external/logo.png" style="width: 200px;transform: translateY(-15%);"></a>
+        <a class="navbar-brand" href="index.html"><img alt="Brand" src="http://vishnut.me/assets/external/logo.png" style="width: 200px;transform: translateY(-15%);"></a>
       </div>
       <div id="home-navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -37,6 +37,7 @@
           <li><a href="people.html">People</a></li>
           <li><a href="investors.html">Investors</a></li>
           <li><a href="schools.html">Schools</a></li>
+          <li><a href="implementation.html">Implementation</a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -44,13 +45,17 @@
     <!--/.container-fluid -->
   </nav>
   <div class="gradient-bg">
-    <div class="inner">
+    <div class="paragraph">
+      <br /><br /><br />
       <h1 style="color: white;">The Problem</h1>
-      <br/>
+      <h4> Have you ever had a brilliant idea and want to create your own company but don't know if something similar already exists? Who could be an investor in your company? Who could join you in this new adventure? Or simple know what schools have the most notable graduates to recruit employees from? The SWEetshop aims to make easily accesible and free everything you need to know about any company, the people it takes to fund those companies, the people who run those companies, and the institutions that educate the people behind a company </h4>
     </div>
-    <div class="inner">
+    <div class="paragraph">
       <h1 style="color: white;">The Use Cases</h1>
-      <br/>
+      <h4> A user could be a college student who one night comes up with the idea of a new social network for pets and pet owners. However, he doesn't know if there exists such a company and Google is too vast, not specific enough, and too daunting for such a task. He can then go on sweatshop.tech, click on our companies tab and sort the companies by category. Alternatively, he can filter companies by categories on social networks and pets to begin his research.</h4>
+      <h4>Another user can be the founder of  a small startup company who is in need of more investors. The found can simply go to SWEatshop’s investor tab and start looking for investors. He/She can filter for the type of investor that they would like to have. He/She can also sort the investors by number of companies that they have invested in. Finally he/she can easily learn more about an individual investor if he/she has an investor in mind like what other companies they have invested in, how many funds do they have, where are the funds coming from, etc.</h4>
+      <h4>A third use case would be one of a company recruiter who is in search of interns, but where does the recruiter go to recruit. In most cases they would to an university, but what university? Well, the recruiter can go to SWEatshop’s school tab and search for schools to recruit at. The recruiter can filter by notable graduates as metrics of good students and graduates that would be valuable for the company they are hiring for.</h4>
+      <h4>Another use case is a CEO of his new startup in Austin, Texas who needs advice on how to run the financial side of his new company, but who does he ask for help? In SWEatshop, he can search all sorts of people. he can search people by their job title, location, name, etc. In this example he could filter for CFOs who are located in Austin, TX. He then would be able to contact CFOs around Austin and be able to set up a meeting with one of them to give him some advice.</h4>
     </div>
     <div class="inner">
       <h1 class="cover-heading">The Team</h1>
@@ -131,7 +136,7 @@
             </div>
           </div>
           <div class= "member">
-            <img class="profile--image" src="../static/img/temp.jpg">
+            <img class="profile--image" src="../static/img/aaron.jpg">
             <div class="member-info">
               <member-name> Aaron Chang <br /><br /></member-name>
               <member-body> Insert bio here <br /><br /></member-body>
@@ -182,8 +187,8 @@
               <img class="logo--image" src="../static/img/github.png" alt="Javascript Logo"> 
           </a>
           <div class="member-info">
-            <member-name> Github is a web-base Git (version control repository) that was utilized to maintain the source code, track issues/features, and assign issues/features to each team members. <br /><br /></member-name>
-            <member-body>  <br /><br /></member-body>
+            <member-name> GitHub <br /><br /></member-name>
+            <member-body> Github is a web-based Git (version control repository) that we utilize to maintain the source code, track issues/features, and assign issues/features to each of the team members. <br /><br /></member-body>
           </div>
         </div>
         <div class="member">
@@ -192,7 +197,7 @@
           </a>
           <div class="member-info">
             <member-name> Slack <br /><br /></member-name>
-            <member-body> Slack is one of the communication tools utilzed by the team members. There are several channels (chatrooms) to discusse the different portions of the web application. Slack is also connected to the Github to see progress. <br /><br /></member-body>
+            <member-body> Slack is one of the communication tools utilzed by the team members. There are several channels (chatrooms) such as #frontend, #backend, and #db to discuss the different portions of the web application. Slack is also connected to the Github repository and to our Trello board to frequently and easily monitor progress. <br /><br /></member-body>
           </div>
         </div>
         <div class="member">
@@ -201,7 +206,7 @@
           </a>
           <div class="member-info">
             <member-name> Trello <br /><br /></member-name>
-            <member-body> A project managemet application utilized to list and separate all necessary task for the web application. It provides a way of assigning tasks and also track progress. Trello is connected to Slack.<br /><br /></member-body>
+            <member-body> A project management application utilized to list and separate all necessary tasks for the web application. It provides a way to assign tasks and track progress. Trello is connected to our Slack channels. <br /><br /></member-body>
           </div>
         </div>
         <div class="member">
@@ -210,7 +215,7 @@
           </a>
           <div class="member-info">
             <member-name> SQL Alchemy <br /><br /></member-name>
-            <member-body> Insert description here <br /><br /></member-body>
+            <member-body> SQLAlchemy is an open source SQL toolkit and object-relational mapper (ORM) for the python language. We utilize SQLAlchemy in order to connected the front-end with our Postgresql database. SQLAlchemy is essentially used to retrieve data from our database and populate our HTML pages. <br /><br /></member-body>
           </div>
         </div>
         <div class="member">
@@ -219,7 +224,7 @@
           </a>
           <div class="member-info">
             <member-name> PostgreSQL <br /><br /></member-name>
-            <member-body> Insert description here <br /><br /></member-body>
+            <member-body> PostgreSQL is an object-relational database. We utilize PostgreSQL as a place to keep and organize our data models. <br /><br /></member-body>
           </div>
         </div>
         <div class="member">
@@ -228,7 +233,7 @@
           </a>
           <div class="member-info">
             <member-name> Namecheap <br /><br /></member-name>
-            <member-body> Tool from which the domain was obtained at a low price. <br /><br /></member-body>
+            <member-body> Vendor from which we obtained the sweatshop.tech domain. We then set the IP and DNS to point to our AWS EC2 instance. <br /><br /></member-body>
           </div>
         </div>
         <div class="member">
@@ -237,7 +242,7 @@
           </a>
           <div class="member-info">
             <member-name> Python <br /><br /></member-name>
-            <member-body> Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Python was utilized for the backend of the web application. <br /><br /></member-body>
+            <member-body> Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. We utilize Python for the backend of the web application. This was by use of Flask and SQLAlchemy to connect the frontend and database to our backend. <br /><br /></member-body>
           </div>
         </div>
         <div class="member">
@@ -246,7 +251,7 @@
           </a>
           <div class="member-info">
             <member-name> HTML 5 <br /><br /></member-name>
-            <member-body> HTML 5 is the 5th version of HTML. HTML is utilized to organize the components on the front-end of the web application. <br /><br /></member-body>
+            <member-body> HTML 5 is the 5th version of HTML. We use HTML with Bootstrap and ReactJS to design and organize the components on the front-end of the web application. <br /><br /></member-body>
           </div>
         </div>
         <div class="member">
@@ -255,7 +260,7 @@
           </a>
           <div class="member-info">
             <member-name> CSS 3 <br /><br /></member-name>
-            <member-body> CSS 3 is the 3rd version of CSS. CSS is utilized to style the web application in a more visually engaging way. <br /><br /></member-body>
+            <member-body> CSS 3 is the 3rd version of CSS. We use CSS with Bootstrap included to style the web application in a more visually engaging way. <br /><br /></member-body>
           </div>
         </div>
       </div>
