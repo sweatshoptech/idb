@@ -14,22 +14,6 @@ body {
   width: 100%;
 }
 
-.carousel-caption {
-  position: absolute;
-  top: 0;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.carousel-caption h1 {
-  width: 100%;
-  font-size: 50px;
-  text-shadow: 2px 2px #333;
-}
-
 .item {
   width: 100%;
   height: 95vh;
@@ -79,41 +63,11 @@ h4 {
 .lead {
   color: #AAA;
 }
-/*
-.navbar {
-  border-color: transparent;
-}
 
-nav .home-logo {
-  background: url(http://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png) center/contain no-repeat;
-  width: 200px;
-  transform: translateX(-50%);
-  left: 50%;
-  position: absolute;
-}
-
-
-@media (max-width: 767px) {
-  .navbar-collapse {
-    background-color: #111;
-  }
-}
-
-
-.navbar-inverse .navbar-nav>li>a {
-  color: #ddd;
-}
-
-.navbar-inverse .navbar-nav>.active>a,
-.navbar-inverse .navbar-nav>.active>a:hover,
-.navbar-inverse .navbar-nav>.active>a:focus {
-  color: #DDD;
-  background-color: #048;
-}
-*/
 .outro {
   background-color: #000;
   color: #FFF;
+  height: 13vh;
 }
 
 p {
@@ -221,6 +175,16 @@ th, td {
     width: 98%;
 }
 
+.carousel-caption {
+  position: absolute;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  bottom: 0;
+}
+
 .carousel img {
   overflow: hidden;
   position: relative;
@@ -232,7 +196,7 @@ th, td {
   min-width: 100%;
 }
 
-.carousel p {
+.carousel-caption p {
   overflow: hidden;
   word-wrap: normal;
   color: white;
@@ -240,17 +204,4 @@ th, td {
   width: 100%;
   height: 100%;
   vertical-align: bottom;
-}
-
-.carousel-group {
-  height: auto;
-  color: #FFF;
-  overflow: hidden;
-  margin: 0px 0% 0px 0%;
-  top: 50%;
-  max-height: 75%;
-  max-width: 69%;
-  vertical-align: middle;
-  display: inline-block;
-  vertical-align: middle;
 }
