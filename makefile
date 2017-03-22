@@ -10,7 +10,7 @@ ifeq ($(CI), true)                # Travis CI
 else                                   # UTCS
     PYTHON   := python3
     PIP      := pip3
-    PYLINT   := pylint3
+    PYLINT   := pylint
     COVERAGE := coverage-3.5
     PYDOC    := pydoc3.5
     AUTOPEP8 := autopep8
@@ -23,7 +23,7 @@ format:
 	$(AUTOPEP8) -i tables.py
 
 html:
-	pydoc -w models.py
+	pydoc -w models
 	mv models.html IDB1.html
 
 log:
@@ -38,7 +38,7 @@ clean:
 	rm -f *.log
 	rm -f .coverage
 
-test: format pylint html log
+test: format pylint log
 	echo "success"
 
 versions:
