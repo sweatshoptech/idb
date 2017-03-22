@@ -23,7 +23,7 @@ format:
 	$(AUTOPEP8) -i tables.py
 
 html:
-	pydoc -w models.py
+	pydoc -w models
 	mv models.html IDB1.html
 
 log:
