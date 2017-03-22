@@ -1,14 +1,14 @@
 """
 SWEatshop Database Models
 
-Note: Disable no-member error in because pylint does not work well
-      with SQLAlchemy
+Note: Pylint does not work well with SQLAlchemy since it is
+      dynamically generated
 """
 # pylint: disable=E1101
 # pylint: disable=too-many-arguments
 # pylint: disable=too-few-public-methods
 # pylint: disable=too-many-instance-attributes
-
+# pylint: disable=undefined-variable
 # pylint: disable=invalid-name
 
 from enum import Enum
@@ -147,7 +147,6 @@ class Category(db.Model):
     def __repr__(self):
         return '<Category %r>' % self.name
 
-# TODO: for phase 2, add title here instead of in person
 employment = db.Table(
     'employment',
     db.Column('person_id', db.Integer, db.ForeignKey('person.idnum')),
