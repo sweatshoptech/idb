@@ -44,32 +44,14 @@ body {
 
 .gradient-bg {
   height: 100%;
-  background-image: linear-gradient(#41295a, #333399);
+  background-image: linear-gradient(#403B4A, #E7E9BB);
   text-align: center;
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
-}
-
-nav .home-logo {
-  background: url(http://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png) center/contain no-repeat;
-  width: 200px;
-  transform: translateX(-50%);
-  left: 50%;
-  position: absolute;
 }
 
 body {
   text-align: center;
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
-}
-
-.navbar {
-  border-color: transparent;
-}
-
-@media (max-width: 767px) {
-  .navbar-collapse {
-    background-color: #111;
-  }
 }
 
 .inner {
@@ -87,20 +69,26 @@ h1 {
 .lead {
   color: #AAA;
 }
-
-.btn-outline-secondary:hover {
-  color: #FFF;
-  opacity: 0.4;
+/*
+.navbar {
+  border-color: transparent;
 }
 
-p {
-  color: #AAA;
+nav .home-logo {
+  background: url(http://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png) center/contain no-repeat;
+  width: 200px;
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
 }
 
-.outro {
-  background-color: #000;
-  color: #FFF;
+
+@media (max-width: 767px) {
+  .navbar-collapse {
+    background-color: #111;
+  }
 }
+
 
 .navbar-inverse .navbar-nav>li>a {
   color: #ddd;
@@ -111,6 +99,15 @@ p {
 .navbar-inverse .navbar-nav>.active>a:focus {
   color: #DDD;
   background-color: #048;
+}
+*/
+.outro {
+  background-color: #000;
+  color: #FFF;
+}
+
+p {
+  color: #AAA;
 }
 
 .profile--image {
@@ -174,4 +171,19 @@ member-body {
     font-size: 14px;
     word-wrap: normal;
     font-family: 'Open Sans';
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+.row {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.col-xs-12 {
+    margin: auto;
+    width: 98%;
 }
