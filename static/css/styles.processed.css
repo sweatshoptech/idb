@@ -28,7 +28,7 @@ body {
 
 .gradient-bg {
   height: 100%;
-  background-image: linear-gradient(#403B4A, #E7E9BB);
+  background-image: linear-gradient(#403B4A, #222123);
   text-align: center;
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
@@ -46,6 +46,12 @@ body {
   padding-left: 10rem;
   padding-right: 10rem;
   padding-top: 3rem;
+}
+
+.paragraph-text {
+    font-size: 14px;
+    word-wrap: normal;
+    font-family: 'Open Sans';
 }
 
 body {
