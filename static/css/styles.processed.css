@@ -49,9 +49,10 @@ body {
 }
 
 .paragraph-text {
-    font-size: 14px;
+    font-size: 18px;
     word-wrap: normal;
     font-family: 'Open Sans';
+    color: #FFF;
 }
 
 body {
