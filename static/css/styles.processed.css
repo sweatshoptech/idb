@@ -175,6 +175,15 @@ p {
   font-size: 18px;
 }
 
+side-menu {
+  min-width: 200px;
+  position: absolute;
+  right: 20px;
+  top: 400px;
+  background-color: #333399;
+  color: #FFF;
+}
+
 member-name {
     font-size: 24px;
     font-weight: bold;
