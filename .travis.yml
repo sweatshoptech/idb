@@ -1,0 +1,31 @@
+sudo: false
+
+language: python
+
+python:
+   - "2.7.6"
+
+before_install:
+    - pip install --upgrade pip
+
+install:
+    - pip install autopep8
+    - pip install coverage
+    - pip install mypy
+    - pip install numpy
+    - pip install pylint
+    - pip install Flask
+    - pip install Flask-SQLAlchemy
+    - pip install Flask-Testing
+    - pip install Jinja2
+    - pip install SQLAlchemy
+
+before_script:
+    - uname -a
+    - printenv | sort
+    - make versions
+
+script:
+    - date
+    - ls -al
+    - make test
