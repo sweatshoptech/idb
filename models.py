@@ -8,7 +8,6 @@ Note: Pylint does not work well with SQLAlchemy since it is
 # pylint: disable=too-many-arguments
 # pylint: disable=too-few-public-methods
 # pylint: disable=too-many-instance-attributes
-# pylint: disable=undefined-variable
 # pylint: disable=invalid-name
 
 from enum import Enum
@@ -78,7 +77,6 @@ class Company(db.Model):
                  ceo_id, image_url, size, website):
         """Initializes Company, ceo as foreign key and ownership as enum"""
         self.name = name
-        self.title = title
         self.location = location
         self.ownership_type = ownership_type
         self.funding = funding
