@@ -129,13 +129,15 @@ class Investor(db.Model):
     idnum = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
     location = db.Column(db.String(50), nullable=True)
+    funding = db.Column(db.Integer, nullable=True)
     description = db.Column(db.String(350), nullable=True)
     image_url = db.Column(db.String(512), nullable=True)
     website = db.Column(db.String(512), nullable=True)
 
-    def __init__(self, name, location, description, image_url, website):
+    def __init__(self, name, location, funding, description, image_url, website):
         self.name = name
         self.location = location
+        self.funding = funding
         self.description = description
         self.image_url = image_url
         self.website = website

@@ -29,6 +29,7 @@ class InvestorTable(Table):
     name = Col('Investor')
     website = Col('Website')
     location = Col('Location')
+    funding = Col('Funding')
 
 
 class PersonTable(Table):
