@@ -32,6 +32,11 @@ investment = db.Table(
     db.Column('company_id', db.Integer, db.ForeignKey('company.idnum')),
     db.Column('investor_id', db.Integer, db.ForeignKey('investor.idnum')))
 
+school_investment = db.Table(
+    'school_investment',
+    db.Column('school_id', db.Integer, db.ForeignKey('school.idnum')),
+    db.Column('investor_id', db.Integer, db.ForeignKey('investor.idnum')))
+
 employment = db.Table(
     'employment',
     db.Column('person_id', db.Integer, db.ForeignKey('person.idnum')),
@@ -136,7 +141,9 @@ class School(db.Model):
     size = db.Column(db.Integer, nullable=True)
     image_url = db.Column(db.String(512), nullable=True)
     website = db.Column(db.String(512), nullable=True)
-
+    investors = db.relationship('Investor', secondary=school_investment,
+        backref=db.backref('schools', lazy='dynamic'))
+            
     def __init__(self, name, location, description, image_url, size, website):
         self.name = name
         self.location = location
@@ -197,4 +204,3 @@ class Category(db.Model):
     def get_all_rows(self):
         """Get all category rows"""
         return self.query.all()
-
