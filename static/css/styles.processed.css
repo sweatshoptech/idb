@@ -278,7 +278,9 @@ member-body {
 }
 
 .list-group-item {
+  text-align: center;
   background-color: #333; 
   border-color: #333; 
   color: #FFF;
+  display: block;
 }
