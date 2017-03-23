@@ -73,14 +73,23 @@
           </div>
         </div>
       </div>
+      <div class="ui-group">
+        <h3>Sort By</h3>
+        <div class="button-group sort-by-button-group">
+          <button class="button is-checked" data-sort-value="name" >Name</button>
+          <button class="button" data-sort-value="funding" >Funding</button>
+          <button class="button" data-sort-value="size" >Size</button>
+        </div>
+      </div>
       <div class="grid small">
         <a href="link.com">  
-        <div class="grid-item private small-size usa">
-        
+        <div class="grid-item private small-size usa" funding='6300000' name='Chowbotics' size='32'>
           <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
-            <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1489162423/uihtpjzpzdmjjfftpjwu.png" alt="Card image cap">
+            <div style="background: #FFF; width: 100%">
+              <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1489162423/uihtpjzpzdmjjfftpjwu.png" alt="Card image cap">
+            </div>
             <div class="card-block">
-              <h4 class="card-title">Chowbotics</h4>
+              <h4 class="card-title name">Chowbotics</h4>
               <div class="list-group-item">
                 Chowbotics uses robots to solve several problems in food service including compromised cleanliness and inefficiency.
               </div>
@@ -88,39 +97,41 @@
             </div>
             <ul class="list-group list-group-flush;">
               <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: Private</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Funding: $6300000</li>
+              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: $6300000</li>
               <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
             </ul>
           </div>
-          
         </div>
         </a>
         <a href="link.com">  
-        <div class="grid-item private small-size usa">
+        <div class="grid-item private small-size usa" funding='24700000' name='Stormpath' size='12'>
             <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
+            <div style="background: #FFF; width: 100%">
               <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1397190357/ef976829c17f2aa791001c15875492b2.png" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Stormpath</h4>
-                <div class="list-group-item">
-                  Authentication & User Management API.
-                </div>
-                <a href="#" class="btn btn-primary">More Information</a>
-              </div>
-              <ul class="list-group list-group-flush;">
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: Private</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Funding: $24700000</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
-              </ul>
             </div>
+            <div class="card-block">
+              <h4 class="card-title name">Stormpath</h4>
+              <div class="list-group-item">
+                Authentication & User Management API.
+              </div>
+              <a href="#" class="btn btn-primary">More Information</a>
+            </div>
+            <ul class="list-group list-group-flush;">
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: Private</li>
+              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: $24700000</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
+            </ul>
+          </div>
         </div>
         </a>
         <a href="link.com"> 
-        <div class="grid-item private large-size usa">
-        
+        <div class="grid-item private large-size usa" funding='6300000' name='BORN' size='592'>
           <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
-            <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1414010267/v7pesynsteohgygkuhfz.jpg" alt="Card image cap">
+            <div style="background: #FFF; width: 100%">
+              <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1414010267/v7pesynsteohgygkuhfz.jpg" alt="Card image cap">
+            </div>
             <div class="card-block">
-              <h4 class="card-title">BORN</h4>
+              <h4 class="card-title name">BORN</h4>
                 <div class="list-group-item">
                   A marketing and technology agency whose solutions combine Creative Design, Content Production and eCommerce solutions.
                 </div>
@@ -128,33 +139,35 @@
             </div>
             <ul class="list-group list-group-flush;">
               <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: Private</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Fuding: $6300000</li>
+              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: $6300000</li>
               <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
             </ul>
           </div>
-          
         </div>
         </a>
       </div>
       <script>
-      $('.grid').isotope({
-          // options
-          itemSelector: '.grid-item',
-        layoutMode: 'fitRows'
-        });
-      $('.grid').isotope({
-        itemSelector: '.grid-item',
-        masonry: {
-          columnWidth: 100
-        }
-      });
-        // external js: isotope.pkgd.js
-
       // init Isotope
       var $grid = $('.grid').isotope({
-        itemSelector: '.color-shape'
+          itemSelector: '.grid-item',
+          layoutMode: 'fitRows',
+          masonry: {
+            columnWidth: 100
+          },
+          getSortData: {
+            name: '[name]',
+            funding: '[funding] parseInt',
+            size: '[size] parseInt'
+          },
+          sortBy: 'name'
       });
-
+        
+      // bind sort button click
+      $('.sort-by-button-group').on( 'click', 'button', function() {
+        var sortByValue = $(this).attr('data-sort-value');
+        $grid.isotope({ sortBy: sortByValue });
+      });
+        
       // store filter for each group
       var filters = {};
 
