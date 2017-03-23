@@ -1,9 +1,10 @@
+// Cool Class Diagram
 [Person|idnum:int; name: string; title: string; location: string; dob: DateTime; image_url: string; website: string;]
 [Company|idnum:int; name: string; location: string; ownership_type: enum; funding: string; description: string; ceo_id: Person; image_url: string; size: int; website: string;]
 [Person]++<N-N>[Company]
 [School|idnum:int; name: string; location: string; description: string; size: int; image_url: string;  website: string;]
 [School]++<N-N>[Person]
-[Investor|idnum:int; name: string; location: string; description: string; image_url: string;  website: string;]
+[Investor|idnum:int; name: string; location: string; funding: int; description: string; image_url: string; website: string;]
 [Investor]++<N-N>[Company]
 [Category|idnum:int; name: string;]
 [Category]++<1-N>[Investor]
