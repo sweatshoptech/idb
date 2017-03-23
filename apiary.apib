@@ -1,80 +1,185 @@
 FORMAT: 1A
 HOST: http://polls.apiblueprint.org/
 
-# sweatshop
+# SWEatshop.tech
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+SWEatshop is a simple API to retrieve centralized data regarding companies along with the people, investors and schools of everyone involved.
 
-## Questions Collection [/questions]
+## People Collection [/people]
 
-### List All Questions [GET]
+### List All People [GET]
+
++ Response 200 (application/json)
+
+        [
+           {
+                "idnum": "1",
+                "name": "Deepak Sekar"
+            },
+            {
+                "idnum": "2",
+                "name": "Alex Salazar"
+            },
+            {
+                "idnum": "3",
+                "name": "Dilip Keshu"
+            }
+                ]
+            }
+        ]
+
+## Specific Person [/people/{person_id}]
+
++ Parameters
+    + person_id (number) - id of the requested person in the form of an integer
+
+### Specific Person [GET]
 
 + Response 200 (application/json)
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
+                "idnum": "3",
+                "name": "Dilip Keshu",
+                "title": "CEO",
+                "location": "Princeton",
+                "dob": "1962-01-12 00:00:00",
+                "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1397632836/052828bcd0edb674d3c6176413d58b81.jpg",
+                "website": "http://borngroup.com",
+            }
+        ]
+
+## Company Collection [/companies]
+
+### List All Companies [GET]
+
++ Response 200 (application/json)
+
+        [
+           {
+                "idnum": "1",
+                "name": "Chowbotics"
+            },
+            {
+                "idnum": "2",
+                "name": "Stormpath"
+            },
+            {
+                "idnum": "3",
+                "name": "BORN"
+            }
                 ]
             }
         ]
 
-### Create a New Question [POST]
+## Specific Company [/companies/{company_id}]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
++ Parameters
+    + company_id (number) - id of the requested company in the form of an integer
 
-+ Request (application/json)
+### Specific Company [GET]
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
++ Response 200 (application/json)
 
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
+        [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
+                "idnum": "1",
+                "name": "Chowbotics",
+                "location": "San Jose",
+                "ownership_type": PRIVATE,
+                "funding": 6300000,
+                "description": "Chowbotics uses robots to solve several problems in food service including compromised cleanliness and inefficiency.",
+                "ceo_id": 1,
+                "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1489162423/uihtpjzpzdmjjfftpjwu.png",
+                "size": 2,
+                "website": "http://www.chowbotics.com"
+            }
+        ]
+
+## Schools Collection [/schools]
+
+### List All Schools [GET]
+
++ Response 200 (application/json)
+
+        [
+           {
+                "idnum": "1",
+                "name": "Indian Institute of Technology Madras"
+            },
+            {
+                "idnum": "2",
+                "name": "Georgia Institute of Technology"
+            },
+            {
+                "idnum": "3",
+                "name": "Stanford University Graduate School of Business"
+            }
                 ]
             }
+        ]
+
+## Specific School [/companies/{school_id}]
+
++ Parameters
+    + school_id (number) - id of the requested school in the form of an integer
+
+### Specific School [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "idnum": "1",
+                "name": "Indian Institute of Technology Madras",
+                "location": "Chennai",
+                "description": "Indian Institute of Technology Madras",
+                "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1415957687/v2l8rpjmlodkqqedmbpe.jpg",
+                "size": 10000,
+                "website": "http://www.iitm.ac.in/"
+            }
+        ]
+
+## Investors Collection [/investors]
+
+### List All Investors [GET]
+
++ Response 200 (application/json)
+
+        [
+           {
+                "idnum": "1",
+                "name": "Geekdom Fund"
+            },
+            {
+                "idnum": "2",
+                "name": "Pelion Venture Partners"
+            },
+            {
+                "idnum": "3",
+                "name": "Scale Venture Partners"
+            }
+                ]
+            }
+        ]
+
+## Specific Investor [/companies/{investor_id}]
+
++ Parameters
+    + investor_id (number) - id of the requested investor in the form of an integer
+
+### Specific Investor [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "idnum": "2",
+                "name": "Pelion Venture Partners",
+                "location": "Salt Lake City",
+                "funding": 780000,
+                "description": "Formerly UV Partners Since 1986, Pelion Venture Partners has been helping entrepreneurs turn early-stage concepts into tomorrow.",
+                "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1397179667/c01cda23b1c8153e87bc37b324ec5fec.jpg",
+                "website": "http://pelionvp.com"
+            }
+        ]
