@@ -235,3 +235,34 @@ tbody {
     display: table;
   }
 }
+
+
+/* Grid */
+.grid-sizer,
+.grid-item { width: 20%; }
+
+.grid {
+  width: 100%;
+  text-align:center;
+
+}
+
+.grid-item {
+  width: 33.333%;
+  min-width: 350px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 18px;
+  margin-bottom: 10px;
+  background: #EEE;
+  border: none;
+  border-radius: 7px;
+  background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
+  color: #222;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-shadow: 0 1px white;
+  cursor: pointer;
+}
