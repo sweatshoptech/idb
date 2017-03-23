@@ -45,10 +45,10 @@ body {
 }
 
 .paragraph-text {
-    font-size: 18px;
-    word-wrap: normal;
-    font-family: 'Open Sans';
     color: #FFF;
+    font-family: Open Sans;
+    font-size: 18px;
+    padding: 1rem 5rem;
 }
 
 body {
