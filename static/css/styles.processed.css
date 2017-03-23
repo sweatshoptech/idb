@@ -3,11 +3,44 @@ body {
   background-color: #333;
 }
 
-.slides {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
+body {
+  font-family: "Lucida Grande";
+  text-align: center;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+p {
+  color: #AAA;
+}
+
+h1 {
+  color: #FFF;
+}
+
+h4 {
+  color: #AAA;;
+}
+
+@media screen and (min-width: 767px) {
+  .inner{
+    padding: 5%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .inner{
+    padding: 1rem;
+  }
+}
+
+.lead {
+  color: #AAA;
+}
+
+.outro {
+  background-color: #000;
+  color: #FFF;
+  height: 13vh;
 }
 
 .full-width {
@@ -33,11 +66,6 @@ body {
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 
-body {
-  text-align: center;
-  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
-}
-
 .paragraph {
   padding-left: 10rem;
   padding-right: 10rem;
@@ -50,32 +78,17 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #FFF;
 }
+/* ---- member-group ---- */
 
-body {
-  font-family: "Lucida Grande";
-}
-
-h1 {
+.member-group {
+  width: auto;
+  height: auto;
   color: #FFF;
+  overflow: hidden;
+  top: 50%;
 }
 
-h4 {
-  color: #AAA;;
-}
-
-.lead {
-  color: #AAA;
-}
-
-.outro {
-  background-color: #000;
-  color: #FFF;
-  height: 13vh;
-}
-
-p {
-  color: #AAA;
-}
+/* ---- member-image ---- */
 
 .profile--image {
   width: 200px;
@@ -92,14 +105,7 @@ p {
   margin: 24px 0% 12px 0%;
 }
 
-
-.member-group {
-  width: auto;
-  height: auto;
-  color: #FFF;
-  overflow: hidden;
-  top: 50%;
-}
+/* ---- member ---- */
 
 .member {
   display: inline-block;
@@ -134,60 +140,15 @@ member-body {
   font-family: 'Open Sans';
 }
 
-th, td {
-  border-bottom: 1px solid #ddd;
-}
+/* ---- footer ---- */
 
-.row {
-  width: 100%;
-  align-content: center;
-  right: 0;
-}
-
-.col-xs-12 {
-  margin: auto;
-  width: 98%;
-}
-
-.col-md-6 {
-  margin: auto;
-  width: 100%;
-  left:0;
-}
-
-
-.dataTables_filter label {
-  float: right;
-}
-
-.dataTables_length label {
-  float: left;
-}
-
-.dataTables_info {
-  float: left;
-}
-
-.dataTables_paginate {
-  float: right;
-}
-
-dataTables_wrapper {
-  display: inline-block;
-}
-/*
-thead {
-  display: inline-block;
-}
-
-tbody {
-  display: inline-block;
-}
-*/
 .no-footer {
   margin: 0px, 0%, 0px, 0%;
   padding: 0px;
 }
+
+/* ---- carousel ---- */
+
 .carousel-caption {
   position: absolute;
   display: -ms-flexbox;
@@ -224,20 +185,8 @@ tbody {
   vertical-align: bottom;
 }
 
-@media screen and (min-width: 767px) {
-  .inner{
-    padding: 10%;
-  }
-}
-
-@media screen and (min-width: 1227px) {
-  .table-responsive{
-    display: table;
-  }
-}
-
-
 /* Grid */
+
 .grid-sizer,
 .grid-item { width: 20%; }
 
@@ -252,17 +201,84 @@ tbody {
   min-width: 350px;
 }
 
+/* ---- button ---- */
+
 .button {
   display: inline-block;
-  padding: 10px 18px;
+  padding: 8px 15px;
   margin-bottom: 10px;
   background: #EEE;
   border: none;
   border-radius: 7px;
   background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
   color: #222;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   text-shadow: 0 1px white;
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: #8CF;
+  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+  color: #222;
+}
+
+.button:active,
+.button.is-checked {
+  background-color: #28F;
+}
+
+.button.is-checked {
+  color: white;
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+}
+
+.button:active {
+  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+}
+
+/* ---- button-group ---- */
+
+.button-group {
+  content: '';
+  clear: both;
+  margin-bottom: 30px;
+}
+
+/* ---- ui-group ---- */
+
+.ui-group {
+  display: inline-block;
+}
+
+.ui-group h3 {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 32px;
+  margin-right: 0.2em;
+  font-size: 16px;
+}
+
+.ui-group .button-group {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* ---- card ---- */
+
+.card {
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  margin-bottom: 0;
+}
+
+.list-group-item {
+  background-color: #333; 
+  border-color: #333; 
+  color: #FFF;
 }

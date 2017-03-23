@@ -7,18 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="CS373/idb/static/css/styles.processed.css"/>
+  <link rel="stylesheet" href="../static/css/styles.processed.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/dataTables.bootstrap4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-
-  <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script--> 
-  <!--script src="https://npmcdn.com/react@15.3.0/dist/react-with-addons.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"></script>
-  <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js"></script-->
-  <!--script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script-->
 </head>
 <body>
   <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
@@ -49,15 +41,12 @@
       </ul>
     </div>
   </nav>
-  <!--div id="app"></div-->
   <div class="gradient-bg" style="min-height:85vh"> 
     <div class="inner">
       <h1 class="cover-heading">Companies</h1>
     <br/><br/>
     <div class="container" style="color: white;">
-
       <div class="filters">
-
         <div class="ui-group">
           <h3>Ownership Type</h3>
           <div class="button-group js-radio-button-group" data-filter-group="ownership-type">
@@ -66,17 +55,15 @@
             <button class="button" data-filter=".private">Private</button>
           </div>
         </div>
-
         <div class="ui-group">
           <h3>Size</h3>
           <div class="button-group js-radio-button-group" data-filter-group="size">
             <button class="button is-checked" data-filter="">Any</button>
-            <button class="button" data-filter=".small-size">Small (1-50)</button>
-            <button class="button" data-filter=".medium-size">Medium (50-250)</button>
-            <button class="button" data-filter=".large-size">Large (250+)</button>
+            <button class="button" data-filter=".small-size">1-50</button>
+            <button class="button" data-filter=".medium-size">50-250</button>
+            <button class="button" data-filter=".large-size">250+</button>
           </div>
         </div>
-
         <div class="ui-group">
           <h3>Country</h3>
           <div class="button-group js-radio-button-group" data-filter-group="country">
@@ -85,9 +72,7 @@
             <button class="button" data-filter=".canada">Canada</button>
           </div>
         </div>
-
       </div>
-      
       <div class="grid small">
         <a href="link.com">  
         <div class="grid-item private small-size usa">
@@ -96,7 +81,9 @@
             <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1489162423/uihtpjzpzdmjjfftpjwu.png" alt="Card image cap">
             <div class="card-block">
               <h4 class="card-title">Chowbotics</h4>
-              <p class="card-text">Chowbotics uses robots to solve several problems in food service including compromised cleanliness and inefficiency.</p>
+              <div class="list-group-item">
+                Chowbotics uses robots to solve several problems in food service including compromised cleanliness and inefficiency.
+              </div>
               <a href="#" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
@@ -114,7 +101,9 @@
               <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1397190357/ef976829c17f2aa791001c15875492b2.png" alt="Card image cap">
               <div class="card-block">
                 <h4 class="card-title">Stormpath</h4>
-                <p class="card-text">Authentication & User Management API</p>
+                <div class="list-group-item">
+                  Authentication & User Management API.
+                </div>
                 <a href="#" class="btn btn-primary">More Information</a>
               </div>
               <ul class="list-group list-group-flush;">
@@ -132,7 +121,9 @@
             <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1414010267/v7pesynsteohgygkuhfz.jpg" alt="Card image cap">
             <div class="card-block">
               <h4 class="card-title">BORN</h4>
-              <p class="card-text">A marketing and technology agency whose solutions combine Creative Design, Content Production and eCommerce solutions.</p>
+                <div class="list-group-item">
+                  A marketing and technology agency whose solutions combine Creative Design, Content Production and eCommerce solutions.
+                </div>
               <a href="#" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
@@ -143,10 +134,8 @@
           </div>
           
         </div>
-      </a>
+        </a>
       </div>
-      
-      
       <script>
       $('.grid').isotope({
           // options
@@ -199,23 +188,17 @@
         }
         return value;
       }
-
-
       </script>
-      
-<div class="grid">
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-</div>
-
-
-      
+      <div class="grid">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+      </div>
     </div>
   </div>
   </div>
