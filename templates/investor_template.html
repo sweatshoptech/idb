@@ -43,29 +43,26 @@
   </nav>
   <div class="gradient-bg">
     <div class="inner">
-      <h1 class="cover-heading">{{company.name}}</h1>
+      <h1 class="cover-heading">{{investor.name}}</h1>
       <br/><br/>
       <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
         <div class="card-block">
           <div class="row">
             <div class="col-4">
-              <img src="{{company.image_url}}" alt="Company Logo" /></div>
+              <img src="{{investor.image_url}}" alt="Investor Logo" /></div>
             <div class="col-8" style="text-align: left;">
-              <b>Ownership  Type: </b> Private<br/>
-              <b>CEO: </b><a href="../../person/{{ceo.idnum}}">{{ceo.name}}</a>
-              <br/>
-              <b>Size: </b>{{company.size}} Employees
-              </br/>
-              <b>Location: </b>{{company.location}}<br/>
-              <b>Fuding: </b>${{company.funding}}<br/><br/>
-              <b>Description: </b>{{company.description}}<br/>
+              <b>Funding: </b> {{investor.title}}<br/>
+              <b>Location: </b>{{investor.location}}<br/>
+              <b>Website: </b><a href="{{investor.website}}" target="_blank">{{investor.website}}</a><br/><br/>
+              <b>Description: </b>{{investor.description}}<br/>
+
             </div>
           </div>
         </div>
       </div>
 </br>
 <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
-  <div class="card-block"><iframe src="//www.google.com/maps/embed/v1/place?q={{company.location}}&zoom=9&key=AIzaSyCWG2UDFO2LYEWx_dHDiLjeDBAYkeQ2vFc" width=100% height=300px>
+  <div class="card-block"><iframe src="//www.google.com/maps/embed/v1/place?q={{investor.location}}&zoom=9&key=AIzaSyCWG2UDFO2LYEWx_dHDiLjeDBAYkeQ2vFc" width=100% height=300px>
   </iframe></div>
   </div>
     </div>

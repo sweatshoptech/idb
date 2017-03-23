@@ -26,19 +26,23 @@ def companies():
 @app.route('/company/<int:company_id>')
 def company_template(company_id):
     company = models.Company.query.get(company_id)
-    return render_template('company_template.html', company=company)
+    ceo = models.Person.query.get(company.ceo_id)
+    return render_template('company_template.html', company=company, ceo=ceo)
 
 @app.route('/person/<int:person_id>')
-def person_template():
-    return render_template('companies.html', companies=tables.get_table_html(models.Company))
+def person_template(person_id):
+    person = models.Person.query.get(person_id)
+    return render_template('person_template.html', person=person)
 
 @app.route('/school/<int:school_id>')
-def school_template():
-    return render_template('companies.html', companies=tables.get_table_html(models.Company))
+def school_template(school_id):
+    school = models.School.query.get(school_id)
+    return render_template('school_template.html', school=school)
 
 @app.route('/investor/<int:investor_id>')
-def investor_template():
-    return render_template('companies.html', companies=tables.get_table_html(models.Company))
+def investor_template(investor_id):
+    investor = models.Investor.query.get(investor_id)
+    return render_template('investor_template.html', investor=investor)
 
 @app.route('/schools')
 @app.route('/schools.html')

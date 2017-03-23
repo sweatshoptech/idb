@@ -43,29 +43,25 @@
   </nav>
   <div class="gradient-bg">
     <div class="inner">
-      <h1 class="cover-heading">{{company.name}}</h1>
+      <h1 class="cover-heading">{{person.name}}</h1>
       <br/><br/>
       <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
         <div class="card-block">
           <div class="row">
             <div class="col-4">
-              <img src="{{company.image_url}}" alt="Company Logo" /></div>
+              <img src="{{person.image_url}}" alt="Company Logo" /></div>
             <div class="col-8" style="text-align: left;">
-              <b>Ownership  Type: </b> Private<br/>
-              <b>CEO: </b><a href="../../person/{{ceo.idnum}}">{{ceo.name}}</a>
-              <br/>
-              <b>Size: </b>{{company.size}} Employees
-              </br/>
-              <b>Location: </b>{{company.location}}<br/>
-              <b>Fuding: </b>${{company.funding}}<br/><br/>
-              <b>Description: </b>{{company.description}}<br/>
+              <b>Job Title: </b> {{person.title}}<br/>
+              <b>Date of Birth: </b>{{person.dob}}<br/>
+              <b>Location: </b>{{person.location}}<br/>
+              <b>Website: </b><a href="{{person.website}}" target="_blank">{{person.website}}</a><br/>
             </div>
           </div>
         </div>
       </div>
 </br>
 <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
-  <div class="card-block"><iframe src="//www.google.com/maps/embed/v1/place?q={{company.location}}&zoom=9&key=AIzaSyCWG2UDFO2LYEWx_dHDiLjeDBAYkeQ2vFc" width=100% height=300px>
+  <div class="card-block"><iframe src="//www.google.com/maps/embed/v1/place?q={{person.location}}&zoom=9&key=AIzaSyCWG2UDFO2LYEWx_dHDiLjeDBAYkeQ2vFc" width=100% height=300px>
   </iframe></div>
   </div>
     </div>
