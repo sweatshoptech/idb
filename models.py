@@ -42,6 +42,16 @@ education = db.Table(
     db.Column('person_id', db.Integer, db.ForeignKey('person.idnum')),
     db.Column('school_id', db.Integer, db.ForeignKey('school.idnum')))
 
+company_category = db.Table(
+    'company_category',
+    db.Column('category_id', db.Integer, db.ForeignKey('category.idnum')),
+    db.Column('company_id', db.Integer, db.ForeignKey('company.idnum')))
+
+investor_category = db.Table(
+    'investor_category',
+    db.Column('category_id', db.Integer, db.ForeignKey('category.idnum')),
+    db.Column('investor_id', db.Integer, db.ForeignKey('investor.idnum')))
+
 
 class Person(db.Model):
 
@@ -188,12 +198,3 @@ class Category(db.Model):
         """Get all category rows"""
         return self.query.all()
 
-company_category = db.Table(
-    'company_category',
-    db.Column('category_id', db.Integer, db.ForeignKey('category.idnum')),
-    db.Column('company_id', db.Integer, db.ForeignKey('company.idnum')))
-
-investor_category = db.Table(
-    'investor_category',
-    db.Column('category_id', db.Integer, db.ForeignKey('category.idnum')),
-    db.Column('investor_id', db.Integer, db.ForeignKey('investor.idnum')))
