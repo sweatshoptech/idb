@@ -44,11 +44,14 @@
         <li class="nav-item">
           <a class="nav-link" href="schools.html">Schools</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="implementation.html">Implementation</a>
+        </li>
       </ul>
     </div>
   </nav>
   <!--div id="app"></div-->
-  <div class="gradient-bg" style="height:85vh"> 
+  <div class="gradient-bg" style="height:85vh">
     <div class="inner">
       <h1 class="cover-heading">Companies</h1>
     <br/><br/>
@@ -56,7 +59,7 @@
       {{ companies|safe }}
       <script>
         $("table").css("color","white");
-        $("table").addClass("table table-hover table-striped table-responsive");
+        $("table").addClass("table table-hover table-striped");
         $("table").attr("id","example");
         $("table").attr("cellspacing", "0");
         $("table").attr("width", "100%");
@@ -65,12 +68,7 @@
       $(document).ready(function() {
         $('#example').DataTable();
       });
-      jQuery(document).ready(function($) {
-        $(".clickable-row").click(function() {
-          window.location = $(this).data("href");
-        });
-      }); 
-      </script>
+    </script>
     </div>
   </div>
   </div>

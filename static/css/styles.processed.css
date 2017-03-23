@@ -45,10 +45,10 @@ body {
 }
 
 .paragraph-text {
-    color: #FFF;
-    font-family: Open Sans;
-    font-size: 18px;
-    padding: 1rem 5rem;
+  font-size: 18px;
+  word-wrap: normal;
+  font-family: 'Open Sans', sans-serif;
+  color: #FFF;
 }
 
 body {
@@ -183,4 +183,10 @@ th, td {
   line-height: 90px;
   text-align: center;
   vertical-align: bottom;
+}
+
+@media screen and (min-width: 767px) {
+  .inner{
+    padding: 10%;
+  }
 }
