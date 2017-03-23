@@ -40,12 +40,14 @@ def person_template(person_id):
 @app.route('/school/<int:school_id>')
 def school_template(school_id):
     school = models.School.query.get(school_id)
-    return render_template('school_template.html', school=school)
+    people = school.alumni.all()[0]
+    return render_template('school_template.html', school=school, alum=people)
 
 @app.route('/investor/<int:investor_id>')
 def investor_template(investor_id):
     investor = models.Investor.query.get(investor_id)
-    return render_template('investor_template.html', investor=investor)
+    companies = investor.companies.all()[0]
+    return render_template('investor_template.html', investor=investor, company=companies)
 
 @app.route('/schools')
 @app.route('/schools.html')
