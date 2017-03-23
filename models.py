@@ -27,6 +27,21 @@ class Ownership(Enum):
     PUBLIC = 'Public'
     PRIVATE = 'Private'
 
+investment = db.Table(
+    'investment',
+    db.Column('company_id', db.Integer, db.ForeignKey('company.idnum')),
+    db.Column('investor_id', db.Integer, db.ForeignKey('investor.idnum')))
+
+employment = db.Table(
+    'employment',
+    db.Column('person_id', db.Integer, db.ForeignKey('person.idnum')),
+    db.Column('company_id', db.Integer, db.ForeignKey('company.idnum')))
+
+education = db.Table(
+    'education',
+    db.Column('person_id', db.Integer, db.ForeignKey('person.idnum')),
+    db.Column('school_id', db.Integer, db.ForeignKey('school.idnum')))
+
 
 class Person(db.Model):
 
@@ -39,6 +54,10 @@ class Person(db.Model):
     dob = db.Column(db.DateTime, nullable=True)
     image_url = db.Column(db.String(512), nullable=True)
     website = db.Column(db.String(512), nullable=True)
+    companies = db.relationship('Company', secondary=employment,
+        backref=db.backref('employees', lazy='dynamic'))
+    schools = db.relationship('School', secondary=education,
+        backref=db.backref('alumni', lazy='dynamic'))
 
     def __init__(self, name, title, location, dob, image_url, website):
         """Initializes a Person, pass in dob as datetime object"""
@@ -72,6 +91,8 @@ class Company(db.Model):
     image_url = db.Column(db.String(512), nullable=True)
     size = db.Column(db.Integer, nullable=True)
     website = db.Column(db.String(512), nullable=True)
+    investors = db.relationship('Investor', secondary=investment,
+        backref=db.backref('companies', lazy='dynamic'))
 
     def __init__(self, name, location, ownership_type, funding, description,
                  ceo_id, image_url, size, website):
@@ -166,22 +187,6 @@ class Category(db.Model):
     def get_all_rows(self):
         """Get all category rows"""
         return self.query.all()
-
-
-employment = db.Table(
-    'employment',
-    db.Column('person_id', db.Integer, db.ForeignKey('person.idnum')),
-    db.Column('company_id', db.Integer, db.ForeignKey('company.idnum')))
-
-education = db.Table(
-    'education',
-    db.Column('person_id', db.Integer, db.ForeignKey('person.idnum')),
-    db.Column('school_id', db.Integer, db.ForeignKey('school.idnum')))
-
-investment = db.Table(
-    'investment',
-    db.Column('company_id', db.Integer, db.ForeignKey('company.idnum')),
-    db.Column('investor_id', db.Integer, db.ForeignKey('investor.idnum')))
 
 company_category = db.Table(
     'company_category',

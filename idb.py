@@ -27,12 +27,15 @@ def companies():
 def company_template(company_id):
     company = models.Company.query.get(company_id)
     ceo = models.Person.query.get(company.ceo_id)
-    return render_template('company_template.html', company=company, ceo=ceo)
+    investors = company.investors
+    return render_template('company_template.html', company=company, ceo=ceo, investor=investors[0])
 
 @app.route('/person/<int:person_id>')
 def person_template(person_id):
     person = models.Person.query.get(person_id)
-    return render_template('person_template.html', person=person)
+    companies = person.companies[0]
+    schools = person.schools[0]
+    return render_template('person_template.html', person=person, company=companies, school=schools)
 
 @app.route('/school/<int:school_id>')
 def school_template(school_id):
