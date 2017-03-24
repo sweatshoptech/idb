@@ -24,39 +24,42 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="index.html"><img alt="Brand" src="http://vishnut.me/assets/external/logo.png" style="width: 200px;"></a>
+        <a class="navbar-brand" href="../index.html"><img alt="Brand" src="http://vishnut.me/assets/external/logo.png" style="width: 200px;"></a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="companies.html">Companies</a>
+              <a class="nav-link" href="../about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="people.html">People</a>
+              <a class="nav-link" href="../companies.html">Companies</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="investors.html">Investors</a>
+              <a class="nav-link" href="../people.html">People</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="schools.html">Schools</a>
+              <a class="nav-link" href="../investors.html">Investors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../schools.html">Schools</a>
             </li>
           </ul>
         </div>
       </nav>
       
-      <div class="gradient-bg">
+    <div class="gradient-bg inner" style="color: white; font-family: Open Sans;">
       
       
-      <h1><a id="Design_16"></a>Design</h1>
-<h2><a id="Model_18"></a>Model</h2>
-<p>[<img src="https://raw.githubusercontent.com/sweatshoptech/idb/master/static/img/IDB1.png" alt="">]</p>
-<p>Above is our UML diagram created using this text on <a href="https://yUML.me">yUML</a>:</p>
-<pre><code>[Person|name: string; title: string; location: string; dob: DateTime; image_url: string; website: string;]
+        <h1><b>Design</b></h1>
+        <br/>
+<h2>UML Model</h2>
+[<img src="https://raw.githubusercontent.com/sweatshoptech/idb/master/static/img/IDB1.png" alt="">]
+<br/>
+      Above is our UML diagram created using this text on <a href="https://yUML.me">yUML</a>:
+<br/>
+<pre><code style="color: white;">[Person|name: string; title: string; location: string; dob: DateTime; image_url: string; website: string;]
 [Company|name: string; location: string; ownership_type: enum; funding: string; description: string; image_url: string; size: int; website: string;]
 [Person]++&lt;1..*-1..*&gt;[Company]
 [School|name: string; location: string; description: string; size: int; image_url: string;  website: string;]
@@ -68,14 +71,14 @@
 [Category]++&lt;1-1..*&gt;[Investor]
 [Category]++&lt;1-1..*&gt;[Company]
 </code></pre>
-<p>We have four models: Company, Person, Investor, and School. Each model connects to two other models. Each company has a CEO, employees, and investors, people work for companies and have attended schools, investors invest in companies and schools, and schools have investors and alumni. Apart from this, each model also has additional information about each instance, such as location, description, website, etc. When creating the models, we set one-to-many and many-to-many relationships by creating tables in our <a href="http://models.py">models.py</a> file.</p>
-<h1><a id="Design_37"></a>Design</h1>
-<h2><a id="API_39"></a>API</h2>
-<p><a href="https://sweatshop.tech/api">SWEatshop API</a><br>
-SWEatshop has a simple API to retrieve centralized data regarding companies along with the people, investors and schools of everyone involved. We created a RESTful API in order to satisfy get requests by returning rows from our tables in our Amazon Web Services Relational PostgreSQL Database using Flask-SQLAlchemy. In future versions, we expect to make the API accept POST and UPDATE calls as well so that the AWS database can be updated through API calls.</p>
-<p>#Design</p>
-<h2><a id="Sorting_and_Filtering_46"></a>Sorting and Filtering</h2>
-<p>We use JQuery, Javascript, Isotope, Jinja2, Flask, HTML, and Bootstrap to implement sorting and filtering. First we create a template using HTML and Bootstrap. Each item is represented using a Bootstrap card and the data for each card is dynamically set by Flask and Jinja2. Flask accesses the AWS Relational Database through Flask PostgreSQL SQLAlchemy and renders the retrieved information in the template by means of Jinja2. We then set classes and certain other attributes in the HTML through Flask and Jinja2 so that the filters will know what to do. The filtering and sorting functionality are implemented through the use of Isotope, Jquery, and embedded Javascript. This allows us to, upon detecting a button click, change the content of the Isotope grid in the HTML template body. In order for Isotope to recognize that an item falls under a particular filter, a class attribute must be set with the name of the filter, and the same name must be set to the respective button’s list of attributes. For the sorting function to know what data to sort by, an attribute must be created in the div surrounding the Bootstrap card for each item.</p>
+We have four models: Company, Person, Investor, and School. Each model connects to two other models. Each company has a CEO, employees, and investors, people work for companies and have attended schools, investors invest in companies and schools, and schools have investors and alumni. Apart from this, each model also has additional information about each instance, such as location, description, website, etc. When creating the models, we set one-to-many and many-to-many relationships by creating tables in our <a href="http://models.py">models.py</a> file.
+<br/><br/>
+<h2>API</h2>
+<a href="https://sweatshop.tech/api">SWEatshop API</a><br>
+SWEatshop has a simple API to retrieve centralized data regarding companies along with the people, investors and schools of everyone involved. We created a RESTful API in order to satisfy get requests by returning rows from our tables in our Amazon Web Services Relational PostgreSQL Database using Flask-SQLAlchemy. In future versions, we expect to make the API accept POST and UPDATE calls as well so that the AWS database can be updated through API calls.
+<br/><br/>
+<h2>Sorting and Filtering</h2>
+We use JQuery, Javascript, Isotope, Jinja2, Flask, HTML, and Bootstrap to implement sorting and filtering. First we create a template using HTML and Bootstrap. Each item is represented using a Bootstrap card and the data for each card is dynamically set by Flask and Jinja2. Flask accesses the AWS Relational Database through Flask PostgreSQL SQLAlchemy and renders the retrieved information in the template by means of Jinja2. We then set classes and certain other attributes in the HTML through Flask and Jinja2 so that the filters will know what to do. The filtering and sorting functionality are implemented through the use of Isotope, Jquery, and embedded Javascript. This allows us to, upon detecting a button click, change the content of the Isotope grid in the HTML template body. In order for Isotope to recognize that an item falls under a particular filter, a class attribute must be set with the name of the filter, and the same name must be set to the respective button’s list of attributes. For the sorting function to know what data to sort by, an attribute must be created in the div surrounding the Bootstrap card for each item.
       
       
             
