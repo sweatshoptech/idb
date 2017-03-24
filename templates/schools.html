@@ -9,14 +9,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="../static/css/styles.processed.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/dataTables.bootstrap4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script--> 
-  <!--script src="https://npmcdn.com/react@15.3.0/dist/react-with-addons.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"></script>
-  <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js"></script-->
-  <!--script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script-->
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
@@ -42,35 +36,177 @@
           <a class="nav-link" href="investors.html">Investors</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="schools.html">Schools<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Schools<span class="sr-only">(current)</span></a>
         </li>
       </ul>
     </div>
   </nav>
-  <!--div id="app"></div-->
-  <div class="gradient-bg" style="height:85vh">
+  <div class="gradient-bg" style="min-height:85vh"> 
     <div class="inner">
       <h1 class="cover-heading">Schools</h1>
-    <br/><br/>
+      <br/><br/>
     <div class="container" style="color: white;">
-      {{ schools|safe }}
+      <div class="filters">
+        <div class="ui-group">
+          <h3>Size</h3>
+          <div class="button-group js-radio-button-group" data-filter-group="size">
+            <button class="button is-checked" data-filter="">Any</button>
+            <button class="button" data-filter=".small-size">1-1,000</button>
+            <button class="button" data-filter=".medium-size">1,001-10,000</button>
+            <button class="button" data-filter=".large-size">10,001+</button>
+          </div>
+        </div>
+        <div class="ui-group">
+          <h3>Country</h3>
+          <div class="button-group js-radio-button-group" data-filter-group="country">
+            <button class="button is-checked" data-filter="">Any</button>
+            <button class="button" data-filter=".usa">USA</button>
+            <button class="button" data-filter=".india">India</button>
+          </div>
+        </div>
+      </div>
+      <div class="ui-group">
+        <h3>Sort By</h3>
+        <div class="button-group sort-by-button-group">
+          <button class="button is-checked" data-sort-value="name" >Name</button>
+          <button class="button" data-sort-value="size" >Size</button>
+        </div>
+      </div>
+      <div class="grid small">
+        <a href="http://sweatshop.tech/company/1">  
+        <div class="grid-item private medium-size india" name='Indian Institute of Technology Madras' size='10000'>
+          <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
+            <div style="background: #FFF; width: 100%">
+              <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1415957687/v2l8rpjmlodkqqedmbpe.jpg" alt="Card image cap">
+            </div>
+            <div class="card-block">
+              <h4 class="card-title name">Indian Institute of Technology Madras</h4>
+              <div class="list-group-item">
+                Indian Institute of Technology branch in Madras, India.
+              </div>
+              <a href="#" class="btn btn-primary">More Information</a>
+            </div>
+            <ul class="list-group list-group-flush;">
+              <a href="http://www.iitm.ac.in/">
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">http://www.iitm.ac.in/</li>
+              </a>
+              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Size: 10,000</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: India</li>
+            </ul>
+          </div>
+        </div>
+        </a>
+        <a href="http://sweatshop.tech/company/2">  
+        <div class="grid-item private large-size usa" name='Stormpath' size='26806'>
+            <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
+            <div style="background: #FFF; width: 100%">
+              <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1397190357/ef976829c17f2aa791001c15875492b2.png" alt="Card image cap">
+            </div>
+            <div class="card-block">
+              <h4 class="card-title name">Georgia Institute of Technology</h4>
+              <div class="list-group-item">
+                The Georgia Institute of Technology is a public research university in Atlanta, Georgia, in the United States.
+              </div>
+              <a href="#" class="btn btn-primary">More Information</a>
+            </div>
+            <ul class="list-group list-group-flush;">
+              <a href="http://www.gatech.edu/">
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">http://www.gatech.edu/</li>
+              </a>
+              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Size: 26,806</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
+            </ul>
+          </div>
+        </div>
+        </a>
+        <a href="http://sweatshop.tech/company/3"> 
+        <div class="grid-item private small-size usa" name='Stanford University Graduate School of Business' size='1000'>
+          <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
+            <div style="background: #FFF; width: 100%">
+              <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1414010267/v7pesynsteohgygkuhfz.jpg" alt="Card image cap">
+            </div>
+            <div class="card-block">
+              <h4 class="card-title name">Stanford University Graduate School of Business</h4>
+                <div class="list-group-item">
+                  Graduate School of Business at Stanford University in Stanford, CA. 
+                </div>
+              <a href="#" class="btn btn-primary">More Information</a>
+            </div>
+            <ul class="list-group list-group-flush;">
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: Private</li>
+              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Size: 1000</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
+            </ul>
+          </div>
+        </div>
+        </a>
+      </div>
       <script>
-        $("table").css("color","white");
-        $("table").addClass("table table-hover table-striped table-responsive");
-        $("table").attr("id","example");
-        $("table").attr("cellspacing", "0");
-        $("table").attr("width", "100%");
-      </script>
-    <script>
-      $(document).ready(function() {
-        $('#example').DataTable();
+      // init Isotope
+      var $grid = $('.grid').isotope({
+          itemSelector: '.grid-item',
+          layoutMode: 'fitRows',
+          masonry: {
+            columnWidth: 100
+          },
+          getSortData: {
+            name: '[name]',
+            funding: '[funding] parseInt',
+            size: '[size] parseInt'
+          },
+          sortBy: 'name'
       });
-      jQuery(document).ready(function($) {
-        $(".clickable-row").click(function() {
-          window.location = $(this).data("href");
+        
+      // bind sort button click
+      $('.sort-by-button-group').on( 'click', 'button', function() {
+        var sortByValue = $(this).attr('data-sort-value');
+        $grid.isotope({ sortBy: sortByValue });
+      });
+        
+      // store filter for each group
+      var filters = {};
+
+      $('.filters').on( 'click', '.button', function() {
+        var $this = $(this);
+        // get group key
+        var $buttonGroup = $this.parents('.button-group');
+        var filterGroup = $buttonGroup.attr('data-filter-group');
+        // set filter for group
+        filters[ filterGroup ] = $this.attr('data-filter');
+        // combine filters
+        var filterValue = concatValues( filters );
+        // set filter for Isotope
+        $grid.isotope({ filter: filterValue });
+      });
+
+      // change is-checked class on buttons
+      $('.button-group').each( function( i, buttonGroup ) {
+        var $buttonGroup = $( buttonGroup );
+        $buttonGroup.on( 'click', 'button', function() {
+          $buttonGroup.find('.is-checked').removeClass('is-checked');
+          $( this ).addClass('is-checked');
         });
-      });  
-    </script>
+      });
+
+      // flatten object by concatting values
+      function concatValues( obj ) {
+        var value = '';
+        for ( var prop in obj ) {
+          value += obj[ prop ];
+        }
+        return value;
+      }
+      </script>
+      <div class="grid">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+      </div>
     </div>
   </div>
   </div>
