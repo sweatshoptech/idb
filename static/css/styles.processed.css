@@ -174,8 +174,11 @@ member-body {
   overflow: hidden;
   word-wrap: normal;
   color: white;
-  font-size: 200%;
-  width: 100%;
+  width: auto;
+  margin-top: 29%;
+  color: white;
+  text-shadow: 1px 2px 3px #666;
+  font-size: 550%;
 }
 
 .carousel-body {
