@@ -50,14 +50,19 @@
       </nav>
       
     <div class="gradient-bg inner" style="color: white; font-family: Open Sans;">
-        <ul>
-          <li><a href="../report" style="color:white;">Report</a></li>
-          <li><a href="introduction.html" style="color:white;">Introduction</a></li>
-          <li><a href="#" style="color:white;">Design</a></li>
-          <li><a href="tools.html" style="color:white;">Tools</a></li>
-          <li><a href="hosting.html" style="color:white;">Hosting</a></li>
-        </ul>
-        
+               <br/>
+          <div class="card text-center" style="background-color: #333; width:500px; max-width: 95%;" >
+            <div class="card-block">
+              <h4 class="card-title">Report Menu</h4>
+                <p class="card-text"><br/>
+                  <a href="../report" style="color:white;">Report</a></br>
+                  <a href="introduction.html" style="color:white;">Introduction</a></br>
+                  <a href="design.html" style="color:white;">Design</a></br>
+                  <a href="tools.html" style="color:white;">Tools</a></br>
+                  <a href="hosting.html" style="color:white;">Hosting</a></br>
+               </p>
+             </div>
+           </div> 
         <br/><br/>
       
         <h1><b>Design</b></h1>
@@ -67,6 +72,8 @@
 <br/>
       Above is our UML diagram created using this text on <a href="https://yUML.me">yUML</a>:
 <br/>
+<div class="card" style="background-color: #333;" >
+  <div class="card-block text-left" style="text: left">
 <pre><code style="color: white;">[Person|name: string; title: string; location: string; dob: DateTime; image_url: string; website: string;]
 [Company|name: string; location: string; ownership_type: enum; funding: string; description: string; image_url: string; size: int; website: string;]
 [Person]++&lt;1..*-1..*&gt;[Company]
@@ -77,13 +84,16 @@
 [Investor]++&lt;1..*-1..*&gt;[Company]
 [Category|idnum:int; name: string;]
 [Category]++&lt;1-1..*&gt;[Investor]
-[Category]++&lt;1-1..*&gt;[Company]
-</code></pre>
+[Category]++&lt;1-1..*&gt;[Company]</code></pre>
+  </div>
+</div>
+
 We have four models: Company, Person, Investor, and School. Each model connects to two other models. Each company has a CEO, employees, and investors, people work for companies and have attended schools, investors invest in companies and schools, and schools have investors and alumni. Apart from this, each model also has additional information about each instance, such as location, description, website, etc. When creating the models, we set one-to-many and many-to-many relationships by creating tables in our <a href="http://models.py">models.py</a> file.
 <br/><br/>
 <h2>API</h2>
 <a href="https://sweatshop.tech/api">SWEatshop API</a><br>
-SWEatshop has a simple API to retrieve centralized data regarding companies along with the people, investors and schools of everyone involved. We created a RESTful API in order to satisfy get requests by returning rows from our tables in our Amazon Web Services Relational PostgreSQL Database using Flask-SQLAlchemy. In future versions, we expect to make the API accept POST and UPDATE calls as well so that the AWS database can be updated through API calls.
+SWEatshop has a simple API to retrieve centralized data regarding companies along with the people, investors and schools of everyone involved. We created a RESTful API in order to satisfy get requests by returning rows from our tables in our Amazon Web Services Relational PostgreSQL Database using Flask-SQLAlchemy. In future versions, we expect to make the API accept POST and UPDATE calls as well so that the AWS database can be updated through API calls.<br/>
+We get our data from the <a href="http://data.crunchbase.com">Crunchbase API</a>. The API has information on the companies, people, investments, and a lot more. 
 <br/><br/>
 <h2>Sorting and Filtering</h2>
 We use JQuery, Javascript, Isotope, Jinja2, Flask, HTML, and Bootstrap to implement sorting and filtering. First we create a template using HTML and Bootstrap. Each item is represented using a Bootstrap card and the data for each card is dynamically set by Flask and Jinja2. Flask accesses the AWS Relational Database through Flask PostgreSQL SQLAlchemy and renders the retrieved information in the template by means of Jinja2. We then set classes and certain other attributes in the HTML through Flask and Jinja2 so that the filters will know what to do. The filtering and sorting functionality are implemented through the use of Isotope, Jquery, and embedded Javascript. This allows us to, upon detecting a button click, change the content of the Isotope grid in the HTML template body. In order for Isotope to recognize that an item falls under a particular filter, a class attribute must be set with the name of the filter, and the same name must be set to the respective button’s list of attributes. For the sorting function to know what data to sort by, an attribute must be created in the div surrounding the Bootstrap card for each item.
