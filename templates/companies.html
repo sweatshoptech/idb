@@ -83,64 +83,64 @@
       </div>
       <div class="grid small">
         <a href="http://sweatshop.tech/company/1">  
-        <div class="grid-item private small-size usa" funding='6300000' name='Chowbotics' size='32'>
+        <div class="grid-item private small-size usa" funding='{{companies[0].funding}}' name='{{companies[0].name}}' size='{{companies[0].size}}'>
           <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
             <div style="background: #FFF; width: 100%">
-              <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1489162423/uihtpjzpzdmjjfftpjwu.png" alt="Card image cap">
+              <img class="card-img-top" src="{{companies[0].image_url}}" alt="Card image cap">
             </div>
             <div class="card-block">
               <h4 class="card-title name">{{companies[0].name}}</h4>
               <div class="list-group-item">
-                Chowbotics uses robots to solve several problems in food service including compromised cleanliness and inefficiency.
+                {{companies[0].description}}
               </div>
               <a href="#" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: Private</li>
-              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: $6300000</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: {{companies[0].ownership_type}}</li>
+              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{companies[0].funding}}</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{companies[0].location}}</li>
             </ul>
           </div>
         </div>
         </a>
         <a href="http://sweatshop.tech/company/2">  
-        <div class="grid-item private small-size usa" funding='24700000' name='Stormpath' size='12'>
+        <div class="grid-item private small-size usa" funding='{{companies[1].funding}}' name='{{companies[1].name}}' size='{{companies[1].size}}'>
             <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
             <div style="background: #FFF; width: 100%">
-              <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1397190357/ef976829c17f2aa791001c15875492b2.png" alt="Card image cap">
+              <img class="card-img-top" src="{{companies[1].image_url}}" alt="Card image cap">
             </div>
             <div class="card-block">
               <h4 class="card-title name">{{companies[1].name}}</h4>
               <div class="list-group-item">
-                Authentication & User Management API.
+                {{companies[1].description}}
               </div>
               <a href="#" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: Private</li>
-              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: $24700000</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: {{companies[1].ownership_type}}</li>
+              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{companies[1].funding}}</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{companies[1].location}}</li>
             </ul>
           </div>
         </div>
         </a>
         <a href="http://sweatshop.tech/company/3"> 
-        <div class="grid-item private large-size usa" funding='6300000' name='BORN' size='592'>
+        <div class="grid-item private large-size usa" funding='{{companies[2].funding}}' name='{{companies[2].name}}' size='{{companies[2].size}}'>
           <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
             <div style="background: #FFF; width: 100%">
-              <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1414010267/v7pesynsteohgygkuhfz.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{{companies[2].image_url}}" alt="Card image cap">
             </div>
             <div class="card-block">
               <h4 class="card-title name">{{companies[2].name}}</h4>
                 <div class="list-group-item">
-                  A marketing and technology agency whose solutions combine Creative Design, Content Production and eCommerce solutions.
+                {{companies[2].description}}
                 </div>
               <a href="#" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: Private</li>
-              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: $6300000</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: {{companies[2].ownership_type}}</li>
+              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{companies[2].funding}}</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{companies[2].location}}</li>
             </ul>
           </div>
         </div>
