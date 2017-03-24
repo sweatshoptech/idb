@@ -65,69 +65,70 @@
       </div>
       <div class="grid small">
         <a href="http://sweatshop.tech/investor/2">  
-        <div class="grid-item usa" funding='3748000' name='Pelion Venture Partners'>
+        <div class="grid-item usa" funding='{{investors[0].funding}}' name='{{investors[0].name}}'>
           <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
             <div style="background: #FFF; width: 100%">
-              <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1397179667/c01cda23b1c8153e87bc37b324ec5fec.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{{investors[0].image_url}}" alt="Card image cap">
             </div>
             <div class="card-block">
               <h4 class="card-title name">{{investors[0].name}}</h4>
               <div class="list-group-item">
-                Formerly UV Partners Since 1986, Pelion Venture Partners has been helping entrepreneurs turn early-stage concepts into tomorrow.
+                {{investors[0].description}}
               </div>
               <a href="#" class="btn btn-primary">More Information</a>
             </div>
-            <ul class="list-group list-group-flush;"><a href="http://pelionvp.com">
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">http://pelionvp.com</li>
+            <ul class="list-group list-group-flush;">
+              <a href="{{investors[0].website}}">
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{investors[0].website}}</li>
               </a>
-              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: $3,748,000</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
+              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{investors[0].funding}}</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investors[0].location}}</li>
             </ul>
           </div>
         </div>
         </a>
         <a href="http://sweatshop.tech/investor/1">  
-        <div class="grid-item usa" funding='5784850' name='Geekdom Fund'>
+        <div class="grid-item usa" funding='{{investors[1].funding}}' name='{{investors[1].name}}'>
             <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
             <div style="background: #FFF; width: 100%">
-              <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1407349059/czbs2zk9z5kz5dyvfbny.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{{investors[1].image_url}}" alt="Card image cap">
             </div>
             <div class="card-block">
               <h4 class="card-title name">{{investors[1].name}}</h4>
               <div class="list-group-item">
-                The Geekdom Fund is a venture capital fund that invests in early stage IT startups in San Antonio, South Texas and beyond.
+                {{investors[1].description}}
               </div>
               <a href="#" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
-              <a href="http://geekdomfund.com/">
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">http://geekdomfund.com/</li>
+              <a href="{{investors[1].website}}">
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{investors[1].website}}</li>
               </a>
-              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: $5,784,850</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
+              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{investors[1].funding}}</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investors[1].location}}</li>
             </ul>
           </div>
         </div>
         </a>
         <a href="http://sweatshop.tech/investor/3"> 
-        <div class="grid-item usa" funding='3749300' name='Scale Venture Partners'>
+        <div class="grid-item usa" funding='{{investors[2].funding}}' name='{{investors[2].name}}'>
           <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
             <div style="background: #FFF; width: 100%">
-              <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1397178826/f7ab3ffe2646afa0014c27dd1c036891.gif" alt="Card image cap">
+              <img class="card-img-top" src="{{investors[2].image_url}}" alt="Card image cap">
             </div>
             <div class="card-block">
               <h4 class="card-title name">{{investors[2].name}}</h4>
                 <div class="list-group-item">
-                  Scale Venture Partners is a VC firm that invests in enterprise technology companies with a focus on SaaS and cloud infrastructure.
+                {{investors[2].description}}
                 </div>
               <a href="#" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
-              <a href="http://www.scalevp.com">
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">http://www.scalevp.com</li>
+              <a href="{{investors[2].website}}">
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{investors[2].website}}/li>
               </a>
-              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: $3,749,300</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
+              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{investors[2].funding}}</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investors[2].location}}</li>
             </ul>
           </div>
         </div>
