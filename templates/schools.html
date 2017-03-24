@@ -74,68 +74,70 @@
       </div>
       <div class="grid small">
         <a href="http://sweatshop.tech/school/1">  
-        <div class="grid-item private medium-size india" name='Indian Institute of Technology Madras' size='10000'>
+        <div class="grid-item private medium-size india" name='{{schools[0].name}}' size='{{schools[0].size}}'>
           <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
             <div style="background: #FFF; width: 100%">
-              <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1415957687/v2l8rpjmlodkqqedmbpe.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{{schools[0].image_url}}" alt="Card image cap">
             </div>
             <div class="card-block">
               <h4 class="card-title name">{{schools[0].name}}</h4>
               <div class="list-group-item">
-                Indian Institute of Technology branch in Madras, India.
+                {{schools[0].description}}
               </div>
               <a href="#" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
-              <a href="http://www.iitm.ac.in/">
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">http://www.iitm.ac.in/</li>
+              <a href="{{schools[0].website}}">
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{schools[0].website}}</li>
               </a>
-              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Size: 10,000</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: India</li>
+              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Size: {{schools[0].size}}</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{schools[0].location}}</li>
             </ul>
           </div>
         </div>
         </a>
         <a href="http://sweatshop.tech/school/2">  
-        <div class="grid-item private large-size usa" name='Stormpath' size='26806'>
+        <div class="grid-item private large-size usa" name='{{schools[1].name}}' size='{{schools[1].size}}'>
             <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
             <div style="background: #FFF; width: 100%">
-              <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1452600927/wygblir8adecdfrokppd.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{{schools[1].image_url}}" alt="Card image cap">
             </div>
             <div class="card-block">
               <h4 class="card-title name">{{schools[1].name}}</h4>
               <div class="list-group-item">
-                The Georgia Institute of Technology is a public research university in Atlanta, Georgia, in the United States.
+                {{schools[1].description}}
               </div>
               <a href="#" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
-              <a href="http://www.gatech.edu/">
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">http://www.gatech.edu/</li>
+              <a href="{{schools[1].website}}">
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{schools[1].website}}</li>
               </a>
-              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Size: 26,806</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
+              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Size: {{schools[1].size}}</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{schools[1].location}}</li>
             </ul>
           </div>
         </div>
         </a>
         <a href="http://sweatshop.tech/school/3"> 
-        <div class="grid-item private small-size usa" name='Stanford University Graduate School of Business' size='1000'>
+        <div class="grid-item private small-size usa" name='{{schools[2].name}}' size='{{schools[2].size}}'>
           <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
             <div style="background: #FFF; width: 100%">
-              <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1481309706/olvayk18i7e3t1mptejq.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{{schools[2].image_url}}" alt="Card image cap">
             </div>
             <div class="card-block">
               <h4 class="card-title name">{{schools[2].name}}</h4>
                 <div class="list-group-item">
-                  Graduate School of Business at Stanford University in Stanford, CA. 
+                {{schools[2].description}}
                 </div>
               <a href="#" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: Private</li>
-              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Size: 1000</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
+              <a href="{{schools[2].website}}">
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{schools[2].website}}</li>
+              </a>
+              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Size: {{schools[2].size}}</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{schools[2].location}}</li>
             </ul>
           </div>
         </div>
