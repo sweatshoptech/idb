@@ -49,10 +49,9 @@
         </div>
       </nav>
       <div class="gradient-bg inner" style="color: white; font-family: Open Sans;">
-      <br/>
       <h1><b>Hosting</b></h1>
         <br/>
-<p>We created an Elastic Compute Cloud (EC2) instance (virtual machine) and placed <a href="http://idb.py">idb.py</a> inside of it. We then used Apache2 to map the ip address of the EC2 instance to <a href="http://idb.py">idb.py</a>. In <a href="http://idb.py">idb.py</a> we utilize Flask as our backend to link the database and the HTML templates. On top of Flask we have Jinja2 which allows us to embed dynamic content through Flask onto the HTML pages. We use SQLAlchemy to model databases in Python using classes instead of plsql. It is also used to query the tables, integrate with Flask, and get data from the database which is hosted on Amazon Web Services relation database (AWS RDS). We bought the domain sweatshop.tech from Namecheap after much deliberation. We mapped the domain to the public IP and public DNS of our EC2 instance on AWS so that going to the Namecheap domain would run <a href="http://idb.py">idb.py</a> and Flask can route your request, connect to the AWS PostgresSQL database, and finally render the HTML templates.</p>
+We created an Elastic Compute Cloud (EC2) instance (virtual machine) and placed <a href="http://idb.py">idb.py</a> inside of it. We then used Apache2 to map the ip address of the EC2 instance to <a href="http://idb.py">idb.py</a>. In <a href="http://idb.py">idb.py</a> we utilize Flask as our backend to link the database and the HTML templates. On top of Flask we have Jinja2 which allows us to embed dynamic content through Flask onto the HTML pages. We use SQLAlchemy to model databases in Python using classes instead of plsql. It is also used to query the tables, integrate with Flask, and get data from the database which is hosted on Amazon Web Services relation database (AWS RDS). We bought the domain sweatshop.tech from Namecheap after much deliberation. We mapped the domain to the public IP and public DNS of our EC2 instance on AWS so that going to the Namecheap domain would run <a href="http://idb.py">idb.py</a> and Flask can route your request, connect to the AWS PostgresSQL database, and finally render the HTML templates.
       
       
       </div>
