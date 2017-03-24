@@ -21,7 +21,7 @@ def about():
 @app.route('/companies')
 @app.route('/companies.html')
 def companies():
-    return render_template('companies.html', companies=tables.get_table_html(models.Company))
+    return render_template('companies.html', companies=models.Company.query.all())
 
 @app.route('/company/<int:company_id>')
 def company_template(company_id):
@@ -41,13 +41,15 @@ def person_template(person_id):
 def school_template(school_id):
     school = models.School.query.get(school_id)
     people = school.alumni.all()[0]
-    return render_template('school_template.html', school=school, alum=people)
+    investors = school.investors
+    return render_template('school_template.html', school=school, alum=people, investor=investors[0])
 
 @app.route('/investor/<int:investor_id>')
 def investor_template(investor_id):
     investor = models.Investor.query.get(investor_id)
     companies = investor.companies.all()[0]
-    return render_template('investor_template.html', investor=investor, company=companies)
+    schools = investor.schools.all()[0]
+    return render_template('investor_template.html', investor=investor, company=companies, school=schools)
 
 @app.route('/schools')
 @app.route('/schools.html')
@@ -64,10 +66,14 @@ def investors():
 def people():
     return render_template('people.html', people=tables.get_table_html(models.Person))
 
-@app.route('/implementation')
-@app.route('/implementation.html')
+@app.route('/report')
+@app.route('/report.html')
 def report():
-    return render_template('implementation.html')
+    return render_template('report/report.html')
+
+@app.route('/report/<subpage>')
+def reportsub(subpage):
+    return render_template('report/{0}'.format(subpage))
 
 if __name__ == '__main__':
   app.run()
