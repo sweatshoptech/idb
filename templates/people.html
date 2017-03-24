@@ -73,27 +73,27 @@
       </div>
       <div class="grid small">
         <a href="http://sweatshop.tech/person/1">  
-        <div class="grid-item ceo usa" funding='6300000' name='Deepak Sekar' date='1975'>
+        <div class="grid-item ceo usa" name='{{people[0].name}}' date='1975'>
           <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
             <div style="background: #FFF; width: 100%">
               <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1488973627/czyyg9bvkun0skdepnsn.png" alt="Card image cap">
             </div>
             <div class="card-block">
-              <h4 class="card-title name">{{people[0].name}}r</h4>
+              <h4 class="card-title name">{{people[0].name}}</h4>
               <div class="list-group-item">
-                CEO
+                {{people[0].title}}
               </div>
               <a href="#" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
               <li class="list-group-item" style="background-color: #333; border-color: #333;">DOB: June 2, 1975</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{people[0].location}}</li>
             </ul>
           </div>
         </div>
         </a>
         <a href="http://sweatshop.tech/person/2">  
-        <div class="grid-item ceo usa" funding='24700000' name='Alex Salazar' date='1967'>
+        <div class="grid-item ceo usa" name='{{people[1].name}}' date='1967'>
             <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
             <div style="background: #FFF; width: 100%">
               <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1482911671/ginkhqtposotzugi0zpl.png" alt="Card image cap">
@@ -101,19 +101,19 @@
             <div class="card-block">
               <h4 class="card-title name">{{people[1].name}}</h4>
               <div class="list-group-item">
-                CEO
+                {{people[1].title}}
               </div>
               <a href="#" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
               <li class="list-group-item" style="background-color: #333; border-color: #333;">DOB: Dec 18, 1967</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: {{people[1].location}}</li>
             </ul>
           </div>
         </div>
         </a>
         <a href="http://sweatshop.tech/person/3"> 
-        <div class="grid-item ceo usa" funding='6300000' name='Dilip Keshu' date='1962'>
+        <div class="grid-item ceo usa" name='{{people[2].name}}' date='1962'>
           <div class="card text-center card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
             <div style="background: #FFF; width: 100%">
               <img class="card-img-top" src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1397632836/052828bcd0edb674d3c6176413d58b81.jpg" alt="Card image cap">
@@ -121,13 +121,13 @@
             <div class="card-block">
               <h4 class="card-title name">{{people[2].name}}</h4>
               <div class="list-group-item">
-                CEO
+                {{people[2].title}}
               </div>
               <a href="#" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
               <li class="list-group-item" style="background-color: #333; border-color: #333;">DOB: Jan 12, 1962</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: USA</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: {{people[2].location}}</li>
             </ul>
           </div>
         </div>
