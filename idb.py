@@ -4,8 +4,10 @@ from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 import models
 import tables
+import json
 
 app = Flask(__name__)
+
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
@@ -13,15 +15,18 @@ app = Flask(__name__)
 def home_page():
     return render_template('index.html')
 
+
 @app.route('/about')
 @app.route('/about.html')
 def about():
     return render_template('about.html')
 
+
 @app.route('/companies')
 @app.route('/companies.html')
 def companies():
     return render_template('companies.html', companies=models.Company.query.all())
+
 
 @app.route('/company/<int:company_id>')
 def company_template(company_id):
@@ -30,12 +35,14 @@ def company_template(company_id):
     investors = company.investors
     return render_template('company_template.html', company=company, ceo=ceo, investor=investors[0])
 
+
 @app.route('/person/<int:person_id>')
 def person_template(person_id):
     person = models.Person.query.get(person_id)
     companies = person.companies[0]
     schools = person.schools[0]
     return render_template('person_template.html', person=person, company=companies, school=schools)
+
 
 @app.route('/school/<int:school_id>')
 def school_template(school_id):
@@ -44,6 +51,7 @@ def school_template(school_id):
     investors = school.investors
     return render_template('school_template.html', school=school, alum=people, investor=investors[0])
 
+
 @app.route('/investor/<int:investor_id>')
 def investor_template(investor_id):
     investor = models.Investor.query.get(investor_id)
@@ -51,29 +59,45 @@ def investor_template(investor_id):
     schools = investor.schools.all()[0]
     return render_template('investor_template.html', investor=investor, company=companies, school=schools)
 
+
 @app.route('/schools')
 @app.route('/schools.html')
 def schools():
     return render_template('schools.html', schools=tables.get_table_html(models.School))
+
 
 @app.route('/investors')
 @app.route('/investors.html')
 def investors():
     return render_template('investors.html', investors=tables.get_table_html(models.Investor))
 
+
 @app.route('/people')
 @app.route('/people.html')
 def people():
     return render_template('people.html', people=tables.get_table_html(models.Person))
+
 
 @app.route('/report')
 @app.route('/report.html')
 def report():
     return render_template('report/report.html')
 
+
 @app.route('/report/<subpage>')
 def reportsub(subpage):
     return render_template('report/{0}'.format(subpage))
 
+
+@app.route('/api/companies')
+def all_companies():
+    return json.dumps(models.Company.query.all())
+
+
+@app.route('/api/company/<instance_id>')
+def get_company(instance_id):
+    # instance state
+    return json.dumps(models.Company.query.get(instance_id).__dict__)
+
 if __name__ == '__main__':
-  app.run()
+    app.run()

@@ -70,9 +70,9 @@ class Person(db.Model):
     image_url = db.Column(db.String(512), nullable=True)
     website = db.Column(db.String(512), nullable=True)
     companies = db.relationship('Company', secondary=employment,
-        backref=db.backref('employees', lazy='dynamic'))
+                                backref=db.backref('employees', lazy='dynamic'))
     schools = db.relationship('School', secondary=education,
-        backref=db.backref('alumni', lazy='dynamic'))
+                              backref=db.backref('alumni', lazy='dynamic'))
 
     def __init__(self, name, title, location, dob, image_url, website):
         """Initializes a Person, pass in dob as datetime object"""
@@ -107,7 +107,7 @@ class Company(db.Model):
     size = db.Column(db.Integer, nullable=True)
     website = db.Column(db.String(512), nullable=True)
     investors = db.relationship('Investor', secondary=investment,
-        backref=db.backref('companies', lazy='dynamic'))
+                                backref=db.backref('companies', lazy='dynamic'))
 
     def __init__(self, name, location, ownership_type, funding, description,
                  ceo_id, image_url, size, website):
@@ -142,8 +142,8 @@ class School(db.Model):
     image_url = db.Column(db.String(512), nullable=True)
     website = db.Column(db.String(512), nullable=True)
     investors = db.relationship('Investor', secondary=school_investment,
-        backref=db.backref('schools', lazy='dynamic'))
-            
+                                backref=db.backref('schools', lazy='dynamic'))
+
     def __init__(self, name, location, description, image_url, size, website):
         self.name = name
         self.location = location

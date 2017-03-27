@@ -1,3 +1,895 @@
+commit fca02df7b3370c8cd195a0d486af3061b36d9df9
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 24 02:49:49 2017 +0000
+
+    report fin
+
+commit 53a3dd4fc0a4c904b697ca470d77f37b42b23d12
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 24 02:26:03 2017 +0000
+
+    tools update
+
+commit 7e20ede36397f995f48eb761ca705ecda8b1b7c0
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 21:22:18 2017 -0500
+
+    added data in about
+
+commit ddfaa35ae27ce2453046473aa6163265de5f88cc
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 21:15:00 2017 -0500
+
+    fixed about page
+
+commit b95b53903958563fa5de45094f1a60fd930e53b5
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 24 02:02:21 2017 +0000
+
+    about page
+
+commit 4a5b709c023b79e4e79f5253c0c5693391b0b28a
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 20:50:54 2017 -0500
+
+    fixed link on investor page
+
+commit 8962068dc3d281ba56295df309c9fc1929f0b6ad
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 20:46:16 2017 -0500
+
+    made carousel p a sans serif font
+
+commit e057600c6ad2cc4be0614f26b48c90dde35aba9e
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 20:44:59 2017 -0500
+
+    made schools dynamic
+
+commit 9bf8c9bae8967efd2a0027c8e0913194b416f233
+Merge: 509a8e1 24131ee
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 20:39:31 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 509a8e19d6a07217c8d465b9f1e268993289eb7a
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 20:39:28 2017 -0500
+
+    made investors dynamic
+
+commit 24131ee4556d69ad5466cde4aaf7e35f5a45b5c0
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 24 01:35:34 2017 +0000
+
+    fix links
+
+commit 71a69bc410651799f42c208583a50db0e0802efe
+Merge: d701384 69d04e4
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 20:31:22 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit d7013843802e6ba3b66819be32be97ba5ce5902d
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 20:31:18 2017 -0500
+
+    made people page load dynamically
+
+commit 69d04e463cdd02346ddab87654a864ea7d1b8afa
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 20:27:50 2017 -0500
+
+    Update report.html
+
+commit cd3554d1de07742f84674cbf0dd7a173b6b64c48
+Merge: 9875dd3 0a535a9
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 20:25:39 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 9875dd3359fc0409dd316f9b8ba3cb328671dff4
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 20:25:36 2017 -0500
+
+    people not broken and companies is dynamic
+
+commit 0a535a9150d4f114d18ca7e9617139e90ba3e0b4
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 20:24:44 2017 -0500
+
+    Update hosting.html
+
+commit 5f093e2c7f647bd66c516f4ca02d728698c0c33e
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 20:23:56 2017 -0500
+
+    Update tools.html
+
+commit d62c78bc4cafa2e9c0a7db385aaaa8a665059c0b
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 20:23:06 2017 -0500
+
+    Update design.html
+
+commit 5874bde89c47fc1d1363980433552204027336ed
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 20:22:28 2017 -0500
+
+    Update introduction.html
+
+commit d448c4f3e1139678bfb37b0c4f80f84c542e407b
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 20:20:52 2017 -0500
+
+    Update report.html
+
+commit 802e540ed22706a7b6eb39289a95a20f0f02594f
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 20:19:21 2017 -0500
+
+    Update report.html
+
+commit 0442a9d40eb9fa8924a95c3397724f8c2fea778b
+Merge: c2352f0 a25b82e
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 24 01:17:34 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit c2352f0603da30d5eb277f112df2193dbe8005c1
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 24 01:17:21 2017 +0000
+
+    company dynamic
+
+commit a25b82eaf3f605951f017a79a13462d20534dfee
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 20:13:35 2017 -0500
+
+    add links to hosting
+
+commit a4d570224dae0774890c0c6e2c6f433560d5c870
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 20:12:33 2017 -0500
+
+    add links to tools
+
+commit 79083d273b3d8b933c6d8cd568c2a385a9bbb01d
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 20:11:57 2017 -0500
+
+    add links to design
+
+commit 3abd65a9c9eef4edd8c3c6a3b26009261d5a5a61
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 20:11:14 2017 -0500
+
+    add links to introduction
+
+commit 40882254041838d42a7c0af4b1b3a818c6317b27
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 20:09:50 2017 -0500
+
+    add links to report
+
+commit ff0106d114328754a9b5135b2370b16fe79c3974
+Merge: b93a092 801847e
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 20:09:16 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit b93a092f27cb34ba5b14ff9f4974ba9534e7f571
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 20:09:09 2017 -0500
+
+    ughhhhh stupid links to flask
+
+commit 801847e24c0b9e2c97369ee51d97108a52f335de
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 24 01:07:51 2017 +0000
+
+    tools links
+
+commit 677f16c061786571a3e82d2aa4d72b4e21e80b4f
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 20:00:23 2017 -0500
+
+    Update hosting.html
+
+commit 4285e3f7ed20e835f86a702e1a5fa5ef6e97c611
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 19:58:18 2017 -0500
+
+    style changes to tools.html
+
+commit 0d2ef4fbe99b50b4b596294d3cc2312cd1f21223
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 24 00:57:45 2017 +0000
+
+    design links
+
+commit c8520f19000181cfc4f3473053493928b88917bd
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 19:55:48 2017 -0500
+
+    made caption centered on carousel
+
+commit 56a8cf6ff92bf278888b019f4a9bc2092ee64962
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 19:55:13 2017 -0500
+
+    Update tools.html
+
+commit 27d2f1847159e75657cc7b1cc09164f338c20df4
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 19:54:52 2017 -0500
+
+    Update tools.html
+
+commit 5956569aaa5d4d3c220070c2c3306ebe7c7e9074
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 19:51:57 2017 -0500
+
+    Update design.html
+
+commit 343a6b3b934ae359b9a7b5ac7df4c83839e5fecf
+Merge: 006fa02 51ce167
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 24 00:49:33 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 51ce167c13242a268c933888a151a1cccb154d73
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 19:49:27 2017 -0500
+
+    Style changes
+
+commit 006fa02874942e82887ac039c42611dd22eb455b
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 24 00:49:25 2017 +0000
+
+    removing pyc
+
+commit f68eef2dd870e385423f5ef8e490bb2eaa670101
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 24 00:48:24 2017 +0000
+
+    nav links
+
+commit 334c908f423c8963426cf8b098d21ecfb1e6342c
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 19:42:47 2017 -0500
+
+    Update introduction.html
+
+commit cb981c383c012676a255adf7547668bd29d9e545
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 19:41:39 2017 -0500
+
+    Update introduction.html
+
+commit 1e2adc35e979b3fc7d7f0f1d385d60795a11e890
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 19:40:24 2017 -0500
+
+    Update introduction.html
+
+commit bdbf864038ef41ed474a82bfa1cb5b8b3d147e40
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 19:38:26 2017 -0500
+
+    Update introduction.html
+
+commit 5b9ad7ea428da28efd2b70dee834dee1fcec6171
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 19:36:07 2017 -0500
+
+    style changes
+
+commit 6ef7685660d7326029347d371b454b9406e1ea1b
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 19:28:12 2017 -0500
+
+    Update report.html
+
+commit 9a35e47b260c55308ce26f37b2da252d61e1919d
+Merge: 501451a f206346
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 19:26:22 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 501451a94a99b3d7b896a205ae776c4d6d2a927c
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 19:26:19 2017 -0500
+
+    made schools page sexy ;-)
+
+commit f2063469bf8064d256210a6da7eb7004f71462cd
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 19:25:06 2017 -0500
+
+    minor changes
+
+commit 837b3a995006f7447d93a09cce3a70e8762c5ff2
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 19:21:24 2017 -0500
+
+    fixing miscellaneous in report.html
+
+commit cf6cd9fe03baf5395e02ce390c0a6ba2f9752d76
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 19:17:20 2017 -0500
+
+    fix random
+
+commit e04ee9f9644bfe6e4ccf30405b9341510e22d2a8
+Merge: b2d3a17 d9a8e75
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 24 00:13:34 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit b2d3a17b8c59d4e28b210010df78f7383af6edfa
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 24 00:13:18 2017 +0000
+
+    double colon fix
+
+commit d9a8e75c1d9b07c7a174b1d28edcf8637c928a88
+Merge: 8a6950f 5f4877a
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 19:11:01 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 8a6950f96ce06bdaaf4d0ee088df1753a20a14df
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 19:10:58 2017 -0500
+
+    made investors look sexy too ;-)
+
+commit 5f4877a02ea693004f74ff4970e2b4032864d502
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 24 00:07:36 2017 +0000
+
+    template add mapping
+
+commit a41ee4678c4232a65d5107c6005fc2855cf0dfef
+Merge: a1aa547 50be70b
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 23 23:48:18 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit a1aa547dc6f38d6b897f2854c6bcc0c843f9cf64
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 23 23:48:09 2017 +0000
+
+    bio, closes #27
+
+commit 50be70be74da25dd8649ad9ce28e80ee7c57afb6
+Merge: 85a977d cb51d96
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 18:40:12 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 85a977d137abfec90320d3012bc27128514ac4a3
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 18:40:00 2017 -0500
+
+    made people page look sexy ;)
+
+commit cb51d96d32619b657e332f7c5e6c2911d6f0fed4
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 23 23:34:24 2017 +0000
+
+    cleaning up directories
+
+commit a62354d4391210ca34201c1f6bdef7c304372b46
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 18:31:19 2017 -0500
+
+    Adding hosting section of technical report
+
+commit f968f2e8c81c785844e1883959052d3ca9173603
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 18:29:28 2017 -0500
+
+    Rename tools to tools.html
+
+commit 24f4d2c3256ac5c9b1965d37cf376cfcee5fbdd7
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 18:28:55 2017 -0500
+
+    Adding tools section of technical report
+
+commit d119329f759ecaf338cd637e7b09afabf707c93d
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 18:26:42 2017 -0500
+
+    Adding Design part of technical report
+
+commit ffa945fc69d780efe7d5c49fb2c217e380e01c8a
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 18:24:05 2017 -0500
+
+    Adding introduction section of technical report
+
+commit f3f7863d4a5fb5095ffbc8153f6bf5a4c2f6ed4b
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 18:18:13 2017 -0500
+
+    Added report.html
+    
+    Contains team information from the "about" page
+
+commit 9cef58513c72e231f1d11072d3c3ef6558fd52d2
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Mar 23 17:55:24 2017 -0500
+
+    Add temp HTML generated from the markdown file
+
+commit 4e17f358ff2a5e57ce2f75d9e182a6d7e0cf138b
+Merge: 23162c9 5fd6370
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 17:33:13 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 23162c945eecaa8ef17a3bbd06013e84cf24d4e4
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 17:33:05 2017 -0500
+
+    added dope af sorting
+
+commit 5fd6370650cf0f8e3a4c1df552141b3d6ef11876
+Merge: bcfcb3b dca4c9f
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Thu Mar 23 16:59:33 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit bcfcb3bff1fe21754a3f219ad2109549f336104c
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Thu Mar 23 16:59:22 2017 -0500
+
+    completed bio
+
+commit dca4c9f50070971e78f0480c852c278c422afa88
+Merge: 728d389 9702287
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Thu Mar 23 16:41:56 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 728d3896f03d9109bf72576390c28433c113dfa0
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Thu Mar 23 16:41:51 2017 -0500
+
+    Added companies to design portion of report
+
+commit 9702287fc4c34e57e52f066ef75445ebf22d215b
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 23 16:35:27 2017 -0500
+
+    Transferring API Description file from Apiary.io
+
+commit 1e1fd2462ae7cc9ec94879891c17682de3c28133
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Thu Mar 23 16:11:10 2017 -0500
+
+    modified bio
+
+commit bf2e692c79b9c36733dffad19686c88925d1661d
+Merge: 83b0c53 17d95fb
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Thu Mar 23 16:02:24 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 83b0c532b0be72b056c5cd1ea23a80d0e24d34db
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Thu Mar 23 16:02:03 2017 -0500
+
+    added my bio
+
+commit 17d95fb6ea1d43d7fb4ad861a04a75bcf2ab6a9e
+Author: adityapalnitkar <adityapalnitkar@gmail.com>
+Date:   Thu Mar 23 16:00:21 2017 -0500
+
+    Update about.html
+
+commit 2e9baa55d6848c064ae4f00d7196f2668db97ba0
+Merge: 6dd9720 21648a7
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 15:42:00 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 6dd9720daf072cbfa2d3752bfde8e661a3c1bb0b
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 15:41:54 2017 -0500
+
+    made grids look sexy ;)
+
+commit 21648a79b72e352a91254e6b0e11e42288ae19c5
+Merge: 0e1668e 413d66a
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Thu Mar 23 15:36:15 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 0e1668e8acfdb263817cac5f988cbde50ae8cc4e
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Thu Mar 23 15:36:09 2017 -0500
+
+    Added descriptions of new tools
+
+commit 413d66af7d444cf695dd3e6f297ed69ad983a8bd
+Merge: 5d42125 7807277
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Thu Mar 23 15:33:49 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 5d421255bb813b061e67514f324bda7898f066cd
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Thu Mar 23 15:33:03 2017 -0500
+
+    new UML
+
+commit 7807277aaa1b4c51552ba1f69cfaa49254804bcd
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Thu Mar 23 15:11:40 2017 -0500
+
+    Added new tools, separated sections a bit
+
+commit f6cdde11ead964950f678701086f48e953bce270
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Thu Mar 23 14:40:15 2017 -0500
+
+    removing temp
+
+commit 3cb73eebafcdc99dc44d10a113d202b9085cc8b9
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Thu Mar 23 14:38:30 2017 -0500
+
+    added school_investment
+
+commit d137b9a08915fc0c8196f9f70f946b2b1c69b55e
+Merge: 2dbaf5d cc496ca
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 14:30:27 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 2dbaf5d359e8b2ba8e8876ea33e9289c9806c309
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 23 14:30:19 2017 -0500
+
+    changed companies from grid to tables
+
+commit cc496caed0c0937c6521043fe97363d195dca722
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Thu Mar 23 10:24:36 2017 -0500
+
+    Add overall statistics
+    :
+
+commit 71f2a7e290ff00361f681030676d1f412a113006
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 23 06:51:31 2017 +0000
+
+    template logo link fix
+
+commit 461e3d4f868b463e93dc4eb1435165162b9a77c5
+Merge: 3f48351 c62a8ff
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 23 05:08:39 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 3f48351bb4b5055f7de964d168efdc498e08c614
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 23 05:08:31 2017 +0000
+
+    templates good
+
+commit c62a8ffa3e95a3968d5e3017af1d9f6ce48193d7
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 22 23:59:12 2017 -0500
+
+    spannnnnnnnnn
+
+commit 9ba315db3c33e3655e373af2ad7f3ce2a081ec8f
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 23 04:54:38 2017 +0000
+
+    template checkpoint
+
+commit 0de9c5e629d677368593964a02eac8e6d18784d2
+Merge: 59117cf 9b3b3d6
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 23 04:03:13 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 59117cfea49687c5505ae2bf422197db6fa89e1a
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 23 04:02:59 2017 +0000
+
+    Templates much better, closes #41
+
+commit 9b3b3d6c3f2021b94180ea6a57d16bbe02aefbe6
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 22 22:56:27 2017 -0500
+
+    we done w dis bich
+
+commit daa4ed070e8d5e9e224eaeac460a3c0431d72faf
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 22 22:51:19 2017 -0500
+
+    fixed the fucking tables
+
+commit 2ef4efcfd98691c80fe6a09c99df3e9c604666a0
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 23 02:21:37 2017 +0000
+
+    removing unnecessary files
+
+commit 8348b7bca62b4ec7c790fac09a3315c61c612d33
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 23 02:19:52 2017 +0000
+
+    templates, css
+
+commit 0dae00a13839b700fb9e44605a4557d54a967bbb
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Wed Mar 22 21:04:51 2017 -0500
+
+    changed UMLDiagram
+
+commit fde3c7562b6c9d361032723f194ea5e7fa6a74b3
+Merge: 1f30aaa aef4836
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Wed Mar 22 20:57:42 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+    Updated uml
+
+commit 1f30aaa8ce23e7b2ced59c609fb339ebb836af64
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Wed Mar 22 20:57:22 2017 -0500
+
+    updated uml
+
+commit aef483629e3ae5a34ad50e453020f6317de3f96c
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Mar 22 20:49:57 2017 -0500
+
+    Transferring API Description file from Apiary.io
+
+commit 97c44fc5c9fb26fb3cddaea25f8127147e79f74e
+Merge: 8b763ff 50a26df
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Wed Mar 22 20:46:48 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 8b763ff4fc26d6b3bd2e465064e0ddff48d65949
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Wed Mar 22 20:46:29 2017 -0500
+
+    Rearrange tools and all tools descriptions added Close #29
+
+commit 50a26dfb9052eb9f580dd012394c8a79767e0220
+Merge: add5cf3 71397b5
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Wed Mar 22 20:17:14 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+    Added tests
+
+commit add5cf34e9fe711a2970e36368f105376570b9d8
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Wed Mar 22 20:16:42 2017 -0500
+
+    added tests
+
+commit 71397b551c7ccdc97fc6cafa05efae992ccf6b0a
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Wed Mar 22 19:59:43 2017 -0500
+
+    Updated some descriptions on the technology stack, #32
+
+commit a4c42d3306e5f3894daf7b1f18b6a14b0abbbd09
+Merge: 9889897 0ac5f8b
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Wed Mar 22 19:50:58 2017 -0500
+
+    Fixed merge conflict
+
+commit 98898977dda7867f9e82a89d044bc2d6b9fb6928
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Wed Mar 22 19:49:50 2017 -0500
+
+    Added some styling
+
+commit 0ac5f8b83368a309eb7056d7b1f6885277f0a094
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Wed Mar 22 19:35:35 2017 -0500
+
+    Added Hosting section (make much more wordy)
+
+commit 2f6d7e1d52f5c7da974da2c560e9c01f9ab3185c
+Merge: 899293e 87ac1a0
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 22 19:03:39 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 899293ea33c33051a74cc2814798ceeaa7d0a269
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 22 19:03:35 2017 -0500
+
+    fixed grammar - aaron
+
+commit 87ac1a0e6e2f22f487e3110ef31da39354c04e1a
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Wed Mar 22 19:01:34 2017 -0500
+
+    added funding for investors
+
+commit 5f1794d38c186533560ceacf8c0f7f8985b5079f
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 22 18:50:12 2017 -0500
+
+    changed about fonts to open sans
+
+commit 1ef14bcf6f2459905e501acc2d61729299c26160
+Merge: 6e5b784 0a09397
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 22 18:43:29 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 6e5b78455891b4980e2f1d2b31c5405b7d321b83
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 22 18:43:26 2017 -0500
+
+    updated logos for react and bootstrap
+
+commit ed1a56008532f3b9df5621ac738fb6b5b00b8b1b
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 22 18:40:23 2017 -0500
+
+    made navbar dynamic in about
+
+commit 0a093974c17c08ca391f0404d0aafdef0c1d45c2
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Mar 22 23:38:03 2017 +0000
+
+    rename pdf
+
+commit 3440024f3e024e65c1c54569a8ffc9afa9f856fb
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 22 18:35:47 2017 -0500
+
+    removed inner from about
+
+commit 34b97a2f928244607ca545594d99be5561e89be3
+Merge: dbecafa 945a866
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 22 18:33:16 2017 -0500
+
+    resolved merge conflict
+
+commit dbecafa48f56506599cc5cb0616969ea0f533a62
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 22 18:16:08 2017 -0500
+
+    made about page dynamic
+
+commit 945a8663788826dfcaa81adbe224807bba8f37cb
+Author: vk4433 <vignesh.1996@utexas.edu>
+Date:   Wed Mar 22 18:12:50 2017 -0500
+
+    UML Diagram Done
+    
+    Close #11
+
+commit f1773e56473e0f05aa1621c399b9c7159aa99e87
+Author: vk4433 <vignesh.1996@utexas.edu>
+Date:   Wed Mar 22 17:45:22 2017 -0500
+
+    Extra title in company removed
+    
+    This should fix the pylint undefined variable, close #42
+
+commit 1523b1f73e4e9ae0574450f5962b3b374c689750
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Wed Mar 22 17:42:02 2017 -0500
+
+    Got rid of line break in my bio, references #27
+
+commit 5d0bd2351f25b5a7872b4d480e2ec4ed203c961a
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Wed Mar 22 17:36:45 2017 -0500
+
+    Adding bio info, references #27
+
+commit 3125b0e9e3d6d05d885efc47225be897d365effd
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Wed Mar 22 16:27:49 2017 -0500
+
+    Added more tools and descriptions to tools
+
+commit 7ae0766d4729fa802604cd486e4783999dee37e7
+Merge: be74e6f 4e31743
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Mar 22 21:12:35 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit be74e6f78cdcf16464ff0419531c91abc3de097e
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Mar 22 21:12:24 2017 +0000
+
+    rows link to instances, closes #40
+
+commit 4e31743f4d4df57ce07e66955cbb9aab2c64ef2b
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Wed Mar 22 16:01:07 2017 -0500
+
+    Updated about page
+
+commit 3892f6926373b6a15964ccb063aa722eb1bf4015
+Merge: abf64ea 66fd0ed
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Wed Mar 22 15:28:46 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit abf64ea37389268620542aaa531af93b84144e66
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Wed Mar 22 15:28:09 2017 -0500
+
+    Removed implementation page and integrated with about page
+
+commit 66fd0ed47ca6c403437cdfe7adadbeb9242eea9a
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 22 15:13:21 2017 -0500
+
+    messing w outtro height
+
+commit b19bc3646903f5a30717d5fd9961238f23f236c6
+Merge: 6ce44ef 472221d
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 22 15:04:02 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 6ce44ef04ca1c149bcc03260120d713f567dbcb8
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 22 15:03:50 2017 -0500
+
+    made dropdowns responsive and updating index
+
+commit 472221db32d80ff04cb17da2ad07f3f04a149f5c
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Mar 22 19:35:22 2017 +0000
+
+    travis please
+
 commit a82368e848f5d048eee0fdaa60bf7a29a79d9a80
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Wed Mar 22 19:32:47 2017 +0000

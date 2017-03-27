@@ -7,6 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_table import Table, Col, DateCol
 import models
 
+
 class CompanyTable(Table):
     idnum = Col('ID')
     name = Col('Company')
@@ -19,7 +20,7 @@ class CompanyTable(Table):
 
     def get_tr_attrs(self, item):
         href_text = 'company/{0}'.format(item.idnum)
-        return {'class' : 'clickable-row', 'data-href': href_text}
+        return {'class': 'clickable-row', 'data-href': href_text}
 
 
 class SchoolTable(Table):
@@ -31,7 +32,7 @@ class SchoolTable(Table):
 
     def get_tr_attrs(self, item):
         href_text = 'school/{0}'.format(item.idnum)
-        return {'class' : 'clickable-row', 'data-href': href_text}
+        return {'class': 'clickable-row', 'data-href': href_text}
 
 
 class InvestorTable(Table):
@@ -43,7 +44,7 @@ class InvestorTable(Table):
 
     def get_tr_attrs(self, item):
         href_text = 'investor/{0}'.format(item.idnum)
-        return {'class' : 'clickable-row', 'data-href': href_text}
+        return {'class': 'clickable-row', 'data-href': href_text}
 
 
 class PersonTable(Table):
@@ -56,10 +57,12 @@ class PersonTable(Table):
 
     def get_tr_attrs(self, item):
         href_text = 'person/{0}'.format(item.idnum)
-        return {'class' : 'clickable-row', 'data-href': href_text}
+        return {'class': 'clickable-row', 'data-href': href_text}
 
 
-table_mappings = {models.Company : CompanyTable, models.Person : PersonTable, models.Investor : InvestorTable, models.School : SchoolTable}
+table_mappings = {models.Company: CompanyTable, models.Person:
+                  PersonTable, models.Investor: InvestorTable, models.School: SchoolTable}
+
 
 def get_table_html(model):
     companies = model.query.all()
