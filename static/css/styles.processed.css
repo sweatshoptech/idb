@@ -1,10 +1,10 @@
 html,
 body {
   background-color: #333;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  font-family: "Lucida Grande";
   text-align: center;
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
@@ -61,7 +61,7 @@ h4 {
 
 .gradient-bg {
   height: 100%;
-  background-image: linear-gradient(#403B4A, #222123);
+  background-image: linear-gradient(#dc2430, #7b4397);
   text-align: center;
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
@@ -75,7 +75,6 @@ h4 {
 .paragraph-text {
   font-size: 18px;
   word-wrap: normal;
-  font-family: 'Open Sans', sans-serif;
   color: #FFF;
 }
 /* ---- member-group ---- */
@@ -90,19 +89,16 @@ h4 {
 
 /* ---- member-image ---- */
 
+.logo-image,
 .profile--image {
   width: 200px;
   height: 200px;
   overflow: hidden;
-  border-radius: 50%;
   margin: 24px 0% 12px 0%;
 }
 
-.logo--image {
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  margin: 24px 0% 12px 0%;
+.profile--image {
+  border-radius: 50%;
 }
 
 /* ---- member ---- */
@@ -137,7 +133,6 @@ member-header {
 
 member-body {
   font-size: 14px;
-  font-family: 'Open Sans';
 }
 
 /* ---- footer ---- */
@@ -179,7 +174,6 @@ member-body {
   color: white;
   text-shadow: 1px 2px 3px #666;
   font-size: 550%;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .carousel-body {
@@ -216,7 +210,6 @@ member-body {
   border-radius: 7px;
   background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
   color: #222;
-  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   text-shadow: 0 1px white;
   cursor: pointer;
