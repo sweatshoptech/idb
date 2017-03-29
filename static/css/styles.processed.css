@@ -6,7 +6,7 @@ body {
 
 body {
   text-align: center;
-  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.1);
 }
 
 .black{
@@ -15,6 +15,14 @@ body {
 
 .bg-inverse {
   background-color: black !important;
+}
+
+.bg-inverse-opacity {
+  background-color: rgba(0, 0, 0, .4)
+}
+
+.bg-sfo {
+  background: url(../img/sfo-bg.jpg) no-repeat center;
 }
 
 .rounded {
@@ -60,9 +68,11 @@ h4 {
 }
 
 .outro {
+  display: block;
   background-color: #000;
   color: #FFF;
-  height: 13vh;
+  height: 5vh;
+  line-height: 5vh;
 }
 
 .full-width {
