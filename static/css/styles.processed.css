@@ -9,16 +9,38 @@ body {
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 
+.black{
+  color: black; 
+}
+
+.bg-inverse {
+  background-color: black !important;
+}
+
+.rounded {
+  border-radius: 30px;
+  background: #000;
+}
+
 p {
   color: #AAA;
 }
 
 h1 {
-  color: #FFF;
+  color: black;
+  font-weight: 100;
+  font-size: 350%; 
+  text-transform: uppercase; 
+  padding: 100px;
+}
+
+h3 {
+  color: black;
+  font-weight: 300;
 }
 
 h4 {
-  color: #AAA;;
+  color: #AAA;
 }
 
 @media screen and (min-width: 767px) {
@@ -61,7 +83,7 @@ h4 {
 
 .gradient-bg {
   height: 100%;
-  background-image: linear-gradient(#dc2430, #7b4397);
+  background-image: linear-gradient(white, darkgray);
   text-align: center;
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
@@ -89,19 +111,33 @@ h4 {
 
 /* ---- member-image ---- */
 
-.logo-image,
 .profile--image {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: block;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  margin: 24px 0% 12px 0%;
+}
+
+.logo--image {
   width: 200px;
   height: 200px;
   overflow: hidden;
   margin: 24px 0% 12px 0%;
 }
 
-.profile--image {
-  border-radius: 50%;
+/* ---- member ---- */
+
+.container {
+  margin-bottom: 3rem;
 }
 
-/* ---- member ---- */
+.col-sm-12 {
+  padding: 2rem;
+}
 
 .member {
   display: inline-block;
@@ -111,17 +147,23 @@ h4 {
   max-width: 350px;
   min-width: 330px;
   word-wrap: normal;
+  color: white;
 }
 
 .member-info {
   width: auto;
   margin: 10px 2.5% 24px 2.5%;
+  color: white;
 }
 
 member-name {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  color: white;
+}.rounded {
+  border-radius: 10px;
+  background: #000; // without a background or border applied you won't be able to see if its rounded
 }
 
 member-header {
@@ -129,10 +171,12 @@ member-header {
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+  color: white;
 }
 
 member-body {
   font-size: 14px;
+  color: white;
 }
 
 /* ---- footer ---- */
@@ -190,8 +234,6 @@ member-body {
 
 .grid {
   width: 100%;
-  text-align:center;
-
 }
 
 .grid-item {
@@ -213,6 +255,7 @@ member-body {
   font-size: 16px;
   text-shadow: 0 1px white;
   cursor: pointer;
+  font-family: 'Roboto', sans-serif;
 }
 
 .button:hover {
@@ -267,7 +310,9 @@ member-body {
 .card {
   margin: 0 auto;
   float: none;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  background: black;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-title {
