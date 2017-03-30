@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
   </head>
-  <body class="bg-sfo">
+  <body class="gradient-bg">
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse-opacity">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,6 @@
     </nav>
     <div style="min-height:89vh"> 
       <h1 class="cover-heading">Companies</h1>
-      <br/><br/>
       <div class="container" style="color: white;">
         <div class="filters">
           <div class="ui-group">
@@ -158,13 +157,17 @@
               funding: '[funding] parseInt',
               size: '[size] parseInt'
             },
-            sortBy: 'name'
+            sortBy: 'name',
+            sortAscending: true
         });
+        var $ascending = true
 
         // bind sort button click
         $('.sort-by-button-group').on( 'click', 'button', function() {
           var sortByValue = $(this).attr('data-sort-value');
-          $grid.isotope({ sortBy: sortByValue });
+          $grid.isotope({ sortBy: sortByValue, sortAscending: !$ascending });
+          $ascending = !$ascending;
+          console.log($ascending)
         });
 
         // store filter for each group

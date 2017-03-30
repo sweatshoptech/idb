@@ -43,7 +43,6 @@
   </nav>
   <div class="gradient-bg" style="min-height:89vh"> 
     <h1 class="cover-heading">Schools</h1>
-    <br/><br/>
     <div class="container" style="color: white;">
       <div class="filters">
         <div class="ui-group">
@@ -74,7 +73,7 @@
       <div class="grid small">
         <a href="http://sweatshop.tech/school/1">  
         <div class="grid-item private medium-size india" name='{{schools[0].name}}' size='{{schools[0].size}}'>
-          <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
+          <div class="card card-inverse card-grid">
             <div style="background: #FFF; width: 100%">
               <img class="card-img-top" src="{{schools[0].image_url}}" alt="Card image cap">
             </div>
@@ -87,9 +86,9 @@
             </div>
             <ul class="list-group list-group-flush;">
               <a href="{{schools[0].website}}">
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{schools[0].website}}</li>
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">{{schools[0].website}}</li>
               </a>
-              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Size: {{schools[0].size}}</li>
+              <li class="list-group-item" style="background-color: #333; border-color: #333;">Size: {{schools[0].size}}</li>
               <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{schools[0].location}}</li>
             </ul>
           </div>
@@ -97,7 +96,7 @@
         </a>
         <a href="http://sweatshop.tech/school/2">  
         <div class="grid-item private large-size usa" name='{{schools[1].name}}' size='{{schools[1].size}}'>
-            <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
+            <div class="card card-inverse card-grid">
             <div style="background: #FFF; width: 100%">
               <img class="card-img-top" src="{{schools[1].image_url}}" alt="Card image cap">
             </div>
@@ -110,33 +109,33 @@
             </div>
             <ul class="list-group list-group-flush;">
               <a href="{{schools[1].website}}">
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{schools[1].website}}</li>
+                <li class="list-group-item">{{schools[1].website}}</li>
               </a>
-              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Size: {{schools[1].size}}</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{schools[1].location}}</li>
+              <li class="list-group-item">Size: {{schools[1].size}}</li>
+              <li class="list-group-item">Location: {{schools[1].location}}</li>
             </ul>
           </div>
         </div>
         </a>
         <a href="http://sweatshop.tech/school/3"> 
         <div class="grid-item private small-size usa" name='{{schools[2].name}}' size='{{schools[2].size}}'>
-          <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
+          <div class="card card-inverse card-grid">
             <div style="background: #FFF; width: 100%">
               <img class="card-img-top" src="{{schools[2].image_url}}" alt="Card image cap">
             </div>
             <div class="card-block">
               <h4 class="card-title name">{{schools[2].name}}</h4>
-                <div class="list-group-item">
+              <div class="list-group-item">
                 {{schools[2].description}}
-                </div>
+              </div>
               <a href="#" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
               <a href="{{schools[2].website}}">
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{schools[2].website}}</li>
+                <li class="list-group-item">{{schools[2].website}}</li>
               </a>
-              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Size: {{schools[2].size}}</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{schools[2].location}}</li>
+              <li class="list-group-item card-list">Size: {{schools[2].size}}</li>
+              <li class="list-group-item">Location: {{schools[2].location}}</li>
             </ul>
           </div>
         </div>
