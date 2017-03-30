@@ -5,7 +5,10 @@ import idb
 from models import db
 import flask
 
-# depends on flask, flask_sqlalchemy, flask_table
+# depends on flask, flask_sqlalchemy, flask_table, psycopg2
+# to run coverage:
+# coverage-3.5 run tests.py
+# coverage-3.5 report --include="models.py","config.py"
 
     ################   IMPORTANT   ################
     # Because we auto-increment when adding       #
