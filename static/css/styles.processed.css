@@ -229,6 +229,11 @@ member-body {
 
 /* ---- carousel ---- */
 
+.carousel {
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
 .carousel-caption {
   position: absolute;
   display: -ms-flexbox;
@@ -268,11 +273,25 @@ member-body {
   vertical-align: bottom;
 }
 
+.carousel-item {
+  width: 70%;
+  left: 15%;
+}
+
 .carousel-item.active,
 .carousel-item-next,
 .carousel-item-prev{
     display:block;
 }
+
+.carousel-control-prev:active {
+  opacity: 1 !important;
+}
+
+.carousel-control-prev:focus {
+  opacity: none !important;
+}
+
 
 /* Grid */
 
@@ -390,4 +409,14 @@ member-body {
   border-color: #333; 
   color: #FFF;
   display: block;
+}
+
+.card:hover .cover-heading {
+  margin-top: 0px !important;
+  padding-top: 125px !important;
+  padding-bottom: 75px !important;
+}
+
+.card:hover .carousel {
+  opacity: 1;
 }
