@@ -7,6 +7,24 @@ import flask
 
 # depends on flask, flask_sqlalchemy, flask_table
 
+    ################   IMPORTANT   ################
+    # Because we auto-increment when adding       #
+    # categories, the category tests failed with  #
+    #                                             #
+    # DETAIL:  Key (idnum)=(1) already exists.    #
+    # [SQL: 'INSERT INTO category (name) VALUES   #
+    # (%(name)s) RETURNING category.idnum']       #
+    # [parameters: {'name': 'test_category_1'}]   #
+    #                                             #
+    # until the tests were run 8 times, and the   #
+    # final "Key (idnum)=(20)" error was thrown.  #
+    # Then all the category tests started passing #
+    # since the autoincremented id became more    #
+    # than the 20 categories we have currently in #
+    # the database. If more categories are added, #
+    # the category tests may begin failing again. #
+    ###############################################
+
 #
 # Person Unit Tests
 #
@@ -236,12 +254,12 @@ class TestModels (TestCase):
         """Test querying the database by attribute using simple keywords"""
     
         with models.APP.test_request_context():
-            example1 = Category("test_category_1")
+            example1 = models.Category("test_category_1")
     
             db.session.add(example1)
             
     
-            category1 = db.session.query(Category).filter_by(name="test_category_1").first()
+            category1 = db.session.query(models.Category).filter_by(name="test_category_1").first()
             self.assertEqual(category1.name, "test_category_1")
     
             db.session.delete(example1)
@@ -252,12 +270,12 @@ class TestModels (TestCase):
         """Test querying the database by attribute using simple keywords"""
     
         with models.APP.test_request_context():
-            example1 = Category("test_category_2")
+            example2 = models.Category("test_category_2")
     
             db.session.add(example2)
             
     
-            category2 = db.session.query(Category).filter_by(name="test_category_2").first()
+            category2 = db.session.query(models.Category).filter_by(name="test_category_2").first()
             self.assertEqual(category2.name, "test_category_2")
     
             db.session.delete(example2)
@@ -268,12 +286,12 @@ class TestModels (TestCase):
         """Test querying the database by attribute using simple keywords"""
     
         with models.APP.test_request_context():
-            example1 = Category("test_category_3")
+            example3 = models.Category("test_category_3")
     
             db.session.add(example3)
             
     
-            category3 = db.session.query(Category).filter_by(name="test_category_3").first()
+            category3 = db.session.query(models.Category).filter_by(name="test_category_3").first()
             self.assertEqual(category3.name, "test_category_3")
     
             db.session.delete(example3)
