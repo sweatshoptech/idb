@@ -213,6 +213,7 @@ member-header {
   text-align: center;
   text-transform: uppercase;
   color: white;
+  opacity: 1 !important;
 }
 
 member-body {
@@ -316,19 +317,19 @@ member-body {
   background: #EEE;
   border: none;
   border-radius: 2px;
-  background-color: black;
-  opacity: .4;
+  background: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 1.0);
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
-  color: white;
+  transition: background .5s ease;
 }
 
 .button:hover {
-  opacity: 1;
+  background: rgba(0, 0, 0, 1.0);
   text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
   text-decoration: none;
 }
@@ -411,12 +412,12 @@ member-body {
   display: block;
 }
 
-.card:hover .cover-heading {
+.card-animation:hover .cover-heading {
   margin-top: 0px !important;
   padding-top: 125px !important;
   padding-bottom: 75px !important;
 }
 
-.card:hover .carousel {
+.card-animation:hover .carousel {
   opacity: 1;
 }
