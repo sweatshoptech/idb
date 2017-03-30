@@ -46,7 +46,7 @@
       <div class="container" style="color: white;">
         <div class="filters">
           <div class="ui-group">
-            <h3>Ownership Type</h3>
+            <button-text>Ownership Type</button-text>
             <div class="button-group js-radio-button-group" data-filter-group="ownership-type">
               <button class="button is-checked" data-filter="">Any</button>
               <button class="button" data-filter=".public">Public</button>
@@ -54,7 +54,7 @@
             </div>
           </div>
           <div class="ui-group">
-            <h3>Size</h3>
+            <button-text>Size</button-text>
             <div class="button-group js-radio-button-group" data-filter-group="size">
               <button class="button is-checked" data-filter="">Any</button>
               <button class="button" data-filter=".small-size">1-50</button>
@@ -63,7 +63,7 @@
             </div>
           </div>
           <div class="ui-group">
-            <h3>Country</h3>
+            <button-text>Country</button-text>
             <div class="button-group js-radio-button-group" data-filter-group="country">
               <button class="button is-checked" data-filter="">Any</button>
               <button class="button" data-filter=".usa">USA</button>
@@ -72,7 +72,7 @@
           </div>
         </div>
         <div class="ui-group">
-          <h3>Sort By</h3>
+          <button-text>Sort By</button-text>
           <div class="button-group sort-by-button-group">
             <button class="button is-checked" data-sort-value="name" >Name</button>
             <button class="button" data-sort-value="funding" >Funding</button>
@@ -112,7 +112,7 @@
                 <div class="list-group-item">
                   {{companies[1].description}}
                 </div>
-                <a href="#" class="btn btn-primary">More Information</a>
+                <a href="#" class="button bg-white">More Information</a>
               </div>
               <ul class="list-group list-group-flush;">
                 <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: {{companies[1].ownership_type}}</li>
