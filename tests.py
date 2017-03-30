@@ -180,12 +180,12 @@ class TestModels (TestCase):
         """Test querying the database by attribute using simple keywords"""
     
         with models.APP.test_request_context():
-            example1 = Investor("test_investor_1", "San Antonio", 100, "High Rollers", "http://geekdomfund.com/image", "http://geekdomfund.com")
+            example1 = models.Investor("test_investor_1", "San Antonio", 100, "High Rollers", "http://geekdomfund.com/image", "http://geekdomfund.com")
     
             db.session.add(example1)
             
     
-            investor1 = db.session.query(Investor).filter_by(name="test_investor_1").first()
+            investor1 = db.session.query(models.Investor).filter_by(name="test_investor_1").first()
             self.assertEqual(investor1.funding, 100)
             self.assertEqual(investor1.location, "San Antonio")
     
@@ -197,12 +197,12 @@ class TestModels (TestCase):
         """Test querying the database by attribute using simple keywords"""
     
         with models.APP.test_request_context():
-            example2 = Investor("test_investor_2", "SLC", 100000, "VCs", "http://pelionvp.com/image", "http://pelionvp.com")
+            example2 = models.Investor("test_investor_2", "SLC", 100000, "VCs", "http://pelionvp.com/image", "http://pelionvp.com")
     
             db.session.add(example2)
             
     
-            investor2 = db.session.query(Investor).filter_by(name="test_investor_2").first()
+            investor2 = db.session.query(models.Investor).filter_by(name="test_investor_2").first()
             self.assertEqual(investor2.funding, 100000)
             self.assertEqual(investor2.location, "SLC")
     
@@ -215,12 +215,12 @@ class TestModels (TestCase):
         """Test querying the database by attribute using simple keywords"""
     
         with models.APP.test_request_context():
-            example3 = Investor("test_investor_3", "Foster City", 10, "Investors", "http://scalevp.com/image", "http://scalevp.com")
+            example3 = models.Investor("test_investor_3", "Foster City", 10, "Investors", "http://scalevp.com/image", "http://scalevp.com")
     
             db.session.add(example3)
             
     
-            investor3 = db.session.query(Investor).filter_by(name="test_investor_3").first()
+            investor3 = db.session.query(models.Investor).filter_by(name="test_investor_3").first()
             self.assertEqual(investor3.funding, 10)
             self.assertEqual(investor3.location, "Foster City")
     
