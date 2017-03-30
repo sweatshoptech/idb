@@ -126,12 +126,12 @@ class TestModels (TestCase):
         """Test querying the database by attribute using simple keywords"""
     
         with models.APP.test_request_context():
-            example1 = School("test_school_1", "Chennai", "IIT Madras", "www.iitm.ac.in/image", 10000, "www.iitm.ac.in")
+            example1 = models.School("test_school_1", "Chennai", "IIT Madras", "www.iitm.ac.in/image", 10000, "www.iitm.ac.in")
     
             db.session.add(example1)
             
     
-            school1 = db.session.query(School).filter_by(name="test_school_1").first()
+            school1 = db.session.query(models.School).filter_by(name="test_school_1").first()
             self.assertEqual(school1.size, 10000)
             self.assertEqual(school1.location, "Chennai")
     
@@ -143,12 +143,12 @@ class TestModels (TestCase):
         """Test querying the database by attribute using simple keywords"""
     
         with models.APP.test_request_context():
-            example2 = School("test_school_2", "Atlanta", "Georgia Tech", "www.gatech.edu/image", 26806, "www.gatech.edu")
+            example2 = models.School("test_school_2", "Atlanta", "Georgia Tech", "www.gatech.edu/image", 26806, "www.gatech.edu")
     
             db.session.add(example2)
             
     
-            school2= db.session.query(School).filter_by(name="test_school_2").first()
+            school2= db.session.query(models.School).filter_by(name="test_school_2").first()
             self.assertEqual(school2.size, 26806)
             self.assertEqual(school2.location, "Atlanta")
     
@@ -160,12 +160,12 @@ class TestModels (TestCase):
         """Test querying the database by attribute using simple keywords"""
     
         with models.APP.test_request_context():
-            example3 = School("test_school_3", "Stanford", "Stanford GSB", "www.gsb.stanford.edu/image", 4000, "www.gsb.stanford.edu")
+            example3 = models.School("test_school_3", "Stanford", "Stanford GSB", "www.gsb.stanford.edu/image", 4000, "www.gsb.stanford.edu")
     
             db.session.add(example3)
             
     
-            school3= db.session.query(School).filter_by(name="test_school_3").first()
+            school3= db.session.query(models.School).filter_by(name="test_school_3").first()
             self.assertEqual(school3.size, 4000)
             self.assertEqual(school3.location, "Stanford")
     
