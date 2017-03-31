@@ -1,3 +1,94 @@
+commit 0f28d5c93bd4d1ade476008870caf6632b8c532e
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 30 23:10:25 2017 -0500
+
+    Duplicate and extra installation
+
+commit d1ac2506212ec785a5576a5de2ed8106b41784e1
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 30 23:08:04 2017 -0500
+
+    required installations
+
+commit e38e7117f46a4f8a3dec6ac843cca2e7e7bb0809
+Merge: bede3d1 55aae6a
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 04:05:08 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit bede3d1e831b9f3186ffa43fdbcdfde5f2d36bf1
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 04:05:03 2017 +0000
+
+    fixes
+
+commit 78d16f20792a275f07c58f8dd9e6b2a8d029903b
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 04:04:47 2017 +0000
+
+    matches db changes, closes #56
+
+commit f3b158daa4bee826625c865d993c56a14a6477e7
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 04:03:58 2017 +0000
+
+    commit check
+
+commit 55aae6a9183e319d908853193261e97aae1fc4e1
+Author: Aaron Chang <achang@cs.utexas.edu>
+Date:   Thu Mar 30 17:23:43 2017 -0500
+
+    a few comments about coverage, references #19
+
+commit 42a1deb4fdfd305d01b127dfbd5fc64081e3618c
+Author: Aaron Chang <achang@cs.utexas.edu>
+Date:   Thu Mar 30 16:49:07 2017 -0500
+
+    Tests now all pass with a caveat: category tests may fail as more are added. Check test.py comment for details, references #19
+
+commit 7a24390190d5923e3a7d6423f6ea1248008c430f
+Author: Aaron Chang <achang@cs.utexas.edu>
+Date:   Thu Mar 30 16:22:53 2017 -0500
+
+    Fixed Investor tests, references #19
+
+commit 17967b99bcb4900bff01c338ff1e15a7e3c6d32a
+Author: Aaron Chang <achang@cs.utexas.edu>
+Date:   Thu Mar 30 16:21:43 2017 -0500
+
+    School tests now fixed, references #19
+
+commit 78bf7f7d3009fe86cbdc377972f54dfb8d0af99e
+Author: Aaron Chang <achang@cs.utexas.edu>
+Date:   Thu Mar 30 16:19:39 2017 -0500
+
+    Fixing 6/15 tests, references #19
+
+commit 278969a0d7dd9984c1abf746a8ae91fac0883552
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Mar 29 01:07:39 2017 +0000
+
+    scraper
+
+commit 8bf2895faa862a3c8774d2359051af0769171591
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Tue Mar 28 23:35:18 2017 +0000
+
+    general fixes and security
+
+commit 1dbd9ded4888ec08e05986abbd9f5c52705979e0
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Tue Mar 28 20:29:42 2017 +0000
+
+    scraping People #10
+
+commit 8cc7b3a8c84bdb6fd33b8970f17faaa14e5c54ac
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Mar 27 23:09:16 2017 +0000
+
+    starting api work
+
 commit fca02df7b3370c8cd195a0d486af3061b36d9df9
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Fri Mar 24 02:49:49 2017 +0000
