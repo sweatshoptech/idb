@@ -156,7 +156,25 @@ class TestModels (TestCase):
     
             db.session.delete(example3)
             
+    def test_Company_methods(self):
+        """"Test __repr__ and get_all_rows"""
 
+        with models.APP.test_request_context():
+            example4 = models.Company("test_company_4", "TX", models.Ownership.PUBLIC, 350,
+                               "sweatshop", None, "realimage.png", 350, "sweatshop.org")
+            initial_len = len(models.Company.get_all_rows())
+
+            db.session.add(example4)
+
+            changed_len = len(models.Company.get_all_rows())
+            company4 = db.session.query(models.Company).filter_by(name="test_company_4").first()
+
+            self.assertEqual(initial_len + 1, changed_len)
+            self.assertEqual(repr(company4), "<Company 'test_company_4'>")
+
+            db.session.delete(example4)
+            self.assertEqual(len(models.Company.get_all_rows()), initial_len)
+ 
     
     #
     # School Unit Tests
@@ -210,8 +228,28 @@ class TestModels (TestCase):
             self.assertEqual(school3.location, "Stanford")
     
             db.session.delete(example3)
+
             
-    
+    def test_School_methods(self):
+        """"Test __repr__ and get_all_rows"""
+
+        with models.APP.test_request_context():
+            example4 = models.School("test_school_4", "2kewl4skewl", "2kewl", "www2.kewl4.skewl/bro.png",
+                               420, "www2.kewl4.skewl")
+            initial_len = len(models.School.get_all_rows())
+
+            db.session.add(example4)
+
+            changed_len = len(models.School.get_all_rows())
+            school4 = db.session.query(models.School).filter_by(name="test_school_4").first()
+
+            self.assertEqual(initial_len + 1, changed_len)
+            self.assertEqual(repr(school4), "<School 'test_school_4'>")
+
+            db.session.delete(example4)
+            self.assertEqual(len(models.School.get_all_rows()), initial_len)
+ 
+   
     #
     # Investor Unit Tests
     #
@@ -265,7 +303,25 @@ class TestModels (TestCase):
             self.assertEqual(investor3.location, "Foster City")
     
             db.session.delete(example3)
+
             
+    def test_Investor_methods(self):
+        """"Test __repr__ and get_all_rows"""
+
+        with models.APP.test_request_context():
+            example4 = models.Investor("test_investor_4", "Kewlville", 350, "Kewl investors", "kewlinvestors.org/moi.png", "kewlinvestors.org")
+            initial_len = len(models.Investor.get_all_rows())
+
+            db.session.add(example4)
+
+            changed_len = len(models.Investor.get_all_rows())
+            investor4 = db.session.query(models.Investor).filter_by(name="test_investor_4").first()
+
+            self.assertEqual(initial_len + 1, changed_len)
+            self.assertEqual(repr(investor4), "<Investor 'test_investor_4'>")
+
+            db.session.delete(example4)
+            self.assertEqual(len(models.Investor.get_all_rows()), initial_len)
     
     
     #
@@ -318,7 +374,25 @@ class TestModels (TestCase):
     
             db.session.delete(example3)
             
-    
+    def test_Category_methods(self):
+        """"Test __repr__ and get_all_rows"""
+
+        with models.APP.test_request_context():
+            example4 = models.Category("test_category_4")
+            initial_len = len(models.Category.get_all_rows())
+
+            db.session.add(example4)
+
+            changed_len = len(models.Category.get_all_rows())
+            category4 = db.session.query(models.Category).filter_by(name="test_category_4").first()
+
+            self.assertEqual(initial_len + 1, changed_len)
+            self.assertEqual(repr(category4), "<Category 'test_category_4'>")
+
+            db.session.delete(example4)
+            self.assertEqual(len(models.Category.get_all_rows()), initial_len)
+
+
 # ----
 # main
 # ----
