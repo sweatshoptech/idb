@@ -10,7 +10,7 @@ body {
 }
 
 .black {
-  color: black; 
+  color: black !important; 
 }
 
 .bg-white {
@@ -173,7 +173,7 @@ button-text {
 /* ---- member ---- */
 
 .container {
-  margin-bottom: 3rem;
+  // margin-bottom: 3rem;
 }
 
 .col-sm-12 {
@@ -188,23 +188,24 @@ button-text {
   max-width: 350px;
   min-width: 330px;
   word-wrap: normal;
-  color: white;
+  text-shadow: none;
 }
 
 .member-info {
   width: auto;
   margin: 10px 2.5% 24px 2.5%;
-  color: white;
+  color: inherit;
 }
 
 member-name {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  color: white;
-}.rounded {
+}
+
+.rounded {
   border-radius: 10px;
-  background: #000; // without a background or border applied you won't be able to see if its rounded
+  background: #000;
 }
 
 member-header {
@@ -212,13 +213,11 @@ member-header {
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  color: white;
   opacity: 1 !important;
 }
 
 member-body {
   font-size: 14px;
-  color: white;
 }
 
 /* ---- footer ---- */
