@@ -32,6 +32,10 @@ log:
 pylint:
 	$(PYLINT) models.py
 
+coverage:
+	$(COVERAGE) run tests.py
+	$(COVERAGE) report --include="models.py","config.py"
+
 clean:
 	rm -f *.pyc
 	rm -f *.html
