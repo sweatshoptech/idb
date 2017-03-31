@@ -33,8 +33,8 @@ pylint:
 	$(PYLINT) models.py
 
 coverage:
-	$(COVERAGE) run tests.py
-	$(COVERAGE) report --include="models.py","config.py"
+	$(COVERAGE) run tests.py > TestIDB.out
+	$(COVERAGE) report --include="models.py","config.py" >> TestIDB.out
 
 clean:
 	rm -f *.pyc
