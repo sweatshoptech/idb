@@ -33,7 +33,7 @@ pylint:
 	$(PYLINT) models.py
 
 coverage:
-	$(COVERAGE) run tests.py > TestIDB.out
+	$(COVERAGE) run    --branch tests.py > TestIDB.out 2>&1
 	$(COVERAGE) report --include="models.py","config.py" >> TestIDB.out
 	cat TestIDB.out
 

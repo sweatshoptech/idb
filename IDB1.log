@@ -1,3 +1,100 @@
+commit e99834c114a6d536cc71f8c29f1e9e1a75875949
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 10:56:28 2017 -0500
+
+    Show test output
+
+commit 73a30aca2fc90e1c15c12a75f4e49a075d022503
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 10:55:29 2017 -0500
+
+    Pipe test results
+
+commit 76592a432dcbe926e96520c4691b98d301bb7475
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 30 23:42:23 2017 -0500
+
+    Investor and mappings
+
+commit a82fc8ef54f518f44e939d3fbcfaa5fbca509fea
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 30 23:41:58 2017 -0500
+
+    School and mappings
+
+commit 562ed2d94b9d071be8958a8317485bf8a8df4a63
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 30 23:41:23 2017 -0500
+
+    Create personobject.sql
+
+commit 08624944c3fff1f6366a9d0f5e2dbdc62fcc3a0f
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 30 23:39:19 2017 -0500
+
+    Name and location setter
+
+commit 1042ddd7340520cdff7cb097f5f21668e6fc7b21
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 30 23:38:39 2017 -0500
+
+    Person from object
+
+commit 1aba22ded4c4b8bc6ee48fa4b498ef39bc23cd3b
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 30 23:37:54 2017 -0500
+
+    Set public/private
+
+commit 60ce462fc67b4b47ae5056af6713a9c2fa96effa
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 30 23:36:40 2017 -0500
+
+    Rename employmenttransfer.py to employmenttransfer.sql
+
+commit fa7f5f727e5262f215d5d8e2268dde6d96766797
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 30 23:36:15 2017 -0500
+
+    Person Company mappings
+
+commit 86eb867ddac6d0dd279d1e3c7d0360ed7e9c602d
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 30 23:35:20 2017 -0500
+
+    Company rows
+
+commit f8123b9383e3e85d4b301cc736c522bf7d7a89e8
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 04:33:38 2017 +0000
+
+    basic parser
+
+commit 4ac5ca6018aaef419791bf28a79231e00393c80b
+Merge: 7c527fa 87b4cea
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 04:30:33 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 7c527faa4f6af3cd90dde456d5d5a7ea1c42f405
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 04:29:46 2017 +0000
+
+    adding extra files dir
+
+commit 87b4cea744ddee4bf7941fbf4d8a8e1aaa937c22
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Mar 30 23:18:07 2017 -0500
+
+    coverage test
+
+commit 5368480d748a36e4c565164d72a97dce3ab33dbd
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 04:14:28 2017 +0000
+
+    coverage tests
+
 commit 0f28d5c93bd4d1ade476008870caf6632b8c532e
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Thu Mar 30 23:10:25 2017 -0500
