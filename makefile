@@ -42,7 +42,7 @@ clean:
 	rm -f *.log
 	rm -f .coverage
 
-test: format pylint log
+test: format pylint log coverage
 	echo "success"
 
 versions:
