@@ -64,15 +64,17 @@ class Person(db.Model):
     __tablename__ = 'person'
     idnum = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
-    title = db.Column(db.String(50), nullable=True)
-    location = db.Column(db.String(50), nullable=True)
+    title = db.Column(db.String(200), nullable=True)
+    location = db.Column(db.String(500), nullable=True)
     dob = db.Column(db.DateTime, nullable=True)
     image_url = db.Column(db.String(512), nullable=True)
     website = db.Column(db.String(512), nullable=True)
     companies = db.relationship('Company', secondary=employment,
-                                backref=db.backref('employees', lazy='dynamic'))
+        backref=db.backref('employees', lazy='dynamic'))
     schools = db.relationship('School', secondary=education,
-                              backref=db.backref('alumni', lazy='dynamic'))
+        backref=db.backref('alumni', lazy='dynamic'))
+    crunch_id = db.Column(db.String(25), nullable=True)
+    description = db.Column(db.String(10000), nullable=True)
 
     def __init__(self, name, title, location, dob, image_url, website):
         """Initializes a Person, pass in dob as datetime object"""
@@ -97,17 +99,18 @@ class Company(db.Model):
     __tablename__ = 'company'
     idnum = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
-    location = db.Column(db.String(50), nullable=True)
+    location = db.Column(db.String(500), nullable=True)
     ownership_type = db.Column(db.Enum(Ownership), nullable=True)
     funding = db.Column(db.Integer, nullable=True)
-    description = db.Column(db.String(350), nullable=True)
+    description = db.Column(db.String(10000), nullable=True)
     ceo_id = db.Column(
         db.Integer, db.ForeignKey('person.idnum'), nullable=True)
     image_url = db.Column(db.String(512), nullable=True)
     size = db.Column(db.Integer, nullable=True)
     website = db.Column(db.String(512), nullable=True)
     investors = db.relationship('Investor', secondary=investment,
-                                backref=db.backref('companies', lazy='dynamic'))
+        backref=db.backref('companies', lazy='dynamic'))
+    crunch_id = db.Column(db.String(25), nullable=True)
 
     def __init__(self, name, location, ownership_type, funding, description,
                  ceo_id, image_url, size, website):
@@ -135,15 +138,15 @@ class School(db.Model):
     """School Model"""
     __tablename__ = 'school'
     idnum = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50), nullable=False)
+    name = db.Column(db.String(150), nullable=False)
     location = db.Column(db.String(50), nullable=True)
     description = db.Column(db.String(350), nullable=True)
     size = db.Column(db.Integer, nullable=True)
     image_url = db.Column(db.String(512), nullable=True)
     website = db.Column(db.String(512), nullable=True)
     investors = db.relationship('Investor', secondary=school_investment,
-                                backref=db.backref('schools', lazy='dynamic'))
-
+        backref=db.backref('schools', lazy='dynamic'))
+            
     def __init__(self, name, location, description, image_url, size, website):
         self.name = name
         self.location = location
