@@ -99,5 +99,11 @@ def get_company(instance_id):
     # instance state
     return json.dumps(models.Company.query.get(instance_id).__dict__)
 
+
+@app.route('/run-tests')
+def run_tests(instance_id):
+    return render_template('../TestIDB.out')
+
+
 if __name__ == '__main__':
     app.run()

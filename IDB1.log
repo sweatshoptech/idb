@@ -1,3 +1,33 @@
+commit 52cca615cc1a55112bd071798ebce59d8af157ea
+Author: Aaron Chang <achang@cs.utexas.edu>
+Date:   Fri Mar 31 11:52:47 2017 -0500
+
+    tests
+
+commit caacde91761124ba224c3628f96e7ba563eb166c
+Author: Aaron Chang <achang@cs.utexas.edu>
+Date:   Fri Mar 31 11:50:29 2017 -0500
+
+    Added 5 tests for full coverage of models.py, closes #57
+
+commit cbcff67c63070fea9a99757bea2d9d20c0c259cd
+Author: Aaron Chang <achang@cs.utexas.edu>
+Date:   Fri Mar 31 11:34:49 2017 -0500
+
+    added first test for __repr__ and get_all_rows() for coverage purposes, references #57
+
+commit 2b10d0334372575bcad18f2b7bc8e84c24256646
+Author: Aaron Chang <achang@cs.utexas.edu>
+Date:   Fri Mar 31 11:29:49 2017 -0500
+
+    changed get_all_rows to a class method. Doesn't make sense to query an instance
+
+commit 7bb0525daa39af439003a7126661f4bf7faf330d
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 16:00:44 2017 +0000
+
+    testing success
+
 commit e99834c114a6d536cc71f8c29f1e9e1a75875949
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Fri Mar 31 10:56:28 2017 -0500
