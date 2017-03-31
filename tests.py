@@ -8,7 +8,7 @@ import flask
 # depends on flask, flask_sqlalchemy, flask_table, psycopg2
 # to run coverage:
 # coverage-3.5 run tests.py
-# coverage-3.5 report --include="models.py","config.py"
+# coverage-3.5 report -m --include="models.py","config.py"
 
     ################   IMPORTANT   ################
     # Because we auto-increment when adding       #
@@ -82,7 +82,25 @@ class TestModels (TestCase):
             self.assertEqual(person3.website, "borngroup.com")
     
             db.session.delete(example3)
-            
+
+    def test_Person_methods(self):
+        """"Test __repr__ and get_all_rows"""
+
+        with models.APP.test_request_context():
+            example4 = models.Person("test_person_4", "CFO", "UT Austin",
+                               date(2017,4,1), "www.google.com", "fakeswe.me")
+            initial_len = len(models.Person.get_all_rows())
+
+            db.session.add(example4)
+
+            changed_len = len(models.Person.get_all_rows())
+            person4 = db.session.query(models.Person).filter_by(name="test_person_4").first()
+
+            self.assertEqual(initial_len + 1, changed_len)
+            self.assertEqual(repr(person4), "<Person 'test_person_4'>")
+
+            db.session.delete(example4)
+            self.assertEqual(len(models.Person.get_all_rows()), initial_len)
     
     #
     # Company Unit Tests
@@ -138,6 +156,7 @@ class TestModels (TestCase):
     
             db.session.delete(example3)
             
+
     
     #
     # School Unit Tests
