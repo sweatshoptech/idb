@@ -88,9 +88,10 @@ class Person(db.Model):
     def __repr__(self):
         return '<Person %r>' % self.name
 
-    def get_all_rows(self):
+    @classmethod
+    def get_all_rows(cls):
         """Get all person rows"""
-        return self.query.all()
+        return cls.query.all()
 
 
 class Company(db.Model):
@@ -128,9 +129,10 @@ class Company(db.Model):
     def __repr__(self):
         return '<Company %r>' % self.name
 
-    def get_all_rows(self):
+    @classmethod
+    def get_all_rows(cls):
         """Get all company rows"""
-        return self.query.all()
+        return cls.query.all()
 
 
 class School(db.Model):
@@ -158,9 +160,10 @@ class School(db.Model):
     def __repr__(self):
         return '<School %r>' % self.name
 
-    def get_all_rows(self):
+    @classmethod
+    def get_all_rows(cls):
         """Get all school rows"""
-        return self.query.all()
+        return cls.query.all()
 
 
 class Investor(db.Model):
@@ -186,9 +189,10 @@ class Investor(db.Model):
     def __repr__(self):
         return '<Investor %r>' % self.name
 
-    def get_all_rows(self):
+    @classmethod
+    def get_all_rows(cls):
         """Get all investor rows"""
-        return self.query.all()
+        return cls.query.all()
 
 
 class Category(db.Model):
@@ -204,6 +208,7 @@ class Category(db.Model):
     def __repr__(self):
         return '<Category %r>' % self.name
 
-    def get_all_rows(self):
+    @classmethod
+    def get_all_rows(cls):
         """Get all category rows"""
-        return self.query.all()
+        return cls.query.all()
