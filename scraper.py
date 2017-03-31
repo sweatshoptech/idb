@@ -32,7 +32,6 @@ def add_organization(prop):
 if __name__ == "__main__":
     people_items = items_from_url("https://api.crunchbase.com/v/3/odm-people?user_key=fb1eb389415ec74fd8f8b55f631e334a")
     properties_map(people_items, add_person)
-#   models.db.session.commit()
     org_items = items_from_url("https://api.crunchbase.com/v/3/odm-organizations?user_key=fb1eb389415ec74fd8f8b55f631e334a")
     properties_map(org_items, add_organization)
     print(models.School.query.all()) 
