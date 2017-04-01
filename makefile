@@ -20,7 +20,6 @@ format:
 	$(AUTOPEP8) -i models.py 
 	$(AUTOPEP8) -i idb.py
 	$(AUTOPEP8) -i config.py
-	$(AUTOPEP8) -i tables.py
 
 html:
 	pydoc -w models

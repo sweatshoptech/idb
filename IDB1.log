@@ -1,3 +1,63 @@
+commit de7b9c3042d3b39a71270f3098cba67f0a40630e
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sat Apr 1 20:09:03 2017 +0000
+
+    path set by wsgi file
+
+commit 3f5a09d161b8895f3ca16b95b03af7cfa72758a7
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sat Apr 1 15:02:44 2017 -0500
+
+    Import not needed
+
+commit c761aa80cb36a29d80e5d741bd6046e3a3ccdc47
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sat Apr 1 15:02:14 2017 -0500
+
+    Fix models back
+
+commit 49978ea096509a4104e6227fde8e40025c29509d
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sat Apr 1 19:57:35 2017 +0000
+
+    updates to tables
+
+commit e84aa1c405440a31a70ed5ff29984015a915b805
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 20:28:51 2017 +0000
+
+    fixing idb to work without tables
+
+commit fbabebc19b25666514e3f843e57f8f1409f9df7a
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 20:28:35 2017 +0000
+
+    moving scrapers
+
+commit 45c3f1fbbbadd42f09110bfc3947188b0f9e4b5f
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 20:27:50 2017 +0000
+
+    moving tables
+
+commit 36fefb6c2654d5ebeb2cb6cff0adbe9c85627023
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 20:24:43 2017 +0000
+
+    add coverage shell script, need to add to makefile
+
+commit 124aca4ff06ce6e2541f9b2d5b6094f00bc1ccc3
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 17:54:52 2017 +0000
+
+    formatted tests
+
+commit 3adda9fc26e0bfa219e31ab9711b1f7286376c12
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Mar 31 17:35:33 2017 +0000
+
+    test from link
+
 commit 52cca615cc1a55112bd071798ebce59d8af157ea
 Author: Aaron Chang <achang@cs.utexas.edu>
 Date:   Fri Mar 31 11:52:47 2017 -0500
