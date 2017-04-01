@@ -29,9 +29,9 @@ def companies():
 @app.route('/company/<int:company_id>')
 def company_template(company_id):
     company = models.Company.query.get(company_id)
-    ceo = models.Person.query.get(company.ceo_id)
-    investors = company.investors
-    return render_template('company_template.html', company=company, ceo=ceo, investor=investors[0])
+    ceo = models.Person.query.get(company.ceo_id) if company.ceo_id else None
+    investor = company.investors[0] if company.investors else None
+    return render_template('company_template.html', company=company, ceo=ceo, investor=investor)
 
 
 @app.route('/person/<int:person_id>')
@@ -89,9 +89,6 @@ def reportsub(subpage):
 
 @app.route('/run-tests')
 def run_tests():
-    # script_path = '/home/ubuntu/idb/RunCoverage.sh'
-    # test = subprocess.Popen([script_path], stdout=subprocess.PIPE)
-    # out, err = test.communicate()
     with open('/home/ubuntu/idb/TestIDB.out', 'r') as fi:
         testout = fi.read().replace('\n', '<br/>')
         return render_template('TestIDB.html', test=testout)
