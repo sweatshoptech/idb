@@ -70,9 +70,9 @@ class Person(db.Model):
     image_url = db.Column(db.String(512), nullable=True)
     website = db.Column(db.String(512), nullable=True)
     companies = db.relationship('Company', secondary=employment,
-        backref=db.backref('employees', lazy='dynamic'))
+                                backref=db.backref('employees', lazy='dynamic'))
     schools = db.relationship('School', secondary=education,
-        backref=db.backref('alumni', lazy='dynamic'))
+                              backref=db.backref('alumni', lazy='dynamic'))
     crunch_id = db.Column(db.String(25), nullable=True)
     description = db.Column(db.String(10000), nullable=True)
 
@@ -88,9 +88,10 @@ class Person(db.Model):
     def __repr__(self):
         return '<Person %r>' % self.name
 
-    def get_all_rows(self):
+    @classmethod
+    def get_all_rows(cls):
         """Get all person rows"""
-        return self.query.all()
+        return cls.query.all()
 
 
 class Company(db.Model):
@@ -109,7 +110,7 @@ class Company(db.Model):
     size = db.Column(db.Integer, nullable=True)
     website = db.Column(db.String(512), nullable=True)
     investors = db.relationship('Investor', secondary=investment,
-        backref=db.backref('companies', lazy='dynamic'))
+                                backref=db.backref('companies', lazy='dynamic'))
     crunch_id = db.Column(db.String(25), nullable=True)
 
     def __init__(self, name, location, ownership_type, funding, description,
@@ -128,9 +129,10 @@ class Company(db.Model):
     def __repr__(self):
         return '<Company %r>' % self.name
 
-    def get_all_rows(self):
+    @classmethod
+    def get_all_rows(cls):
         """Get all company rows"""
-        return self.query.all()
+        return cls.query.all()
 
 
 class School(db.Model):
@@ -145,8 +147,8 @@ class School(db.Model):
     image_url = db.Column(db.String(512), nullable=True)
     website = db.Column(db.String(512), nullable=True)
     investors = db.relationship('Investor', secondary=school_investment,
-        backref=db.backref('schools', lazy='dynamic'))
-            
+                                backref=db.backref('schools', lazy='dynamic'))
+
     def __init__(self, name, location, description, image_url, size, website):
         self.name = name
         self.location = location
@@ -158,9 +160,10 @@ class School(db.Model):
     def __repr__(self):
         return '<School %r>' % self.name
 
-    def get_all_rows(self):
+    @classmethod
+    def get_all_rows(cls):
         """Get all school rows"""
-        return self.query.all()
+        return cls.query.all()
 
 
 class Investor(db.Model):
@@ -186,9 +189,10 @@ class Investor(db.Model):
     def __repr__(self):
         return '<Investor %r>' % self.name
 
-    def get_all_rows(self):
+    @classmethod
+    def get_all_rows(cls):
         """Get all investor rows"""
-        return self.query.all()
+        return cls.query.all()
 
 
 class Category(db.Model):
@@ -204,6 +208,7 @@ class Category(db.Model):
     def __repr__(self):
         return '<Category %r>' % self.name
 
-    def get_all_rows(self):
+    @classmethod
+    def get_all_rows(cls):
         """Get all category rows"""
-        return self.query.all()
+        return cls.query.all()
