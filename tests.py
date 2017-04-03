@@ -1,9 +1,10 @@
+from __future__ import print_function
 from unittest import main, TestCase
 from datetime import date
 import models
-import idb
 from models import db
 import flask
+import sys
 
 # depends on flask, flask_sqlalchemy, flask_table, psycopg2
 # to run coverage:
@@ -41,7 +42,6 @@ class TestModels (TestCase):
         with models.APP.test_request_context():
             example1 = models.Person("test_person_1", "CEO", "SF",
                                date.today(), "www.image.com", "SWEatshop1")
-    
             db.session.add(example1)
     
             person1 = db.session.query(models.Person).filter_by(name="test_person_1").first()

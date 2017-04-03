@@ -18,6 +18,10 @@ import config
 APP = Flask(__name__)
 APP.config['SQLALCHEMY_DATABASE_URI'] = config.SQLALCHEMY_DATABASE_URI
 APP.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+APP.config['TESTING'] = True
+APP.config['WTF_CSRF_ENABLED'] = False
+
+
 db = SQLAlchemy(APP)
 
 

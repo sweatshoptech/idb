@@ -3,9 +3,10 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 import models
+import subprocess
+import tests
 
 app = Flask(__name__)
-
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
@@ -89,9 +90,17 @@ def reportsub(subpage):
 
 @app.route('/run-tests')
 def run_tests():
-    with open('/home/ubuntu/idb/TestIDB.out', 'r') as fi:
-        testout = fi.read().replace('\n', '<br/>')
-        return render_template('TestIDB.html', test=testout)
+    #tests = subprocess.Popen(['/home/ubuntu/idb/RunCoverage.sh'], stderr=subprocess.PIPE)
+    #tests = subprocess.Popen(['python', 'tests.py'], cwd=r'/home/ubuntu/idb', stderr=subprocess.PIPE, close_fds=True)
+    #out, err = tests.communicate()
+    #with open('/home/ubuntu/idb/TestIDB.out', 'r') as fi:
+    try:
+        tests = subprocess.check_output(['python', '/home/ubuntu/idb/tests.py'], stderr=subprocess.STDOUT)
+    except subprocess.CalledProcessError, e:
+        tests = e.output
+    testout = tests.replace('\n', '<br/>')
+#    with app.app_context():
+    return render_template('TestIDB.html', test=testout)
 
 if __name__ == '__main__':
     app.run()
