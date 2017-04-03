@@ -150,6 +150,7 @@ class School(db.Model):
     size = db.Column(db.Integer, nullable=True)
     image_url = db.Column(db.String(512), nullable=True)
     website = db.Column(db.String(512), nullable=True)
+    country = db.Column(db.String(200), nullable=True)
     investors = db.relationship('Investor', secondary=school_investment,
                                 backref=db.backref('schools', lazy='dynamic'))
 
@@ -178,7 +179,7 @@ class Investor(db.Model):
     name = db.Column(db.String(50), nullable=False)
     location = db.Column(db.String(50), nullable=True)
     funding = db.Column(db.Integer, nullable=True)
-    description = db.Column(db.String(350), nullable=True)
+    description = db.Column(db.String(10000), nullable=True)
     image_url = db.Column(db.String(512), nullable=True)
     website = db.Column(db.String(512), nullable=True)
 
