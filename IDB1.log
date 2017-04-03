@@ -1,3 +1,110 @@
+commit 6b360e5b9b07c55ba72342846187dce34652c085
+Merge: 4ce1b51 e9d2f67
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 3 17:15:16 2017 -0500
+
+    Merge pull request #58 from sweatshoptech/dev
+    
+    Geee, who dun diddly did dis shizz
+
+commit e9d2f67c7cae4d0262a8d9839f15141341e656a3
+Merge: b587cca 4ce1b51
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 3 17:13:12 2017 -0500
+
+    Merge branch 'master' into dev
+
+commit 4ce1b51da065206991428305c4d7d323fa432623
+Merge: 0b46285 8eb0f2e
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 3 21:59:37 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 0b46285968f78fb9eb7aee67f48ffdab2323eb88
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 3 21:59:26 2017 +0000
+
+    schools db
+
+commit b587ccad95fe8c502170d5af9f1c3378b4e7f414
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Mon Apr 3 16:55:53 2017 -0500
+
+    updated about again
+
+commit fa5e8a58fb4ea697f7b797af8a2dffc09c0474e1
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Mon Apr 3 16:44:25 2017 -0500
+
+    idk what i did but it works
+
+commit 8eb0f2e12831ae4acecf46557e3e2211f48b24f9
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 3 16:36:57 2017 -0500
+
+    Travis Build Status
+
+commit 3dd89b8d7ef965efd50598e9fbf8959d3a113250
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Mon Apr 3 15:01:17 2017 -0500
+
+    made github logo white
+
+commit 5fed9b6ab32478c1a164ea1ab23a8f06aa640d7a
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Mon Apr 3 14:49:19 2017 -0500
+
+    changed tools background
+
+commit 1a378623c67e6f557475d7978fb754c1839cf5c5
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Mon Apr 3 14:39:03 2017 -0500
+
+    changed about tools to cards
+
+commit f3c7cb0cd5fa7ba5d7f78896c43253ea91530f7f
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Mon Apr 3 14:09:52 2017 -0500
+
+    fixed bios and added clearbit and elastic beanstalk back
+
+commit 4f2a7965df4af3f6a86cc9fcf4f51c5d209cb161
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 3 17:03:35 2017 +0000
+
+    tests run but fail
+
+commit ea35b52b3cef316e13c92454b4fc4da792b4b899
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 3 03:30:15 2017 +0000
+
+    got 500 school info
+
+commit f723320154ff6ba9b52767beaaae7224d6fa4aa3
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sun Apr 2 17:30:18 2017 -0500
+
+    School information from data.gov
+
+commit 328ec5f570309069e0bcf3fcbc46a843267e8b44
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sat Apr 1 21:36:31 2017 +0000
+
+    all companies in
+
+commit c4e581a61c525157b0b7cfb274ef98120d87e9b2
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sat Apr 1 16:24:53 2017 -0500
+
+    Loop companies, #47 and #45
+
+commit 459ef6f637e5bb8d38556682e580f42eaa4ffaef
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sat Apr 1 21:05:00 2017 +0000
+
+    test display:
+
 commit de7b9c3042d3b39a71270f3098cba67f0a40630e
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Sat Apr 1 20:09:03 2017 +0000
@@ -81,6 +188,18 @@ Author: Aaron Chang <achang@cs.utexas.edu>
 Date:   Fri Mar 31 11:29:49 2017 -0500
 
     changed get_all_rows to a class method. Doesn't make sense to query an instance
+
+commit 19e0316b9f7cbcdce18d4d313ac7a95d26c262f3
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Fri Mar 31 11:26:14 2017 -0500
+
+    made outro and navbar transparentish
+
+commit c67d5d14f21a7137f184f52ba9cf383deb442ee5
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Fri Mar 31 11:14:51 2017 -0500
+
+    about page work cont.
 
 commit 7bb0525daa39af439003a7126661f4bf7faf330d
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
@@ -222,11 +341,35 @@ Date:   Fri Mar 31 04:03:58 2017 +0000
 
     commit check
 
+commit c69f5745b3042d73b0208ae31a88b6b497ba4b0f
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 30 19:49:53 2017 -0500
+
+    about page work cont.
+
+commit 458e88f3ab2c407ec1ebf02b83a8a3811556cf77
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 30 19:49:22 2017 -0500
+
+    about page work
+
+commit 15557ee60101694b02beea3385150ddf411a8b6e
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 30 18:59:56 2017 -0500
+
+    changed button opacity animation
+
 commit 55aae6a9183e319d908853193261e97aae1fc4e1
 Author: Aaron Chang <achang@cs.utexas.edu>
 Date:   Thu Mar 30 17:23:43 2017 -0500
 
     a few comments about coverage, references #19
+
+commit 8e1e298ee9984b765037c473f928cbd76fbbdc8d
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 30 16:52:36 2017 -0500
+
+    finished animations on about
 
 commit 42a1deb4fdfd305d01b127dfbd5fc64081e3618c
 Author: Aaron Chang <achang@cs.utexas.edu>
@@ -252,6 +395,42 @@ Date:   Thu Mar 30 16:19:39 2017 -0500
 
     Fixing 6/15 tests, references #19
 
+commit 7df059d4b3db5c4fd40e73bbd991cb7a2ba63af9
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Mar 30 14:34:29 2017 -0500
+
+    finished index page
+
+commit c9993ca4a5d7e70586fe0b54933551649dbe27a7
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 29 20:10:19 2017 -0500
+
+    changed button styling and updated about
+
+commit 0d22c5af19b24d3dfa0c704db195063efec929f2
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 29 13:56:57 2017 -0500
+
+    bg added and footer fixed
+
+commit e7a03ff75cbf7fff4112d0bbfd570e476062558b
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Mar 29 01:37:55 2017 -0500
+
+    removed unneccessary imports
+
+commit be8ac2c7ae275101687521bd74c8e42d7c12dd41
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Tue Mar 28 23:27:28 2017 -0500
+
+    updated the logo
+
+commit 00d9b3e1d86fe5f876a06f67088c42fa41d54131
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Tue Mar 28 21:51:52 2017 -0500
+
+    refactored about info page
+
 commit 278969a0d7dd9984c1abf746a8ae91fac0883552
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Wed Mar 29 01:07:39 2017 +0000
@@ -264,11 +443,23 @@ Date:   Tue Mar 28 23:35:18 2017 +0000
 
     general fixes and security
 
+commit 2817e3fdf8858b86c5e57cefc78ef9a104ac94f0
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Tue Mar 28 15:49:57 2017 -0500
+
+    changed font to roboto
+
 commit 1dbd9ded4888ec08e05986abbd9f5c52705979e0
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Tue Mar 28 20:29:42 2017 +0000
 
     scraping People #10
+
+commit 8d80eb0136cc2bf65143735678266a3a0b9e85da
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Tue Mar 28 14:02:43 2017 -0500
+
+    first dev commit
 
 commit 8cc7b3a8c84bdb6fd33b8970f17faaa14e5c54ac
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
