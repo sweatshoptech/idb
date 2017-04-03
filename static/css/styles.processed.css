@@ -126,14 +126,14 @@ button-text {
   height: 100%;
   background-image: linear-gradient( #d9d9d9, gray);
   text-align: center;
-  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  // text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 
 .gradient-bg-inverse {
   height: 100%;
   background-image: linear-gradient(gray, #d9d9d9);
   text-align: center;
-  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  // text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 
 .paragraph {
@@ -168,7 +168,7 @@ button-text {
   display: block;
   margin-right: auto !important;
   margin-left: auto !important;
-  margin: 24px 0% 12px 0%;
+  margin: 24px 0% 48px 0%;
 }
 
 .logo--image {
@@ -197,14 +197,14 @@ button-text {
 
 .member-info {
   width: auto;
-  margin: 10px 2.5% 24px 2.5%;
+  margin: 12px 2.5% 24px 2.5%;
   color: inherit;
+  text-align: left;
 }
 
 member-name {
   font-size: 24px;
   font-weight: bold;
-  text-align: center;
 }
 
 .rounded {
@@ -215,7 +215,6 @@ member-name {
 member-header {
   font-size: 18px;
   font-weight: bold;
-  text-align: center;
   text-transform: uppercase;
   opacity: 1 !important;
 }
@@ -328,11 +327,12 @@ member-body {
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
-  transition: background .5s ease;
+  transition: .5s ease;
 }
 
 .button:hover {
   background: rgba(0, 0, 0, 1.0);
+  color: rgba(255, 255, 255, 1.0);
   text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
   text-decoration: none;
 }
