@@ -13,3 +13,9 @@ def find_website(school):
     
 def get_schools():
     return (school for school in models.School.query.all())
+
+def find_next_num(num, schools, school):
+    for i in range(num):
+        find_website(school)
+        school = next(schools)
+    return school
