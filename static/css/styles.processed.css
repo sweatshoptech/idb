@@ -168,12 +168,12 @@ button-text {
   display: block;
   margin-right: auto !important;
   margin-left: auto !important;
-  margin: 24px 0% 48px 0%;
+  margin: 36px 0% 36px 0%;
 }
 
 .logo--image {
-  width: 200px;
-  height: 200px;
+  width: 256px;
+  height: 256px;
   overflow: hidden;
   margin: 24px 0% 12px 0%;
 }
