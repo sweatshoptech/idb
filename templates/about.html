@@ -1,30 +1,24 @@
   <!DOCTYPE html>
-  <html lang="en">
-
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>SWEatshop.tech</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
     <link rel="stylesheet" href="../static/css/styles.processed.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script--> 
-    <!--script src="https://npmcdn.com/react@15.3.0/dist/react-with-addons.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"></script>
-    <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js"></script-->
-      <!--script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script-->
-    </head>
-    <body>
-      <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+  </head>
+  <body>
+    <div class="bg-ut">
+      <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse-opacity">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="index.html"><img alt="Brand" src="http://vishnut.me/assets/external/logo.png" style="width: 200px;"></a>
+        <a class="navbar-brand" href="index.html"><img alt="Brand" src="../static/img/sweatshop-logo.png" style="width: 200px;">
+        </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -48,306 +42,338 @@
           </ul>
         </div>
       </nav>
-      <div class="gradient-bg">
-        <h1 class="h1" style="color: white; font-family: Open Sans; padding: 100px; font-size: 350%;">The Team</h1>
-        <div class="member-group">
-          <div class= "member">
-            <img class="profile--image" src="http://vishnut.me/CS373/profpic.jpg">
-            <div class="member-info">
-              <member-name> Vishnu Thiagarajan <br /><br /></member-name>
-              <member-body> Hi, My name is Vishnu and I am a second year Computer Science major (classified as a Senior) at the University of Texas at Austin. I was born in Singapore on May 12, 1997 and I moved to Houston, Texas in November 2009. I attended Clements High School in Sugar Land and came to UT in 2014. While here, I have found my passion in in robotics, computer vision, machine learning, and backend web development. I spend my free time personal projects in thoses areas and browsing through memes.I am the secretary of the UT IEEE Robotics and Automation Society where I am helping with the building of an autonomous wheelchair. I am fluent in English and Tamil and I am intermediate in Spanish. Apart from all of that, I love food and doggo memes. <br /><br /></member-body>
-              <member-header> Major Responsibilities <br /><br /></member-header>
-              <member-body> Bootstrap HTML Templates, Flask Backend, SQLAlchemy Database, Hosting Setup <br /><br /><br /></member-body>
-              <member-header> # of commits <br /><br /></member-header>
-              <member-body> 46 <br /><br /></member-body>
-              <member-header> # of issues <br /><br /></member-header>
-              <member-body> 29 <br /><br /></member-body>
-              <member-header> # of unit tests <br /><br /></member-header>
-              <member-body> 0 <br /><br /></member-body>
-            </div>
-          </div>
-          <div class= "member">
-            <img class="profile--image" src="../static/img/raunak.jpg">
-            <div class="member-info">
-              <member-name> Raunak Srivastava <br /><br /></member-name>
-              <member-body> Hi, I am a Sunior (Junior/Senior), it is a complicated situation since I transferred to UT, Computer Science major and am extremely passionate about bridging the education gap through technology. I am a director of a club at UT called Code Orange whose sole goal is to mentor kids at low-income communties and present them with opportunities that they lack but deserve! If you are interested to join, feel free to reach out to me! <br /> Anyways, a few random facts about me are that I am loud, that I love food (particularly deep dish pizza), that I am an anime addict, that ball is literally life for me, and that I am addicted to sleep although I rarely get it :(! Last but not least, I transferred from Aggieland xD!<br /><br /></member-body>
-              <member-header> Major Responsibilities <br /><br /></member-header>
-              <member-body> Minor front-end stuff including, but primarily the back-end. <br /><br /></member-body>
-              <member-header> # of commits <br /><br /></member-header>
-              <member-body> 37 <br /><br /></member-body>
-              <member-header> # of issues <br /><br /></member-header>
-              <member-body> 6 <br /><br /></member-body>
-              <member-header> # of unit tests <br /><br /></member-header>
-              <member-body> 0 <br /><br /></member-body>
-            </div>
-          </div>
-          <div class= "member">
-            <img class="profile--image" src="../static/img/aditya.jpg">
-            <div class="member-info">
-              <member-name> Aditya Palnitkar <br /><br /></member-name>
-              <member-body> Hi! My name is Aditya, and I am a Junior Computer Science major at UT. I chose CS because I like to solve problems by leveraging technology. I was born in the SF Bay Area, and then my family moved to Pune, India where I spent 12 years before coming to Austin for college. My family and I really enjoy traveling - till date, I've visited over 60 countries across 5 continents. In fact, when I interned at American Airlines last summer, I took advantage of the free flights and explored a new country pretty much every week! I'm fluent in three languages and reasonable in another two. I'm also a huge aviation geek and I'm currently working on my private pilot's license. In my free time, you'll find me reading, playing FIFA or planning my next adventure. <br /><br /></member-body>
-              <member-header> Major Responsibilities <br /><br /></member-header>
-              <member-body> A bit of both front-end and back-end <br /><br /><br /></member-body>
-              <member-header> # of commits <br /><br /></member-header>
-              <member-body> 1 <br /><br /></member-body>
-              <member-header> # of issues <br /><br /></member-header>
-              <member-body> 5 <br /><br /></member-body>
-              <member-header> # of unit tests <br /><br /></member-header>
-              <member-body> 15 <br /><br /></member-body>
-            </div>
-          </div>
-          <div class= "member">
-            <img class="profile--image" src="../static/img/brenda.jpg">
-            <div class="member-info">
-              <member-name> Brenda Salazar <br /><br /></member-name>
-              <member-body> Hola, I am a Junior Computer Science major at UT \m/ (Hook 'em Horns). I am cofounder and vicepresident of HACS (Hispanic Association for Computer Scientists) at UT and hope to leave a legacy in the CS department. <br /> I am a proud Mexican and Austinite girl having spent the first 9.5 years of my life in Mexico City and the other 11.5 years in Austin. I am fluent in English, Spanish and French (although slightly less fluent than English and Spanish). I spend a lot of my time trying to perfection my French every day and hope to add other languages later on. In my freetime I enjoy going to the movies, specially at the Bullock museum with their amazing IMAX screen. Finally I love spending time at the park with my puppy Chuy. <br /><br /></member-body>
-              <member-header> Major Responsibilities <br /><br /></member-header>
-              <member-body> Primarily front-end and some backend <br /><br /></member-body>
-              <member-header> # of commits <br /><br /></member-header>
-              <member-body> 20 <br /><br /></member-body>
-              <member-header> # of issues <br /><br /></member-header>
-              <member-body> 8 <br /><br /></member-body>
-              <member-header> # of unit tests <br /><br /></member-header>
-              <member-body> 0 <br /><br /></member-body>
-            </div>
-          </div>
-          <div class= "member">
-            <img class="profile--image" src="../static/img/Vignesh.jpg">
-            <div class="member-info">
-              <member-name> Vignesh Kumar <br /><br /></member-name>
-              <member-body> Hi, I'm a Junior in University of Texas at Austin and I'm a Computer Science Major. I am extremely passionate in data-driven technologies and I'll be interning at Bank of America this summer. <br/>  Fun fact about me is that even though I was born in India, I have not lived there for more than 2 years. Throughout my childhood, I have been moving across Asia; Kuwait, Singapore, and Abu Dhabi. I enjoyed experiencing all the different kinds of cultures around Asia. I decided to come to America for my education as I wanted to move to a different continent and learn Computer Science from the best. I am fluent in English, Tamil and I am intermediate in French. In my freetime, I enjoy experiencing my favorite sport soccer in several ways- Playing it with my friends in the sun, watching my favorite club Manchester United and playing my favorite video game FIFA.  <br /><br /></member-body>
-              <member-header> Major Responsibilities <br /><br /></member-header>
-              <member-body> Database and Backend <br /><br /></member-body>
-              <member-header> # of commits <br /><br /></member-henader>
-              <member-body> 16 <br /><br /></member-body>
-              <member-header> # of issues <br /><br /></member-header>
-              <member-body> 11 <br /><br /></member-body>
-              <member-header> # of unit tests <br /><br /></member-header>
-              <member-body> 3 <br /><br /></member-body>
-            </div>
-          </div>
-          <div class= "member">
-            <img class="profile--image" src="../static/img/aaron.jpg">
-            <div class="member-info">
-              <member-name> Aaron Chang <br /><br /></member-name>
-              <member-body> Hi, I'm classified as a Junior at UT Austin, and I'm majoring in Computer Science. My main interests are cybersecurity and supercomputing, and I’ll be interning at BP’s Center for High Performance Computing this summer. A few words about myself - though I reside in Texas now, I was born in Missouri and lived there for 15 years before I moved here. Consequently, the weather here very frequently feels much too warm! Temperature preferences aside, in my free time I love reading (Stephen King is my favorite author), playing piano, and listening to classical and electronic music. Strangely, my favorite thing to do while coding a project is bugfixing; there’s nothing more satisfying than finding and correcting an obscure error and finally getting the program to work how you want it to work. <br /><br /></member-body>
-              <member-header> Major Responsibilities <br /><br /></member-header>
-              <member-body> Mostly backend, some work with frontend <br /><br /></member-body>
-              <member-header> # of commits <br /><br /></member-header>
-              <member-body> 44 <br /><br /></member-body>
-              <member-header> # of issues <br /><br /></member-header>
-              <member-body> 12 <br /><br /></member-body>
-              <member-header> # of unit tests <br /><br /></member-header>
-              <member-body> 20 <br /><br /></member-body>
-            </div>
-          </div>
-        </div>
-        <div class="paragraph">
-          <h1 style="color: white; padding: 100px; font-size: 350%;">Overall Statistics</h1>
+
+      <div class="container"  style="min-height: 94vh; padding-bottom: 15px">
+        <br /><br /><br /><br /><br />
+        <div class="card rounded-opacity" style="margin-bottom: 0rem; align-self: center">
           <div class="member-group">
+            <h1 class="cover-heading" style="color: white;">What we’ve done</h1>
             <div class="member">
               <div class="member-info">
-                <member-header>Total # of commits<br /><br /></member-header>
-                <member-body> 163 <br /><br /></member-body>
-                <member-header>Total # of issues<br /><br /></member-header>
-                <member-body> 42 <br /><br /></member-body>
-                <member-header>Total # of unit tests<br /><br /></member-header>
-                <member-body> 15 </member-body>
+                <member-header>Total commits : 163<br /><br /></member-header>
+                <member-header>Total issues : 42<br /><br /></member-header>
+                <member-header>Total unit tests : 15<br /><br /></member-header>
+                <member-header>Total additions : 6,151<br /><br /></member-header>
+                <member-header>Total deletions : 229<br /><br /></member-header>
               </div>
             </div>
             <div class="member">
-              <div class="member-info"><br />
-                <member-header><a href="https://github.com/sweatshoptech/idb/">Github Repo<br /><br /></a></member-header>
-                <member-header><a href="https://github.com/sweatshoptech/idb/issues">Github Issue Tracker<br /><br /></a></member-header>
-                <member-header><a href="http://docs.sweatshop.apiary.io">Apiary</a><br /><br /></member-header>
-                <member-header><a href="report.html">Technical Report</a><br /><br /></member-header>
+              <div class="member-info">
+                <a class="button" href="https://github.com/sweatshoptech/idb/">
+                    <member-header>
+                      Github Repo
+                    </member-header>
+                  </a>
+                <br />
+                <a class="button" href="https://github.com/sweatshoptech/idb/issues">
+                  <member-header>
+                    Github Issue Tracker
+                  </member-header>
+                </a>
+                <br />
+                <a class="button" href="http://docs.sweatshop.apiary.io">
+                  <member-header>
+                    Apiary
+                  </member-header>
+                </a>
+                <br />
+                <a class="button" href="report.html">
+                  <member-header>
+                    Technical Report
+                  </member-header>
+                </a>
+                <br />
+                <a class="button" href="run-tests">
+                  <member-header>
+                    Run Tests
+                  </member-header>
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <h1 style="color: white; padding: 100px; font-size: 350%;">Data</h1><br />
-        <h3 style="color: white; padding: 50px;">For this phase, we manually scraped the data from their database rather than using the API.</h3>
-        <a href="https://data.crunchbase.com/">
-          <h3 style=" padding: 50px;">https://data.crunchbase.com/</h3>
-        </a>
-       <h1 style="color: white; padding: 100px; font-size: 350%;">Technology Stack</h1><br />
-        <div class="member-group">
-          <h3 style="color: white; padding: 50px; font-size: 300%;">Front-End</h3>
-          <div class="member">
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
-              <img class="logo--image" src="../static/img/html.png" alt="HTML Logo"> 
-            </a>
-            <div class="member-info">
-              <member-name> HTML 5 <br /><br /></member-name>
-              <member-body> HTML 5 is the 5th version of HTML. We use HTML with Bootstrap and ReactJS to design and organize the components on the front-end of the web application. <br /><br /></member-body>
-            </div>
-          </div>
-          <div class="member">
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
-              <img class="logo--image" src="../static/img/css.png" alt="CSS Logo"> 
-            </a>
-            <div class="member-info">
-              <member-name> CSS 3 <br /><br /></member-name>
-              <member-body> CSS 3 is the 3rd version of CSS. We use CSS with Bootstrap included to style the web application in a more visually engaging way. <br /><br /></member-body>
-            </div>
-          </div>
-          <div class="member">
-            <a href="http://getbootstrap.com/">
-              <img class="logo--image" src="../static/img/bootstrap.png" alt="Bootstrap Logo">
-            </a>
-            <div class="member-info">
-              <member-name> Bootstrap <br /><br /></member-name>
-              <member-body> Bootstrap is a free and open-source front-end web framework for designing websites and web applications. It contains HTML and CSS based design templates. Bootstrap was utilized to create the homepage Carousel as well as the to display our data in a table like manner. <br /><br /></member-body>
-            </div>
-          </div>
-          <div class="member">
-            <a href="https://facebook.github.io/react/">
-              <img class="logo--image" src="../static/img/react-logo.png" alt="React Logo">
-            </a>
-            <div class="member-info">
-              <member-name> ReactJS <br /><br /></member-name>
-              <member-body> ReactJS is an open-source JavaScript framework for building user interfaces.  <br /><br /></member-body>
-            </div>
-          </div>
-          <div class="member">
-            <a href="http://isotope.metafizzy.co/">
-              <img class="logo--image" src="../static/img/isotope.png" alt="Isotope Logo">
-            </a>
-            <div class="member-info">
-              <member-name> Isotope <br /><br /></member-name>
-              <member-body> Isotope is an open source package that we utilized in order to create the grid like interface. It also has the functionality to add sorting and filtering. </member-body>
-            </div>
-          </div>
-          <h3 style="color: white; padding: 50px; font-size: 300%;">Back-End</h3>
-          <div class="member">
-            <a href="https://aws.amazon.com/s3/">
-              <img class="profile--image" src="../static/img/awss3.png" alt="AWS S3 Logo">
-            </a>
-            <div class="member-info">
-              <member-name> AWS S3 <br /><br /></member-name>
-              <member-body> AWS S3 is a stororage for the Internet designed to make web-scale computing easier for developers. AWS S3 is where the SWEatshop is hosted. <br /><br /></member-body>
-            </div>
-          </div>
-          <div class="member">
-            <a href="https://www.sqlalchemy.org/">
-              <img class="logo--image" src="../static/img/sqla.png" alt="SQLAlchemy Logo">
-            </a>
-            <div class="member-info">
-              <member-name> SQL Alchemy <br /><br /></member-name>
-              <member-body> SQLAlchemy is an open source SQL toolkit and object-relational mapper (ORM) for the python language. We utilize SQLAlchemy in order to connected the front-end with our Postgresql database. SQLAlchemy is essentially used to retrieve data from our database and populate our HTML pages. <br /><br /></member-body>
-            </div>
-          </div>
-          <div class="member">
-            <a href="https://www.postgresql.org/">
-              <img class="logo--image" src="../static/img/psql.png" alt="PostgreSQL Logo">
-            </a>
-            <div class="member-info">
-              <member-name> PostgreSQL <br /><br /></member-name>
-              <member-body> PostgreSQL is an object-relational database. We utilize PostgreSQL as a place to keep and organize our data models. <br /><br /></member-body>
-            </div>
-          </div>
-          <div class="member">
-            <a href="https://docs.python.org/2/">
-              <img class="logo--image" src="../static/img/python.png" alt="Python Logo"> 
-            </a>
-            <div class="member-info">
-              <member-name> Python <br /><br /></member-name>
-              <member-body> Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. We utilize Python for the backend of the web application. This was by use of Flask and SQLAlchemy to connect the frontend and database to our backend. <br /><br /></member-body>
-            </div>
-          </div>
-          <div class="member">
-            <a href="http://flask.pocoo.org/">
-              <img class="logo--image" src="../static/img/flask.png" alt="Flask Logo"> 
-            </a>
-            <div class="member-info">
-              <member-name> Flask <br /><br /></member-name>
-              <member-body> Flask is a micro web framework written in Python. It allows us to connect our HTML templates to specific routes for our URL address. <br /><br /></member-body>
-            </div>
-          </div>
-          <h3 style="color: white; padding: 50px; font-size: 300%;">Hosting Tools</h3>
-          <div class="member">
-            <a href="https://aws.amazon.com/ec2/">
-              <img class="logo--image landscape" src="../static/img/awsec2.png" alt="AWS EC2 Logo">
-            </a>
-            <div class="member-info">
-              <member-name> AWS EC2 <br /><br /></member-name>
-              <member-body> Elastic Compute Cloud is a web service that provides computing capacity from Amazon's cloud. We use it create a virtual machine that contains our files for this site. <br /><br /></member-body>
-            </div>
-          </div>
-          <div class="member">
-            <a href="https://aws.amazon.com/elasticbeanstalk/">
-              <img class="logo--image" src="../static/img/awseb.png" alt="AWS Elastic Beanstalk Logo">
-            </a>
-            <div class="member-info">
-              <member-name> AWS Elastic Beanstalk <br /><br /></member-name>
-              <member-body> Elastic Beanstalk is used to deploy our web application developed in Python developed on an Apache server. <br /><br /></member-body>
-            </div>
-          </div>
-          <div class="member">
-            <a href="https://www.namecheap.com/">
-              <img class="logo--image" src="../static/img/namecheap.png" alt="Namecheap Logo">
-            </a>
-            <div class="member-info">
-              <member-name> Namecheap <br /><br /></member-name>
-              <member-body> Vendor from which we obtained the sweatshop.tech domain. We then set the IP and DNS to point to our AWS EC2 instance. <br /><br /></member-body>
-            </div>
-          </div>
-          <h3 style="color: white; padding: 50px; font-size: 300%;">Other</h3>
-          <div class="member">
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">
-              <img class="logo--image" src="../static/img/github.png" alt="Javascript Logo"> 
-            </a>
-            <div class="member-info">
-              <member-name> Github <br /><br /></member-name>
-              <member-body> Github is a web-based Git (version control repository) that we utilize to maintain the source code, track issues/features, and assign issues/features to each of the team members. <br /><br /></member-body>
-            </div>
-          </div>
-          <div class="member">
-            <a href="https://www.slack.com/">
-              <img class="logo--image" src="https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png" alt="Slack Logo"> 
-            </a>
-            <div class="member-info">
-              <member-name> Slack <br /><br /></member-name>
-              <member-body> Slack is one of the communication tools utilzed by the team members. There are several channels (chatrooms) such as #frontend, #backend, and #db to discuss the different portions of the web application. Slack is also connected to the Github repository and to our Trello board to frequently and easily monitor progress. <br /><br /></member-body>
-            </div>
-          </div>
-          <div class="member">
-            <a href="https://www.trello.com/">
-              <img class="logo--image" src="../static/img/trello.png" alt="Trello Logo"> 
-            </a>
-            <div class="member-info">
-              <member-name> Trello <br /><br /></member-name>
-              <member-body> A project management application utilized to list and separate all necessary tasks for the web application. It provides a way to assign tasks and track progress. Trello is connected to our Slack channels. <br /><br /></member-body>
-            </div>
-          </div>
-          <div class="member">
-            <a href="https://apiary.io/">
-              <img class="logo--image" src="../static/img/apiary.png" alt="Apiary Logo"> 
-            </a>
-            <div class="member-info">
-              <member-name> Apiary <br /><br /></member-name>
-              <member-body> Apiary is a Github tool that allows us to document our API easily and efficiently and be connected to our Github to provide further documentation for our web application. <br /><br /></member-body>
-            </div>
-          </div>
-          <div class="member">
-            <a href="https://developers.google.com/maps/">
-              <img class="logo--image landscape" src="../static/img/googlemaps.png" alt="Google Maps Logo">
-            </a>
-            <div class="member-info">
-              <member-name>Google Maps API<br /><br /></member-name>
-              <member-body>The Google Maps API is an aplication programming interfaces that allows developers to use Google Maps services in their applications. We utilized the Google Maps API in order to embed the location of the companies, people, investors, and schools of our models. </member-body>
+      </div>
+    </div>
+    <div style="padding-top: 0; background-color: white; height: 100%;">
+      <h1 class="cover-heading">Who we are</h1>
+      <div class="container" style="margin-bottom: 4rem;">
+        <div class="card rounded">
+          <div class="container" style="padding-left: 3rem; padding-right: 3rem; color: white;">
+            <div class="row">
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                  <img class="profile--image" src="http://vishnut.me/CS373/profpic.jpg">
+                  <div class="member-info">
+                    <member-name>Vishnu Thiagarajan <br /><br /></member-name>
+                    <member-body> Hi, My name is Vishnu and I am a second year Computer Science major (classified as a Senior) at the University of Texas at Austin. I love food and doggo memes. <br /><br /></member-body>
+                    <member-header> Major Responsibilities <br /><br /></member-header>
+                    <member-body> Bootstrap HTML Templates, Flask Backend, SQLAlchemy Database, Hosting Setup <br /><br /></member-body>
+                    <member-header>commits : 46 <br /><br /></member-header>
+                    <member-header>issues : 29<br /><br /></member-header>
+                    <member-header>unit tests : 8</member-header>
+                  </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <img class="profile--image" src="../static/img/raunak.jpg">
+                <div class="member-info">
+                  <member-name> Raunak Srivastava <br /><br /></member-name>
+                  <member-body> Hi, I am a third year Computer Science major at UT. I am extremely passionate about making education more easily accessible through technology.<br /><br /></member-body>
+                  <member-header> Major Responsibilities <br /><br /></member-header>
+                  <member-body> Mostly front-end design and implementation, along with some of the back-end. <br /><br /></member-body>
+                  <member-header>commits : 37<br /><br /></member-header>
+                  <member-header>issues : 6<br /><br /></member-header>
+                  <member-header>unit tests : 0</member-header>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <img class="profile--image" src="../static/img/aditya.jpg">
+                <div class="member-info">
+                  <member-name> Aditya Palnitkar <br /><br /></member-name>
+                  <member-body> Hi! My name is Aditya, and I am a Junior Computer Science major at UT. I'm a huge aviation geek and I'm currently working on my private pilot's license.  <br /><br /></member-body>
+                  <member-header> Major Responsibilities <br /><br /></member-header>
+                  <member-body> A bit of both front-end and back-end <br /><br /><br /><br /></member-body>
+                  <member-header>commits : 1<br /><br /></member-header>
+                  <member-header>issues : 5<br /><br /></member-header>
+                  <member-header>unit tests : 15</member-header>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <img class="profile--image" src="../static/img/brenda.jpg">
+                <div class="member-info">
+                  <member-name> Brenda Salazar <br /><br /></member-name>
+                  <member-body> Hola, I am a Junior Computer Science major at UT \m/ (Hook 'em Horns). I am cofounder and vicepresident of HACS (Hispanic Association for Computer Scientists) at UT and hope to leave a legacy in the CS department. <br /><br /></member-body>
+                  <member-header> Major Responsibilities <br /><br /></member-header>
+                  <member-body> Primarily front-end and some backend <br /><br /></member-body>
+                  <member-header>commits : 20<br /><br /></member-header>
+                  <member-header>issues : 8<br /><br /></member-header>
+                  <member-header>unit tests : 0</member-header>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <img class="profile--image" src="../static/img/Vignesh.jpg">
+                <div class="member-info">
+                  <member-name> Vignesh Kumar <br /><br /></member-name>
+                  <member-body> Hi, I'm a Junior in University of Texas at Austin and I'm a Computer Science Major. I am extremely passionate in data-driven technologies and I'll be interning at Bank of America this summer.<br /><br /><br /></member-body>
+                  <member-header> Major Responsibilities <br /><br /></member-header>
+                  <member-body> Database and Backend <br /><br /></member-body>
+                  <member-header>commits : 16<br /><br /></member-header>
+                  <member-header>issues : 11<br /><br /></member-header>
+                  <member-header>unit tests : 3</member-header>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <img class="profile--image" src="../static/img/aaron.jpg">
+                <div class="member-info">
+                  <member-name> Aaron Chang <br /><br /></member-name>
+                  <member-body> Hi, I'm classified as a Junior at UT Austin, and I'm majoring in Computer Science. My main interests are cybersecurity and supercomputing, and I’ll be interning at BP’s Center for High Performance Computing this summer. <br /><br /></member-body>
+                  <member-header> Major Responsibilities <br /><br /></member-header>
+                  <member-body> Mostly backend, some work with frontend <br /><br /></member-body>
+                  <member-header>commits : 44<br /><br /></member-header>
+                  <member-header>issues : 12<br /><br /></member-header>
+                  <member-header>unit tests : 0</member-header>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <br/>
       </div>
-      <script src="https://npmcdn.com/react@15.3.0/dist/react-with-addons.min.js"></script>
-      <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js"></script>
-      <script src="js/app.processed.js"></script>
-    </body>
-    <div class="outro">
-      <br/>
-      <p>© SWEatshop 2017</p>
-      <br/>
     </div>
-  </html>
+    
+    <div style="padding-top: 0; margin-top: 0; background-color: black; height: 100%;">
+      <h1 style="padding: 100px; font-size: 350%; color: white">What we used</h1><br />
+      <div class="container" style="margin-bottom: 4rem;">
+        <div class="card rounded">
+          <div class="container" style="padding-left: 3rem; padding-right: 3rem; color: white">
+            <div class="row tools">
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                  <a href="https://data.crunchbase.com">
+                  <img class="logo--image" src="../static/img/crunchbase.jpg" alt="HTML Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> Data <br /><br /></member-name>
+                  <member-body> We used the CrunchBase API scrape all of our data for this web application.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+                  <img class="logo--image" src="../static/img/html.png" alt="HTML Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> HTML 5 <br /><br /></member-name>
+                  <member-body> HTML 5 is the 5th version of HTML. We use HTML with Bootstrap and ReactJS to design and organize the components on the front-end of the web application.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+                  <img class="logo--image" src="../static/img/css.png" alt="CSS Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> CSS 3 <br /><br /></member-name>
+                  <member-body> CSS 3 is the 3rd version of CSS. We use CSS with Bootstrap included to style the web application in a more visually engaging way.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="http://getbootstrap.com/">
+                  <img class="logo--image" src="../static/img/bootstrap.png" alt="Bootstrap Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> Bootstrap <br /><br /></member-name>
+                  <member-body> Bootstrap is a free and open-source front-end web framework for designing websites and web applications. It contains HTML and CSS based design templates. Bootstrap was utilized to create the homepage Carousel as well as the to display our data in a table like manner.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://facebook.github.io/react/">
+                  <img class="logo--image" src="../static/img/react-logo.png" alt="React Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> ReactJS <br /><br /></member-name>
+                  <member-body> ReactJS is an open-source JavaScript framework for building user interfaces.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="http://isotope.metafizzy.co/">
+                  <img class="logo--image" src="../static/img/isotope.png" alt="Isotope Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> Isotope <br /><br /></member-name>
+                  <member-body> Isotope is an open source package that we utilized in order to create the grid like interface. It also has the functionality to add sorting and filtering. </member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://aws.amazon.com/s3/">
+                  <img class="profile--image" src="../static/img/awss3.png" alt="AWS S3 Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> AWS S3 <br /><br /></member-name>
+                  <member-body> AWS S3 is a stororage for the Internet designed to make web-scale computing easier for developers. AWS S3 is where the SWEatshop is hosted. </member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://aws.amazon.com/ec2/">
+                  <img class="logo--image landscape" src="../static/img/awsec2.png" alt="AWS EC2 Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> AWS EC2 <br /><br /></member-name>
+                  <member-body> Elastic Compute Cloud is a web service that provides computing capacity from Amazon's cloud. We use it create a virtual machine that contains our files for this site. </member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://aws.amazon.com/elasticbeanstalk/">
+                  <img class="logo--image landscape" src="../static/img/awseb.png" alt="AWS Elastic Beanstalk Logo">
+                </a>
+                <div class="member-info">
+                  <member-name>AWS Elastic Beanstalk<br /><br /></member-name>
+                  <member-body>Elastic Beanstalk is used to deploy our web application developed in Python developed on an Apache server.  </member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://www.sqlalchemy.org/">
+                  <img class="logo--image" src="../static/img/sqla.png" alt="SQLAlchemy Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> SQL Alchemy <br /><br /></member-name>
+                  <member-body> SQLAlchemy is an open source SQL toolkit and object-relational mapper (ORM) for the python language. We utilize SQLAlchemy in order to connected the front-end with our Postgresql database. SQLAlchemy is essentially used to retrieve data from our database and populate our HTML pages. </member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://www.postgresql.org/">
+                  <img class="logo--image" src="../static/img/psql.png" alt="PostgreSQL Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> PostgreSQL <br /><br /></member-name>
+                  <member-body> PostgreSQL is an object-relational database. We utilize PostgreSQL as a place to keep and organize our data models.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://docs.python.org/2/">
+                  <img class="logo--image" src="../static/img/python.png" alt="Python Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> Python <br /><br /></member-name>
+                  <member-body> Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. We utilize Python for the backend of the web application. This was by use of Flask and SQLAlchemy to connect the frontend and database to our backend.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="http://flask.pocoo.org/">
+                  <img class="logo--image" src="../static/img/flask.png" alt="Flask Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> Flask <br /><br /></member-name>
+                  <member-body> Flask is a micro web framework written in Python. It allows us to connect our HTML templates to specific routes for our URL address.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://www.namecheap.com/">
+                  <img class="logo--image" src="../static/img/namecheap.png" alt="Namecheap Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> Namecheap <br /><br /></member-name>
+                  <member-body> Vendor from which we obtained the sweatshop.tech domain. We then set the IP and DNS to point to our AWS EC2 instance.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">
+                  <img class="logo--image" src="../static/img/github.png" alt="Javascript Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> Github <br /><br /></member-name>
+                  <member-body> Github is a web-based Git (version control repository) that we utilize to maintain the source code, track issues/features, and assign issues/features to each of the team members.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://www.slack.com/">
+                  <img class="logo--image" src="https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png" alt="Slack Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> Slack <br /><br /></member-name>
+                  <member-body> Slack is one of the communication tools utilzed by the team members. There are several channels (chatrooms) such as #frontend, #backend, and #db to discuss the different portions of the web application. Slack is also connected to the Github repository and to our Trello board to frequently and easily monitor progress.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://www.trello.com/">
+                  <img class="logo--image" src="../static/img/trello.png" alt="Trello Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> Trello <br /><br /></member-name>
+                  <member-body> A project management application utilized to list and separate all necessary tasks for the web application. It provides a way to assign tasks and track progress. Trello is connected to our Slack channels.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://apiary.io/">
+                  <img class="logo--image" src="../static/img/apiary.png" alt="Apiary Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> Apiary <br /><br /></member-name>
+                  <member-body> Apiary is a Github tool that allows us to document our API easily and efficiently and be connected to our Github to provide further documentation for our web application.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://developers.google.com/maps/">
+                  <img class="logo--image landscape" src="../static/img/googlemaps.png" alt="Google Maps Logo">
+                </a>
+                <div class="member-info">
+                  <member-name>Google Maps API<br /><br /></member-name>
+                  <member-body>The Google Maps API is an aplication programming interfaces that allows developers to use Google Maps services in their applications. We utilized the Google Maps API in order to embed the location of the companies, people, investors, and schools of our models. </member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://clearbit.com/logo">
+                  <img class="logo--image landscape" src="../static/img/clearbit.png" alt="ClearBit Logo">
+                </a>
+                <div class="member-info">
+                  <member-name>ClearBit API<br /><br /></member-name>
+                  <member-body>The ClearBit API allowed us to scrape the web for our school's logos since they weren't provided in the 2013 SQL dump. </member-body>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="outro">
+        © SWEatshop 2017
+      </div>
+    </div>
+    <script src="https://npmcdn.com/react@15.3.0/dist/react-with-addons.min.js"></script>
+    <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js"></script>
+    <script src="js/app.processed.js"></script>
+  </body>
+</html>

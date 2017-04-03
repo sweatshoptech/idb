@@ -1,212 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <title>SWEatshop.tech</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="../static/css/styles.processed.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-</head>
-<body>
-  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="index.html"><img alt="Brand" src="http://vishnut.me/assets/external/logo.png" style="width: 200px;"></a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="companies.html">Companies</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="people.html">People</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Investors<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="schools.html">Schools</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="gradient-bg" style="min-height:85vh"> 
-    <div class="inner">
+  <head>
+    <meta charset="UTF-8">
+    <title>SWEatshop.tech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.processed.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+  </head>
+  <body class="gradient-bg">
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse-opacity">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img alt="Brand" src="../static/img/sweatshop-logo.png" style="width: 200px;"></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="companies.html">Companies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="people.html">People</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Investors<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="schools.html">Schools</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div style="min-height:89vh"> 
       <h1 class="cover-heading">Investors</h1>
-      <br/><br/>
-    <div class="container" style="color: white;">
-      <div class="filters">
+      <div class="container" style="color: white;">
+        <div class="filters">
+          <div class="ui-group">
+            <h3>Country</h3>
+            <div class="button-group js-radio-button-group" data-filter-group="country">
+              <button class="button is-checked" data-filter="">Any</button>
+              <button class="button" data-filter=".usa">USA</button>
+              <button class="button" data-filter=".canada">Canada</button>
+            </div>
+          </div>
+        </div>
         <div class="ui-group">
-          <h3>Country</h3>
-          <div class="button-group js-radio-button-group" data-filter-group="country">
-            <button class="button is-checked" data-filter="">Any</button>
-            <button class="button" data-filter=".usa">USA</button>
-            <button class="button" data-filter=".canada">Canada</button>
+          <h3>Sort By</h3>
+          <div class="button-group sort-by-button-group">
+            <button class="button is-checked" data-sort-value="name" >Name</button>
+            <button class="button" data-sort-value="funding" >Funding</button>
           </div>
         </div>
-      </div>
-      <div class="ui-group">
-        <h3>Sort By</h3>
-        <div class="button-group sort-by-button-group">
-          <button class="button is-checked" data-sort-value="name" >Name</button>
-          <button class="button" data-sort-value="funding" >Funding</button>
-        </div>
-      </div>
-      <div class="grid small">
-        <a href="http://sweatshop.tech/investor/1">  
-        <div class="grid-item usa" funding='{{investors[0].funding}}' name='{{investors[0].name}}'>
-          <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
-            <div style="background: #FFF; width: 100%">
-              <img class="card-img-top" src="{{investors[0].image_url}}" alt="Card image cap">
-            </div>
-            <div class="card-block">
-              <h4 class="card-title name">{{investors[0].name}}</h4>
-              <div class="list-group-item">
-                {{investors[0].description}}
-              </div>
-              <a href="investor/1" class="btn btn-primary">More Information</a>
-            </div>
-            <ul class="list-group list-group-flush;">
-              <a href="{{investors[0].website}}">
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{investors[0].website}}</li>
-              </a>
-              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{investors[0].funding}}</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investors[0].location}}</li>
-            </ul>
-          </div>
-        </div>
-        </a>
-        <a href="http://sweatshop.tech/investor/2">  
-        <div class="grid-item usa" funding='{{investors[1].funding}}' name='{{investors[1].name}}'>
+        <div class="grid small">
+          <a href="http://sweatshop.tech/investor/2">  
+          <div class="grid-item usa" funding='{{investors[0].funding}}' name='{{investors[0].name}}'>
             <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
-            <div style="background: #FFF; width: 100%">
-              <img class="card-img-top" src="{{investors[1].image_url}}" alt="Card image cap">
-            </div>
-            <div class="card-block">
-              <h4 class="card-title name">{{investors[1].name}}</h4>
-              <div class="list-group-item">
-                {{investors[1].description}}
+              <div style="background: #FFF; width: 100%">
+                <img class="card-img-top" src="{{investors[0].image_url}}" alt="Card image cap">
               </div>
-              <a href="investor/2" class="btn btn-primary">More Information</a>
-            </div>
-            <ul class="list-group list-group-flush;">
-              <a href="{{investors[1].website}}">
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{investors[1].website}}</li>
-              </a>
-              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{investors[1].funding}}</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investors[1].location}}</li>
-            </ul>
-          </div>
-        </div>
-        </a>
-        <a href="http://sweatshop.tech/investor/3"> 
-        <div class="grid-item usa" funding='{{investors[2].funding}}' name='{{investors[2].name}}'>
-          <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
-            <div style="background: #FFF; width: 100%">
-              <img class="card-img-top" src="{{investors[2].image_url}}" alt="Card image cap">
-            </div>
-            <div class="card-block">
-              <h4 class="card-title name">{{investors[2].name}}</h4>
+              <div class="card-block">
+                <h4 class="card-title name">{{investors[0].name}}</h4>
                 <div class="list-group-item">
-                {{investors[2].description}}
+                  {{investors[0].description}}
                 </div>
-              <a href="investor/3" class="btn btn-primary">More Information</a>
+                <a href="#" class="btn btn-primary">More Information</a>
+              </div>
+              <ul class="list-group list-group-flush;">
+                <a href="{{investors[0].website}}">
+                  <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{investors[0].website}}</li>
+                </a>
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{investors[0].funding}}</li>
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investors[0].location}}</li>
+              </ul>
             </div>
-            <ul class="list-group list-group-flush;">
-              <a href="{{investors[2].website}}">
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{investors[2].website}}</li>
-              </a>
-              <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{investors[2].funding}}</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investors[2].location}}</li>
-            </ul>
           </div>
+          </a>
+          <a href="http://sweatshop.tech/investor/1">  
+          <div class="grid-item usa" funding='{{investors[1].funding}}' name='{{investors[1].name}}'>
+              <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
+              <div style="background: #FFF; width: 100%">
+                <img class="card-img-top" src="{{investors[1].image_url}}" alt="Card image cap">
+              </div>
+              <div class="card-block">
+                <h4 class="card-title name">{{investors[1].name}}</h4>
+                <div class="list-group-item">
+                  {{investors[1].description}}
+                </div>
+                <a href="#" class="btn btn-primary">More Information</a>
+              </div>
+              <ul class="list-group list-group-flush;">
+                <a href="{{investors[1].website}}">
+                  <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{investors[1].website}}</li>
+                </a>
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{investors[1].funding}}</li>
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investors[1].location}}</li>
+              </ul>
+            </div>
+          </div>
+          </a>
+          <a href="http://sweatshop.tech/investor/3"> 
+          <div class="grid-item usa" funding='{{investors[2].funding}}' name='{{investors[2].name}}'>
+            <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
+              <div style="background: #FFF; width: 100%">
+                <img class="card-img-top" src="{{investors[2].image_url}}" alt="Card image cap">
+              </div>
+              <div class="card-block">
+                <h4 class="card-title name">{{investors[2].name}}</h4>
+                  <div class="list-group-item">
+                  {{investors[2].description}}
+                  </div>
+                <a href="#" class="btn btn-primary">More Information</a>
+              </div>
+              <ul class="list-group list-group-flush;">
+                <a href="{{investors[2].website}}">
+                  <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{investors[2].website}}</li>
+                </a>
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{investors[2].funding}}</li>
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investors[2].location}}</li>
+              </ul>
+            </div>
+          </div>
+          </a>
         </div>
-        </a>
-      </div>
-      <script>
-      // init Isotope
-      var $grid = $('.grid').isotope({
-          itemSelector: '.grid-item',
-          layoutMode: 'fitRows',
-          masonry: {
-            columnWidth: 100
-          },
-          getSortData: {
-            name: '[name]',
-            funding: '[funding] parseInt',
-            size: '[size] parseInt'
-          },
-          sortBy: 'name'
-      });
-        
-      // bind sort button click
-      $('.sort-by-button-group').on( 'click', 'button', function() {
-        var sortByValue = $(this).attr('data-sort-value');
-        $grid.isotope({ sortBy: sortByValue });
-      });
-        
-      // store filter for each group
-      var filters = {};
-
-      $('.filters').on( 'click', '.button', function() {
-        var $this = $(this);
-        // get group key
-        var $buttonGroup = $this.parents('.button-group');
-        var filterGroup = $buttonGroup.attr('data-filter-group');
-        // set filter for group
-        filters[ filterGroup ] = $this.attr('data-filter');
-        // combine filters
-        var filterValue = concatValues( filters );
-        // set filter for Isotope
-        $grid.isotope({ filter: filterValue });
-      });
-
-      // change is-checked class on buttons
-      $('.button-group').each( function( i, buttonGroup ) {
-        var $buttonGroup = $( buttonGroup );
-        $buttonGroup.on( 'click', 'button', function() {
-          $buttonGroup.find('.is-checked').removeClass('is-checked');
-          $( this ).addClass('is-checked');
+        <script>
+        // init Isotope
+        var $grid = $('.grid').isotope({
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows',
+            masonry: {
+              columnWidth: 100
+            },
+            getSortData: {
+              name: '[name]',
+              funding: '[funding] parseInt',
+              size: '[size] parseInt'
+            },
+            sortBy: 'name'
         });
-      });
 
-      // flatten object by concatting values
-      function concatValues( obj ) {
-        var value = '';
-        for ( var prop in obj ) {
-          value += obj[ prop ];
+        // bind sort button click
+        $('.sort-by-button-group').on( 'click', 'button', function() {
+          var sortByValue = $(this).attr('data-sort-value');
+          $grid.isotope({ sortBy: sortByValue });
+        });
+
+        // store filter for each group
+        var filters = {};
+
+        $('.filters').on( 'click', '.button', function() {
+          var $this = $(this);
+          // get group key
+          var $buttonGroup = $this.parents('.button-group');
+          var filterGroup = $buttonGroup.attr('data-filter-group');
+          // set filter for group
+          filters[ filterGroup ] = $this.attr('data-filter');
+          // combine filters
+          var filterValue = concatValues( filters );
+          // set filter for Isotope
+          $grid.isotope({ filter: filterValue });
+        });
+
+        // change is-checked class on buttons
+        $('.button-group').each( function( i, buttonGroup ) {
+          var $buttonGroup = $( buttonGroup );
+          $buttonGroup.on( 'click', 'button', function() {
+            $buttonGroup.find('.is-checked').removeClass('is-checked');
+            $( this ).addClass('is-checked');
+          });
+        });
+
+        // flatten object by concatting values
+        function concatValues( obj ) {
+          var value = '';
+          for ( var prop in obj ) {
+            value += obj[ prop ];
+          }
+          return value;
         }
-        return value;
-      }
-      </script>
-      <div class="grid">
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
+        </script>
+        <div class="grid">
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+        </div>
       </div>
     </div>
-  </div>
-  </div>
-  <div class="outro">
-    <br/>
-      <p>© SWEatshop 2017</p>
-    <br/>
-  </div>
-</body>
+    <div class="outro">
+      © SWEatshop 2017
+    </div>
+  </body>
 </html>

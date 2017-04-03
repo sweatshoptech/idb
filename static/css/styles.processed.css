@@ -1,12 +1,57 @@
 html,
 body {
   background-color: #333;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  font-family: "Lucida Grande";
   text-align: center;
-  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+
+.black {
+  color: black !important; 
+}
+
+.bg-white {
+  background-color: white !important;
+  opacity: inherit;
+  color: black !important;
+  text-shadow: none;
+}
+
+.bg-inverse {
+  background-color: black !important;
+}
+
+.bg-inverse-opacity {
+  background-color: rgba(0, 0, 0, .4)
+}
+
+.bg-sfo {
+  background: url(../img/sfo-bg.jpg) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg-ut {
+  background: url(../img/ut-bg.jpg) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.rounded {
+  border-radius: 30px;
+  background: #000;
+}
+
+.rounded-opacity {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, .4) !important;
 }
 
 p {
@@ -14,11 +59,27 @@ p {
 }
 
 h1 {
-  color: #FFF;
+  color: black;
+  font-weight: 100;
+  font-size: 350%; 
+  text-transform: uppercase; 
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 300;
 }
 
 h4 {
-  color: #AAA;;
+  color: #AAA;
+}
+
+button-text {
+  color: black;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 @media screen and (min-width: 767px) {
@@ -38,9 +99,11 @@ h4 {
 }
 
 .outro {
-  background-color: #000;
+  display: block;
+  background-color: rgba(0, 0, 0, .4);
   color: #FFF;
-  height: 13vh;
+  height: 5vh;
+  line-height: 5vh;
 }
 
 .full-width {
@@ -61,9 +124,16 @@ h4 {
 
 .gradient-bg {
   height: 100%;
-  background-image: linear-gradient(#403B4A, #222123);
+  background-image: linear-gradient( #d9d9d9, gray);
   text-align: center;
-  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  // text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.gradient-bg-inverse {
+  height: 100%;
+  background-image: linear-gradient(gray, #d9d9d9);
+  text-align: center;
+  // text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 
 .paragraph {
@@ -75,7 +145,6 @@ h4 {
 .paragraph-text {
   font-size: 18px;
   word-wrap: normal;
-  font-family: 'Open Sans', sans-serif;
   color: #FFF;
 }
 /* ---- member-group ---- */
@@ -86,6 +155,7 @@ h4 {
   color: #FFF;
   overflow: hidden;
   top: 50%;
+  margin-bottom: 0 !important
 }
 
 /* ---- member-image ---- */
@@ -95,17 +165,36 @@ h4 {
   height: 200px;
   overflow: hidden;
   border-radius: 50%;
-  margin: 24px 0% 12px 0%;
+  display: block;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  margin: 36px 0% 36px 0%;
 }
 
 .logo--image {
-  width: 200px;
-  height: 200px;
+  width: 256px;
+  height: 256px;
   overflow: hidden;
   margin: 24px 0% 12px 0%;
 }
 
 /* ---- member ---- */
+
+.tools member-name{
+  text-align: center;
+}
+
+.tools member-body {
+  text-align: left !important;
+}
+
+.col-sm-12 {
+  padding: 2rem;
+}
+
+.tools .col-sm-12 img {
+  position: relative;
+}
 
 .member {
   display: inline-block;
@@ -115,29 +204,35 @@ h4 {
   max-width: 350px;
   min-width: 330px;
   word-wrap: normal;
+  text-shadow: none;
 }
 
 .member-info {
   width: auto;
-  margin: 10px 2.5% 24px 2.5%;
+  margin: 12px 2.5% 24px 2.5%;
+  color: inherit;
+  text-align: left;
 }
 
 member-name {
   font-size: 24px;
   font-weight: bold;
-  text-align: center;
+}
+
+.rounded {
+  border-radius: 10px;
+  background: #000;
 }
 
 member-header {
   font-size: 18px;
   font-weight: bold;
-  text-align: center;
   text-transform: uppercase;
+  opacity: 1 !important;
 }
 
 member-body {
   font-size: 14px;
-  font-family: 'Open Sans';
 }
 
 /* ---- footer ---- */
@@ -148,6 +243,11 @@ member-body {
 }
 
 /* ---- carousel ---- */
+
+.carousel {
+  opacity: 0;
+  transition: opacity .5s ease;
+}
 
 .carousel-caption {
   position: absolute;
@@ -179,7 +279,6 @@ member-body {
   color: white;
   text-shadow: 1px 2px 3px #666;
   font-size: 550%;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .carousel-body {
@@ -189,6 +288,26 @@ member-body {
   vertical-align: bottom;
 }
 
+.carousel-item {
+  width: 70%;
+  left: 15%;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev{
+    display:block;
+}
+
+.carousel-control-prev:active {
+  opacity: 1 !important;
+}
+
+.carousel-control-prev:focus {
+  opacity: none !important;
+}
+
+
 /* Grid */
 
 .grid-sizer,
@@ -196,8 +315,6 @@ member-body {
 
 .grid {
   width: 100%;
-  text-align:center;
-
 }
 
 .grid-item {
@@ -213,29 +330,29 @@ member-body {
   margin-bottom: 10px;
   background: #EEE;
   border: none;
-  border-radius: 7px;
-  background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
-  color: #222;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  text-shadow: 0 1px white;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 1.0);
   cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .5s ease;
 }
 
 .button:hover {
-  background-color: #8CF;
+  background: rgba(0, 0, 0, 1.0);
+  color: rgba(255, 255, 255, 1.0);
   text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
-  color: #222;
+  text-decoration: none;
 }
 
 .button:active,
 .button.is-checked {
-  background-color: #28F;
-}
-
-.button.is-checked {
-  color: white;
-  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+  background-color: black;
+  text-decoration: none;
 }
 
 .button:active {
@@ -274,7 +391,28 @@ member-body {
 .card {
   margin: 0 auto;
   float: none;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  background: black;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-inverse {
+  background-color: rgba(51, 51, 51, 1.0); 
+  border-color: rgba(51, 51, 51, 1.0); 
+  width: 20rem;
+  color: white;
+}
+
+.card-list {
+  background-color: rgba(51, 51, 51, 1.0); 
+  border-color: rgba(51, 51, 51, 1.0);
+  color: white;
+}
+
+.card-grid:hover {
+  background-color: rgba(51, 51, 51, 1);
+  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+  text-decoration: none;
 }
 
 .card-title {
@@ -287,4 +425,14 @@ member-body {
   border-color: #333; 
   color: #FFF;
   display: block;
+}
+
+.card-animation:hover .cover-heading {
+  margin-top: 0px !important;
+  padding-top: 125px !important;
+  padding-bottom: 75px !important;
+}
+
+.card-animation:hover .carousel {
+  opacity: 1;
 }

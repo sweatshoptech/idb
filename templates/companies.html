@@ -1,184 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <title>SWEatshop.tech</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="../static/css/styles.processed.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-</head>
-<body>
-  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="index.html"><img alt="Brand" src="http://vishnut.me/assets/external/logo.png" style="width: 200px;"></a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Companies<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="people.html">People</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="investors.html">Investors</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="schools.html">Schools</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="gradient-bg" style="min-height:85vh"> 
-    <div class="inner">
+  <head>
+    <meta charset="UTF-8">
+    <title>SWEatshop.tech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.processed.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+  </head>
+  <body class="gradient-bg">
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse-opacity">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img alt="Brand" src="../static/img/sweatshop-logo.png" style="width: 200px;"></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Companies<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="people.html">People</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="investors.html">Investors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="schools.html">Schools</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div style="min-height:89vh"> 
       <h1 class="cover-heading">Companies</h1>
-      <br/><br/>
-    <div class="container" style="color: white;">
-      <div class="filters">
-        <div class="ui-group">
-          <h3>Ownership Type</h3>
-          <div class="button-group js-radio-button-group" data-filter-group="ownership-type">
-            <button class="button is-checked" data-filter="">Any</button>
-            <button class="button" data-filter=".public">Public</button>
-            <button class="button" data-filter=".private">Private</button>
+      <div class="container" style="color: white;">
+        <div class="filters">
+          <div class="ui-group">
+            <button-text>Ownership Type</button-text>
+            <div class="button-group js-radio-button-group" data-filter-group="ownership-type">
+              <button class="button is-checked" data-filter="">Any</button>
+              <button class="button" data-filter=".public">Public</button>
+              <button class="button" data-filter=".private">Private</button>
+            </div>
+          </div>
+          <div class="ui-group">
+            <button-text>Size</button-text>
+            <div class="button-group js-radio-button-group" data-filter-group="size">
+              <button class="button is-checked" data-filter="">Any</button>
+              <button class="button" data-filter=".small-size">1-50</button>
+              <button class="button" data-filter=".medium-size">50-250</button>
+              <button class="button" data-filter=".large-size">250+</button>
+            </div>
+          </div>
+          <div class="ui-group">
+            <button-text>Country</button-text>
+            <div class="button-group js-radio-button-group" data-filter-group="country">
+              <button class="button is-checked" data-filter="">Any</button>
+              <button class="button" data-filter=".usa">USA</button>
+              <button class="button" data-filter=".canada">Canada</button>
+            </div>
           </div>
         </div>
         <div class="ui-group">
-          <h3>Size</h3>
-          <div class="button-group js-radio-button-group" data-filter-group="size">
-            <button class="button is-checked" data-filter="">Any</button>
-            <button class="button" data-filter=".small-size">1-50</button>
-            <button class="button" data-filter=".medium-size">50-250</button>
-            <button class="button" data-filter=".large-size">250+</button>
+          <button-text>Sort By</button-text>
+          <div class="button-group sort-by-button-group">
+            <button class="button is-checked" data-sort-value="name" >Name</button>
+            <button class="button" data-sort-value="funding" >Funding</button>
+            <button class="button" data-sort-value="size" >Size</button>
           </div>
         </div>
-        <div class="ui-group">
-          <h3>Country</h3>
-          <div class="button-group js-radio-button-group" data-filter-group="country">
-            <button class="button is-checked" data-filter="">Any</button>
-            <button class="button" data-filter=".usa">USA</button>
-            <button class="button" data-filter=".canada">Canada</button>
-          </div>
-        </div>
-      </div>
-      <div class="ui-group">
-        <h3>Sort By</h3>
-        <div class="button-group sort-by-button-group">
-          <button class="button is-checked" data-sort-value="name" >Name</button>
-          <button class="button" data-sort-value="funding" >Funding</button>
-          <button class="button" data-sort-value="size" >Size</button>
-        </div>
-      </div>
-      <div class="grid small">
-        {% for company in companies %}
-          <a href="http://sweatshop.tech/company/{{company.idnum}}">  
-          <div class="grid-item private small-size usa" funding='{{company.funding}}' name='{{company.name}}' size='{{company.size}}'>
+        <div class="grid small">
+          <a href="http://sweatshop.tech/company/1">  
+          <div class="grid-item private small-size usa" funding='{{companies[0].funding}}' name='{{companies[0].name}}' size='{{companies[0].size}}'>
             <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
               <div style="background: #FFF; width: 100%">
-                <img class="card-img-top" src="{{company.image_url}}" alt="Card image cap">
+                <img class="card-img-top" src="{{companies[0].image_url}}" alt="Card image cap">
               </div>
               <div class="card-block">
-                <h4 class="card-title name">{{company.name}}</h4>
+                <h4 class="card-title name">{{companies[0].name}}</h4>
                 <div class="list-group-item">
-                  {{company.description}}
+                  {{companies[0].description}}
                 </div>
-                <a href="company/{{company.idnum}}" class="btn btn-primary">More Information</a>
+                <a href="#" class="btn btn-primary">More Information</a>
               </div>
               <ul class="list-group list-group-flush;">
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: {{company.ownership_type}}</li>
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{company.funding}}</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{company.location}}</li>
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: {{companies[0].ownership_type}}</li>
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{companies[0].funding}}</li>
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{companies[0].location}}</li>
               </ul>
             </div>
           </div>
           </a>
-        {% endfor %}
-      </div>
-      <script>
-      // init Isotope
-      var $grid = $('.grid').isotope({
-          itemSelector: '.grid-item',
-          layoutMode: 'fitRows',
-          masonry: {
-            columnWidth: 100
-          },
-          getSortData: {
-            name: '[name]',
-            funding: '[funding] parseInt',
-            size: '[size] parseInt'
-          },
-          sortBy: 'name'
-      });
-        
-      // bind sort button click
-      $('.sort-by-button-group').on( 'click', 'button', function() {
-        var sortByValue = $(this).attr('data-sort-value');
-        $grid.isotope({ sortBy: sortByValue });
-      });
-        
-      // store filter for each group
-      var filters = {};
-
-      $('.filters').on( 'click', '.button', function() {
-        var $this = $(this);
-        // get group key
-        var $buttonGroup = $this.parents('.button-group');
-        var filterGroup = $buttonGroup.attr('data-filter-group');
-        // set filter for group
-        filters[ filterGroup ] = $this.attr('data-filter');
-        // combine filters
-        var filterValue = concatValues( filters );
-        // set filter for Isotope
-        $grid.isotope({ filter: filterValue });
-      });
-
-      // change is-checked class on buttons
-      $('.button-group').each( function( i, buttonGroup ) {
-        var $buttonGroup = $( buttonGroup );
-        $buttonGroup.on( 'click', 'button', function() {
-          $buttonGroup.find('.is-checked').removeClass('is-checked');
-          $( this ).addClass('is-checked');
+          <a href="http://sweatshop.tech/company/2">  
+          <div class="grid-item private small-size usa" funding='{{companies[1].funding}}' name='{{companies[1].name}}' size='{{companies[1].size}}'>
+              <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
+              <div style="background: #FFF; width: 100%">
+                <img class="card-img-top" src="{{companies[1].image_url}}" alt="Card image cap">
+              </div>
+              <div class="card-block">
+                <h4 class="card-title name">{{companies[1].name}}</h4>
+                <div class="list-group-item">
+                  {{companies[1].description}}
+                </div>
+                <a href="#" class="btn btn-primary">More Information</a>
+              </div>
+              <ul class="list-group list-group-flush;">
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: {{companies[1].ownership_type}}</li>
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{companies[1].funding}}</li>
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{companies[1].location}}</li>
+              </ul>
+            </div>
+          </div>
+          </a>
+          <a href="http://sweatshop.tech/company/3"> 
+          <div class="grid-item private large-size usa" funding='{{companies[2].funding}}' name='{{companies[2].name}}' size='{{companies[2].size}}'>
+            <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
+              <div style="background: #FFF; width: 100%">
+                <img class="card-img-top" src="{{companies[2].image_url}}" alt="Card image cap">
+              </div>
+              <div class="card-block">
+                <h4 class="card-title name">{{companies[2].name}}</h4>
+                  <div class="list-group-item">
+                  {{companies[2].description}}
+                  </div>
+                <a href="#" class="btn btn-primary">More Information</a>
+              </div>
+              <ul class="list-group list-group-flush;">
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: {{companies[2].ownership_type}}</li>
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{companies[2].funding}}</li>
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{companies[2].location}}</li>
+              </ul>
+            </div>
+          </div>
+          </a>
+        </div>
+        <script>
+        // init Isotope
+        var $grid = $('.grid').isotope({
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows',
+            masonry: {
+              columnWidth: 100
+            },
+            getSortData: {
+              name: '[name]',
+              funding: '[funding] parseInt',
+              size: '[size] parseInt'
+            },
+            sortBy: 'name',
+            sortAscending: true
         });
-      });
+        var $ascending = true
 
-      // flatten object by concatting values
-      function concatValues( obj ) {
-        var value = '';
-        for ( var prop in obj ) {
-          value += obj[ prop ];
+        // bind sort button click
+        $('.sort-by-button-group').on( 'click', 'button', function() {
+          var sortByValue = $(this).attr('data-sort-value');
+          $grid.isotope({ sortBy: sortByValue, sortAscending: !$ascending });
+          $ascending = !$ascending;
+          console.log($ascending)
+        });
+
+        // store filter for each group
+        var filters = {};
+
+        $('.filters').on( 'click', '.button', function() {
+          var $this = $(this);
+          // get group key
+          var $buttonGroup = $this.parents('.button-group');
+          var filterGroup = $buttonGroup.attr('data-filter-group');
+          // set filter for group
+          filters[ filterGroup ] = $this.attr('data-filter');
+          // combine filters
+          var filterValue = concatValues( filters );
+          // set filter for Isotope
+          $grid.isotope({ filter: filterValue });
+        });
+
+        // change is-checked class on buttons
+        $('.button-group').each( function( i, buttonGroup ) {
+          var $buttonGroup = $( buttonGroup );
+          $buttonGroup.on( 'click', 'button', function() {
+            $buttonGroup.find('.is-checked').removeClass('is-checked');
+            $( this ).addClass('is-checked');
+          });
+        });
+
+        // flatten object by concatting values
+        function concatValues( obj ) {
+          var value = '';
+          for ( var prop in obj ) {
+            value += obj[ prop ];
+          }
+          return value;
         }
-        return value;
-      }
-      </script>
-      <div class="grid">
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
+        </script>
+        <div class="grid">
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+        </div>
       </div>
     </div>
-  </div>
-  </div>
-  <div class="outro">
-    <br/>
-      <p>© SWEatshop 2017</p>
-    <br/>
-  </div>
-</body>
+    <div class="outro">
+      © SWEatshop 2017
+    </div>
+  </body>
 </html>
