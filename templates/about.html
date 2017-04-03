@@ -172,190 +172,197 @@
         </div>
       </div>
     </div>
+    
     <div style="padding-top: 0; margin-top: 0; background-color: white; height: 100%;">
       <h1 style="padding: 100px; font-size: 350%;">What we used</h1><br />
-      <div class="member-group black">
-        <div class="member">
-          <a href="https://data.crunchbase.com">
-            <img class="logo--image" src="../static/img/crunchbase.jpg" alt="HTML Logo"> 
-          </a>
-          <div class="member-info">
-            <member-name> Data <br /><br /></member-name>
-            <member-body> We used the CrunchBase API scrape all of our data for this web application. <br /><br /></member-body>
+      
+      <div class="container" style="margin-bottom: 3rem;">
+        <div class="card rounded">
+          <div class="container" style="padding-left: 3rem; padding-right: 3rem; color: white">
+            <div class="row">
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                  <a href="https://data.crunchbase.com">
+                  <img class="logo--image" src="../static/img/crunchbase.jpg" alt="HTML Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> Data <br /><br /></member-name>
+                  <member-body> We used the CrunchBase API scrape all of our data for this web application.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+                  <img class="logo--image" src="../static/img/html.png" alt="HTML Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> HTML 5 <br /><br /></member-name>
+                  <member-body> HTML 5 is the 5th version of HTML. We use HTML with Bootstrap and ReactJS to design and organize the components on the front-end of the web application.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+                  <img class="logo--image" src="../static/img/css.png" alt="CSS Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> CSS 3 <br /><br /></member-name>
+                  <member-body> CSS 3 is the 3rd version of CSS. We use CSS with Bootstrap included to style the web application in a more visually engaging way.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="http://getbootstrap.com/">
+                  <img class="logo--image" src="../static/img/bootstrap.png" alt="Bootstrap Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> Bootstrap <br /><br /></member-name>
+                  <member-body> Bootstrap is a free and open-source front-end web framework for designing websites and web applications. It contains HTML and CSS based design templates. Bootstrap was utilized to create the homepage Carousel as well as the to display our data in a table like manner.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://facebook.github.io/react/">
+                  <img class="logo--image" src="../static/img/react-logo.png" alt="React Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> ReactJS <br /><br /></member-name>
+                  <member-body> ReactJS is an open-source JavaScript framework for building user interfaces.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="http://isotope.metafizzy.co/">
+                  <img class="logo--image" src="../static/img/isotope.png" alt="Isotope Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> Isotope <br /><br /></member-name>
+                  <member-body> Isotope is an open source package that we utilized in order to create the grid like interface. It also has the functionality to add sorting and filtering. </member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://aws.amazon.com/s3/">
+                  <img class="profile--image" src="../static/img/awss3.png" alt="AWS S3 Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> AWS S3 <br /><br /></member-name>
+                  <member-body> AWS S3 is a stororage for the Internet designed to make web-scale computing easier for developers. AWS S3 is where the SWEatshop is hosted. </member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://aws.amazon.com/ec2/">
+                  <img class="logo--image landscape" src="../static/img/awsec2.png" alt="AWS EC2 Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> AWS EC2 <br /><br /></member-name>
+                  <member-body> Elastic Compute Cloud is a web service that provides computing capacity from Amazon's cloud. We use it create a virtual machine that contains our files for this site. </member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://aws.amazon.com/elasticbeanstalk/">
+                  <img class="logo--image landscape" src="../static/img/awseb.png" alt="AWS Elastic Beanstalk Logo">
+                </a>
+                <div class="member-info">
+                  <member-name>AWS Elastic Beanstalk<br /><br /></member-name>
+                  <member-body>Elastic Beanstalk is used to deploy our web application developed in Python developed on an Apache server.  </member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://www.sqlalchemy.org/">
+                  <img class="logo--image" src="../static/img/sqla.png" alt="SQLAlchemy Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> SQL Alchemy <br /><br /></member-name>
+                  <member-body> SQLAlchemy is an open source SQL toolkit and object-relational mapper (ORM) for the python language. We utilize SQLAlchemy in order to connected the front-end with our Postgresql database. SQLAlchemy is essentially used to retrieve data from our database and populate our HTML pages. </member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://www.postgresql.org/">
+                  <img class="logo--image" src="../static/img/psql.png" alt="PostgreSQL Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> PostgreSQL <br /><br /></member-name>
+                  <member-body> PostgreSQL is an object-relational database. We utilize PostgreSQL as a place to keep and organize our data models.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://docs.python.org/2/">
+                  <img class="logo--image" src="../static/img/python.png" alt="Python Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> Python <br /><br /></member-name>
+                  <member-body> Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. We utilize Python for the backend of the web application. This was by use of Flask and SQLAlchemy to connect the frontend and database to our backend.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="http://flask.pocoo.org/">
+                  <img class="logo--image" src="../static/img/flask.png" alt="Flask Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> Flask <br /><br /></member-name>
+                  <member-body> Flask is a micro web framework written in Python. It allows us to connect our HTML templates to specific routes for our URL address.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://www.namecheap.com/">
+                  <img class="logo--image" src="../static/img/namecheap.png" alt="Namecheap Logo">
+                </a>
+                <div class="member-info">
+                  <member-name> Namecheap <br /><br /></member-name>
+                  <member-body> Vendor from which we obtained the sweatshop.tech domain. We then set the IP and DNS to point to our AWS EC2 instance.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">
+                  <img class="logo--image" src="../static/img/github.png" alt="Javascript Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> Github <br /><br /></member-name>
+                  <member-body> Github is a web-based Git (version control repository) that we utilize to maintain the source code, track issues/features, and assign issues/features to each of the team members.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://www.slack.com/">
+                  <img class="logo--image" src="https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png" alt="Slack Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> Slack <br /><br /></member-name>
+                  <member-body> Slack is one of the communication tools utilzed by the team members. There are several channels (chatrooms) such as #frontend, #backend, and #db to discuss the different portions of the web application. Slack is also connected to the Github repository and to our Trello board to frequently and easily monitor progress.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://www.trello.com/">
+                  <img class="logo--image" src="../static/img/trello.png" alt="Trello Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> Trello <br /><br /></member-name>
+                  <member-body> A project management application utilized to list and separate all necessary tasks for the web application. It provides a way to assign tasks and track progress. Trello is connected to our Slack channels.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://apiary.io/">
+                  <img class="logo--image" src="../static/img/apiary.png" alt="Apiary Logo"> 
+                </a>
+                <div class="member-info">
+                  <member-name> Apiary <br /><br /></member-name>
+                  <member-body> Apiary is a Github tool that allows us to document our API easily and efficiently and be connected to our Github to provide further documentation for our web application.</member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://developers.google.com/maps/">
+                  <img class="logo--image landscape" src="../static/img/googlemaps.png" alt="Google Maps Logo">
+                </a>
+                <div class="member-info">
+                  <member-name>Google Maps API<br /><br /></member-name>
+                  <member-body>The Google Maps API is an aplication programming interfaces that allows developers to use Google Maps services in their applications. We utilized the Google Maps API in order to embed the location of the companies, people, investors, and schools of our models. </member-body>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6 col-xl-4">
+                <a href="https://clearbit.com/logo">
+                  <img class="logo--image landscape" src="../static/img/clearbit.png" alt="ClearBit Logo">
+                </a>
+                <div class="member-info">
+                  <member-name>ClearBit API<br /><br /></member-name>
+                  <member-body>The ClearBit API allowed us to scrape the web for our school's logos since they weren't provided in the 2013 SQL dump. </member-body>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="member">
-          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
-            <img class="logo--image" src="../static/img/html.png" alt="HTML Logo"> 
-          </a>
-          <div class="member-info">
-            <member-name> HTML 5 <br /><br /></member-name>
-            <member-body> HTML 5 is the 5th version of HTML. We use HTML with Bootstrap and ReactJS to design and organize the components on the front-end of the web application. <br /><br /></member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
-            <img class="logo--image" src="../static/img/css.png" alt="CSS Logo"> 
-          </a>
-          <div class="member-info">
-            <member-name> CSS 3 <br /><br /></member-name>
-            <member-body> CSS 3 is the 3rd version of CSS. We use CSS with Bootstrap included to style the web application in a more visually engaging way. <br /><br /></member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="http://getbootstrap.com/">
-            <img class="logo--image" src="../static/img/bootstrap.png" alt="Bootstrap Logo">
-          </a>
-          <div class="member-info">
-            <member-name> Bootstrap <br /><br /></member-name>
-            <member-body> Bootstrap is a free and open-source front-end web framework for designing websites and web applications. It contains HTML and CSS based design templates. Bootstrap was utilized to create the homepage Carousel as well as the to display our data in a table like manner. <br /><br /></member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="https://facebook.github.io/react/">
-            <img class="logo--image" src="../static/img/react-logo.png" alt="React Logo">
-          </a>
-          <div class="member-info">
-            <member-name> ReactJS <br /><br /></member-name>
-            <member-body> ReactJS is an open-source JavaScript framework for building user interfaces.  <br /><br /></member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="http://isotope.metafizzy.co/">
-            <img class="logo--image" src="../static/img/isotope.png" alt="Isotope Logo">
-          </a>
-          <div class="member-info">
-            <member-name> Isotope <br /><br /></member-name>
-            <member-body> Isotope is an open source package that we utilized in order to create the grid like interface. It also has the functionality to add sorting and filtering. </member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="https://aws.amazon.com/s3/">
-            <img class="profile--image" src="../static/img/awss3.png" alt="AWS S3 Logo">
-          </a>
-          <div class="member-info">
-            <member-name> AWS S3 <br /><br /></member-name>
-            <member-body> AWS S3 is a stororage for the Internet designed to make web-scale computing easier for developers. AWS S3 is where the SWEatshop is hosted. <br /><br /></member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="https://aws.amazon.com/ec2/">
-            <img class="logo--image landscape" src="../static/img/awsec2.png" alt="AWS EC2 Logo">
-          </a>
-          <div class="member-info">
-            <member-name> AWS EC2 <br /><br /></member-name>
-            <member-body> Elastic Compute Cloud is a web service that provides computing capacity from Amazon's cloud. We use it create a virtual machine that contains our files for this site. <br /><br /></member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="https://developers.google.com/maps/">
-            <img class="logo--image landscape" src="../static/img/awseb.png" alt="AWS Elastic Beanstalk Logo">
-          </a>
-          <div class="member-info">
-            <member-name>AWS Elastic Beanstalk<br /><br /></member-name>
-            <member-body>Elastic Beanstalk is used to deploy our web application developed in Python developed on an Apache server.  </member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="https://www.sqlalchemy.org/">
-            <img class="logo--image" src="../static/img/sqla.png" alt="SQLAlchemy Logo">
-          </a>
-          <div class="member-info">
-            <member-name> SQL Alchemy <br /><br /></member-name>
-            <member-body> SQLAlchemy is an open source SQL toolkit and object-relational mapper (ORM) for the python language. We utilize SQLAlchemy in order to connected the front-end with our Postgresql database. SQLAlchemy is essentially used to retrieve data from our database and populate our HTML pages. <br /><br /></member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="https://www.postgresql.org/">
-            <img class="logo--image" src="../static/img/psql.png" alt="PostgreSQL Logo">
-          </a>
-          <div class="member-info">
-            <member-name> PostgreSQL <br /><br /></member-name>
-            <member-body> PostgreSQL is an object-relational database. We utilize PostgreSQL as a place to keep and organize our data models. <br /><br /></member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="https://docs.python.org/2/">
-            <img class="logo--image" src="../static/img/python.png" alt="Python Logo"> 
-          </a>
-          <div class="member-info">
-            <member-name> Python <br /><br /></member-name>
-            <member-body> Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. We utilize Python for the backend of the web application. This was by use of Flask and SQLAlchemy to connect the frontend and database to our backend. <br /><br /></member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="http://flask.pocoo.org/">
-            <img class="logo--image" src="../static/img/flask.png" alt="Flask Logo"> 
-          </a>
-          <div class="member-info">
-            <member-name> Flask <br /><br /></member-name>
-            <member-body> Flask is a micro web framework written in Python. It allows us to connect our HTML templates to specific routes for our URL address. <br /><br /></member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="https://www.namecheap.com/">
-            <img class="logo--image" src="../static/img/namecheap.png" alt="Namecheap Logo">
-          </a>
-          <div class="member-info">
-            <member-name> Namecheap <br /><br /></member-name>
-            <member-body> Vendor from which we obtained the sweatshop.tech domain. We then set the IP and DNS to point to our AWS EC2 instance. <br /><br /></member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">
-            <img class="logo--image" src="../static/img/github.png" alt="Javascript Logo"> 
-          </a>
-          <div class="member-info">
-            <member-name> Github <br /><br /></member-name>
-            <member-body> Github is a web-based Git (version control repository) that we utilize to maintain the source code, track issues/features, and assign issues/features to each of the team members. <br /><br /></member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="https://www.slack.com/">
-            <img class="logo--image" src="https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png" alt="Slack Logo"> 
-          </a>
-          <div class="member-info">
-            <member-name> Slack <br /><br /></member-name>
-            <member-body> Slack is one of the communication tools utilzed by the team members. There are several channels (chatrooms) such as #frontend, #backend, and #db to discuss the different portions of the web application. Slack is also connected to the Github repository and to our Trello board to frequently and easily monitor progress. <br /><br /></member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="https://www.trello.com/">
-            <img class="logo--image" src="../static/img/trello.png" alt="Trello Logo"> 
-          </a>
-          <div class="member-info">
-            <member-name> Trello <br /><br /></member-name>
-            <member-body> A project management application utilized to list and separate all necessary tasks for the web application. It provides a way to assign tasks and track progress. Trello is connected to our Slack channels. <br /><br /></member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="https://apiary.io/">
-            <img class="logo--image" src="../static/img/apiary.png" alt="Apiary Logo"> 
-          </a>
-          <div class="member-info">
-            <member-name> Apiary <br /><br /></member-name>
-            <member-body> Apiary is a Github tool that allows us to document our API easily and efficiently and be connected to our Github to provide further documentation for our web application. <br /><br /></member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="https://developers.google.com/maps/">
-            <img class="logo--image landscape" src="../static/img/googlemaps.png" alt="Google Maps Logo">
-          </a>
-          <div class="member-info">
-            <member-name>Google Maps API<br /><br /></member-name>
-            <member-body>The Google Maps API is an aplication programming interfaces that allows developers to use Google Maps services in their applications. We utilized the Google Maps API in order to embed the location of the companies, people, investors, and schools of our models. </member-body>
-          </div>
-        </div>
-        <div class="member">
-          <a href="https://developers.google.com/maps/">
-            <img class="logo--image landscape" src="../static/img/clearbit.png" alt="ClearBit Logo">
-          </a>
-          <div class="member-info">
-            <member-name>ClearBit API<br /><br /></member-name>
-            <member-body>The ClearBit API allowed us to scrape the web for our school's logos since they weren't provided in the 2013 SQL dump. </member-body>
-          </div>
-        </div>
-      </div>
       </div>
       <div class="outro">
         © SWEatshop 2017
