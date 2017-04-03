@@ -180,8 +180,20 @@ button-text {
 
 /* ---- member ---- */
 
+.tools member-name{
+  text-align: center;
+}
+
+.tools member-body {
+  text-align: left !important;
+}
+
 .col-sm-12 {
   padding: 2rem;
+}
+
+.tools .col-sm-12 img {
+  position: relative;
 }
 
 .member {
