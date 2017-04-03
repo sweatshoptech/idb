@@ -1,0 +1,15 @@
+select * from education;
+
+INSERT INTO SCHOOL(NAME)
+SELECT distinct CBO.INSTITUTION
+FROM CB_DEGREES AS CBO JOIN PERSON AS P ON CBO.object_id = P.CRUNCH_ID
+where institution is not null;
+
+update school
+set location='Sydney'
+where idnum=57;
+
+INSERT INTO EDUCATION(PERSON_ID, SCHOOL_ID)
+SELECT P.IDNUM, S.IDNUM
+FROM CB_DEGREES AS CBO JOIN PERSON AS P ON CBO.object_id = P.CRUNCH_ID 
+JOIN SCHOOL AS S ON CBO.INSTITUTION = S.NAME;

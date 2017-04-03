@@ -3,11 +3,10 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 import models
-import tables
-import json
+import subprocess
+import tests
 
 app = Flask(__name__)
-
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
@@ -31,9 +30,9 @@ def companies():
 @app.route('/company/<int:company_id>')
 def company_template(company_id):
     company = models.Company.query.get(company_id)
-    ceo = models.Person.query.get(company.ceo_id)
-    investors = company.investors
-    return render_template('company_template.html', company=company, ceo=ceo, investor=investors[0])
+    ceo = models.Person.query.get(company.ceo_id) if company.ceo_id else None
+    investor = company.investors[0] if company.investors else None
+    return render_template('company_template.html', company=company, ceo=ceo, investor=investor)
 
 
 @app.route('/person/<int:person_id>')
@@ -63,19 +62,19 @@ def investor_template(investor_id):
 @app.route('/schools')
 @app.route('/schools.html')
 def schools():
-    return render_template('schools.html', schools=tables.get_table_html(models.School))
+    return render_template('schools.html', schools=models.School.query.all())
 
 
 @app.route('/investors')
 @app.route('/investors.html')
 def investors():
-    return render_template('investors.html', investors=tables.get_table_html(models.Investor))
+    return render_template('investors.html', investors=models.Investor.query.all())
 
 
 @app.route('/people')
 @app.route('/people.html')
 def people():
-    return render_template('people.html', people=tables.get_table_html(models.Person))
+    return render_template('people.html', people=models.Person.query.all())
 
 
 @app.route('/report')
@@ -89,15 +88,19 @@ def reportsub(subpage):
     return render_template('report/{0}'.format(subpage))
 
 
-@app.route('/api/companies')
-def all_companies():
-    return json.dumps(models.Company.query.all())
-
-
-@app.route('/api/company/<instance_id>')
-def get_company(instance_id):
-    # instance state
-    return json.dumps(models.Company.query.get(instance_id).__dict__)
+@app.route('/run-tests')
+def run_tests():
+    #tests = subprocess.Popen(['/home/ubuntu/idb/RunCoverage.sh'], stderr=subprocess.PIPE)
+    #tests = subprocess.Popen(['python', 'tests.py'], cwd=r'/home/ubuntu/idb', stderr=subprocess.PIPE, close_fds=True)
+    #out, err = tests.communicate()
+    #with open('/home/ubuntu/idb/TestIDB.out', 'r') as fi:
+    try:
+        tests = subprocess.check_output(['python', '/home/ubuntu/idb/tests.py'], stderr=subprocess.STDOUT)
+    except subprocess.CalledProcessError, e:
+        tests = e.output
+    testout = tests.replace('\n', '<br/>')
+#    with app.app_context():
+    return render_template('TestIDB.html', test=testout)
 
 if __name__ == '__main__':
     app.run()

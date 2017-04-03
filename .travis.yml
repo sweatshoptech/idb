@@ -19,6 +19,8 @@ install:
     - pip install Flask-Testing
     - pip install Jinja2
     - pip install SQLAlchemy
+    - pip install flask_table
+    - pip install psycopg2
 
 before_script:
     - uname -a

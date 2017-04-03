@@ -71,7 +71,7 @@
         </div>
       </div>
       <div class="grid small">
-        <a href="http://sweatshop.tech/school/1">  
+        <a href="http://sweatshop.tech/school/{{schools[0].idnum}}">  
         <div class="grid-item private medium-size india" name='{{schools[0].name}}' size='{{schools[0].size}}'>
           <div class="card card-inverse card-grid">
             <div style="background: #FFF; width: 100%">
@@ -82,7 +82,7 @@
               <div class="list-group-item">
                 {{schools[0].description}}
               </div>
-              <a href="#" class="btn btn-primary">More Information</a>
+              <a href="school/{{schools[0].idnum}}" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
               <a href="{{schools[0].website}}">
@@ -94,7 +94,7 @@
           </div>
         </div>
         </a>
-        <a href="http://sweatshop.tech/school/2">  
+        <a href="http://sweatshop.tech/school/{{schools[1].idnum}}">  
         <div class="grid-item private large-size usa" name='{{schools[1].name}}' size='{{schools[1].size}}'>
             <div class="card card-inverse card-grid">
             <div style="background: #FFF; width: 100%">
@@ -105,7 +105,7 @@
               <div class="list-group-item">
                 {{schools[1].description}}
               </div>
-              <a href="#" class="btn btn-primary">More Information</a>
+              <a href="school/{{schools[1].idnum}}" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
               <a href="{{schools[1].website}}">
@@ -117,7 +117,7 @@
           </div>
         </div>
         </a>
-        <a href="http://sweatshop.tech/school/3"> 
+        <a href="http://sweatshop.tech/school/{{schools[2].idnum}}"> 
         <div class="grid-item private small-size usa" name='{{schools[2].name}}' size='{{schools[2].size}}'>
           <div class="card card-inverse card-grid">
             <div style="background: #FFF; width: 100%">
@@ -127,8 +127,8 @@
               <h4 class="card-title name">{{schools[2].name}}</h4>
               <div class="list-group-item">
                 {{schools[2].description}}
-              </div>
-              <a href="#" class="btn btn-primary">More Information</a>
+                </div>
+              <a href="school/{{schools[2].idnum}}" class="btn btn-primary">More Information</a>
             </div>
             <ul class="list-group list-group-flush;">
               <a href="{{schools[2].website}}">

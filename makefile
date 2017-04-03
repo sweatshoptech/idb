@@ -20,7 +20,6 @@ format:
 	$(AUTOPEP8) -i models.py 
 	$(AUTOPEP8) -i idb.py
 	$(AUTOPEP8) -i config.py
-	$(AUTOPEP8) -i tables.py
 
 html:
 	pydoc -w models
@@ -32,13 +31,18 @@ log:
 pylint:
 	$(PYLINT) models.py
 
+coverage:
+	$(COVERAGE) run    --branch tests.py > TestIDB.out 2>&1
+	$(COVERAGE) report --include="models.py","config.py" >> TestIDB.out
+	cat TestIDB.out
+
 clean:
 	rm -f *.pyc
 	rm -f *.html
 	rm -f *.log
 	rm -f .coverage
 
-test: format pylint log
+test: format pylint log coverage
 	echo "success"
 
 versions:
