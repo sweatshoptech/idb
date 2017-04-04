@@ -71,75 +71,31 @@
         </div>
       </div>
       <div class="grid small">
-        <a href="http://sweatshop.tech/school/{{schools[0].idnum}}">  
-        <div class="grid-item private medium-size india" name='{{schools[0].name}}' size='{{schools[0].size}}'>
-          <div class="card card-inverse card-grid">
-            <div style="background: #FFF; width: 100%">
-              <img class="card-img-top" src="{{schools[0].image_url}}" alt="Card image cap">
-            </div>
-            <div class="card-block">
-              <h4 class="card-title name">{{schools[0].name}}</h4>
-              <div class="list-group-item">
-                {{schools[0].description}}
-              </div>
-              <a href="school/{{schools[0].idnum}}" class="btn btn-primary">More Information</a>
-            </div>
-            <ul class="list-group list-group-flush;">
-              <a href="{{schools[0].website}}">
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">{{schools[0].website}}</li>
-              </a>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Size: {{schools[0].size}}</li>
-              <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{schools[0].location}}</li>
-            </ul>
-          </div>
-        </div>
-        </a>
-        <a href="http://sweatshop.tech/school/{{schools[1].idnum}}">  
-        <div class="grid-item private large-size usa" name='{{schools[1].name}}' size='{{schools[1].size}}'>
+        {% for school in schools %}
+          <a href="http://sweatshop.tech/school/{{school.idnum}}">  
+          <div class="grid-item private medium-size india" name='{{school.name}}' size='{{school.size}}'>
             <div class="card card-inverse card-grid">
-            <div style="background: #FFF; width: 100%">
-              <img class="card-img-top" src="{{schools[1].image_url}}" alt="Card image cap">
-            </div>
-            <div class="card-block">
-              <h4 class="card-title name">{{schools[1].name}}</h4>
-              <div class="list-group-item">
-                {{schools[1].description}}
+              <div style="background: #FFF; width: 100%">
+                <img class="card-img-top" src="{{school.image_url}}" alt="Card image cap">
               </div>
-              <a href="school/{{schools[1].idnum}}" class="btn btn-primary">More Information</a>
-            </div>
-            <ul class="list-group list-group-flush;">
-              <a href="{{schools[1].website}}">
-                <li class="list-group-item">{{schools[1].website}}</li>
-              </a>
-              <li class="list-group-item">Size: {{schools[1].size}}</li>
-              <li class="list-group-item">Location: {{schools[1].location}}</li>
-            </ul>
-          </div>
-        </div>
-        </a>
-        <a href="http://sweatshop.tech/school/{{schools[2].idnum}}"> 
-        <div class="grid-item private small-size usa" name='{{schools[2].name}}' size='{{schools[2].size}}'>
-          <div class="card card-inverse card-grid">
-            <div style="background: #FFF; width: 100%">
-              <img class="card-img-top" src="{{schools[2].image_url}}" alt="Card image cap">
-            </div>
-            <div class="card-block">
-              <h4 class="card-title name">{{schools[2].name}}</h4>
-              <div class="list-group-item">
-                {{schools[2].description}}
+              <div class="card-block">
+                <h4 class="card-title name">{{school.name}}</h4>
+                <div class="list-group-item">
+                  {{school.description[:350] if school.description}}
                 </div>
-              <a href="school/{{schools[2].idnum}}" class="btn btn-primary">More Information</a>
+                <a href="school/{{school.idnum}}" class="btn btn-primary">More Information</a>
+              </div>
+              <ul class="list-group list-group-flush;">
+                <a href="{{school.website}}">
+                  <li class="list-group-item" style="background-color: #333; border-color: #333;">{{school.website}}</li>
+                </a>
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">Size: {{school.size}}</li>
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{school.location}}</li>
+              </ul>
             </div>
-            <ul class="list-group list-group-flush;">
-              <a href="{{schools[2].website}}">
-                <li class="list-group-item">{{schools[2].website}}</li>
-              </a>
-              <li class="list-group-item card-list">Size: {{schools[2].size}}</li>
-              <li class="list-group-item">Location: {{schools[2].location}}</li>
-            </ul>
           </div>
-        </div>
-        </a>
+          </a>
+        {% endfor %}    
       </div>
       <script>
       // init Isotope

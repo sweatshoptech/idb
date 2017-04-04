@@ -62,75 +62,31 @@
           </div>
         </div>
         <div class="grid small">
-          <a href="http://sweatshop.tech/investor/2">  
-          <div class="grid-item usa" funding='{{investors[0].funding}}' name='{{investors[0].name}}'>
-            <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
-              <div style="background: #FFF; width: 100%">
-                <img class="card-img-top" src="{{investors[0].image_url}}" alt="Card image cap">
-              </div>
-              <div class="card-block">
-                <h4 class="card-title name">{{investors[0].name}}</h4>
-                <div class="list-group-item">
-                  {{investors[0].description}}
-                </div>
-                <a href="#" class="btn btn-primary">More Information</a>
-              </div>
-              <ul class="list-group list-group-flush;">
-                <a href="{{investors[0].website}}">
-                  <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{investors[0].website}}</li>
-                </a>
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{investors[0].funding}}</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investors[0].location}}</li>
-              </ul>
-            </div>
-          </div>
-          </a>
-          <a href="http://sweatshop.tech/investor/1">  
-          <div class="grid-item usa" funding='{{investors[1].funding}}' name='{{investors[1].name}}'>
+          {% for investor in investors %}
+            <a href="http://sweatshop.tech/investor/{{investor.idnum}}">  
+            <div class="grid-item usa" funding='{{investor.funding}}' name='{{investor.name}}'>
               <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
-              <div style="background: #FFF; width: 100%">
-                <img class="card-img-top" src="{{investors[1].image_url}}" alt="Card image cap">
-              </div>
-              <div class="card-block">
-                <h4 class="card-title name">{{investors[1].name}}</h4>
-                <div class="list-group-item">
-                  {{investors[1].description}}
+                <div style="background: #FFF; width: 100%">
+                  <img class="card-img-top" src="{{investor.image_url}}" alt="Card image cap">
                 </div>
-                <a href="#" class="btn btn-primary">More Information</a>
-              </div>
-              <ul class="list-group list-group-flush;">
-                <a href="{{investors[1].website}}">
-                  <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{investors[1].website}}</li>
-                </a>
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{investors[1].funding}}</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investors[1].location}}</li>
-              </ul>
-            </div>
-          </div>
-          </a>
-          <a href="http://sweatshop.tech/investor/3"> 
-          <div class="grid-item usa" funding='{{investors[2].funding}}' name='{{investors[2].name}}'>
-            <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
-              <div style="background: #FFF; width: 100%">
-                <img class="card-img-top" src="{{investors[2].image_url}}" alt="Card image cap">
-              </div>
-              <div class="card-block">
-                <h4 class="card-title name">{{investors[2].name}}</h4>
+                <div class="card-block">
+                  <h4 class="card-title name">{{investor.name}}</h4>
                   <div class="list-group-item">
-                  {{investors[2].description}}
+                    {{investor.description[:350] if investor.description}}
                   </div>
-                <a href="#" class="btn btn-primary">More Information</a>
+                  <a href="#" class="btn btn-primary">More Information</a>
+                </div>
+                <ul class="list-group list-group-flush;">
+                  <a href="{{investor.website}}">
+                    <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{investor.website}}</li>
+                  </a>
+                  <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{investor.funding}}</li>
+                  <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investor.location}}</li>
+                </ul>
               </div>
-              <ul class="list-group list-group-flush;">
-                <a href="{{investors[2].website}}">
-                  <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{investors[2].website}}</li>
-                </a>
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{investors[2].funding}}</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investors[2].location}}</li>
-              </ul>
             </div>
-          </div>
-          </a>
+            </a>
+          {% endfor %}    
         </div>
         <script>
         // init Isotope
