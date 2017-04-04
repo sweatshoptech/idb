@@ -39,17 +39,18 @@ def company_template(company_id):
 @app.route('/person/<int:person_id>')
 def person_template(person_id):
     person = models.Person.query.get(person_id)
-    companies = person.companies[0]
-    schools = person.schools[0]
+    companies = person.companies[0] if person.companies else None
+    schools = person.schools[0] if person.schools else None
     return render_template('person_template.html', person=person, company=companies, school=schools)
 
 
 @app.route('/school/<int:school_id>')
 def school_template(school_id):
     school = models.School.query.get(school_id)
-    people = school.alumni.all()[0]
-    investors = school.investors
-    return render_template('school_template.html', school=school, alum=people, investor=investors[0])
+    alum = school.alumni.all()
+    people = alum[0] if alum else None
+    investors = school.investors[0] if person.investors else None
+    return render_template('school_template.html', school=school, alum=people, investor=investors)
 
 
 @app.route('/investor/<int:investor_id>')

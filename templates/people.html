@@ -70,6 +70,29 @@
           </div>
         </div>
         <div class="grid small">
+          {% for person in people  %}
+            <a href="http://sweatshop.tech/person/{{person.idnum}}">
+            <div class="grid-item ceo usa" name='{{person.name}}' date='1975'>
+              <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
+                <div style="background: #FFF; width: 100%">
+                  <img class="card-img-top" src="{{person.image_url}}" alt="Card image cap">
+                </div>
+                <div class="card-block">
+                  <h4 class="card-title name">{{person.name}}</h4>
+                  <div class="list-group-item">
+                    {{person.title}}
+                  </div>
+                  <a href="#" class="btn btn-primary">More Information</a>
+                </div>
+                <ul class="list-group list-group-flush;">
+                  <li class="list-group-item" style="background-color: #333; border-color: #333;">DOB: June 2, 1975</li>
+                  <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{person.location}}</li>
+                </ul>
+              </div>
+            </div>
+            </a>
+          {% endfor %}    
+ 
           <a href="http://sweatshop.tech/person/1">  
           <div class="grid-item ceo usa" name='{{people[0].name}}' date='1975'>
             <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">

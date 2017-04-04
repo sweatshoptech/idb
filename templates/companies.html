@@ -80,69 +80,31 @@
           </div>
         </div>
         <div class="grid small">
-          <a href="http://sweatshop.tech/company/1">  
-          <div class="grid-item private small-size usa" funding='{{companies[0].funding}}' name='{{companies[0].name}}' size='{{companies[0].size}}'>
+     
+        {% for company in companies %}
+          <a href="http://sweatshop.tech/company/{{company.idnum}}">  
+          <div class="grid-item private small-size usa" funding='{{company.funding}}' name='{{company.name}}' size='{{company.size}}'>
             <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
               <div style="background: #FFF; width: 100%">
-                <img class="card-img-top" src="{{companies[0].image_url}}" alt="Card image cap">
+                <img class="card-img-top" src="{{company.image_url}}" alt="Card image cap">
               </div>
               <div class="card-block">
-                <h4 class="card-title name">{{companies[0].name}}</h4>
+                <h4 class="card-title name">{{company.name}}</h4>
                 <div class="list-group-item">
-                  {{companies[0].description}}
+                  {{company.description[:350] if company.description}}
                 </div>
-                <a href="#" class="btn btn-primary">More Information</a>
+                <a href="company/{{company.idnum}}" class="btn btn-primary">More Information</a>
               </div>
               <ul class="list-group list-group-flush;">
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: {{companies[0].ownership_type}}</li>
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{companies[0].funding}}</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{companies[0].location}}</li>
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: {{company.ownership_type}}</li>
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{company.funding}}</li>
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{company.location}}</li>
               </ul>
             </div>
           </div>
           </a>
-          <a href="http://sweatshop.tech/company/2">  
-          <div class="grid-item private small-size usa" funding='{{companies[1].funding}}' name='{{companies[1].name}}' size='{{companies[1].size}}'>
-              <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
-              <div style="background: #FFF; width: 100%">
-                <img class="card-img-top" src="{{companies[1].image_url}}" alt="Card image cap">
-              </div>
-              <div class="card-block">
-                <h4 class="card-title name">{{companies[1].name}}</h4>
-                <div class="list-group-item">
-                  {{companies[1].description}}
-                </div>
-                <a href="#" class="btn btn-primary">More Information</a>
-              </div>
-              <ul class="list-group list-group-flush;">
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: {{companies[1].ownership_type}}</li>
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{companies[1].funding}}</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{companies[1].location}}</li>
-              </ul>
-            </div>
-          </div>
-          </a>
-          <a href="http://sweatshop.tech/company/3"> 
-          <div class="grid-item private large-size usa" funding='{{companies[2].funding}}' name='{{companies[2].name}}' size='{{companies[2].size}}'>
-            <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
-              <div style="background: #FFF; width: 100%">
-                <img class="card-img-top" src="{{companies[2].image_url}}" alt="Card image cap">
-              </div>
-              <div class="card-block">
-                <h4 class="card-title name">{{companies[2].name}}</h4>
-                  <div class="list-group-item">
-                  {{companies[2].description}}
-                  </div>
-                <a href="#" class="btn btn-primary">More Information</a>
-              </div>
-              <ul class="list-group list-group-flush;">
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: {{companies[2].ownership_type}}</li>
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{companies[2].funding}}</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{companies[2].location}}</li>
-              </ul>
-            </div>
-          </div>
-          </a>
+        {% endfor %}    
+
         </div>
         <script>
         // init Isotope
