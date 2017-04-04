@@ -91,13 +91,17 @@ def reportsub(subpage):
 
 @app.route('/run-tests')
 def run_tests():
+    """    with open("tests.out", "w+") as fi:
+        fi.write(tests.run_my_tests())
+    """
     try:
         tests = subprocess.check_output(
-            ['python', '/home/ubuntu/idb/tests.py'], stderr=subprocess.STDOUT)
+            ['python', '-W', 'ignore', '/home/ubuntu/idb/tests.py'], stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError, e:
         tests = e.output
     testout = tests.replace('\n', '<br/>')
     return render_template('TestIDB.html', test=testout)
+
 
 if __name__ == '__main__':
     app.run()

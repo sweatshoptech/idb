@@ -90,7 +90,7 @@ class Person(db.Model):
         self.website = website
 
     def __repr__(self):
-        return '<Person %r>' % self.name
+        return '<Person %s>' % self.name
 
     @classmethod
     def get_all_rows(cls):
@@ -131,7 +131,7 @@ class Company(db.Model):
         self.website = website
 
     def __repr__(self):
-        return '<Company %r>' % self.name
+        return '<Company %s>' % self.name
 
     @classmethod
     def get_all_rows(cls):
@@ -163,7 +163,7 @@ class School(db.Model):
         self.website = website
 
     def __repr__(self):
-        return '<School %r>' % self.name
+        return '<School %s>' % self.name
 
     @classmethod
     def get_all_rows(cls):
@@ -192,7 +192,7 @@ class Investor(db.Model):
         self.website = website
 
     def __repr__(self):
-        return '<Investor %r>' % self.name
+        return '<Investor %s>' % self.name
 
     @classmethod
     def get_all_rows(cls):
@@ -211,7 +211,7 @@ class Category(db.Model):
         self.name = name
 
     def __repr__(self):
-        return '<Category %r>' % self.name
+        return '<Category %s>' % self.name
 
     @classmethod
     def get_all_rows(cls):
