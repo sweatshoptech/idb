@@ -42,30 +42,28 @@
     </div>
   </nav>
   <div class="container" style="min-height:86vh">
-    <div class="inner">
-      <h1 class="cover-heading">{{investor.name}}</h1>
-      <br/><br/>
-      <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
-        <div class="card-block">
-          <div class="row">
-            <div class="col-4">
-              <img src="{{investor.image_url}}" alt="Investor Logo" /></div>
-            <div class="col-8" style="text-align: left;">
-              <b>Funding: </b> {{investor.funding}}<br/>
-              <b>Location: </b>{{investor.location}}<br/>
-              <b>Companies Funded: </b><a href="../../company/{{company.idnum}}">{{company.name}}</a><br/>
-              <b>Schools Funded: </b><a href="../../school/{{school.idnum}}">{{school.name}}</a><br/>
-              <b>Website: </b><a href="{{investor.website}}" target="_blank">{{investor.website}}</a><br/><br/>
-              <b>Description: </b>{{investor.description}}<br/>
+    <h1 class="cover-heading">{{investor.name}}</h1>
+    <br/><br/>
+    <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
+      <div class="card-block">
+        <div class="row">
+          <div class="col-4">
+            <img src="{{investor.image_url}}" alt="Investor Logo" /></div>
+          <div class="col-8" style="text-align: left;">
+            <b>Funding: </b> {{investor.funding}}<br/>
+            <b>Location: </b>{{investor.location}}<br/>
+            <b>Companies Funded: </b><a href="../../company/{{company.idnum}}">{{company.name}}</a><br/>
+            <b>Schools Funded: </b><a href="../../school/{{school.idnum}}">{{school.name}}</a><br/>
+            <b>Website: </b><a href="{{investor.website}}" target="_blank">{{investor.website}}</a><br/><br/>
+            <b>Description: </b>{{investor.description}}<br/>
 
-            </div>
           </div>
         </div>
       </div>
-      <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
-        <div class="card-block">
-          <iframe src="https://www.google.com/maps/embed/v1/place?q={{investor.location}}&zoom=9&key=AIzaSyCWG2UDFO2LYEWx_dHDiLjeDBAYkeQ2vFc" width=100% height=300px></iframe>
-        </div>
+    </div>
+    <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
+      <div class="card-block">
+        <iframe src="https://www.google.com/maps/embed/v1/place?q={{investor.location}}&zoom=9&key=AIzaSyCWG2UDFO2LYEWx_dHDiLjeDBAYkeQ2vFc" width=100% height=300px></iframe>
       </div>
     </div>
   </div>
