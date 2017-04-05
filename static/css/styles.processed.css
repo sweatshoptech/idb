@@ -100,7 +100,7 @@ button-text {
 
 .outro {
   display: block;
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, 0);
   color: #FFF;
   height: 5vh;
   line-height: 5vh;
