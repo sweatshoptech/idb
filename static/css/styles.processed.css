@@ -178,6 +178,11 @@ button-text {
   margin: 24px 0% 12px 0%;
 }
 
+.col-4 img {
+  width: 200px;
+  height: 200px;
+}
+
 /* ---- member ---- */
 
 .tools member-name{
