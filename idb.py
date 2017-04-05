@@ -34,7 +34,6 @@ def about():
 @app.route('/companies.html/', defaults={'page': 1})
 def companies(page):
     page, per_page, offset = get_page_args()
-#    page = request.args.get('page', type=int, default=1)
     sortBy = request.args.get('sort', type=str, default='name')
     sortBy = getattr(models.Company, sortBy)
     #companies = models.Company.query.all()
