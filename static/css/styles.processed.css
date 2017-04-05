@@ -100,7 +100,7 @@ button-text {
 
 .outro {
   display: block;
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, 0);
   color: #FFF;
   height: 5vh;
   line-height: 5vh;
@@ -176,6 +176,11 @@ button-text {
   height: 256px;
   overflow: hidden;
   margin: 24px 0% 12px 0%;
+}
+
+.col-4 img {
+  width: 200px;
+  height: 200px;
 }
 
 /* ---- member ---- */
