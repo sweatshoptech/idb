@@ -443,3 +443,97 @@ member-body {
 .card-animation:hover .carousel {
   opacity: 1;
 }
+
+
+/* ---- pagination ---- */
+
+.pag-container {
+  padding: 1rem;
+  margin: 3rem auto;
+  border-radius: 0.2rem;
+  counter-reset: pagination;
+  text-align: center;
+}
+.pag-container:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.pag-container ul {
+  width: 100%;
+}
+
+.pag-container li a{
+  background-color: #fdfdfd;
+  border: solid 1px #1d1f20;
+}
+
+.pag-container ul, li {
+  list-style: none;
+  display: inline;
+  padding-left: 0px;
+}
+
+.pag-container li:hover a {
+  color: #fdfdfd;
+  background-color: #1d1f20;
+  border: solid 1px #1d1f20;
+}
+.pag-container li.disabled:hover a {
+  background-color: #fdfdfd;
+  border: hidden 1px;
+}
+.pag-container li.active a {
+  color: #fdfdfd;
+  background-color: #1d1f20;
+  border: solid 1px #1d1f20;
+}
+.pag-container li:first-child {
+  float: left;
+}
+.pag-container li:first-child a:after {
+  content: " Previous";
+}
+.pag-container li:last-child {
+  float: right;
+}
+.pag-container li:last-child a:before {
+  content: "Next ";
+}
+.pag-container li a {
+  border: solid 1px #d7d7d7;
+  border-radius: 0.2rem;
+  color: #7d7d7d;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  padding: 0.5rem 0.9rem;
+}
+
+.pag-container li.disabled {
+  color: #7d7d7d;
+}
+
+
+@media screen and (max-width: 767px) {
+.pag-container li {
+  display: none;
+}
+.pag-container li.active {
+  display: inline;
+}
+.pag-container li:first-child {
+  display: inline;
+}
+.pag-container li:first-child a:after {
+  content: " Prev";
+}
+.pag-container li:last-child {
+  display: inline;
+}
+.pag-container li:last-child a:before {
+  content: "Next ";
+}
+}
