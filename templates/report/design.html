@@ -93,11 +93,12 @@ We have four models: Company, Person, Investor, and School. Each model connects 
 <h2>API</h2>
 <a href="https://sweatshop.tech/api">SWEatshop API</a><br>
 SWEatshop has a simple API to retrieve centralized data regarding companies along with the people, investors and schools of everyone involved. We created a RESTful API in order to satisfy get requests by returning rows from our tables in our Amazon Web Services Relational PostgreSQL Database using Flask-SQLAlchemy. In future versions, we expect to make the API accept POST and UPDATE calls as well so that the AWS database can be updated through API calls.<br/>
-We get our data from the <a href="http://data.crunchbase.com">Crunchbase API</a>. The API has information on the companies, people, investments, and a lot more. 
+We get our data from the <a href="http://data.crunchbase.com">Crunchbase API</a>. The API has information on the companies, people, investments, and a lot more. <br />
+Unfortunately as we were scraping the Crunchbase RESTful API we ran into a couple of issues. First, the Crunchbase API would only give us access to a couple hundred instances for free. As we are college students, we can not afford the extra price for the entire API. However, Crunchbase does provide a snapshot of the a thousands and thousands of models for Companies, Investors, People,and Schools. We combined the models from RESTful API and the snapshot to complete our database. Secondly, the JSON dump provided by Crunchbase did not have logos for the schools. Therefore we had to utilize the <a href="https://clearbit.com/docs">ClearBit API</a> in order to obtain the logos for the schools.
 <br/><br/>
 <h2>Sorting and Filtering</h2>
 We use JQuery, Javascript, Isotope, Jinja2, Flask, HTML, and Bootstrap to implement sorting and filtering. First we create a template using HTML and Bootstrap. Each item is represented using a Bootstrap card and the data for each card is dynamically set by Flask and Jinja2. Flask accesses the AWS Relational Database through Flask PostgreSQL SQLAlchemy and renders the retrieved information in the template by means of Jinja2. We then set classes and certain other attributes in the HTML through Flask and Jinja2 so that the filters will know what to do. The filtering and sorting functionality are implemented through the use of Isotope, Jquery, and embedded Javascript. This allows us to, upon detecting a button click, change the content of the Isotope grid in the HTML template body. In order for Isotope to recognize that an item falls under a particular filter, a class attribute must be set with the name of the filter, and the same name must be set to the respective button’s list of attributes. For the sorting function to know what data to sort by, an attribute must be created in the div surrounding the Bootstrap card for each item.
-      
+<h2>DB</h2>      
       
             
       </div>
