@@ -5,9 +5,14 @@ from flask_sqlalchemy import SQLAlchemy
 import models
 import subprocess
 import tests
+import flask_restless
 
 app = Flask(__name__)
-
+manager = flask_restless.APIManager(app, flask_sqlalchemy_db=models.db)
+manager.create_api(models.Person, methods=['GET', 'POST'])
+manager.create_api(models.Company, methods=['GET', 'POST'])
+manager.create_api(models.Investor, methods=['GET', 'POST'])
+manager.create_api(models.School, methods=['GET', 'POST'])
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
@@ -102,7 +107,6 @@ def run_tests():
         tests = e.output
     testout = tests.replace('\n', '<br/>')
     return render_template('TestIDB.html', test=testout)
-
 
 if __name__ == '__main__':
     app.run()

@@ -113,6 +113,7 @@ class Company(db.Model):
     image_url = db.Column(db.String(512), nullable=True)
     size = db.Column(db.Integer, nullable=True)
     website = db.Column(db.String(512), nullable=True)
+    country = db.Column(db.String(50), nullable=True)
     investors = db.relationship('Investor', secondary=investment,
                                 backref=db.backref('companies', lazy='dynamic'))
     crunch_id = db.Column(db.String(25), nullable=True)
@@ -217,3 +218,4 @@ class Category(db.Model):
     def get_all_rows(cls):
         """Get all category rows"""
         return cls.query.all()
+

@@ -9,10 +9,11 @@ def find_website(school):
         print("STAHP: " + school.name)
     soup = BeautifulSoup(r.text, "html.parser")
     school.website = soup.find('cite').text
+    school.size = 1
     print(school.website)
     
 def get_schools():
-    return (school for school in models.School.query.all())
+    return (school for school in models.Company.query.all() if school.website is None)
 
 def find_next_num(num, schools, school):
     for i in range(num):
