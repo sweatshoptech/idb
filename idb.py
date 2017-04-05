@@ -35,7 +35,7 @@ def about():
 def companies(page):
     page, per_page, offset = get_page_args()
     sortBy = request.args.get('sort', type=str, default='name')
-    sortBy = getattr(models.Company, sortBy)
+    sortBy = getattr(models.Company, sortBy or 'name')
     #companies = models.Company.query.all()
     total = len(models.Company.query.all())
     companies = models.Company.query.order_by(sortBy).offset(offset).limit(per_page).all()
