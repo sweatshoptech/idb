@@ -147,7 +147,7 @@ class School(db.Model):
     idnum = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(150), nullable=False)
     location = db.Column(db.String(50), nullable=True)
-    description = db.Column(db.String(350), nullable=True)
+    description = db.Column(db.String(10000), nullable=True)
     size = db.Column(db.Integer, nullable=True)
     image_url = db.Column(db.String(512), nullable=True)
     website = db.Column(db.String(512), nullable=True)

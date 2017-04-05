@@ -2,10 +2,12 @@
 
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
+from flask_paginate import Pagination, get_page_args
 import models
 import subprocess
 import tests
 import flask_restless
+
 
 app = Flask(__name__)
 manager = flask_restless.APIManager(app, flask_sqlalchemy_db=models.db)
@@ -27,10 +29,20 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/companies')
-@app.route('/companies.html')
-def companies():
-    return render_template('companies.html', companies=models.Company.query.all())
+@app.route('/companies/page/<int:page>')
+@app.route('/companies/', defaults={'page': 1})
+@app.route('/companies.html/', defaults={'page': 1})
+def companies(page):
+    page, per_page, offset = get_page_args()
+#    page = request.args.get('page', type=int, default=1)
+    sortBy = request.args.get('sort', type=str, default='name')
+    sortBy = getattr(models.Company, sortBy)
+    #companies = models.Company.query.all()
+    total = len(models.Company.query.all())
+    companies = models.Company.query.order_by(sortBy).offset(offset).limit(per_page).all()
+    pagination = Pagination(page=page, per_page=per_page, total=total, record_name='companies')
+    
+    return render_template('companies.html', companies=companies, page=page, per_page=per_page, pagination=pagination)
 
 
 @app.route('/company/<int:company_id>')
