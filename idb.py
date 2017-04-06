@@ -95,10 +95,32 @@ def investor_template(investor_id):
     return render_template('investor_template.html', investor=investor, company=companies, school=schools)
 
 
-@app.route('/schools')
-@app.route('/schools.html')
-def schools():
-    return render_template('schools.html', schools=models.School.query.all())
+@app.route('/schools/page/<int:page>')
+@app.route('/schools/', defaults={'page': 1})
+@app.route('/schools.html/', defaults={'page': 1})
+def schools(page):
+    # Get page data
+    page, per_page, offset = get_page_args()
+    per_page = 9
+
+    # Get sort data
+    sortBy = request.args.get('sort', type=str, default='name')
+    sortBy = getattr(models.School, sortBy or 'name')
+    schools = models.School.query.order_by(sortBy)
+
+    # Get filter data
+    country = request.args.get('country', type=str, default=None)
+    if country:
+        schools = investors.filter_by(country=country)
+
+    schools = schools.offset(offset).limit(per_page).all()
+
+    # Render with pagination
+    total = len(models.School.query.all())
+    pagination = Pagination(
+        page=page, per_page=per_page, total=total, record_name='schools')
+    return render_template('schools.html', schools=schools, page=page, per_page=per_page, pagination=pagination)
+
 
 
 @app.route('/investors/page/<int:page>')
