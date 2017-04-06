@@ -13,6 +13,7 @@ Note: Pylint does not work well with SQLAlchemy since it is
 from enum import Enum
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from datetime import date
 import config
 
 APP = Flask(__name__)
@@ -83,6 +84,17 @@ class Person(db.Model):
 
     def __init__(self, name, title, location, dob, image_url, website):
         """Initializes a Person, pass in dob as datetime object"""
+
+        """Assertions"""
+        assert name is not None
+
+        assert isinstance(name, str) and len(name) <= 50
+        assert isinstance(title, str) and len(title) <= 200
+        assert isinstance(location, str) and len(name) <= 500
+        assert isinstance(dob, datetime.date)
+        assert isinstance(image_url, str) and len(name) <= 512
+        assert isinstance(website, str) and len(name) <= 512
+
         self.name = name
         self.title = title
         self.location = location
@@ -123,6 +135,20 @@ class Company(db.Model):
     def __init__(self, name, location, ownership_type, funding, description,
                  ceo_id, image_url, size, website):
         """Initializes Company, ceo as foreign key and ownership as enum"""
+
+         """Assertions"""
+        assert name is not None
+
+        assert isinstance(name, str) and len(name) <= 50
+        assert isinstance(location, str) and len(name) <= 500
+        assert isinstance(ownership_type, db.Ownership)
+        assert isinstance(funding, int)
+        assert isinstance(description, str) and len(description) <= 10000
+        assert isinstance(ceo_id, int)
+        assert isinstance(image_url, str) and len(image_url) <= 512
+        assert isinstance(size, int)
+        assert isinstance(website, str) and len(website) <= 512
+
         self.name = name
         self.location = location
         self.ownership_type = ownership_type
@@ -158,6 +184,16 @@ class School(db.Model):
                                 backref=db.backref('schools', lazy='dynamic'))
 
     def __init__(self, name, location, description, image_url, size, website):
+         """Assertions"""
+        assert name is not None
+
+        assert isinstance(name, str) and len(name) <= 150
+        assert isinstance(location, str) and len(name) <= 50
+        assert isinstance(description, str) and len(description) <= 10000
+        assert isinstance(image_url, str) and len(image_url) <= 512
+        assert isinstance(size, int)
+        assert isinstance(website, str) and len(website) <= 512
+
         self.name = name
         self.location = location
         self.description = description
@@ -187,6 +223,16 @@ class Investor(db.Model):
     website = db.Column(db.String(512), nullable=True)
 
     def __init__(self, name, location, funding, description, image_url, website):
+         """Assertions"""
+        assert name is not None
+
+        assert isinstance(name, str) and len(name) <= 150
+        assert isinstance(location, str) and len(name) <= 50
+        assert isinstance(funding, int)
+        assert isinstance(description, str) and len(description) <= 10000
+        assert isinstance(image_url, str) and len(image_url) <= 512
+        assert isinstance(website, str) and len(website) <= 512
+
         self.name = name
         self.location = location
         self.funding = funding
@@ -211,6 +257,11 @@ class Category(db.Model):
     name = db.Column(db.String(50), nullable=False)
 
     def __init__(self, name):
+        """Assertions"""
+        assert name is not None
+
+        assert isinstance(name, str) and len(name) <= 50
+
         self.name = name
 
     def __repr__(self):
