@@ -82,7 +82,7 @@
               <div class="card-block">
                 <h4 class="card-title name">{{person.name}}</h4>
                 <div class="list-group-item">
-                  {{person.description[:350] if person.description else "No Description Available"}}
+                  {{person.description[:350] if person.description}}
                 </div>
                 <a href="person/{{person.idnum}}" class="btn btn-primary">More Information</a>
               </div>

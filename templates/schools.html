@@ -74,7 +74,7 @@
               <div class="card-block">
                 <h4 class="card-title name">{{school.name}}</h4>
                 <div class="list-group-item">
-                  {{school.description[:350] if school.description else "No Description Available"}}
+                  {{school.description[:350] if school.description}}
                 </div>
                 <a href="school/{{school.idnum}}" class="btn btn-primary">More Information</a>
               </div>
