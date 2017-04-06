@@ -83,7 +83,7 @@
               <div class="card-block">
                 <h4 class="card-title name">{{investor.name}}</h4>
                 <div class="list-group-item">
-                  {{investor.description[:350].replace(r'\r\n',r'<br/>') if investor.description}}
+                  {{"".join(investor.description[:350].split("\\r\\n")) if investor.description}}
                 </div>
                 <a href="/investor/{{investor.idnum}}" class="btn btn-primary">More Information</a>
               </div>
