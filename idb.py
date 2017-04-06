@@ -88,8 +88,10 @@ def school_template(school_id):
 @app.route('/investor/<int:investor_id>')
 def investor_template(investor_id):
     investor = models.Investor.query.get(investor_id)
-    companies = investor.companies.all()[0]
-    schools = investor.schools.all()[0]
+    companies = investor.companies.all()
+    companies = companies[0] if companies else None
+    schools = investor.schools.all()
+    schools = schools[0] if schools else None
     return render_template('investor_template.html', investor=investor, company=companies, school=schools)
 
 
