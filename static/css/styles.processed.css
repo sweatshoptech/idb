@@ -393,7 +393,6 @@ member-body {
 /* ---- card ---- */
 
 .card {
-  margin-right: 5rem;
   margin-bottom: 5rem;
   float: none;
   background: black;
