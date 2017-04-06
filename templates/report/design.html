@@ -55,11 +55,11 @@
             <div class="card-block">
               <h4 class="card-title">Report Menu</h4>
                 <p class="card-text"><br/>
-                  <a href="../report" style="color:white;">Report</a></br>
-                  <a href="introduction.html" style="color:white;">Introduction</a></br>
-                  <a href="design.html" style="color:white;">Design</a></br>
-                  <a href="tools.html" style="color:white;">Tools</a></br>
-                  <a href="hosting.html" style="color:white;">Hosting</a></br>
+                  <a href="../report" style="color:white;">Report</a><br/>
+                  <a href="introduction.html" style="color:white;">Introduction</a><br/>
+                  <a href="design.html" style="color:white;">Design</a><br/>
+                  <a href="tools.html" style="color:white;">Tools</a><br/>
+                  <a href="hosting.html" style="color:white;">Hosting</a><br/>
                </p>
              </div>
            </div> 
@@ -92,14 +92,13 @@ We have four models: Company, Person, Investor, and School. Each model connects 
 <br/><br/>
 <h2>API</h2>
 <a href="https://sweatshop.tech/api">SWEatshop API</a><br>
-SWEatshop has a simple API to retrieve centralized data regarding companies along with the people, investors and schools of everyone involved. We created a RESTful API in order to satisfy get requests by returning rows from our tables in our Amazon Web Services Relational PostgreSQL Database using Flask-SQLAlchemy. In future versions, we expect to make the API accept POST and UPDATE calls as well so that the AWS database can be updated through API calls.<br/>
-We get our data from the <a href="http://data.crunchbase.com">Crunchbase API</a>. The API has information on the companies, people, investments, and a lot more. <br />
+SWEatshop has a simple API to retrieve centralized data regarding companies along with the people, investors and schools of everyone involved. We created a RESTful API in order to satisfy get requests by returning rows from our tables in our Amazon Web Services Relational PostgreSQL Database using Flask-SQLAlchemy. In future versions, we expect to make the API accept POST and UPDATE calls as well so that the AWS database can be updated through API calls. We get most of our model data from the <a href="http://data.crunchbase.com">Crunchbase API</a>. The API has information on the companies, people, investments, and a much more. <a href="http://ip-api.com/docs/">IP API</a> allows us to fill in location information for some of the blank fields in our database by providing a location from the model's website url. We utilize <a href="https://developers.google.com/maps/">Google Maps API</a> to provide a map to the location of each instance in the instance pages. <a href="https://clearbit.com/docs">Clearbit API</a> lets us scrape company websites for logos. Finally, <a href="https://www.microsoft.com/cognitive-services/en-us/bing-image-search-api">Bing Images API</a> was used to find photos for our person models.<br />
 <br/><br/>
 <h2>Sorting and Filtering</h2>
 We use JQuery, Javascript, Isotope, Jinja2, Flask, HTML, and Bootstrap to implement sorting and filtering. First we create a template using HTML and Bootstrap. Each item is represented using a Bootstrap card and the data for each card is dynamically set by Flask and Jinja2. Flask accesses the AWS Relational Database through Flask PostgreSQL SQLAlchemy and renders the retrieved information in the template by means of Jinja2. We then set classes and certain other attributes in the HTML through Flask and Jinja2 so that the filters will know what to do. The filtering and sorting functionality are implemented through the use of Isotope, Jquery, and embedded Javascript. This allows us to, upon detecting a button click, change the content of the Isotope grid in the HTML template body. In order for Isotope to recognize that an item falls under a particular filter, a class attribute must be set with the name of the filter, and the same name must be set to the respective button’s list of attributes. For the sorting function to know what data to sort by, an attribute must be created in the div surrounding the Bootstrap card for each item. <br /><br /><br />
 <h2>DB</h2>
 We obtained most of our data by scraping the <a href="https://data.crunchbase.com/">Crunchbase RESTful API.</a> Unfortunately we ran into a couple of issues. First, the Crunchbase API would only give us access to a couple hundred instances for free. As we are college students, we can not afford the extra price for the entire API. However, Crunchbase does provide a snapshot of the a hundreds of thousands of models for Companies, Investors, People,and Schools. We combined the data obtained from RESTful API and the snapshot to create a more complete database. Secondly, the JSON dump provided by Crunchbase did not have logos for the schools. Therefore we had to utilize the <a href="https://clearbit.com/logo">ClearBit API</a> in order to obtain the logos for the schools. Finally, some companies, investors, people, and schools did not have a location of where they were located, so we utilized the <a href="http://ip-api.com/">IP geolocation API</a> to get location information from the website URL that some of the models provided in order to create a more complete database. 
-<h4>Create a New Person (HTTP POST request)</h4><br />
+<br/><h4>Create a New Person (HTTP POST request)</h4><br />
 You can create a new person by utilizing this action. You can provide a JSON object with the first name, last name, title, city name or region name, profile image url, and homepage url.<br /><br />
 <h4>Create a New Organization (HTTP POST request)</h4><br />
 You can create a new company, school, or investor by adding a new organization. <br />
@@ -110,7 +109,7 @@ In order to create a new school you can provide a JSON object with the name, cit
 
 Finally in order to create a new investor you can provide a JSON object with the name, city name or region name, a short description, a profile image url, and a homepage url. The primary role must be of an investor..<br /><br /><br />
 <h2>Website Redesign</h2>
-After the first phase, our website had a purple background, default text, and a messy about page. We decided to do a complete redesign of our website and make it look more professional and polished. To begin with, we changed our color scheme to from purples, to black, gray, and white. We created a new logo for our web application. We also decluttered our about page: We moved all of our statistics and important links to the top so that they wouldn’t get lost. We also shortened our bios and organized our tools in a more efficient manner.<br /><br />
+After the first phase, our website had a purple background, default text, and a messy about page. We decided to do a complete redesign of our website and make it look more professional and polished. To begin with, the color scheme changed from purple to black, gray, and white. A new, bolder logo was created for our organization. We also decluttered our about page by moving all of our statistics and important links to the top so that they wouldn’t get lost. The bios were shortened and the tools were organized in a much more efficient manner.<br /><br />
 
 
             
