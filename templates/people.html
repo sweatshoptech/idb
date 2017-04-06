@@ -26,10 +26,10 @@
           <li class="nav-item">
             <a class="nav-link" href="/about.html">About</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="/companies.html">Companies</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="#">People<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
@@ -46,7 +46,7 @@
       <div class="container" style="color: white;">
         <div class="filters">
           <div class="ui-group">
-            <h3>Job Type</h3>
+            <button-text>Job Type</button-text>
             <div class="button-group js-radio-button-group" data-filter-group="job-type">
               <button class="button is-checked" data-filter="">Any</button>
               <button class="button" data-filter="CEO">CEO</button>
@@ -54,22 +54,25 @@
             </div>
           </div>
           <div class="ui-group">
-            <h3>Country</h3>
+            <button-text>Country</button-text>
             <div class="button-group js-radio-button-group" data-filter-group="country">
               <button class="button is-checked" data-filter="">Any</button>
               <button class="button" data-filter="United States">USA</button>
-              <button class="button" data-filter="Canada">Canada</button>
+              <button class="button" data-filter="United Kingdom">UK</button>
+              <button class="button" data-filter="Japan">Japan</button>
+              <button class="button" data-filter="Pakistan">Pakistan</button>
+              <button class="button" data-filter="Spain">Spain</button>
             </div>
           </div>
         </div>
         <div class="ui-group">
-          <h3>Sort By</h3>
+          <button-text>Sort By</button-text>
           <div class="button-group sort-by-button-group">
             <button class="button is-checked" data-sort-value="name" >Name</button>
             <button class="button" data-sort-value="location" >Location</button>
           </div>
         </div>
-        {{ pagination.info }}
+        <button-text>{{ pagination.info }}</button-text>
         <div class="pag-container">{{ pagination.links }}</div> 
         <div class="grid small">
         {% for person in people %}
@@ -82,9 +85,9 @@
               <div class="card-block">
                 <h4 class="card-title name">{{person.name}}</h4>
                 <div class="list-group-item">
-                  {{person.description[:350] if person.description else "No Description Available"}}
+                  {{person.description[:350].replace(r'\r\n',r'<br/>') if person.description}}
                 </div>
-                <a href="person/{{person.idnum}}" class="btn btn-primary">More Information</a>
+                <a href="/person/{{person.idnum}}" class="btn btn-primary">More Information</a>
               </div>
               <ul class="list-group list-group-flush;">
                 <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Title: {{person.title}}</li>
@@ -94,8 +97,8 @@
           </div>
           </a>
         {% endfor %}    
-
         </div>
+        <div class="pag-container">{{ pagination.links }}</div> 
         <script>
         // init Isotope
         var $grid = $('.grid').isotope({

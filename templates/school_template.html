@@ -50,11 +50,11 @@
           <div class="col-4">
             <img src="{{school.image_url}}" alt="School Logo" /></div>
           <div class="col-8" style="text-align: left;">
-            <b>Size: </b> {{school.size}}<br/>
             <b>Location: </b>{{school.location}}<br/>
+            <b>Country: </b> {{school.country}}<br/>
             <b>Notable Alumni: </b><a href="../../person/{{alum.idnum}}">{{alum.name}}</a><br/>
             <b>Investors: </b><a href="../../investor/{{investor.idnum}}">{{investor.name}}</a><br/>
-            <b>Website: </b><a href="{{school.website}}" target="_blank">{{school.website}}</a><br/><br/>
+            <b>Website: </b><a href="http://{{school.website}}" target="_blank">{{school.website}}</a><br/><br/>
             <b>Description: </b>{{school.description}}<br/>
           </div>
         </div>

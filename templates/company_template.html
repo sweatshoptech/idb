@@ -50,13 +50,12 @@
           <div class="col-4">
             <img src="{{company.image_url}}" alt="Company Logo" /></div>
           <div class="col-8" style="text-align: left;">
-            <b>Ownership  Type: </b> Private<br/>
-            <b>CEO: </b><a href="../../person/{{ceo.idnum}}">{{ceo.name}}</a>
-            <br/>
-            <b>Size: </b>{{company.size}} Employees
-            <br/>
+            <b>Ownership  Type: </b>{{company.ownership_type}}<br/>
+            <b>CEO: </b><a href="../../person/{{ceo.idnum}}">{{ceo.name}}</a><br/>
             <b>Location: </b>{{company.location}}<br/>
-            <b>Investor: </b><a href="../../investor/{{investor.idnum}}">{{investor.name}}</a><br/>
+            <b>Country: </b>{{company.country}}<br/>
+            <b>Investors: </b><a href="../../investor/{{investor.idnum}}">{{investor.name}}</a><br/>
+            <b>Website: </b><a href="http://{{company.website}}">{{company.website}}</a><br/>
             <b>Description: </b>{{company.description}}<br/>
           </div>
         </div>

@@ -58,6 +58,9 @@
             <div class="button-group js-radio-button-group" data-filter-group="country">
               <button class="button is-checked" data-filter="">Any</button>
               <button class="button" data-filter="United States">USA</button>
+              <button class="button" data-filter="United Kingdom">UK</button>
+              <button class="button" data-filter="Germany">Germany</button>
+              <button class="button" data-filter="India">India</button>
               <button class="button" data-filter="Canada">Canada</button>
             </div>
           </div>
@@ -69,7 +72,7 @@
             <button class="button" data-sort-value="location" >Location</button>
           </div>
         </div>
-        {{ pagination.info }}
+        <button-text>{{ pagination.info }}</button-text>
         <div class="pag-container">{{ pagination.links }}</div> 
         <div class="grid small">
         {% for company in companies %}
@@ -82,13 +85,12 @@
               <div class="card-block">
                 <h4 class="card-title name">{{company.name}}</h4>
                 <div class="list-group-item">
-                  {{company.description[:150] if company.description}}
+                  {{company.description[:150].replace(r'\r\n', r'<br/>') if company.description}}
                 </div>
-                <a href="company/{{company.idnum}}" class="btn btn-primary">More Information</a>
+                <a href="/company/{{company.idnum}}" class="btn btn-primary">More Information</a>
               </div>
               <ul class="list-group list-group-flush;">
                 <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: {{company.ownership_type}}</li>
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{company.funding}}</li>
                 <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{company.location}}</li>
               </ul>
             </div>
@@ -97,6 +99,7 @@
         {% endfor %}    
 
         </div>
+        <div class="pag-container">{{ pagination.links }}</div> 
         <script>
         // init Isotope
         var $grid = $('.grid').isotope({

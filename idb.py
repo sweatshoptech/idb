@@ -81,35 +81,72 @@ def school_template(school_id):
     school = models.School.query.get(school_id)
     alum = school.alumni.all()
     people = alum[0] if alum else None
-    investors = school.investors[0] if person.investors else None
+    investors = school.investors[0] if school.investors else None
     return render_template('school_template.html', school=school, alum=people, investor=investors)
 
 
 @app.route('/investor/<int:investor_id>')
 def investor_template(investor_id):
     investor = models.Investor.query.get(investor_id)
-    companies = investor.companies.all()[0]
-    schools = investor.schools.all()[0]
+    companies = investor.companies.all()
+    companies = companies[0] if companies else None
+    schools = investor.schools.all()
+    schools = schools[0] if schools else None
     return render_template('investor_template.html', investor=investor, company=companies, school=schools)
 
 
-@app.route('/schools')
-@app.route('/schools.html')
-def schools():
-    return render_template('schools.html', schools=models.School.query.all())
+@app.route('/schools/page/<int:page>')
+@app.route('/schools/', defaults={'page': 1})
+@app.route('/schools.html/', defaults={'page': 1})
+def schools(page):
+    # Get page data
+    page, per_page, offset = get_page_args()
+    per_page = 9
+
+    # Get sort data
+    sortBy = request.args.get('sort', type=str, default='name')
+    sortBy = getattr(models.School, sortBy or 'name')
+    schools = models.School.query.order_by(sortBy)
+
+    # Get filter data
+    country = request.args.get('country', type=str, default=None)
+    if country:
+        schools = schools.filter_by(country=country)
+
+    schools = schools.offset(offset).limit(per_page).all()
+
+    # Render with pagination
+    total = len(models.School.query.all())
+    pagination = Pagination(
+        page=page, per_page=per_page, total=total, record_name='schools')
+    return render_template('schools.html', schools=schools, page=page, per_page=per_page, pagination=pagination)
 
 
-@app.route('/investors')
-@app.route('/investors.html')
-def investors():
-    return render_template('investors.html', investors=models.Investor.query.all())
+@app.route('/investors/page/<int:page>')
+@app.route('/investors/', defaults={'page': 1})
+@app.route('/investors.html/', defaults={'page': 1})
+def investors(page):
+    # Get page data
+    page, per_page, offset = get_page_args()
+    per_page = 9
 
-"""
-@app.route('/people')
-@app.route('/people.html')
-def people():
-    return render_template('people.html', people=models.Person.query.all())
-"""
+    # Get sort data
+    sortBy = request.args.get('sort', type=str, default='name')
+    sortBy = getattr(models.Investor, sortBy or 'name')
+    investors = models.Investor.query.order_by(sortBy)
+
+    # Get filter data
+    country = request.args.get('country', type=str, default=None)
+    if country:
+        investors = investors.filter_by(country=country)
+
+    investors = investors.offset(offset).limit(per_page).all()
+
+    # Render with pagination
+    total = len(models.Investor.query.all())
+    pagination = Pagination(
+        page=page, per_page=per_page, total=total, record_name='investors')
+    return render_template('investors.html', investors=investors, page=page, per_page=per_page, pagination=pagination)
 
 
 @app.route('/people/page/<int:page>')
@@ -128,7 +165,8 @@ def people(page):
     # Get filter data
     title = request.args.get('job-type', type=str, default=None)
     if title:
-        people = people.filter_by(title=title)
+        people = people.filter(models.Person.title.contains(title))
+        # filter_by(title=title)
     country = request.args.get('country', type=str, default=None)
     if country:
         people = people.filter_by(country=country)

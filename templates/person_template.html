@@ -51,12 +51,13 @@
             <img src="{{person.image_url}}" alt="Company Logo" /></div>
           <div class="col-8" style="text-align: left;">
             <br/>
-            <b>Job Title: </b> {{person.title}}<br/>
-            <b>Company: </b><a href="../../company/{{company.idnum}}">{{company.name}}</a><br/>
-            <b>School: </b><a href="../../school/{{school.idnum}}">{{school.name}}</a><br/>
-            <b>Date of Birth: </b>{{person.dob}}<br/>
+            <b>Primary Job Title: </b> {{person.title}}<br/>
+            <b>Companies: </b><a href="../../company/{{company.idnum}}">{{company.name}}</a><br/>
+            <b>Schools: </b><a href="../../school/{{school.idnum}}">{{school.name}}</a><br/>
             <b>Location: </b>{{person.location}}<br/>
-            <b>Website: </b><a href="{{person.website}}" target="_blank">{{person.website}}</a><br/>
+            <b>Country: </b>{{person.country}}<br/>
+            <b>Website: </b><a href="http://{{person.website}}" target="_blank">{{person.website}}</a><br/>
+            <b>Description: </b>{{person.description}}<br/>
           </div>
         </div>
       </div>
