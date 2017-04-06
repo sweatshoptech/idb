@@ -1,22 +1,24 @@
 import requests
-from bs4 import BeautifulSoup
 import models
+import json
 
-def find_website(school):
+
+def find_image(person):
     lookup_string = school.name
-    r = requests.get("https://www.google.com/search?client=ubuntu&q=" + lookup_string)
+    r = requests.get("https://api.cognitive.microsoft.com/bing/v5.0/images/search + lookup_string + )
     if r.status_code != 200:
-        print("STAHP: " + school.name)
-    soup = BeautifulSoup(r.text, "html.parser")
-    school.website = soup.find('cite').text
-    school.size = 1
-    print(school.website)
+        print("STAHP: " + person.name)
+    data = json.dumps(r.text)
+    print(data["link"])
     
-def get_schools():
-    return (school for school in models.Company.query.all() if school.website is None)
+def get_people():
+    return (person for person in models.Person.query.all() if person.image_url is None)
 
-def find_next_num(num, schools, school):
+def find_next_num(num, people, person):
     for i in range(num):
-        find_website(school)
-        school = next(schools)
-    return school
+        find_website(person)
+        person = next(people)
+    return person
+
+
+
