@@ -86,14 +86,12 @@ class Person(db.Model):
         """Initializes a Person, pass in dob as datetime object"""
 
         # Name not nullable
-        assert name is not None
-
-        assert isinstance(name, str) and len(name) <= 50
-        assert isinstance(title, str) and len(title) <= 200
-        assert isinstance(location, str) and len(name) <= 500
-        assert isinstance(dob, date)
-        assert isinstance(image_url, str) and len(name) <= 512
-        assert isinstance(website, str) and len(name) <= 512
+        assert name is not None and isinstance(name, str) and len(name) <= 50
+        assert title is None or (isinstance(title, str) and len(title) <= 200)
+        assert location is None or (isinstance(location, str) and len(name) <= 500)
+        assert dob is None or isinstance(dob, date)
+        assert image_url is None or (isinstance(image_url, str) and len(name) <= 512)
+        assert website is None or (isinstance(website, str) and len(name) <= 512)
 
         self.name = name
         self.title = title
@@ -189,14 +187,12 @@ class School(db.Model):
         """Initializes School"""
 
         # Name not nullable
-        assert name is not None
-
-        assert isinstance(name, str) and len(name) <= 150
-        assert isinstance(location, str) and len(name) <= 50
-        assert isinstance(description, str) and len(description) <= 10000
-        assert isinstance(image_url, str) and len(image_url) <= 512
-        assert isinstance(size, int)
-        assert isinstance(website, str) and len(website) <= 512
+        assert name is not None and isinstance(name, str) and len(name) <= 150
+        assert location is None or (isinstance(location, str) and len(name) <= 50)
+        assert description is None or (isinstance(description, str) and len(description) <= 10000)
+        assert image_url is None or (isinstance(image_url, str) and len(image_url) <= 512)
+        assert size is None or isinstance(size, int)
+        assert website is None or (isinstance(website, str) and len(website) <= 512)
 
         self.name = name
         self.location = location
@@ -231,14 +227,12 @@ class Investor(db.Model):
         """Initializes Investor"""
 
         # Name not nullable
-        assert name is not None
-
-        assert isinstance(name, str) and len(name) <= 150
-        assert isinstance(location, str) and len(name) <= 50
-        assert isinstance(funding, int)
-        assert isinstance(description, str) and len(description) <= 10000
-        assert isinstance(image_url, str) and len(image_url) <= 512
-        assert isinstance(website, str) and len(website) <= 512
+        assert name is not None and isinstance(name, str) and len(name) <= 150
+        assert location is None or (isinstance(location, str) and len(name) <= 50)
+        assert funding is None or (isinstance(funding, int))
+        assert description is None or(isinstance(description, str) and len(description) <= 10000)
+        assert image_url is None or (isinstance(image_url, str) and len(image_url) <= 512)
+        assert website is None or (isinstance(website, str) and len(website) <= 512)
 
         self.name = name
         self.location = location
