@@ -220,6 +220,7 @@ class Investor(db.Model):
     funding = db.Column(db.Integer, nullable=True)
     description = db.Column(db.String(10000), nullable=True)
     image_url = db.Column(db.String(512), nullable=True)
+    #country = db.Column(db.String(50), nullable=True)
     website = db.Column(db.String(512), nullable=True)
 
     def __init__(self, name, location, funding, description, image_url, website):
