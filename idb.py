@@ -111,7 +111,7 @@ def schools(page):
     # Get filter data
     country = request.args.get('country', type=str, default=None)
     if country:
-        schools = investors.filter_by(country=country)
+        schools = schools.filter_by(country=country)
 
     schools = schools.offset(offset).limit(per_page).all()
 
