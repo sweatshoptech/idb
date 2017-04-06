@@ -140,6 +140,10 @@
         var sortByVal = getParameterByName('sort');
         if (!sortByVal)
           sortByVal = "";
+          
+        var sortOrder = getParameterByName('order');
+        if (!sortOrder)
+          sortOrder = "";
 
         function applyFilters() {
           var qstring = filters;
