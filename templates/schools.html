@@ -77,7 +77,7 @@
               <div class="card-block">
                 <h4 class="card-title name">{{school.name}}</h4>
                 <div class="list-group-item">
-                  {{school.description[:350].replace(r'\r\n',r'<br/>') if school.description}}
+                  {{"".join(school.description[:350].split("\\r\\n")) if school.description}}
                 </div>
                 <a href="/school/{{school.idnum}}" class="btn btn-primary">More Information</a>
               </div>
