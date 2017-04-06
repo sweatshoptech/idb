@@ -442,8 +442,9 @@ member-body {
   opacity: 1;
 }
 
-.card-img-top {
+.card img {
   max-width: 320; 
+  min-height: 200 !important;
   height: 200 !important;
 }
 
