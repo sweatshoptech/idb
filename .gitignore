@@ -1,1 +1,4 @@
 .DS*
+*.pyc
+.coverage
+static/etc/config.py
