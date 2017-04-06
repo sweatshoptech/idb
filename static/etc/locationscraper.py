@@ -3,7 +3,7 @@ import models
 import json
 from bingmaps.apiservices import LocationByQuery
 
-key = 'dUJhlm3uNRFf4mpxD2Ln~PxZ3imaGR9a6EQBE95dykA~AsmyD8OZEZ7wv-Dkgun0f5GpCVsIt4btH6p0Wqha3oBfjlB3g79HHbqd7P6xzaTo'
+key = ''
 
 def find_country(investor):
     try:
