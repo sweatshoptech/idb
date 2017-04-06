@@ -73,9 +73,9 @@
           </div>
         </div>
         <div class="ui-group">
-          <div class="button-group">
-            <button class="button">Ascending</button>
-            <button class="button">Descending</button>
+          <div class="button-group order-by-button-group">
+            <button class="button" data-sort-value="asc">Ascending</button>
+            <button class="button" data-sort-value="desc">Descending</button>
           </div>
         </div>
         <button-text>{{ pagination.info }}</button-text>
@@ -139,11 +139,18 @@
         var sortByVal = getParameterByName('sort');
         if (!sortByVal)
           sortByVal = "";
+          
+        var sortOrder = getParameterByName('order');
+        if (!sortOrder)
+          sortOrder = "";
 
         function applyFilters() {
           var qstring = filters;
           if(sortByVal) {
             qstring['sort'] = sortByVal;
+          }
+          if(sortOrder) {
+            qstring['order'] = sortOrder;
           }
           window.location.href = "?" + $.param(qstring);
         }
@@ -151,12 +158,16 @@
         // bind sort button click
         $('.sort-by-button-group').on( 'click', 'button', function() {
           var sortByValue = $(this).attr('data-sort-value');
-          $ascending = !$ascending;
           sortByVal = sortByValue;
           applyFilters();
         });
-
-
+          
+        // bind order button click
+        $('.order-by-button-group').on( 'click', 'button', function() {
+          var sortOrderValue = $(this).attr('data-sort-value');
+          sortOrder = sortOrderValue;
+          applyFilters();
+        });
 
         $('.filters').on( 'click', '.button', function() {
           var $this = $(this);
