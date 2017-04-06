@@ -444,7 +444,7 @@ member-body {
 
 .card img {
   max-width: 320px; 
-  min-height: 150px !important;
+  min-height: 100px !important;
   height: 150px !important;
 }
 
