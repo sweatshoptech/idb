@@ -69,7 +69,7 @@
             <button class="button" data-sort-value="location" >Location</button>
           </div>
         </div>
-        {{ pagination.info }}
+        <button-text>{{ pagination.info }}</button-text>
         <div class="pag-container">{{ pagination.links }}</div> 
         <div class="grid small">
         {% for company in companies %}
@@ -97,6 +97,7 @@
         {% endfor %}    
 
         </div>
+        <div class="pag-container">{{ pagination.links }}</div> 
         <script>
         // init Isotope
         var $grid = $('.grid').isotope({

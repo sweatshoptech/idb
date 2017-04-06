@@ -1,3 +1,35 @@
+commit 69e9b13ec28bafcbcc3a3b609f9bf93a0a2ab48e
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 21:41:21 2017 -0500
+
+    changed pagination css
+
+commit 227520d84f3677e7368f264858ee6a4822d063fa
+Merge: 60e7f42 0fed14c
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 21:38:43 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 0fed14c844024a7644bb2522a4dfc7aa67c143e3
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 02:38:25 2017 +0000
+
+    fixed person and some formatting
+
+commit 60e7f42434e9500024b9d33539aad0e40a7e2dcf
+Merge: 2215ace 8c95010
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 21:35:49 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 2215aced715bc8b1cfa9bde164c4c9a31703abe7
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 21:35:46 2017 -0500
+
+    changed pagination css
+
 commit 8c950103b7265896e9622161f41c6a8a27f6ed1e
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Thu Apr 6 02:34:12 2017 +0000
@@ -22,6 +54,12 @@ Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Thu Apr 6 02:09:53 2017 +0000
 
     Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 87c4b168e0f26e3030caa34ce3b2d5cd6267aa29
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 21:09:48 2017 -0500
+
+    changing card margin bot
 
 commit fdd0f2e72063546153fb7a63466b6ba2bb2138de
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
