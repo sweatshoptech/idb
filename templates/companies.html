@@ -49,25 +49,16 @@
             <button-text>Ownership Type</button-text>
             <div class="button-group js-radio-button-group" data-filter-group="ownership-type">
               <button class="button is-checked" data-filter="">Any</button>
-              <button class="button" data-filter=".public">Public</button>
-              <button class="button" data-filter=".private">Private</button>
+              <button class="button" data-filter="Public">Public</button>
+              <button class="button" data-filter="Private">Private</button>
             </div>
           </div>
-          <div class="ui-group">
-            <button-text>Size</button-text>
-            <div class="button-group js-radio-button-group" data-filter-group="size">
-              <button class="button is-checked" data-filter="">Any</button>
-              <button class="button" data-filter=".small-size">1-50</button>
-              <button class="button" data-filter=".medium-size">50-250</button>
-              <button class="button" data-filter=".large-size">250+</button>
-            </div>
-          </div>
-          <div class="ui-group">
+         <div class="ui-group">
             <button-text>Country</button-text>
             <div class="button-group js-radio-button-group" data-filter-group="country">
               <button class="button is-checked" data-filter="">Any</button>
-              <button class="button" data-filter=".usa">USA</button>
-              <button class="button" data-filter=".canada">Canada</button>
+              <button class="button" data-filter="United States">USA</button>
+              <button class="button" data-filter="Canada">Canada</button>
             </div>
           </div>
         </div>
@@ -75,8 +66,7 @@
           <button-text>Sort By</button-text>
           <div class="button-group sort-by-button-group">
             <button class="button is-checked" data-sort-value="name" >Name</button>
-            <button class="button" data-sort-value="funding" >Funding</button>
-            <button class="button" data-sort-value="size" >Size</button>
+            <button class="button" data-sort-value="location" >Location</button>
           </div>
         </div>
         {{ pagination.info }}
@@ -84,7 +74,7 @@
         <div class="grid small">
         {% for company in companies %}
           <a href="http://sweatshop.tech/company/{{company.idnum}}">
-          <div class="grid-item private small-size usa" funding='{{company.funding}}' name='{{company.name}}' size='{{company.size}}'>
+          <div class="grid-item private small-size usa" location='{{company.location}}' name='{{company.name}}' size='{{company.size}}'>
             <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
               <div style="background: #FFF; width: 100%">
                 <img class="card-img-top" src="{{company.image_url}}" alt="Card image cap">
@@ -92,7 +82,7 @@
               <div class="card-block">
                 <h4 class="card-title name">{{company.name}}</h4>
                 <div class="list-group-item">
-                  {{company.description[:350] if company.description}}
+                  {{company.description[:150] if company.description}}
                 </div>
                 <a href="company/{{company.idnum}}" class="btn btn-primary">More Information</a>
               </div>
@@ -114,14 +104,14 @@
             layoutMode: 'fitRows',
             masonry: {
               columnWidth: 100
-            },
+            }/*,
             getSortData: {
               name: '[name]',
               funding: '[funding] parseInt',
               size: '[size] parseInt'
             },
             sortBy: 'name',
-            sortAscending: true
+            sortAscending: true*/
         });
         var $ascending = true
 
@@ -163,7 +153,7 @@
         // bind sort button click
         $('.sort-by-button-group').on( 'click', 'button', function() {
           var sortByValue = $(this).attr('data-sort-value');
-          $grid.isotope({ sortBy: sortByValue, sortAscending: !$ascending });
+          //$grid.isotope({ sortBy: sortByValue, sortAscending: !$ascending });
           $ascending = !$ascending;
           console.log($ascending);
           sortByVal = sortByValue;
@@ -182,7 +172,7 @@
           // combine filters
           var filterValue = concatValues( filters );
           // set filter for Isotope
-          $grid.isotope({ filter: filterValue });
+          //$grid.isotope({ filter: filterValue });
           applyFilters()
         });
 

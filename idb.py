@@ -33,14 +33,27 @@ def about():
 @app.route('/companies/', defaults={'page': 1})
 @app.route('/companies.html/', defaults={'page': 1})
 def companies(page):
+    # Get page data
     page, per_page, offset = get_page_args()
+
+    # Get sort data
     sortBy = request.args.get('sort', type=str, default='name')
     sortBy = getattr(models.Company, sortBy or 'name')
-    #companies = models.Company.query.all()
-    total = len(models.Company.query.all())
-    companies = models.Company.query.order_by(sortBy).offset(offset).limit(per_page).all()
-    pagination = Pagination(page=page, per_page=per_page, total=total, record_name='companies')
+    companies = models.Company.query.order_by(sortBy)
+
+    # Get filter data
+    ownership = request.args.get('ownership-type', type=str, default=None)
+    if ownership:
+        companies = companies.filter_by(ownership_type=models.Ownership(ownership))
+    country = request.args.get('country', type=str, default=None)
+    if country:
+        companies = companies.filter_by(country=country)
     
+    companies = companies.offset(offset).limit(per_page).all()
+
+    # Render with pagination
+    total = len(models.Company.query.all())
+    pagination = Pagination(page=page, per_page=per_page, total=total, record_name='companies')
     return render_template('companies.html', companies=companies, page=page, per_page=per_page, pagination=pagination)
 
 
