@@ -1,3 +1,15 @@
+commit 45cf32f49dcf0c57c94b8152b9cfa765bfdea1f5
+Author: Aaron Chang <aaron.j.m.chang@gmail.com>
+Date:   Thu Apr 6 15:01:57 2017 -0500
+
+    ficksed assertions, references #72
+
+commit a37c4fbbf4e4bb133627646b4d088faf26298f0e
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 19:56:37 2017 +0000
+
+    travis pylint/tests fix, tests need further ficksing
+
 commit 2f30d589cc6cb6b5688cb091de05d77237dab142
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Thu Apr 6 19:46:16 2017 +0000

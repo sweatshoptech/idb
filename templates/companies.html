@@ -48,7 +48,7 @@
           <div class="ui-group">
             <button-text>Ownership Type</button-text>
             <div class="button-group js-radio-button-group" data-filter-group="ownership-type">
-              <button class="button is-checked" data-filter="">Any</button>
+              <button class="button" data-filter="">Any</button>
               <button class="button" data-filter="PUBLIC">Public</button>
               <button class="button" data-filter="PRIVATE">Private</button>
             </div>
@@ -56,8 +56,11 @@
          <div class="ui-group">
             <button-text>Country</button-text>
             <div class="button-group js-radio-button-group" data-filter-group="country">
-              <button class="button is-checked" data-filter="">Any</button>
+              <button class="button" data-filter="">Any</button>
               <button class="button" data-filter="United States">USA</button>
+              <button class="button" data-filter="United Kingdom">UK</button>
+              <button class="button" data-filter="Germany">Germany</button>
+              <button class="button" data-filter="India">India</button>
               <button class="button" data-filter="Canada">Canada</button>
             </div>
           </div>
@@ -65,8 +68,14 @@
         <div class="ui-group">
           <button-text>Sort By</button-text>
           <div class="button-group sort-by-button-group">
-            <button class="button is-checked" data-sort-value="name" >Name</button>
+            <button class="button" data-sort-value="name" >Name</button>
             <button class="button" data-sort-value="location" >Location</button>
+          </div>
+        </div>
+        <div class="ui-group">
+          <div class="button-group order-by-button-group">
+            <button class="button" data-sort-value="asc">Ascending</button>
+            <button class="button" data-sort-value="desc">Descending</button>
           </div>
         </div>
         <button-text>{{ pagination.info }}</button-text>
@@ -82,7 +91,7 @@
               <div class="card-block">
                 <h4 class="card-title name">{{company.name}}</h4>
                 <div class="list-group-item">
-                  {{company.description[:150] if company.description}}
+                  {{"".join(company.description[:350].split("\\r\\n")) if company.description}}
                 </div>
                 <a href="/company/{{company.idnum}}" class="btn btn-primary">More Information</a>
               </div>
@@ -131,11 +140,18 @@
         var sortByVal = getParameterByName('sort');
         if (!sortByVal)
           sortByVal = "";
+          
+        var sortOrder = getParameterByName('order');
+        if (!sortOrder)
+          sortOrder = "";
 
         function applyFilters() {
           var qstring = filters;
           if(sortByVal) {
             qstring['sort'] = sortByVal;
+          }
+          if(sortOrder) {
+            qstring['order'] = sortOrder;
           }
           window.location.href = "?" + $.param(qstring);
         }
@@ -147,8 +163,13 @@
           sortByVal = sortByValue;
           applyFilters();
         });
-
-
+          
+        // bind order button click
+        $('.order-by-button-group').on( 'click', 'button', function() {
+          var sortOrderValue = $(this).attr('data-sort-value');
+          sortOrder = sortOrderValue;
+          applyFilters();
+        });
 
         $('.filters').on( 'click', '.button', function() {
           var $this = $(this);

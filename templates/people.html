@@ -48,25 +48,38 @@
           <div class="ui-group">
             <button-text>Job Type</button-text>
             <div class="button-group js-radio-button-group" data-filter-group="job-type">
-              <button class="button is-checked" data-filter="">Any</button>
+              <button class="button" data-filter="">Any</button>
               <button class="button" data-filter="CEO">CEO</button>
-              <button class="button" data-filter="Other">Other</button>
+              <button class="button" data-filter="Founder">Founder</button>
+              <button class="button" data-filter="President">President</button>
+              <button class="button" data-filter="VP">VP</button>
+              <button class="button" data-filter="Director">Director</button>
+              <button class="button" data-filter="CTO">CTO</button>
             </div>
           </div>
           <div class="ui-group">
             <button-text>Country</button-text>
             <div class="button-group js-radio-button-group" data-filter-group="country">
-              <button class="button is-checked" data-filter="">Any</button>
+              <button class="button" data-filter="">Any</button>
               <button class="button" data-filter="United States">USA</button>
-              <button class="button" data-filter="Canada">Canada</button>
+              <button class="button" data-filter="United Kingdom">UK</button>
+              <button class="button" data-filter="Japan">Japan</button>
+              <button class="button" data-filter="Pakistan">Pakistan</button>
+              <button class="button" data-filter="Spain">Spain</button>
             </div>
           </div>
         </div>
         <div class="ui-group">
           <button-text>Sort By</button-text>
           <div class="button-group sort-by-button-group">
-            <button class="button is-checked" data-sort-value="name" >Name</button>
+            <button class="button" data-sort-value="name" >Name</button>
             <button class="button" data-sort-value="location" >Location</button>
+          </div>
+        </div>
+        <div class="ui-group">
+          <div class="button-group order-by-button-group">
+            <button class="button" data-sort-value="asc">Ascending</button>
+            <button class="button" data-sort-value="desc">Descending</button>
           </div>
         </div>
         <button-text>{{ pagination.info }}</button-text>
@@ -82,7 +95,13 @@
               <div class="card-block">
                 <h4 class="card-title name">{{person.name}}</h4>
                 <div class="list-group-item">
-                  {{person.description[:350] if person.description}}
+                  {{
+                  if person.description:
+                      s = "".join(person.description[:350].split("\\r\\n"))
+                      for index in range(0,len(re.findall(r"[^[]*\[([^]]*)\]", s))):
+                          s = re.sub(r'\[.*?\]\((.*?)\)', re.findall(r"[^[]*\[([^]]*)\]", s)[0], s, count=1)
+                      s
+                  }}
                 </div>
                 <a href="/person/{{person.idnum}}" class="btn btn-primary">More Information</a>
               </div>
@@ -130,11 +149,18 @@
         var sortByVal = getParameterByName('sort');
         if (!sortByVal)
           sortByVal = "";
+          
+        var sortOrder = getParameterByName('order');
+        if (!sortOrder)
+          sortOrder = "";
 
         function applyFilters() {
           var qstring = filters;
           if(sortByVal) {
             qstring['sort'] = sortByVal;
+          }
+          if(sortOrder) {
+            qstring['order'] = sortOrder;
           }
           window.location.href = "?" + $.param(qstring);
         }
@@ -142,12 +168,16 @@
         // bind sort button click
         $('.sort-by-button-group').on( 'click', 'button', function() {
           var sortByValue = $(this).attr('data-sort-value');
-          $ascending = !$ascending;
           sortByVal = sortByValue;
           applyFilters();
         });
-
-
+          
+        // bind order button click
+        $('.order-by-button-group').on( 'click', 'button', function() {
+          var sortOrderValue = $(this).attr('data-sort-value');
+          sortOrder = sortOrderValue;
+          applyFilters();
+        });
 
         $('.filters').on( 'click', '.button', function() {
           var $this = $(this);

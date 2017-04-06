@@ -48,8 +48,11 @@
          <div class="ui-group">
             <button-text>Country</button-text>
             <div class="button-group js-radio-button-group" data-filter-group="country">
-              <button class="button is-checked" data-filter="">Any</button>
+              <button class="button" data-filter="">Any</button>
               <button class="button" data-filter="United States">USA</button>
+              <button class="button" data-filter="United Kingdom">UK</button>
+              <button class="button" data-filter="France">France</button>
+              <button class="button" data-filter="India">India</button>
               <button class="button" data-filter="Canada">Canada</button>
             </div>
           </div>
@@ -57,8 +60,14 @@
         <div class="ui-group">
           <button-text>Sort By</button-text>
           <div class="button-group sort-by-button-group">
-            <button class="button is-checked" data-sort-value="name" >Name</button>
+            <button class="button" data-sort-value="name" >Name</button>
             <button class="button" data-sort-value="location" >Location</button>
+          </div>
+        </div>
+        <div class="ui-group">
+          <div class="button-group order-by-button-group">
+            <button class="button" data-sort-value="asc">Ascending</button>
+            <button class="button" data-sort-value="desc">Descending</button>
           </div>
         </div>
         <button-text>{{ pagination.info }}</button-text>
@@ -74,7 +83,7 @@
               <div class="card-block">
                 <h4 class="card-title name">{{school.name}}</h4>
                 <div class="list-group-item">
-                  {{school.description[:350] if school.description}}
+                  {{"".join(school.description[:350].split("\\r\\n")) if school.description}}
                 </div>
                 <a href="/school/{{school.idnum}}" class="btn btn-primary">More Information</a>
               </div>
@@ -121,11 +130,18 @@
         var sortByVal = getParameterByName('sort');
         if (!sortByVal)
           sortByVal = "";
+          
+        var sortOrder = getParameterByName('order');
+        if (!sortOrder)
+          sortOrder = "";
 
         function applyFilters() {
           var qstring = filters;
           if(sortByVal) {
             qstring['sort'] = sortByVal;
+          }
+          if(sortOrder) {
+            qstring['order'] = sortOrder;
           }
           window.location.href = "?" + $.param(qstring);
         }
@@ -137,8 +153,13 @@
           sortByVal = sortByValue;
           applyFilters();
         });
-
-
+          
+        // bind order button click
+        $('.order-by-button-group').on( 'click', 'button', function() {
+          var sortOrderValue = $(this).attr('data-sort-value');
+          sortOrder = sortOrderValue;
+          applyFilters();
+        });
 
         $('.filters').on( 'click', '.button', function() {
           var $this = $(this);

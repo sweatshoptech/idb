@@ -111,7 +111,7 @@ def schools(page):
     # Get filter data
     country = request.args.get('country', type=str, default=None)
     if country:
-        schools = investors.filter_by(country=country)
+        schools = schools.filter_by(country=country)
 
     schools = schools.offset(offset).limit(per_page).all()
 
@@ -165,8 +165,7 @@ def people(page):
     # Get filter data
     title = request.args.get('job-type', type=str, default=None)
     if title:
-        people = people.filter(models.Person.title.ilike(title))
-        # filter_by(title=title)
+        people = people.filter(models.Person.title.ilike("%{0}%".format(title)))
     country = request.args.get('country', type=str, default=None)
     if country:
         people = people.filter_by(country=country)
