@@ -165,7 +165,7 @@ def people(page):
     # Get filter data
     title = request.args.get('job-type', type=str, default=None)
     if title:
-        people = people.filter(models.Person.title.ilike(title))
+        people = people.filter(models.Person.title.contains(title))
         # filter_by(title=title)
     country = request.args.get('country', type=str, default=None)
     if country:
