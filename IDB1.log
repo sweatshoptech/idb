@@ -1,3 +1,238 @@
+commit 993311936ff030ee39cc1c0afd7b3a7e94c1e749
+Merge: d5f7477 abdc6f6
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 22:55:08 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit d5f74771e7b28da22694ee017b06b5ff12b879f7
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 22:55:01 2017 +0000
+
+    regex fixes to format description, closes #78
+
+commit abdc6f652dca7f9dd36176bb066f4f58746a7835
+Merge: f88138e a6e6237
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Thu Apr 6 17:51:30 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit f88138e05ac7865ecae40ae4006416f7a31bc9c9
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Thu Apr 6 17:51:26 2017 -0500
+
+    Added more to report. Added 679 words; 571 to go
+
+commit a6e6237200629aa6655f85700399d4d5da7db216
+Merge: 7bb3a16 37729ef
+Author: Aaron Chang <achang@cs.utexas.edu>
+Date:   Thu Apr 6 17:41:13 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 7bb3a1647406207f9862d4233723583593988250
+Author: Aaron Chang <achang@cs.utexas.edu>
+Date:   Thu Apr 6 17:41:02 2017 -0500
+
+    trying regex
+
+commit 37729ef99866502662afab39e4ce8a13d0ed6f9e
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 17:37:28 2017 -0500
+
+    close #84
+
+commit 48203a3e811a91b380edce586cf5b0ba8d68702e
+Merge: 0f596ff 8066daa
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 17:32:16 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 0f596ffbd5ea1c68b0b412a7146b557dec7a820d
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 17:32:12 2017 -0500
+
+    close #84
+
+commit 8066daaed9f89b2d4499592f5e0f4c4ab45a5a9c
+Merge: c318210 f492a8b
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 22:32:01 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit c31821031984692c312baee943cf6123a98cd8ef
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 22:31:49 2017 +0000
+
+    models pages newlines removed
+
+commit f492a8b0c7b49a9edf2b690bd9ddd0643347decc
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 17:05:12 2017 -0500
+
+    removed is-checked from investors
+
+commit aa5ee781408c28d073605f7aa4a7311a05e22f9e
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 17:04:47 2017 -0500
+
+    removed is-checked from schools
+
+commit d7753e816908ecc8ae7831c29d1c71964f66eec0
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 17:04:16 2017 -0500
+
+    removed is-checked from people
+
+commit 1c07e6509e518ccd1dfdbfe02538ab4a41d6915e
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 17:03:21 2017 -0500
+
+    removed is-checked from companies
+
+commit 9dc7c0ef6ef7d161c4c404758b8f8d065bf8e49d
+Merge: 7eaeb7c 5cedf89
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 16:59:17 2017 -0500
+
+    commiting merge
+
+commit 7eaeb7cc706ebd653356249613f09592a72df53b
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 16:57:58 2017 -0500
+
+    added ascending/descending buttong
+
+commit 5cedf89d176b2b1f6f2b2d9b439734991aee0863
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 21:43:41 2017 +0000
+
+    removing bad files
+
+commit b81bd10cf4c3687f5c64abc199d43d7e21f382d2
+Merge: fa8ff86 5d83fa4
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 21:40:33 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit fa8ff8688282263a4cb90aebaf44bae1cee64d62
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 21:39:45 2017 +0000
+
+    removing http, closes #73
+
+commit 5d83fa4a13b45e6204499d19eb20fbac335a5ca6
+Merge: 31a040e 13aec4f
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 16:39:13 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 31a040ed42a72c33134ca1f0a245bd7f85786f11
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 16:38:58 2017 -0500
+
+    fixed issue #82
+
+commit 13aec4fa6577dac42c12364d02ebb0e42b6635f8
+Author: Aaron Chang <aaron.j.m.chang@gmail.com>
+Date:   Thu Apr 6 16:38:12 2017 -0500
+
+    replacing \r\n with breaks, references #78
+
+commit 13b944145d848d628a14bb503f54eaee7a0fc27a
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Thu Apr 6 16:19:21 2017 -0500
+
+    removed keys
+
+commit 6d77017ba832a99b9e2fee977895d3d703a4705a
+Merge: 09c795e 67823cc
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Thu Apr 6 16:17:43 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 09c795e15de243604d97139bd5c5f70fd9c4948a
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Thu Apr 6 16:17:27 2017 -0500
+
+    fixed wrong commit
+
+commit 67823ccf83ea691b1c2380fb8f99a62cc3608689
+Merge: 9761a4c da0cb60
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 21:16:56 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 9761a4c5a3520e8b307f5b58ef7b4748172d0e5c
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 21:16:52 2017 +0000
+
+    fixed investors, closes #77
+
+commit da0cb600ed2836daa436fd08e66a52f8bd430344
+Merge: fe3602d 07381a7
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Thu Apr 6 16:12:08 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 07381a7422c1585ee0c6a9860f09d8c2c7745f68
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 21:11:57 2017 +0000
+
+    investor country filter
+
+commit fe3602d3b077d704acc777192ef5a76329b72cc5
+Author: vignesh <vignesh.1996@utexas.edu>
+Date:   Thu Apr 6 16:11:52 2017 -0500
+
+    added image and location scraper
+
+commit 25eb37b69a2ed34919533e50e52b90c5bcb3d2c3
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 21:00:48 2017 +0000
+
+    company filter for 3 models
+
+commit 1c857ae691cada0eec7bab49cd361e98d859bc39
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 20:22:49 2017 +0000
+
+    contains fix, closes #76
+
+commit 9620f349760b848ee9c24cac4547420259ec6a5d
+Merge: 9e34680 0004303
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 20:10:42 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 9e34680ac0507befff9dd24bfdd19dc9dc697292
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 20:10:29 2017 +0000
+
+    investors to models, closes #79
+
+commit 0004303fa1226dc853de611264c8e55ed25714a7
+Merge: bb274ae 45cf32f
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Thu Apr 6 15:08:12 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit bb274ae5941e42da286b58494e887b14b1825440
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Thu Apr 6 15:08:07 2017 -0500
+
+    Added more to report
+
 commit 45cf32f49dcf0c57c94b8152b9cfa765bfdea1f5
 Author: Aaron Chang <aaron.j.m.chang@gmail.com>
 Date:   Thu Apr 6 15:01:57 2017 -0500
