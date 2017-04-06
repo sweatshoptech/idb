@@ -105,7 +105,8 @@ class Company(db.Model):
     idnum = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
     location = db.Column(db.String(500), nullable=True)
-    ownership_type = db.Column(db.Enum(Ownership), nullable=True)
+    #ownership_type = db.Column(db.Enum(Ownership), nullable=True)
+    ownership_type = db.Column(db.String(50), nullable=False)
     funding = db.Column(db.Integer, nullable=True)
     description = db.Column(db.String(10000), nullable=True)
     ceo_id = db.Column(

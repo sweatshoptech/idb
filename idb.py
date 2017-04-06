@@ -44,7 +44,7 @@ def companies(page):
     # Get filter data
     ownership = request.args.get('ownership-type', type=str, default=None)
     if ownership:
-        companies = companies.filter_by(ownership_type=models.Ownership(ownership))
+        companies = companies.filter_by(ownership_type=ownership)
     country = request.args.get('country', type=str, default=None)
     if country:
         companies = companies.filter_by(country=country)
