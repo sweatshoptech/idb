@@ -442,6 +442,10 @@ member-body {
   opacity: 1;
 }
 
+.card-img-top {
+  max-width: 320; 
+  height: 200 !important;
+}
 
 /* ---- pagination ---- */
 
