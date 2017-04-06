@@ -78,6 +78,7 @@ class Person(db.Model):
     schools = db.relationship('School', secondary=education,
                               backref=db.backref('alumni', lazy='dynamic'))
     crunch_id = db.Column(db.String(25), nullable=True)
+    country = db.Column(db.String(50), nullable=True)
     description = db.Column(db.String(10000), nullable=True)
 
     def __init__(self, name, title, location, dob, image_url, website):
