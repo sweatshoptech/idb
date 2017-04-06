@@ -496,8 +496,8 @@ member-body {
 .pag-container li a{
   border: none;
   border-radius: 2px;
-  background: rgba(255, 255, 255, 0.4);
-  color: rgba(0, 0, 0, 1.0);
+  background: rgba(0, 0, 0, .4);
+  color: rgba(255, 255, 255, 1.0);
 }
 
 .pag-container ul, li {
@@ -507,15 +507,15 @@ member-body {
 }
 
 .pag-container li:hover a {
-  background: rgba(255, 255, 255, 1.0);
-  color: rgba(0, 0, 0, 1.0);
+  background: rgba(0, 0, 0, 1.0);
+  color: rgba(255, 255, 255, 1.0);
   text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
   text-decoration: none;
 }
 
 .pag-container li.disabled:hover a {
-  background: rgba(255, 255, 255, 1.0);
-  color: rgba(0, 0, 0, 1.0);
+  background: rgba(0, 0, 0, 1.0);
+  color: rgba(255, 255, 255, 1.0);
   text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
   text-decoration: none;
 }
@@ -544,7 +544,7 @@ member-body {
 
 .pag-container li a {
   border-radius: 0.2rem;
-  color: #7d7d7d;
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
@@ -553,7 +553,7 @@ member-body {
 }
 
 .pag-container li.disabled {
-  color: #7d7d7d;
+  color: white;
 }
 
 
