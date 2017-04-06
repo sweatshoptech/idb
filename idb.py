@@ -35,6 +35,7 @@ def about():
 def companies(page):
     # Get page data
     page, per_page, offset = get_page_args()
+    per_page = 9
 
     # Get sort data
     sortBy = request.args.get('sort', type=str, default='name')
@@ -101,11 +102,41 @@ def schools():
 def investors():
     return render_template('investors.html', investors=models.Investor.query.all())
 
-
+"""
 @app.route('/people')
 @app.route('/people.html')
 def people():
     return render_template('people.html', people=models.Person.query.all())
+"""
+@app.route('/people/page/<int:page>')
+@app.route('/people/', defaults={'page': 1})
+@app.route('/people.html/', defaults={'page': 1})
+def people(page):
+    # Get page data
+    page, per_page, offset = get_page_args()
+    per_page = 9
+
+    # Get sort data
+    sortBy = request.args.get('sort', type=str, default='name')
+    sortBy = getattr(models.Person, sortBy or 'name')
+    people = models.Person.query.order_by(sortBy)
+
+    # Get filter data
+    title = request.args.get('job-type', type=str, default=None)
+    if title:
+        people = people.filter_by(title=title)
+    country = request.args.get('country', type=str, default=None)
+    if country:
+        people = people.filter_by(country=country)
+    
+    people = people.offset(offset).limit(per_page).all()
+
+    # Render with pagination
+    total = len(models.Person.query.all())
+    pagination = Pagination(page=page, per_page=per_page, total=total, record_name='people')
+    return render_template('people.html', people=people, page=page, per_page=per_page, pagination=pagination)
+
+
 
 
 @app.route('/report')
