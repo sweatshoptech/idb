@@ -16,6 +16,7 @@ manager.create_api(models.Company, methods=['GET', 'POST'])
 manager.create_api(models.Investor, methods=['GET', 'POST'])
 manager.create_api(models.School, methods=['GET', 'POST'])
 
+
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
 @app.route('/index.html', methods=['GET', 'POST'])
@@ -49,12 +50,13 @@ def companies(page):
     country = request.args.get('country', type=str, default=None)
     if country:
         companies = companies.filter_by(country=country)
-    
+
     companies = companies.offset(offset).limit(per_page).all()
 
     # Render with pagination
     total = len(models.Company.query.all())
-    pagination = Pagination(page=page, per_page=per_page, total=total, record_name='companies')
+    pagination = Pagination(
+        page=page, per_page=per_page, total=total, record_name='companies')
     return render_template('companies.html', companies=companies, page=page, per_page=per_page, pagination=pagination)
 
 
@@ -108,6 +110,8 @@ def investors():
 def people():
     return render_template('people.html', people=models.Person.query.all())
 """
+
+
 @app.route('/people/page/<int:page>')
 @app.route('/people/', defaults={'page': 1})
 @app.route('/people.html/', defaults={'page': 1})
@@ -128,15 +132,14 @@ def people(page):
     country = request.args.get('country', type=str, default=None)
     if country:
         people = people.filter_by(country=country)
-    
+
     people = people.offset(offset).limit(per_page).all()
 
     # Render with pagination
     total = len(models.Person.query.all())
-    pagination = Pagination(page=page, per_page=per_page, total=total, record_name='people')
+    pagination = Pagination(
+        page=page, per_page=per_page, total=total, record_name='people')
     return render_template('people.html', people=people, page=page, per_page=per_page, pagination=pagination)
-
-
 
 
 @app.route('/report')
