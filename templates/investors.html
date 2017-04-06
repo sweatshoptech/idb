@@ -45,49 +45,48 @@
       <h1 class="cover-heading">Investors</h1>
       <div class="container" style="color: white;">
         <div class="filters">
-          <div class="ui-group">
-            <h3>Country</h3>
+         <div class="ui-group">
+            <button-text>Country</button-text>
             <div class="button-group js-radio-button-group" data-filter-group="country">
               <button class="button is-checked" data-filter="">Any</button>
-              <button class="button" data-filter=".usa">USA</button>
-              <button class="button" data-filter=".canada">Canada</button>
+              <button class="button" data-filter="United States">USA</button>
+              <button class="button" data-filter="Canada">Canada</button>
             </div>
           </div>
         </div>
         <div class="ui-group">
-          <h3>Sort By</h3>
+          <button-text>Sort By</button-text>
           <div class="button-group sort-by-button-group">
             <button class="button is-checked" data-sort-value="name" >Name</button>
-            <button class="button" data-sort-value="funding" >Funding</button>
+            <button class="button" data-sort-value="location" >Location</button>
           </div>
         </div>
+        <button-text>{{ pagination.info }}</button-text>
+        <div class="pag-container">{{ pagination.links }}</div> 
         <div class="grid small">
-          {% for investor in investors %}
-            <a href="http://sweatshop.tech/investor/{{investor.idnum}}">  
-            <div class="grid-item usa" funding='{{investor.funding}}' name='{{investor.name}}'>
-              <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
-                <div style="background: #FFF; width: 100%">
-                  <img class="card-img-top" src="{{investor.image_url}}" alt="Card image cap">
-                </div>
-                <div class="card-block">
-                  <h4 class="card-title name">{{investor.name}}</h4>
-                  <div class="list-group-item">
-                    {{investor.description[:350] if investor.description}}
-                  </div>
-                  <a href="#" class="btn btn-primary">More Information</a>
-                </div>
-                <ul class="list-group list-group-flush;">
-                  <a href="{{investor.website}}">
-                    <li class="list-group-item funding" style="background-color: #333; border-color: #333;">{{investor.website}}</li>
-                  </a>
-                  <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Funding: ${{investor.funding}}</li>
-                  <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investor.location}}</li>
-                </ul>
+        {% for investor in investors %}
+          <a href="http://sweatshop.tech/investor/{{investor.idnum}}">
+          <div class="grid-item private small-size usa" location='{{investor.location}}' name='{{investor.name}}'>
+            <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
+              <div style="background: #FFF; width: 100%">
+                <img class="card-img-top" src="{{investor.image_url}}" alt="Card image cap">
               </div>
+              <div class="card-block">
+                <h4 class="card-title name">{{investor.name}}</h4>
+                <div class="list-group-item">
+                  {{investor.description[:350] if investor.description else "No Description Available"}}
+                </div>
+                <a href="investor/{{investor.idnum}}" class="btn btn-primary">More Information</a>
+              </div>
+              <ul class="list-group list-group-flush;">  
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investor.location}}</li>
+              </ul>
             </div>
-            </a>
-          {% endfor %}    
+          </div>
+          </a>
+        {% endfor %}    
         </div>
+        <div class="pag-container">{{ pagination.links }}</div> 
         <script>
         // init Isotope
         var $grid = $('.grid').isotope({
@@ -95,23 +94,51 @@
             layoutMode: 'fitRows',
             masonry: {
               columnWidth: 100
-            },
-            getSortData: {
-              name: '[name]',
-              funding: '[funding] parseInt',
-              size: '[size] parseInt'
-            },
-            sortBy: 'name'
-        });
+            }
+       });
+        var $ascending = true
+
+        function getParameterByName(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        var filters = {};
+        var possiblefilters = ["country"];
+        for(var i in possiblefilters) {
+          var j = possiblefilters[i];
+          var filterVal = getParameterByName(j);
+          if(filterVal)
+            filters[j] = filterVal;
+        }
+
+
+        var sortByVal = getParameterByName('sort');
+        if (!sortByVal)
+          sortByVal = "";
+
+        function applyFilters() {
+          var qstring = filters;
+          if(sortByVal) {
+            qstring['sort'] = sortByVal;
+          }
+          window.location.href = "?" + $.param(qstring);
+        }
 
         // bind sort button click
         $('.sort-by-button-group').on( 'click', 'button', function() {
           var sortByValue = $(this).attr('data-sort-value');
-          $grid.isotope({ sortBy: sortByValue });
+          $ascending = !$ascending;
+          sortByVal = sortByValue;
+          applyFilters();
         });
 
-        // store filter for each group
-        var filters = {};
+
 
         $('.filters').on( 'click', '.button', function() {
           var $this = $(this);
@@ -123,7 +150,7 @@
           // combine filters
           var filterValue = concatValues( filters );
           // set filter for Isotope
-          $grid.isotope({ filter: filterValue });
+          applyFilters()
         });
 
         // change is-checked class on buttons

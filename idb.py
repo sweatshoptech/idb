@@ -99,17 +99,31 @@ def schools():
     return render_template('schools.html', schools=models.School.query.all())
 
 
-@app.route('/investors')
-@app.route('/investors.html')
-def investors():
-    return render_template('investors.html', investors=models.Investor.query.all())
+@app.route('/investors/page/<int:page>')
+@app.route('/investors/', defaults={'page': 1})
+@app.route('/investors.html/', defaults={'page': 1})
+def investors(page):
+    # Get page data
+    page, per_page, offset = get_page_args()
+    per_page = 9
 
-"""
-@app.route('/people')
-@app.route('/people.html')
-def people():
-    return render_template('people.html', people=models.Person.query.all())
-"""
+    # Get sort data
+    sortBy = request.args.get('sort', type=str, default='name')
+    sortBy = getattr(models.Investor, sortBy or 'name')
+    investors = models.Investor.query.order_by(sortBy)
+
+    # Get filter data
+    country = request.args.get('country', type=str, default=None)
+    if country:
+        investors = investors.filter_by(country=country)
+
+    investors = investors.offset(offset).limit(per_page).all()
+
+    # Render with pagination
+    total = len(models.Investor.query.all())
+    pagination = Pagination(
+        page=page, per_page=per_page, total=total, record_name='investors')
+    return render_template('investors.html', investors=investors, page=page, per_page=per_page, pagination=pagination)
 
 
 @app.route('/people/page/<int:page>')
