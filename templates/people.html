@@ -95,13 +95,7 @@
               <div class="card-block">
                 <h4 class="card-title name">{{person.name}}</h4>
                 <div class="list-group-item">
-                  {{
-                  if person.description:
-                      s = "".join(person.description[:350].split("\\r\\n"))
-                      for index in range(0,len(re.findall(r"[^[]*\[([^]]*)\]", s))):
-                          s = re.sub(r'\[.*?\]\((.*?)\)', re.findall(r"[^[]*\[([^]]*)\]", s)[0], s, count=1)
-                      s
-                  }}
+                  {{"".join(person.description[:350].split("\\r\\n")) if person.description}}
                 </div>
                 <a href="/person/{{person.idnum}}" class="btn btn-primary">More Information</a>
               </div>

@@ -7,7 +7,7 @@ import models
 import subprocess
 import tests
 import flask_restless
-
+import formatters
 
 app = Flask(__name__)
 manager = flask_restless.APIManager(app, flask_sqlalchemy_db=models.db)
@@ -57,7 +57,7 @@ def companies(page):
     total = len(models.Company.query.all())
     pagination = Pagination(
         page=page, per_page=per_page, total=total, record_name='companies')
-    return render_template('companies.html', companies=companies, page=page, per_page=per_page, pagination=pagination)
+    return render_template('companies.html', companies=companies, page=page, per_page=per_page, pagination=pagination) 
 
 
 @app.route('/company/<int:company_id>')
@@ -65,7 +65,7 @@ def company_template(company_id):
     company = models.Company.query.get(company_id)
     ceo = models.Person.query.get(company.ceo_id) if company.ceo_id else None
     investor = company.investors[0] if company.investors else None
-    return render_template('company_template.html', company=company, ceo=ceo, investor=investor)
+    return render_template('company_template.html', company=company, ceo=ceo, investor=investor, description = formatters.markdown_remove(company.description))
 
 
 @app.route('/person/<int:person_id>')
@@ -73,7 +73,7 @@ def person_template(person_id):
     person = models.Person.query.get(person_id)
     companies = person.companies[0] if person.companies else None
     schools = person.schools[0] if person.schools else None
-    return render_template('person_template.html', person=person, company=companies, school=schools)
+    return render_template('person_template.html', person=person, company=companies, school=schools, description = formatters.markdown_remove(person.description))
 
 
 @app.route('/school/<int:school_id>')
@@ -82,7 +82,7 @@ def school_template(school_id):
     alum = school.alumni.all()
     people = alum[0] if alum else None
     investors = school.investors[0] if school.investors else None
-    return render_template('school_template.html', school=school, alum=people, investor=investors)
+    return render_template('school_template.html', school=school, alum=people, investor=investors, description = formatters.markdown_remove(school.description))
 
 
 @app.route('/investor/<int:investor_id>')
@@ -92,7 +92,7 @@ def investor_template(investor_id):
     companies = companies[0] if companies else None
     schools = investor.schools.all()
     schools = schools[0] if schools else None
-    return render_template('investor_template.html', investor=investor, company=companies, school=schools)
+    return render_template('investor_template.html', investor=investor, company=companies, school=schools, description = formatters.markdown_remove(investor.description))
 
 
 @app.route('/schools/page/<int:page>')
