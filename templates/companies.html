@@ -104,15 +104,8 @@
             layoutMode: 'fitRows',
             masonry: {
               columnWidth: 100
-            }/*,
-            getSortData: {
-              name: '[name]',
-              funding: '[funding] parseInt',
-              size: '[size] parseInt'
-            },
-            sortBy: 'name',
-            sortAscending: true*/
-        });
+            }
+       });
         var $ascending = true
 
         function getParameterByName(name) {
@@ -130,8 +123,6 @@
         for(var i in possiblefilters) {
           var j = possiblefilters[i];
           var filterVal = getParameterByName(j);
-          console.log(j);
-          console.log(filterVal);
           if(filterVal)
             filters[j] = filterVal;
         }
@@ -146,16 +137,13 @@
           if(sortByVal) {
             qstring['sort'] = sortByVal;
           }
-          console.log($.param(qstring));
           window.location.href = "?" + $.param(qstring);
         }
 
         // bind sort button click
         $('.sort-by-button-group').on( 'click', 'button', function() {
           var sortByValue = $(this).attr('data-sort-value');
-          //$grid.isotope({ sortBy: sortByValue, sortAscending: !$ascending });
           $ascending = !$ascending;
-          console.log($ascending);
           sortByVal = sortByValue;
           applyFilters();
         });
@@ -172,7 +160,6 @@
           // combine filters
           var filterValue = concatValues( filters );
           // set filter for Isotope
-          //$grid.isotope({ filter: filterValue });
           applyFilters()
         });
 
