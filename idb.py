@@ -81,7 +81,7 @@ def school_template(school_id):
     school = models.School.query.get(school_id)
     alum = school.alumni.all()
     people = alum[0] if alum else None
-    investors = school.investors[0] if person.investors else None
+    investors = school.investors[0] if school.investors else None
     return render_template('school_template.html', school=school, alum=people, investor=investors)
 
 
