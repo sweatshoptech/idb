@@ -1,3 +1,321 @@
+commit 8c950103b7265896e9622161f41c6a8a27f6ed1e
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 02:34:12 2017 +0000
+
+    person sort and filter works
+
+commit ec88394300780b5182f275d60a73bf87595d84c2
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 02:30:51 2017 +0000
+
+    adding country field to person
+
+commit 26cc54e30cd921dfb67c480ed42036a0d4d6d1e8
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 02:23:45 2017 +0000
+
+    companies done
+
+commit 3d73ab708f490fbcbee3eb21dcf637eb63508817
+Merge: fdd0f2e 10e03d8
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 02:09:53 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit fdd0f2e72063546153fb7a63466b6ba2bb2138de
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 02:09:45 2017 +0000
+
+    num per page
+
+commit 10e03d8fd3204f65db1534a8624a6175a7577ce3
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 21:08:51 2017 -0500
+
+    changing card margin bot
+
+commit e104f6433542534e1cbc986a1e7c95a5700808c5
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 21:07:05 2017 -0500
+
+    removing card margin right
+
+commit 5c0c3daf9f356972efc0c6ae478f171b1d91759f
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 21:06:39 2017 -0500
+
+    removing card margin right
+
+commit 98fc3f802f0074c0248ee5ec6e70de4178cee63b
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 21:05:51 2017 -0500
+
+    changing card margins
+
+commit 103d2ceb0a9a5915ef36fab32066b369a8149ee7
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 21:03:29 2017 -0500
+
+    modified instance card button css
+
+commit 9c92548c5f505da1e6f2d70d41cc2db160b62eda
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 20:57:53 2017 -0500
+
+    modified company instance
+
+commit a49e3a08923614524ac004616c581428970d5a17
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 20:54:25 2017 -0500
+
+    made instance card margin top 0
+
+commit b38cc4d258e1ed8ded5c9b992b895278cbc46dc4
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 20:53:05 2017 -0500
+
+    testing card img css
+
+commit 3a8651895dae45397904e9b4180e8a224f03cff1
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 20:49:20 2017 -0500
+
+    testing card img css
+
+commit 7a2e7212269b0d5193c3e8542d4e537fe02f4e60
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 20:48:11 2017 -0500
+
+    testing card img css
+
+commit 08d71b6da4b7e032095069509f7aad67836de9ad
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 20:47:48 2017 -0500
+
+    testing card img css
+
+commit ecf69c7410fdeb84392d6d5bbca9e12a7b954f0a
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 20:46:50 2017 -0500
+
+    testing card img css
+
+commit 0b34a0515d03b6e8622daba068acb629b1e9924f
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 20:43:27 2017 -0500
+
+    testing card img css
+
+commit e178ab8d04f22931403af92c35097857b43de20f
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 20:37:49 2017 -0500
+
+    testing card img css
+
+commit 58e4b5caedca8b528a263c7951b599acd3591cb4
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 20:36:08 2017 -0500
+
+    testing card img css
+
+commit b6951ae1f3c8143cceb24bff6a22ba906ef84dd4
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 01:24:33 2017 +0000
+
+    cleanup
+
+commit 8df6bdfe716d3923cd3ef7fe8f62da0bfa353da5
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 01:20:43 2017 +0000
+
+    companies sort and filters work
+
+commit 8d8344aa4e1b33ead7147c1bdaf84759c4bba29f
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 00:29:36 2017 +0000
+
+    sorts and filters kinda work
+
+commit 08d4f4925a87b5adba3a05ab8ebb60127961ccc0
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 18:38:33 2017 -0500
+
+    removed width from instance img
+
+commit 5c64565e9b5e1ffaf42f05e2d4f1d4ea81245565
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 18:37:04 2017 -0500
+
+    made max height be 200
+
+commit 612d0050a907af8e099e3e0cef720dd651915968
+Merge: df5e4af 2381d0b
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 18:36:20 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit df5e4afd075c786932d0cc643d492fd17ee373a3
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 18:36:16 2017 -0500
+
+    made img size max be 200x200
+
+commit 2381d0b10b838a6490583c9323bb65fd5b1e6a4b
+Merge: 88fc4cf baa04b7
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Apr 5 23:33:14 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit baa04b792553d1f0d26c2c8d5a39a7183016b830
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 18:32:59 2017 -0500
+
+    fixed investors template
+
+commit 88fc4cf021c58c6cc1618747cd46b36967a53ac4
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Apr 5 23:32:59 2017 +0000
+
+    pagination
+
+commit c5420c98606e56ab4216e93c12ef9b0142195f21
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 18:32:01 2017 -0500
+
+    made template img 200x200
+
+commit 8aef77e93853cafee7b188a374a630c9cd04ad80
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 18:27:39 2017 -0500
+
+    fixed investors template
+
+commit 82c3b4c72b8df32d8419a8c4ae1484c620f6aacc
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 18:24:49 2017 -0500
+
+    fixed schools template
+
+commit c2611e2139ce683b06f8ac741014b36b39eb7497
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 18:20:55 2017 -0500
+
+    fixed companies template
+
+commit 04554be03e8d406b6bac06d62fbefffcb43a3a5b
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 18:13:57 2017 -0500
+
+    fixed people template
+
+commit 3afe9ce95394e2a0545a4aacef83f899a93c1389
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Wed Apr 5 18:05:06 2017 -0500
+
+    fixed people template header
+
+commit 9ee3b5ef700458e0c09958e8bd26c9327e213d7d
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Apr 5 20:04:32 2017 +0000
+
+    one link left
+
+commit 7ecebb6114bc72bc17423e97e709ab4a396fbb23
+Author: Aaron Chang <aaron.j.m.chang@gmail.com>
+Date:   Wed Apr 5 15:02:50 2017 -0500
+
+    Fixed absolute links, closes #66
+
+commit a4e836096898dc9ef6d7a5491abdf8af286a2f84
+Merge: 88f9b9a e2c4568
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Apr 5 19:58:32 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 88f9b9a4255e10506354a4f85994fb4146ef5a63
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Apr 5 19:58:21 2017 +0000
+
+    pagination support for companies
+
+commit e2c4568360ff7a70864c0968661f203e8475246e
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Wed Apr 5 12:30:49 2017 -0500
+
+    Added more on DB report
+
+commit 3cbfa1a2e596f5bcb809a9665e5d74f7295d0df3
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Wed Apr 5 10:55:55 2017 -0500
+
+    Added overview of how we created our DB
+
+commit 26fd60c6a569d42e4a96d74cde59e740a0c04d1f
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Wed Apr 5 10:40:05 2017 -0500
+
+    Added a new test case to the introduction
+
+commit 10d1bb603e0ecf28f9754bd52dee72514609a790
+Merge: 1f2ef91 c8bf08d
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Apr 5 01:55:42 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 1f2ef91031cbb81e853dd183bab832c880dfd31e
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Apr 5 01:55:31 2017 +0000
+
+    more db changes and scrapers, #62
+
+commit c8bf08d5a27448c66877f2c3ebe036e43666c075
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Tue Apr 4 19:54:13 2017 -0500
+
+    Update about.html
+
+commit b17a6457ddd5f54b07e2d708aea27c60bf207e26
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Tue Apr 4 18:42:37 2017 -0500
+
+    Added issues with Crunchbase to report
+
+commit fede75928b3aef97eab4b47b06f0185f10b8914a
+Merge: 3ecce42 ee94a64
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Tue Apr 4 17:53:06 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 3ecce422f7cf269202f8df5a898f7a42f109d093
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Tue Apr 4 17:53:01 2017 -0500
+
+    Added new tools to report and about page
+
+commit ee94a64c83561cd9f816736c2fec07ab03391912
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Tue Apr 4 22:07:50 2017 +0000
+
+    fixed dynamic instances, closes #61
+
+commit bb4c1ba580feda10f16f0e117fff4b0866ddd9e3
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Tue Apr 4 21:58:04 2017 +0000
+
+    template dynamic loop, closes #47
+
+commit 958fe8320dd73353bbf31281210146abb4cfb2e8
+Author: Vishnu Thiagarajan <aaron.j.m.chang@gmail.com>
+Date:   Tue Apr 4 21:25:45 2017 +0000
+
+    Fixed running tests from site, closes #59
+
 commit 8c3a4e0ae1070b4e84d3c5a71759205343e0140a
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Mon Apr 3 23:41:59 2017 +0000
