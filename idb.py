@@ -122,7 +122,6 @@ def schools(page):
     return render_template('schools.html', schools=schools, page=page, per_page=per_page, pagination=pagination)
 
 
-
 @app.route('/investors/page/<int:page>')
 @app.route('/investors/', defaults={'page': 1})
 @app.route('/investors.html/', defaults={'page': 1})

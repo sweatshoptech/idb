@@ -1,3 +1,106 @@
+commit 2f30d589cc6cb6b5688cb091de05d77237dab142
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 19:46:16 2017 +0000
+
+    indent error fix
+
+commit 06f32f45641eed7987a4c5f9ae7a72d47afdd6d1
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 19:45:58 2017 +0000
+
+    ceo like search, not sure if working, #13
+
+commit f796bc7d631f175acce5e54fb21b888bcb4ba7a0
+Merge: 488e294 e2cbe5e
+Author: Aaron Chang <aaron.j.m.chang@gmail.com>
+Date:   Thu Apr 6 14:39:47 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 488e2943a44079167e19eeeb1abc80dec0edf0ea
+Author: Aaron Chang <aaron.j.m.chang@gmail.com>
+Date:   Thu Apr 6 14:39:42 2017 -0500
+
+    add assertions, references #72
+
+commit e2cbe5e22a4ab3d2e538cef6d50ef75ad5525ff2
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 19:29:29 2017 +0000
+
+    formatting and updated websites, #73
+
+commit 52b54a9815d7bd6a28272177aed1208e1e44faae
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 06:31:14 2017 +0000
+
+    last commit before sleep. schools instances.
+
+commit 952558e9fd95f6194dae1c7380ecc05be2bc40af
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 06:27:08 2017 +0000
+
+    investors bug
+
+commit 1424ad61e051ffded1bdb524283f8c802f959406
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 06:24:59 2017 +0000
+
+    person instance pretty good
+
+commit d500c3a22ed2b8cb0aa895356fe3fcc1547cc785
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 06:17:27 2017 +0000
+
+    company template good, consider adding employees and multiple investors
+
+commit 7a991ac922f4305086fd5d839369279d84a43fca
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 06:09:57 2017 +0000
+
+    more info href bug fix. closes #74.
+
+commit f3dd8b0630e6f0b48466b88a30394d81d35f6d2c
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 05:52:51 2017 +0000
+
+    minor but major bug fix stopping school instances showing
+
+commit a4e7f26313e4ab7323cb2c37bdc83d294d3c13df
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 05:51:06 2017 +0000
+
+    removing no description available default
+
+commit 137bfeb78a209402aa15603a34ebbc33023c7a7a
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 05:49:11 2017 +0000
+
+    backend for schools
+
+commit c50a095b767eb62014c1ad78838d488ed33a26a0
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 05:47:07 2017 +0000
+
+    schools page done
+
+commit 9222cb00bd2b07225b00ce727d309807cf91afd0
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 05:36:46 2017 +0000
+
+    fixed instance pages for investors
+
+commit e3c28ffefc6253ecd37b20d5f4cca705456c33bd
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 05:31:25 2017 +0000
+
+    investors page done
+
+commit a2c7a5fcdfe2ad1f6a83b5e84a5be5eb38d5a769
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 02:47:28 2017 +0000
+
+    formatting
+
 commit 69e9b13ec28bafcbcc3a3b609f9bf93a0a2ab48e
 Author: DonaldMcRonald <raunak1997@utexas.edu>
 Date:   Wed Apr 5 21:41:21 2017 -0500
