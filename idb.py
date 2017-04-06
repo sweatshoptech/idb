@@ -122,7 +122,6 @@ def schools(page):
     return render_template('schools.html', schools=schools, page=page, per_page=per_page, pagination=pagination)
 
 
-
 @app.route('/investors/page/<int:page>')
 @app.route('/investors/', defaults={'page': 1})
 @app.route('/investors.html/', defaults={'page': 1})
@@ -166,7 +165,8 @@ def people(page):
     # Get filter data
     title = request.args.get('job-type', type=str, default=None)
     if title:
-        people = people.filter_by(title=title)
+        people = people.filter(models.Person.title.ilike(title))
+        # filter_by(title=title)
     country = request.args.get('country', type=str, default=None)
     if country:
         people = people.filter_by(country=country)
