@@ -53,10 +53,10 @@ def companies(page):
     if country:
         companies = companies.filter_by(country=country)
 
+    total = len(companies.all())
     companies = companies.offset(offset).limit(per_page).all()
 
     # Render with pagination
-    total = len(models.Company.query.all())
     pagination = Pagination(
         page=page, per_page=per_page, total=total, record_name='companies')
     return render_template('companies.html', companies=companies, page=page, per_page=per_page, pagination=pagination)
@@ -117,10 +117,10 @@ def schools(page):
     if country:
         schools = schools.filter_by(country=country)
 
+    total = len(schools.all())
     schools = schools.offset(offset).limit(per_page).all()
 
     # Render with pagination
-    total = len(models.School.query.all())
     pagination = Pagination(
         page=page, per_page=per_page, total=total, record_name='schools')
     return render_template('schools.html', schools=schools, page=page, per_page=per_page, pagination=pagination)
@@ -146,10 +146,10 @@ def investors(page):
     if country:
         investors = investors.filter_by(country=country)
 
+    total = len(investors.all())
     investors = investors.offset(offset).limit(per_page).all()
 
     # Render with pagination
-    total = len(models.Investor.query.all())
     pagination = Pagination(
         page=page, per_page=per_page, total=total, record_name='investors')
     return render_template('investors.html', investors=investors, page=page, per_page=per_page, pagination=pagination)
@@ -179,10 +179,10 @@ def people(page):
     if country:
         people = people.filter_by(country=country)
 
+    total = len(people.all())
     people = people.offset(offset).limit(per_page).all()
 
     # Render with pagination
-    total = len(models.Person.query.all())
     pagination = Pagination(
         page=page, per_page=per_page, total=total, record_name='people')
     return render_template('people.html', people=people, page=page, per_page=per_page, pagination=pagination)
