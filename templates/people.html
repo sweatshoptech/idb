@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <title>SWEatshop.tech</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
-  <link rel="stylesheet" href="/static/css/styles.processed.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-</head>
-  <body class="gradient-bg" >
+  <head>
+    <meta charset="UTF-8">
+    <title>SWEatshop.tech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.processed.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+  </head>
+  <body class="gradient-bg">
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse-opacity">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -26,10 +26,10 @@
           <li class="nav-item">
             <a class="nav-link" href="/about.html">About</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="/companies.html">Companies</a>
           </li>
-          <li class="nav-item  active">
+          <li class="nav-item">
             <a class="nav-link" href="#">People<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
@@ -47,18 +47,18 @@
         <div class="filters">
           <div class="ui-group">
             <h3>Job Type</h3>
-            <div class="button-group js-radio-button-group" data-filter-group="ownership-type">
+            <div class="button-group js-radio-button-group" data-filter-group="job-type">
               <button class="button is-checked" data-filter="">Any</button>
-              <button class="button" data-filter=".ceo">CEO</button>
-              <button class="button" data-filter=".other">Other</button>
+              <button class="button" data-filter="CEO">CEO</button>
+              <button class="button" data-filter="Other">Other</button>
             </div>
           </div>
           <div class="ui-group">
             <h3>Country</h3>
             <div class="button-group js-radio-button-group" data-filter-group="country">
               <button class="button is-checked" data-filter="">Any</button>
-              <button class="button" data-filter=".usa">USA</button>
-              <button class="button" data-filter=".canada">Canada</button>
+              <button class="button" data-filter="United States">USA</button>
+              <button class="button" data-filter="Canada">Canada</button>
             </div>
           </div>
         </div>
@@ -66,93 +66,36 @@
           <h3>Sort By</h3>
           <div class="button-group sort-by-button-group">
             <button class="button is-checked" data-sort-value="name" >Name</button>
-            <button class="button" data-sort-value="date" >Date</button>
+            <button class="button" data-sort-value="location" >Location</button>
           </div>
         </div>
+       </div>
+        {{ pagination.info }}
+        <div class="pag-container">{{ pagination.links }}</div> 
         <div class="grid small">
-          {% for person in people  %}
-            <a href="http://sweatshop.tech/person/{{person.idnum}}">
-            <div class="grid-item ceo usa" name='{{person.name}}' date='1975'>
-              <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
-                <div style="background: #FFF; width: 100%">
-                  <img class="card-img-top" src="{{person.image_url}}" alt="Card image cap">
-                </div>
-                <div class="card-block">
-                  <h4 class="card-title name">{{person.name}}</h4>
-                  <div class="list-group-item">
-                    {{person.title}}
-                  </div>
-                  <a href="#" class="btn btn-primary">More Information</a>
-                </div>
-                <ul class="list-group list-group-flush;">
-                  <li class="list-group-item" style="background-color: #333; border-color: #333;">DOB: June 2, 1975</li>
-                  <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{person.location}}</li>
-                </ul>
-              </div>
-            </div>
-            </a>
-          {% endfor %}    
- 
-          <a href="http://sweatshop.tech/person/1">  
-          <div class="grid-item ceo usa" name='{{people[0].name}}' date='1975'>
+        {% for person in people %}
+          <a href="http://sweatshop.tech/person/{{person.idnum}}">
+          <div class="grid-item private small-size usa" location='{{person.location}}' name='{{person.name}}'>
             <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
               <div style="background: #FFF; width: 100%">
-                <img class="card-img-top" src="{{people[0].image_url}}" alt="Card image cap">
+                <img class="card-img-top" src="{{person.image_url}}" alt="Card image cap">
               </div>
               <div class="card-block">
-                <h4 class="card-title name">{{people[0].name}}</h4>
+                <h4 class="card-title name">{{person.name}}</h4>
                 <div class="list-group-item">
-                  {{people[0].title}}
+                  {{person.description[:350] if person.description else "No Description Available"}}
                 </div>
-                <a href="#" class="btn btn-primary">More Information</a>
+                <a href="person/{{person.idnum}}" class="btn btn-primary">More Information</a>
               </div>
               <ul class="list-group list-group-flush;">
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">DOB: June 2, 1975</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{people[0].location}}</li>
+                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Title: {{person.title}}</li>
+                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{person.location}}</li>
               </ul>
             </div>
           </div>
           </a>
-          <a href="http://sweatshop.tech/person/2">  
-          <div class="grid-item ceo usa" name='{{people[1].name}}' date='1967'>
-              <div class="card card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
-              <div style="background: #FFF; width: 100%">
-                <img class="card-img-top" src="{{people[1].image_url}}" alt="Card image cap">
-              </div>
-              <div class="card-block">
-                <h4 class="card-title name">{{people[1].name}}</h4>
-                <div class="list-group-item">
-                  {{people[1].title}}
-                </div>
-                <a href="#" class="btn btn-primary">More Information</a>
-              </div>
-              <ul class="list-group list-group-flush;">
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">DOB: Dec 18, 1967</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: {{people[1].location}}</li>
-              </ul>
-            </div>
-          </div>
-          </a>
-          <a href="http://sweatshop.tech/person/3"> 
-          <div class="grid-item ceo usa" name='{{people[2].name}}' date='1962'>
-            <div class="card text-center card-inverse" style="background-color: #333; border-color: #333; width: 20rem;">
-              <div style="background: #FFF; width: 100%">
-                <img class="card-img-top" src="{{people[2].image_url}}" alt="Card image cap">
-              </div>
-              <div class="card-block">
-                <h4 class="card-title name">{{people[2].name}}</h4>
-                <div class="list-group-item">
-                  {{people[2].title}}
-                </div>
-                <a href="#" class="btn btn-primary">More Information</a>
-              </div>
-              <ul class="list-group list-group-flush;">
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">DOB: Jan 12, 1962</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: {{people[2].location}}</li>
-              </ul>
-            </div>
-          </div>
-          </a>
+        {% endfor %}    
+
         </div>
         <script>
         // init Isotope
@@ -161,22 +104,51 @@
             layoutMode: 'fitRows',
             masonry: {
               columnWidth: 100
-            },
-            getSortData: {
-              name: '[name]',
-              date : '[date] parseInt'
-            },
-            sortBy: 'name'
-        });
+            }
+       });
+        var $ascending = true
+
+        function getParameterByName(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        var filters = {};
+        var possiblefilters = ["country", "job-type"];
+        for(var i in possiblefilters) {
+          var j = possiblefilters[i];
+          var filterVal = getParameterByName(j);
+          if(filterVal)
+            filters[j] = filterVal;
+        }
+
+
+        var sortByVal = getParameterByName('sort');
+        if (!sortByVal)
+          sortByVal = "";
+
+        function applyFilters() {
+          var qstring = filters;
+          if(sortByVal) {
+            qstring['sort'] = sortByVal;
+          }
+          window.location.href = "?" + $.param(qstring);
+        }
 
         // bind sort button click
         $('.sort-by-button-group').on( 'click', 'button', function() {
           var sortByValue = $(this).attr('data-sort-value');
-          $grid.isotope({ sortBy: sortByValue });
+          $ascending = !$ascending;
+          sortByVal = sortByValue;
+          applyFilters();
         });
 
-        // store filter for each group
-        var filters = {};
+
 
         $('.filters').on( 'click', '.button', function() {
           var $this = $(this);
@@ -188,7 +160,7 @@
           // combine filters
           var filterValue = concatValues( filters );
           // set filter for Isotope
-          $grid.isotope({ filter: filterValue });
+          applyFilters()
         });
 
         // change is-checked class on buttons
