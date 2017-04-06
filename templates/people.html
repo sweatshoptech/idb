@@ -85,7 +85,7 @@
               <div class="card-block">
                 <h4 class="card-title name">{{person.name}}</h4>
                 <div class="list-group-item">
-                  {{person.description[:350] if person.description}}
+                  {{person.description[:350].replace(r'\r\n',r'<br/>') if person.description}}
                 </div>
                 <a href="/person/{{person.idnum}}" class="btn btn-primary">More Information</a>
               </div>

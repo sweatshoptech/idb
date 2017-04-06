@@ -441,7 +441,7 @@ member-body {
   opacity: 1;
 }
 
-.card img {
+.card-inverse img {
   max-width: 320px; 
   min-height: 100px !important;
   height: 100px !important;
