@@ -35,6 +35,7 @@ def about():
 def companies(page):
     # Get page data
     page, per_page, offset = get_page_args()
+    per_page = 9
 
     # Get sort data
     sortBy = request.args.get('sort', type=str, default='name')
