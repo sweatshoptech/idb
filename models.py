@@ -136,7 +136,7 @@ class Company(db.Model):
                  ceo_id, image_url, size, website):
         """Initializes Company, ceo as foreign key and ownership as enum"""
 
-         """Assertions"""
+        """Assertions"""
         assert name is not None
 
         assert isinstance(name, str) and len(name) <= 50
@@ -184,7 +184,7 @@ class School(db.Model):
                                 backref=db.backref('schools', lazy='dynamic'))
 
     def __init__(self, name, location, description, image_url, size, website):
-         """Assertions"""
+        """Assertions"""
         assert name is not None
 
         assert isinstance(name, str) and len(name) <= 150
@@ -224,7 +224,7 @@ class Investor(db.Model):
     website = db.Column(db.String(512), nullable=True)
 
     def __init__(self, name, location, funding, description, image_url, website):
-         """Assertions"""
+        """Assertions"""
         assert name is not None
 
         assert isinstance(name, str) and len(name) <= 150
