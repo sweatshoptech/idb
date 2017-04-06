@@ -48,7 +48,7 @@
          <div class="ui-group">
             <button-text>Country</button-text>
             <div class="button-group js-radio-button-group" data-filter-group="country">
-              <button class="button is-checked" data-filter="">Any</button>
+              <button class="button" data-filter="">Any</button>
               <button class="button" data-filter="United States">USA</button>
               <button class="button" data-filter="United Kingdom">UK</button>
               <button class="button" data-filter="Canada">Canada</button>
@@ -60,8 +60,14 @@
         <div class="ui-group">
           <button-text>Sort By</button-text>
           <div class="button-group sort-by-button-group">
-            <button class="button is-checked" data-sort-value="name" >Name</button>
+            <button class="button" data-sort-value="name" >Name</button>
             <button class="button" data-sort-value="location" >Location</button>
+          </div>
+        </div>
+        <div class="ui-group">
+          <div class="button-group">
+            <button class="button">Ascending</button>
+            <button class="button">Descending</button>
           </div>
         </div>
         <button-text>{{ pagination.info }}</button-text>
