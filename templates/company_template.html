@@ -54,7 +54,16 @@
             <b>CEO: </b><a href="../../person/{{ceo.idnum}}">{{ceo.name}}</a><br/>
             <b>Location: </b>{{company.location}}<br/>
             <b>Country: </b>{{company.country}}<br/>
-            <b>Investors: </b><a href="../../investor/{{investor.idnum}}">{{investor.name}}</a><br/>
+            <b>Employees: </b>
+            {% for employee in employees %}
+              <a href="../../person/{{employee.idnum}}">{{employee.name }}</a>
+            {% endfor %}
+            <br/>
+            <b>Investors: </b>
+            {% for investor in investors %}
+              <a href="../../investor/{{investor.idnum}}">{{investor.name }}</a>
+            {% endfor %}
+            <br/>
             <b>Website: </b><a href="{{company.website}}">{{company.website}}</a><br/>
             <b>Description: </b>{{description}}<br/>
           </div>

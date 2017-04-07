@@ -52,8 +52,16 @@
           <div class="col-8" style="text-align: left;">
             <b>Funding: </b> {{investor.funding}}<br/>
             <b>Location: </b>{{investor.location}}<br/>
-            <b>Companies Funded: </b><a href="../../company/{{company.idnum}}">{{company.name}}</a><br/>
-            <b>Schools Funded: </b><a href="../../school/{{school.idnum}}">{{school.name}}</a><br/>
+            <b>Companies Funded: </b>
+            {% for company in companies %}
+              <a href="../../company/{{company.idnum}}">{{company.name }}</a>
+            {% endfor %}
+            <br/>
+            <b>Schools Funded: </b>
+            {% for school in schools %}
+              <a href="../../school/{{school.idnum}}">{{school.name }}</a>
+            {% endfor %}
+            <br/>
             <b>Website: </b><a href="{{investor.website}}" target="_blank">{{investor.website}}</a><br/><br/>
             <b>Description: </b>{{description}}<br/>
 
