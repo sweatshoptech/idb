@@ -7,7 +7,7 @@ import models
 import subprocess
 import tests
 import flask_restless
-
+import formatters
 
 app = Flask(__name__)
 manager = flask_restless.APIManager(app, flask_sqlalchemy_db=models.db)
@@ -41,6 +41,8 @@ def companies(page):
     # Get sort data
     sortBy = request.args.get('sort', type=str, default='name')
     sortBy = getattr(models.Company, sortBy or 'name')
+    sortOrder = request.args.get('order', type=str, default='asc')
+    sortBy = sortBy.desc() if sortOrder == 'desc' else sortBy
     companies = models.Company.query.order_by(sortBy)
 
     # Get filter data
@@ -51,10 +53,10 @@ def companies(page):
     if country:
         companies = companies.filter_by(country=country)
 
+    total = len(companies.all())
     companies = companies.offset(offset).limit(per_page).all()
 
     # Render with pagination
-    total = len(models.Company.query.all())
     pagination = Pagination(
         page=page, per_page=per_page, total=total, record_name='companies')
     return render_template('companies.html', companies=companies, page=page, per_page=per_page, pagination=pagination)
@@ -64,35 +66,33 @@ def companies(page):
 def company_template(company_id):
     company = models.Company.query.get(company_id)
     ceo = models.Person.query.get(company.ceo_id) if company.ceo_id else None
-    investor = company.investors[0] if company.investors else None
-    return render_template('company_template.html', company=company, ceo=ceo, investor=investor)
+    investors = company.investors if company.investors else []
+    return render_template('company_template.html', company=company, ceo=ceo, employees=company.employees, investors=investors, description=formatters.markdown_remove(company.description))
 
 
 @app.route('/person/<int:person_id>')
 def person_template(person_id):
     person = models.Person.query.get(person_id)
-    companies = person.companies[0] if person.companies else None
-    schools = person.schools[0] if person.schools else None
-    return render_template('person_template.html', person=person, company=companies, school=schools)
+    companies = person.companies
+    schools = person.schools
+    return render_template('person_template.html', person=person, companies=companies, schools=schools, description=formatters.markdown_remove(person.description))
 
 
 @app.route('/school/<int:school_id>')
 def school_template(school_id):
     school = models.School.query.get(school_id)
     alum = school.alumni.all()
-    people = alum[0] if alum else None
-    investors = school.investors[0] if school.investors else None
-    return render_template('school_template.html', school=school, alum=people, investor=investors)
+    investors = school.investors if school.investors else []
+    return render_template('school_template.html', school=school, alum=alum, investors=investors, description=formatters.markdown_remove(school.description))
 
 
 @app.route('/investor/<int:investor_id>')
 def investor_template(investor_id):
     investor = models.Investor.query.get(investor_id)
     companies = investor.companies.all()
-    companies = companies[0] if companies else None
+    companies = companies if companies else []
     schools = investor.schools.all()
-    schools = schools[0] if schools else None
-    return render_template('investor_template.html', investor=investor, company=companies, school=schools)
+    return render_template('investor_template.html', investor=investor, companies=companies, schools=schools, description=formatters.markdown_remove(investor.description))
 
 
 @app.route('/schools/page/<int:page>')
@@ -106,6 +106,8 @@ def schools(page):
     # Get sort data
     sortBy = request.args.get('sort', type=str, default='name')
     sortBy = getattr(models.School, sortBy or 'name')
+    sortOrder = request.args.get('order', type=str, default='asc')
+    sortBy = sortBy.desc() if sortOrder == 'desc' else sortBy
     schools = models.School.query.order_by(sortBy)
 
     # Get filter data
@@ -113,10 +115,10 @@ def schools(page):
     if country:
         schools = schools.filter_by(country=country)
 
+    total = len(schools.all())
     schools = schools.offset(offset).limit(per_page).all()
 
     # Render with pagination
-    total = len(models.School.query.all())
     pagination = Pagination(
         page=page, per_page=per_page, total=total, record_name='schools')
     return render_template('schools.html', schools=schools, page=page, per_page=per_page, pagination=pagination)
@@ -133,6 +135,8 @@ def investors(page):
     # Get sort data
     sortBy = request.args.get('sort', type=str, default='name')
     sortBy = getattr(models.Investor, sortBy or 'name')
+    sortOrder = request.args.get('order', type=str, default='asc')
+    sortBy = sortBy.desc() if sortOrder == 'desc' else sortBy
     investors = models.Investor.query.order_by(sortBy)
 
     # Get filter data
@@ -140,10 +144,10 @@ def investors(page):
     if country:
         investors = investors.filter_by(country=country)
 
+    total = len(investors.all())
     investors = investors.offset(offset).limit(per_page).all()
 
     # Render with pagination
-    total = len(models.Investor.query.all())
     pagination = Pagination(
         page=page, per_page=per_page, total=total, record_name='investors')
     return render_template('investors.html', investors=investors, page=page, per_page=per_page, pagination=pagination)
@@ -160,20 +164,23 @@ def people(page):
     # Get sort data
     sortBy = request.args.get('sort', type=str, default='name')
     sortBy = getattr(models.Person, sortBy or 'name')
+    sortOrder = request.args.get('order', type=str, default='asc')
+    sortBy = sortBy.desc() if sortOrder == 'desc' else sortBy
     people = models.Person.query.order_by(sortBy)
 
     # Get filter data
     title = request.args.get('job-type', type=str, default=None)
     if title:
-        people = people.filter(models.Person.title.ilike("%{0}%".format(title)))
+        people = people.filter(
+            models.Person.title.ilike("%{0}%".format(title)))
     country = request.args.get('country', type=str, default=None)
     if country:
         people = people.filter_by(country=country)
 
+    total = len(people.all())
     people = people.offset(offset).limit(per_page).all()
 
     # Render with pagination
-    total = len(models.Person.query.all())
     pagination = Pagination(
         page=page, per_page=per_page, total=total, record_name='people')
     return render_template('people.html', people=people, page=page, per_page=per_page, pagination=pagination)
@@ -192,14 +199,16 @@ def reportsub(subpage):
 
 @app.route('/run-tests')
 def run_tests():
-    """    with open("tests.out", "w+") as fi:
-        fi.write(tests.run_my_tests())
+    """
+    Run tests and output results with coverage
     """
     try:
         tests = subprocess.check_output(
             ['python', '-W', 'ignore', '/home/ubuntu/idb/tests.py'], stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError, e:
         tests = e.output
+    with open('/home/ubuntu/idb/coverage.out') as coverage:
+        tests = tests + coverage.read()
     testout = tests.replace('\n', '<br/>')
     return render_template('TestIDB.html', test=testout)
 

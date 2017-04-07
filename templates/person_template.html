@@ -52,12 +52,20 @@
           <div class="col-8" style="text-align: left;">
             <br/>
             <b>Primary Job Title: </b> {{person.title}}<br/>
-            <b>Companies: </b><a href="../../company/{{company.idnum}}">{{company.name}}</a><br/>
-            <b>Schools: </b><a href="../../school/{{school.idnum}}">{{school.name}}</a><br/>
+            <b>Companies: </b>
+            {% for company in companies %}
+              <a href="../../company/{{company.idnum}}">{{company.name }}</a>
+            {% endfor %}
+            <br/>
+            <b>Schools: </b>
+            {% for school in schools %}
+              <a href="../../school/{{school.idnum}}">{{school.name }}</a>
+            {% endfor %}
+            <br/>
             <b>Location: </b>{{person.location}}<br/>
             <b>Country: </b>{{person.country}}<br/>
             <b>Website: </b><a href="{{person.website}}" target="_blank">{{person.website}}</a><br/>
-            <b>Description: </b>{{person.description}}<br/>
+            <b>Description: </b>{{description}}<br/>
           </div>
         </div>
       </div>
