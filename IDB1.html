@@ -9,7 +9,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>models</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ubuntu/repo_idb/models.py">/home/ubuntu/repo_idb/models.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ubuntu/idb/models.py">/home/ubuntu/idb/models.py</a></font></td></tr></table>
     <p><tt>SWEatshop&nbsp;Database&nbsp;Models<br>
 &nbsp;<br>
 Note:&nbsp;Pylint&nbsp;does&nbsp;not&nbsp;work&nbsp;well&nbsp;with&nbsp;SQLAlchemy&nbsp;since&nbsp;it&nbsp;is<br>
@@ -69,6 +69,10 @@ Methods defined here:<br>
 <dl><dt><a name="Category-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
 
 <hr>
+Class methods defined here:<br>
+<dl><dt><a name="Category-get_all_rows"><strong>get_all_rows</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="flask_sqlalchemy.html#_BoundDeclarativeMeta">flask_sqlalchemy._BoundDeclarativeMeta</a></font></font></dt><dd><tt>Get&nbsp;all&nbsp;category&nbsp;rows</tt></dd></dl>
+
+<hr>
 Data descriptors defined here:<br>
 <dl><dt><strong>idnum</strong></dt>
 </dl>
@@ -76,7 +80,7 @@ Data descriptors defined here:<br>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x7eff85b3b7d0; Category&gt;</dl>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x7fd46d59e4d0; Category&gt;</dl>
 
 <dl><dt><strong>__table__</strong> = Table('category', MetaData(bind=None), Column('i..., table=&lt;category&gt;, nullable=False), schema=None)</dl>
 
@@ -124,16 +128,28 @@ Methods defined here:<br>
 <dl><dt><a name="Company-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
 
 <hr>
+Class methods defined here:<br>
+<dl><dt><a name="Company-get_all_rows"><strong>get_all_rows</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="flask_sqlalchemy.html#_BoundDeclarativeMeta">flask_sqlalchemy._BoundDeclarativeMeta</a></font></font></dt><dd><tt>Get&nbsp;all&nbsp;company&nbsp;rows</tt></dd></dl>
+
+<hr>
 Data descriptors defined here:<br>
 <dl><dt><strong>ceo_id</strong></dt>
 </dl>
+<dl><dt><strong>country</strong></dt>
+</dl>
+<dl><dt><strong>crunch_id</strong></dt>
+</dl>
 <dl><dt><strong>description</strong></dt>
+</dl>
+<dl><dt><strong>employees</strong></dt>
 </dl>
 <dl><dt><strong>funding</strong></dt>
 </dl>
 <dl><dt><strong>idnum</strong></dt>
 </dl>
 <dl><dt><strong>image_url</strong></dt>
+</dl>
+<dl><dt><strong>investors</strong></dt>
 </dl>
 <dl><dt><strong>location</strong></dt>
 </dl>
@@ -147,9 +163,9 @@ Data descriptors defined here:<br>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x7eff85b907d0; Company&gt;</dl>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x7fd46d586350; Company&gt;</dl>
 
-<dl><dt><strong>__table__</strong> = Table('company', MetaData(bind=None), Column('id...tring(length=512), table=&lt;company&gt;), schema=None)</dl>
+<dl><dt><strong>__table__</strong> = Table('company', MetaData(bind=None), Column('id...String(length=25), table=&lt;company&gt;), schema=None)</dl>
 
 <hr>
 Methods inherited from flask_sqlalchemy.Model:<br>
@@ -190,13 +206,23 @@ Data descriptors inherited from <a href="flask_sqlalchemy.html#Model">flask_sqla
 </dl>
 <hr>
 Methods defined here:<br>
-<dl><dt><a name="Investor-__init__"><strong>__init__</strong></a>(self, name, location, description, image_url, website)</dt></dl>
+<dl><dt><a name="Investor-__init__"><strong>__init__</strong></a>(self, name, location, funding, description, image_url, website)</dt><dd><tt>Initializes&nbsp;<a href="#Investor">Investor</a></tt></dd></dl>
 
 <dl><dt><a name="Investor-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
 
 <hr>
+Class methods defined here:<br>
+<dl><dt><a name="Investor-get_all_rows"><strong>get_all_rows</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="flask_sqlalchemy.html#_BoundDeclarativeMeta">flask_sqlalchemy._BoundDeclarativeMeta</a></font></font></dt><dd><tt>Get&nbsp;all&nbsp;investor&nbsp;rows</tt></dd></dl>
+
+<hr>
 Data descriptors defined here:<br>
+<dl><dt><strong>companies</strong></dt>
+</dl>
+<dl><dt><strong>country</strong></dt>
+</dl>
 <dl><dt><strong>description</strong></dt>
+</dl>
+<dl><dt><strong>funding</strong></dt>
 </dl>
 <dl><dt><strong>idnum</strong></dt>
 </dl>
@@ -206,11 +232,13 @@ Data descriptors defined here:<br>
 </dl>
 <dl><dt><strong>name</strong></dt>
 </dl>
+<dl><dt><strong>schools</strong></dt>
+</dl>
 <dl><dt><strong>website</strong></dt>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x7eff85b3b450; Investor&gt;</dl>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x7fd46d59e150; Investor&gt;</dl>
 
 <dl><dt><strong>__table__</strong> = Table('investor', MetaData(bind=None), Column('i...ring(length=512), table=&lt;investor&gt;), schema=None)</dl>
 
@@ -258,7 +286,19 @@ Methods defined here:<br>
 <dl><dt><a name="Person-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
 
 <hr>
+Class methods defined here:<br>
+<dl><dt><a name="Person-get_all_rows"><strong>get_all_rows</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="flask_sqlalchemy.html#_BoundDeclarativeMeta">flask_sqlalchemy._BoundDeclarativeMeta</a></font></font></dt><dd><tt>Get&nbsp;all&nbsp;person&nbsp;rows</tt></dd></dl>
+
+<hr>
 Data descriptors defined here:<br>
+<dl><dt><strong>companies</strong></dt>
+</dl>
+<dl><dt><strong>country</strong></dt>
+</dl>
+<dl><dt><strong>crunch_id</strong></dt>
+</dl>
+<dl><dt><strong>description</strong></dt>
+</dl>
 <dl><dt><strong>dob</strong></dt>
 </dl>
 <dl><dt><strong>idnum</strong></dt>
@@ -269,15 +309,17 @@ Data descriptors defined here:<br>
 </dl>
 <dl><dt><strong>name</strong></dt>
 </dl>
+<dl><dt><strong>schools</strong></dt>
+</dl>
 <dl><dt><strong>title</strong></dt>
 </dl>
 <dl><dt><strong>website</strong></dt>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x7eff85bb5e10; Person&gt;</dl>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x7fd46d5dd9d0; Person&gt;</dl>
 
-<dl><dt><strong>__table__</strong> = Table('person', MetaData(bind=None), Column('idn...String(length=512), table=&lt;person&gt;), schema=None)</dl>
+<dl><dt><strong>__table__</strong> = Table('person', MetaData(bind=None), Column('idn...ring(length=10000), table=&lt;person&gt;), schema=None)</dl>
 
 <hr>
 Methods inherited from flask_sqlalchemy.Model:<br>
@@ -318,17 +360,27 @@ Data descriptors inherited from <a href="flask_sqlalchemy.html#Model">flask_sqla
 </dl>
 <hr>
 Methods defined here:<br>
-<dl><dt><a name="School-__init__"><strong>__init__</strong></a>(self, name, location, description, image_url, size, website)</dt></dl>
+<dl><dt><a name="School-__init__"><strong>__init__</strong></a>(self, name, location, description, image_url, size, website)</dt><dd><tt>Initializes&nbsp;<a href="#School">School</a></tt></dd></dl>
 
 <dl><dt><a name="School-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
 
 <hr>
+Class methods defined here:<br>
+<dl><dt><a name="School-get_all_rows"><strong>get_all_rows</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="flask_sqlalchemy.html#_BoundDeclarativeMeta">flask_sqlalchemy._BoundDeclarativeMeta</a></font></font></dt><dd><tt>Get&nbsp;all&nbsp;school&nbsp;rows</tt></dd></dl>
+
+<hr>
 Data descriptors defined here:<br>
+<dl><dt><strong>alumni</strong></dt>
+</dl>
+<dl><dt><strong>country</strong></dt>
+</dl>
 <dl><dt><strong>description</strong></dt>
 </dl>
 <dl><dt><strong>idnum</strong></dt>
 </dl>
 <dl><dt><strong>image_url</strong></dt>
+</dl>
+<dl><dt><strong>investors</strong></dt>
 </dl>
 <dl><dt><strong>location</strong></dt>
 </dl>
@@ -340,9 +392,9 @@ Data descriptors defined here:<br>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x7eff85b90f50; School&gt;</dl>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x7fd46d586ad0; School&gt;</dl>
 
-<dl><dt><strong>__table__</strong> = Table('school', MetaData(bind=None), Column('idn...String(length=512), table=&lt;school&gt;), schema=None)</dl>
+<dl><dt><strong>__table__</strong> = Table('school', MetaData(bind=None), Column('idn...String(length=200), table=&lt;school&gt;), schema=None)</dl>
 
 <hr>
 Methods inherited from flask_sqlalchemy.Model:<br>
@@ -379,5 +431,6 @@ Data descriptors inherited from <a href="flask_sqlalchemy.html#Model">flask_sqla
 <strong>education</strong> = Table('education', MetaData(bind=None), Column('...'school.idnum'), table=&lt;education&gt;), schema=None)<br>
 <strong>employment</strong> = Table('employment', MetaData(bind=None), Column(...ompany.idnum'), table=&lt;employment&gt;), schema=None)<br>
 <strong>investment</strong> = Table('investment', MetaData(bind=None), Column(...vestor.idnum'), table=&lt;investment&gt;), schema=None)<br>
-<strong>investor_category</strong> = Table('investor_category', MetaData(bind=None), ...idnum'), table=&lt;investor_category&gt;), schema=None)</td></tr></table>
+<strong>investor_category</strong> = Table('investor_category', MetaData(bind=None), ...idnum'), table=&lt;investor_category&gt;), schema=None)<br>
+<strong>school_investment</strong> = Table('school_investment', MetaData(bind=None), ...idnum'), table=&lt;school_investment&gt;), schema=None)</td></tr></table>
 </body></html>

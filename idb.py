@@ -59,7 +59,8 @@ def companies(page):
     # Render with pagination
     pagination = Pagination(
         page=page, per_page=per_page, total=total, record_name='companies')
-    return render_template('companies.html', companies=companies, page=page, per_page=per_page, pagination=pagination)
+    return render_template('companies.html', companies=companies, page=page,
+                           per_page=per_page, pagination=pagination)
 
 
 @app.route('/company/<int:company_id>')
@@ -67,7 +68,9 @@ def company_template(company_id):
     company = models.Company.query.get(company_id)
     ceo = models.Person.query.get(company.ceo_id) if company.ceo_id else None
     investors = company.investors if company.investors else []
-    return render_template('company_template.html', company=company, ceo=ceo, employees=company.employees, investors=investors, description=formatters.markdown_remove(company.description))
+    return render_template('company_template.html', company=company, ceo=ceo,
+                           employees=company.employees, investors=investors,
+                           description=formatters.markdown_remove(company.description))
 
 
 @app.route('/person/<int:person_id>')
@@ -75,7 +78,9 @@ def person_template(person_id):
     person = models.Person.query.get(person_id)
     companies = person.companies
     schools = person.schools
-    return render_template('person_template.html', person=person, companies=companies, schools=schools, description=formatters.markdown_remove(person.description))
+    return render_template('person_template.html', person=person,
+                           companies=companies, schools=schools,
+                           description=formatters.markdown_remove(person.description))
 
 
 @app.route('/school/<int:school_id>')
@@ -83,7 +88,9 @@ def school_template(school_id):
     school = models.School.query.get(school_id)
     alum = school.alumni.all()
     investors = school.investors if school.investors else []
-    return render_template('school_template.html', school=school, alum=alum, investors=investors, description=formatters.markdown_remove(school.description))
+    return render_template('school_template.html', school=school, alum=alum,
+                           investors=investors,
+                           description=formatters.markdown_remove(school.description))
 
 
 @app.route('/investor/<int:investor_id>')
@@ -92,7 +99,9 @@ def investor_template(investor_id):
     companies = investor.companies.all()
     companies = companies if companies else []
     schools = investor.schools.all()
-    return render_template('investor_template.html', investor=investor, companies=companies, schools=schools, description=formatters.markdown_remove(investor.description))
+    return render_template('investor_template.html', investor=investor,
+                           companies=companies, schools=schools,
+                           description=formatters.markdown_remove(investor.description))
 
 
 @app.route('/schools/page/<int:page>')
@@ -121,7 +130,8 @@ def schools(page):
     # Render with pagination
     pagination = Pagination(
         page=page, per_page=per_page, total=total, record_name='schools')
-    return render_template('schools.html', schools=schools, page=page, per_page=per_page, pagination=pagination)
+    return render_template('schools.html', schools=schools, page=page,
+                           per_page=per_page, pagination=pagination)
 
 
 @app.route('/investors/page/<int:page>')
@@ -150,7 +160,8 @@ def investors(page):
     # Render with pagination
     pagination = Pagination(
         page=page, per_page=per_page, total=total, record_name='investors')
-    return render_template('investors.html', investors=investors, page=page, per_page=per_page, pagination=pagination)
+    return render_template('investors.html', investors=investors, page=page,
+                           per_page=per_page, pagination=pagination)
 
 
 @app.route('/people/page/<int:page>')
@@ -183,7 +194,8 @@ def people(page):
     # Render with pagination
     pagination = Pagination(
         page=page, per_page=per_page, total=total, record_name='people')
-    return render_template('people.html', people=people, page=page, per_page=per_page, pagination=pagination)
+    return render_template('people.html', people=people, page=page,
+                           per_page=per_page, pagination=pagination)
 
 
 @app.route('/report')
@@ -204,7 +216,8 @@ def run_tests():
     """
     try:
         tests = subprocess.check_output(
-            ['python', '-W', 'ignore', '/home/ubuntu/idb/tests.py'], stderr=subprocess.STDOUT)
+            ['python', '-W', 'ignore', '/home/ubuntu/idb/tests.py'],
+            stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError, e:
         tests = e.output
     with open('/home/ubuntu/idb/coverage.out') as coverage:

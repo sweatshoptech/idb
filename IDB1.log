@@ -1,3 +1,224 @@
+commit b458858f80b8b7e8ef73c46924d6f699dd2df072
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 21:09:28 2017 -0500
+
+    Update design.html
+
+commit d6d461749933341e0de3ca44e32b62de306c51dd
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 21:06:57 2017 -0500
+
+    More data information
+
+commit 8cc8928f5390e44dae0ebf7fd3f7fa9a3da8f5d2
+Merge: 639e611 e89b144
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 21:06:21 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 639e6113d1ff8ebbad65951d52dd1af59952b80c
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 21:06:13 2017 -0500
+
+    fixed nav for report pages close #86
+
+commit 1488631e2b128a0b94c1be0db10d7f21a98b64b8
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 20:58:57 2017 -0500
+
+    fixed about page close #87
+
+commit e89b1447506a2761bf0e45a0b92f12b988fb8f64
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Apr 6 20:23:41 2017 -0500
+
+    Add information on sort/filter/paginate
+
+commit de50336562064d918b2753b602b91bf353dcd6ff
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 20:21:04 2017 -0500
+
+    fixed outro on report
+
+commit 27b58668ae6779c426c41a1f6153a3db030d8c0d
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 20:19:46 2017 -0500
+
+    removed spacing on outro
+
+commit 9b34bb4868a7c0e9f4e10073e748f8fd34cf4f69
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 20:14:52 2017 -0500
+
+    fixed report break lines
+
+commit 5cc4b40a4b4e5c60abce979e8861fda92388f1e2
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 20:10:37 2017 -0500
+
+    close #88
+
+commit 164e850d78fca33eac579de1578412fb62bce83a
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 20:07:47 2017 -0500
+
+    fixed css path in report
+
+commit 02384cb2d6473fa97565d3ac2f469a46e25c71ec
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 19:56:34 2017 -0500
+
+    close #85
+
+commit 54dcc6be3d93c78ed45bcd1000075575da759cba
+Merge: fd4a041 0e5d67a
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 19:47:47 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit fd4a04149955fb2a721f2e07a99240e9d492529f
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 19:47:43 2017 -0500
+
+    close #69
+
+commit 633b22fb6a89874226c3713d8f617b7a9a51eb7f
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 19:46:09 2017 -0500
+
+    finished is-checked for people
+
+commit 0e5d67a24db03d500b9b78aba74992f590015837
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Apr 7 00:43:50 2017 +0000
+
+    coverage out fixed, closes #81
+
+commit 9a2eef743c67134557f2b141328f452d53bb343b
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 19:43:01 2017 -0500
+
+    need to add defualt is clicked for job in people
+
+commit 2029785656a27d0fb32278411d89db01a88d3b26
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 19:40:25 2017 -0500
+
+    finished is-checked for companies
+
+commit 4bb13dcedf9310b6cf68e6f2004765c74a764933
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 19:37:36 2017 -0500
+
+    need to add defualt is clicked for ownership in companies
+
+commit ef204cd0d3887094a436672bc01fe069a41401e3
+Merge: b4b6bc0 917ecee
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Apr 7 00:34:39 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit b4b6bc00d2bfd0fc2b33b09270816ba6b4369d4c
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Apr 7 00:34:28 2017 +0000
+
+    many to many done, closes #75
+
+commit 917eceee80d185a4846c7d2d51de385354d6ec92
+Author: Aaron Chang <achang@cs.utexas.edu>
+Date:   Thu Apr 6 19:30:47 2017 -0500
+
+    derp
+
+commit 59ff10e3262799a525588939a15b330aba3ed8ad
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 19:29:54 2017 -0500
+
+    finished is-checked for investors
+
+commit b3a828a1d0da75ecc56dac5701ef50f4dc69cb2c
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 19:27:31 2017 -0500
+
+    default is-checked works for sortby in investorts
+
+commit 7d915bcc9325aef6497ebd95f99a6640f851b62d
+Merge: f078e2b 4206f23
+Author: Aaron Chang <achang@cs.utexas.edu>
+Date:   Thu Apr 6 19:25:42 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit f078e2b436a22f20362a527d1055c8899ea33dc7
+Author: Aaron Chang <achang@cs.utexas.edu>
+Date:   Thu Apr 6 19:25:23 2017 -0500
+
+    trying something with coverage
+
+commit d2ae6513fd0c7f85acd7fc7c3eea7dd5af2986e0
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 19:18:25 2017 -0500
+
+    default is-checked works for countries in investors
+
+commit 4206f2323ddf472beb7599cfa5bc38b020a2bc63
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Apr 6 18:55:32 2017 -0500
+
+    Update about.html
+
+commit 59b84f824f5db98c31b74cde14310275f25d53f3
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Apr 6 18:53:52 2017 -0500
+
+    Update tools.html
+
+commit 585b84f5d105cd9f3fde6244e21223491149197d
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Apr 6 18:46:34 2017 -0500
+
+    edits
+
+commit e087dedc871d7cd7280cbbce06eb188002188982
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Apr 6 18:39:57 2017 -0500
+
+    more edits (CHANGE SORTING AND FILTERING SECTION)
+
+commit 818371d3c23da0b891e9456ad9edc93157d2a428
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Apr 6 18:25:19 2017 -0500
+
+    more edits
+
+commit f5151123e20c43829a598e13695e4712be892fa6
+Merge: e021434 3337b54
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 23:22:31 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit e0214343a4f30757b8c34157d300d700651118cc
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 23:22:20 2017 +0000
+
+    card numbers fixed on filter. closes #80
+
+commit 3337b54a9555fcda0d1040509ec54fef9a1a5b42
+Author: aach <aaron.j.m.chang@gmail.com>
+Date:   Thu Apr 6 18:19:51 2017 -0500
+
+    minor proofreading
+
+commit b8bd6beccd7b1745f7e339aaf8bf193c275c4a15
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 23:08:04 2017 +0000
+
+    asc/desc sorts work, closes #71
+
 commit 993311936ff030ee39cc1c0afd7b3a7e94c1e749
 Merge: d5f7477 abdc6f6
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
