@@ -199,20 +199,17 @@ def reportsub(subpage):
 
 @app.route('/run-tests')
 def run_tests():
-    """    with open("tests.out", "w+") as fi:
-        fi.write(tests.run_my_tests())
+    """
+    Run tests and output results with coverage
     """
     try:
         tests = subprocess.check_output(
             ['python', '-W', 'ignore', '/home/ubuntu/idb/tests.py'], stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError, e:
         tests = e.output
+    with open('/home/ubuntu/idb/coverage.out') as coverage:
+        tests = tests + coverage.read()
     testout = tests.replace('\n', '<br/>')
-    with open('tests.out') as test_out:
-        for _ in range(0,5):
-            test_out.readline()
-        for _ in range(5, 12)
-            testout = testout + test_out.readline()
     return render_template('TestIDB.html', test=testout)
 
 if __name__ == '__main__':
