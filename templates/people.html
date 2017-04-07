@@ -47,7 +47,7 @@
         <div class="filters">
           <div class="ui-group">
             <button-text>Job Type</button-text>
-            <div class="button-group js-radio-button-group" data-filter-group="job-type">
+            <div class="button-group js-radio-button-group" data-filter-group="job-type" id="job-filters">
               <button class="button" data-filter="">Any</button>
               <button class="button" data-filter="CEO">CEO</button>
               <button class="button" data-filter="Founder">Founder</button>
@@ -196,7 +196,18 @@
         });
           
         /********** Update is-checked on page load **********/
-          
+        
+        // Update the countries filter
+        var jobs = $('#job-filters').children('button');
+        var jobInitValue = filters['job-type'];
+        if (jobInitValue == null) {
+          jobInitValue = "";
+        }
+        for (var i in jobs)
+          if (typeof jobs[i] === "object" && $(jobs[i]).is('button'))
+            if (jobs[i].attributes['data-filter'].value == jobInitValue)
+              $(jobs[i]).addClass('is-checked');  
+        
         // Update the countries filter
         var countries = $('#country-filters').children('button');
         var countryInitValue = filters['country'];
