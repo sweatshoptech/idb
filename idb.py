@@ -210,7 +210,7 @@ def run_tests():
     except subprocess.CalledProcessError, e:
         tests = e.output
     testout = tests.replace('\n', '<br/>')
-    with open(tests.out) as test_out:
+    with open('tests.out') as test_out:
         for _ in range(0,5):
             test_out.readline()
         for _ in range(5, 12)
