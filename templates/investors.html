@@ -59,13 +59,13 @@
         </div>
         <div class="ui-group">
           <button-text>Sort By</button-text>
-          <div class="button-group sort-by-button-group">
+          <div class="button-group sort-by-button-group" id="sort-by">
             <button class="button" data-sort-value="name" >Name</button>
             <button class="button" data-sort-value="location" >Location</button>
           </div>
         </div>
         <div class="ui-group">
-          <div class="button-group order-by-button-group">
+          <div class="button-group order-by-button-group" id="sort-order">
             <button class="button" data-sort-value="asc">Ascending</button>
             <button class="button" data-sort-value="desc">Descending</button>
           </div>
@@ -182,21 +182,30 @@
           });
         });
           
-        // update is-checked on page load
+        /********** Update is-checked on page load **********/
+          
+        // Update the countries filter
         var countries = $('#country-filters').children('button');
         var countryInitValue = filters['country'];
         if (countryInitValue == null) {
           countryInitValue = "";
         }
-        for (var i in countries) {
-          console.log((typeof countries[i]));
-          if (typeof countries[i] === "object" && $(countries[i]).is('button')) {
-            if (countries[i].attributes['data-filter'].value == countryInitValue) {
+        for (var i in countries)
+          if (typeof countries[i] === "object" && $(countries[i]).is('button'))
+            if (countries[i].attributes['data-filter'].value == countryInitValue)
               $(countries[i]).addClass('is-checked');
-              
-            }
-          }
+          
+        // Updates the sort by values
+        var sortByVals = $('#sort-by').children('button');
+        var sortByValue = sortByVal;
+        if (sortByValue == "null" || sortByValue == "") {
+          sortByValue = "name";
         }
+        console.log(sortByVal)
+        for (var i in sortByVals)
+          if (typeof sortByVals[i] === "object" && $(sortByVals[i]).is('button'))
+            if (sortByVals[i].attributes['data-sort-value'].value == sortByValue)
+              $(sortByVals[i]).addClass('is-checked');
         
         // flatten object by concatting values
         function concatValues( obj ) {
