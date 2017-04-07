@@ -59,25 +59,25 @@
           </div>
           <div class="ui-group">
             <button-text>Country</button-text>
-            <div class="button-group js-radio-button-group" data-filter-group="country">
+            <div class="button-group js-radio-button-group" data-filter-group="country" id="country-filters">
               <button class="button" data-filter="">Any</button>
               <button class="button" data-filter="United States">USA</button>
               <button class="button" data-filter="United Kingdom">UK</button>
-              <button class="button" data-filter="Japan">Japan</button>
-              <button class="button" data-filter="Pakistan">Pakistan</button>
-              <button class="button" data-filter="Spain">Spain</button>
+              <button class="button" data-filter="Canada">Canada</button>
+              <button class="button" data-filter="China">China</button>
+              <button class="button" data-filter="France">France</button>
             </div>
           </div>
         </div>
         <div class="ui-group">
           <button-text>Sort By</button-text>
-          <div class="button-group sort-by-button-group">
+          <div class="button-group sort-by-button-group" id="sort-by">
             <button class="button" data-sort-value="name" >Name</button>
             <button class="button" data-sort-value="location" >Location</button>
           </div>
         </div>
         <div class="ui-group">
-          <div class="button-group order-by-button-group">
+          <div class="button-group order-by-button-group" id="sort-order">
             <button class="button" data-sort-value="asc">Ascending</button>
             <button class="button" data-sort-value="desc">Descending</button>
           </div>
@@ -194,6 +194,41 @@
             $( this ).addClass('is-checked');
           });
         });
+          
+        /********** Update is-checked on page load **********/
+          
+        // Update the countries filter
+        var countries = $('#country-filters').children('button');
+        var countryInitValue = filters['country'];
+        if (countryInitValue == null) {
+          countryInitValue = "";
+        }
+        for (var i in countries)
+          if (typeof countries[i] === "object" && $(countries[i]).is('button'))
+            if (countries[i].attributes['data-filter'].value == countryInitValue)
+              $(countries[i]).addClass('is-checked');
+          
+        // Updates the sort by values
+        var sortByVals = $('#sort-by').children('button');
+        var sortByValue = sortByVal;
+        if (sortByValue == "null" || sortByValue == "") {
+          sortByValue = "name";
+        }
+        for (var i in sortByVals)
+          if (typeof sortByVals[i] === "object" && $(sortByVals[i]).is('button'))
+            if (sortByVals[i].attributes['data-sort-value'].value == sortByValue)
+              $(sortByVals[i]).addClass('is-checked');
+          
+        // Updates the sort order by values
+        var sortOrderVals = $('#sort-order').children('button');
+        var sortOrderValue = sortOrder;
+        if (sortOrderValue == "null" || sortOrderValue == "") {
+          sortOrderValue = "asc";
+        }
+        for (var i in sortOrderVals)
+          if (typeof sortOrderVals[i] === "object" && $(sortOrderVals[i]).is('button'))
+            if (sortOrderVals[i].attributes['data-sort-value'].value == sortOrderValue)
+              $(sortOrderVals[i]).addClass('is-checked');
 
         // flatten object by concatting values
         function concatValues( obj ) {
