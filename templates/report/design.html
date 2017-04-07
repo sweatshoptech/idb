@@ -1,48 +1,55 @@
   <!DOCTYPE html>
   <html lang="en">
 
- <head>
+  <head>
     <meta charset="UTF-8">
     <title>SWEatshop.tech</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/styles.processed.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.processed.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-  </head>
-    <body class="gradient-bg">
-      <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse-opacity">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="/index.html"><img alt="Brand" src="/static/img/sweatshop-logo.png" style="width: 200px;"></a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
+    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script--> 
+    <!--script src="https://npmcdn.com/react@15.3.0/dist/react-with-addons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"></script>
+    <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js"></script-->
+      <!--script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script-->
+    </head>
+    <body>
+      <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img alt="Brand" src="http://vishnut.me/assets/external/logo.png" style="width: 200px;"></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/index.html">Home</a>
+              <a class="nav-link" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/about.html">About</a>
+              <a class="nav-link" href="../about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/companies.html">Companies</a>
+              <a class="nav-link" href="../companies.html">Companies</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/people.html">People</a>
+              <a class="nav-link" href="../people.html">People</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/investors.html">Investors</a>
+              <a class="nav-link" href="../investors.html">Investors</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/schools.html">Schools</a>
+              <a class="nav-link" href="../schools.html">Schools</a>
             </li>
           </ul>
-      </div>
-    </nav>
+        </div>
+      </nav>
       
-    <div class="inner" style="color: white; font-family: Open Sans;">
+    <div class="gradient-bg inner" style="color: white; font-family: Open Sans;">
                <br/>
           <div class="card text-center" style="background-color: #333; width:500px; max-width: 95%;" >
             <div class="card-block">
@@ -95,7 +102,12 @@ Reflection on Phase 1 and Planning for Phase 2: There are many downsides to the 
 Phase 2: The first step was to implement pagination. We started off by trying front-end solutions for ease of implementation and for compatibility with Isotope but the methods that we did find did not work properly for our use case. So, we moved pagination to the back-end. Using Flask-Paginate, we limited the number of elements passed into the HTML template and put in the pagination buttons. Upon click of a page number, we calculate the offset and elements to load and query the database with these parameters. Passing just these to the template means that now, we only need to the render the data and images for a small number of elements. This means that page load is significantly faster. However, it also means that we now need to move the filtering and sorting. Upon button click, we now add the filters and sort details to the URL query and set the window href. The Flask backend extracts these values, queries the database with the approrpriate filters and returns the new set of rows. The template page reloads with the new data. This process is largely simple but one major issue we ran into is saving the button states. Previously, this was not an issue since there was a default on page load and it would change upon button click but now, we need to set the button state. We finally accomplished this task by using jQuery and finding the appropriate values from the href used to access the page.
       <br /><br /><br />
 <h2>DB</h2>
-We obtained most of our data by scraping the <a href="https://data.crunchbase.com/">Crunchbase RESTful API.</a> Unfortunately we ran into a couple of issues. First, the Crunchbase API would only give us access to a couple hundred instances for free. As we are college students, we can not afford the extra price for the entire API. However, Crunchbase does provide a snapshot of the a hundreds of thousands of models for Companies, Investors, People,and Schools. We combined the data obtained from RESTful API and the snapshot to create a more complete database. Secondly, the JSON dump provided by Crunchbase did not have logos for the schools. Therefore we had to utilize the <a href="https://clearbit.com/logo">ClearBit API</a> in order to obtain the logos for the schools. Finally, some companies, investors, people, and schools did not have a location of where they were located, so we utilized the <a href="http://ip-api.com/">IP geolocation API</a> to get location information from the website URL that some of the models provided in order to create a more complete database. 
+We obtained most of our data by scraping the <a href="https://data.crunchbase.com/">Crunchbase RESTful API.</a> Unfortunately we ran into a couple of issues. First, the Crunchbase API would only give us access to a couple hundred instances for free. As we are college students, we can not afford the extra price for the entire API. However, Crunchbase does provide a snapshot of the a hundreds of thousands of models for Companies, Investors, People,and Schools. We combined the data obtained from RESTful API and the snapshot to create a more complete database. 
+
+      <b>Schools</b>
+      The dump provided by Crunchbase did not consider schools objects and therefore, did not have a lot of information about schools. We could only get the names of the schools that people went to. As a first step, we created a school row and added a relation for every person, checking whether the school name has already been added to the database. Next, we used the IPEDS (Integrated Postsecondary Education Data System) API provided by <a href="http://data.gov">data.gov</a> to get additional information about the schools. This, since it is provided by the U.S. government, only has a list of U.S. schools. Still, it was a step towards where we needed to be and so, we used this API to fill in more information. We then thought that we could do a lot more if only we had the website URLs of all of these schools. So, next, we wrote a script to look up all of these school names and find possible links for them. We cleaned up this data and then used these URLs to find locations for these schools. Since most schools host their websites on campus servers, we used <a href="http://ip-api.com/">IP-API</a> to find the IP addresses and from there, the locations of all of these schools. We also went through the meta tags of these school websites to find descriptions but not all schools listed descriptions in their meta tags. In this manner, we filled the schools table with as much information as possible. There are faults with this, though. Especially with the increased use of services such as Cloudflare and AWS, many schools, especially small schools, are hosting their websites elsewhere. Finding investors for these schools was just as hard but by looking specifically for investors that fund schools, we added relationships between investors and schools. Furthermore, since the schools were just added using names, there are many issues with duplicate rows. Notably, certain person rows had a type or ann extra symbol in the name of their school. When adding to our database, this would create multiple rows for the same school. This is certainly a problem but it is difficult to clean up without manually going through all of the rows in the database.<br/>      
+      <b>Other Issues</b>
+      The Crunchbase data was far from complete. Many rows still did not have an image URL and/or a website. We got the websites again using the same technique used for schools and then we had to utilize the <a href="https://clearbit.com/logo">ClearBit API</a> in order to obtain the logos for the schools. Clearbit takes in a URL, goes through the website, and finds a logo if there is one. It works most of the time and the API is extremely simple to use without any rate limits. Finally, some companies, investors, and people did not have a location. So, again, we utilized the <a href="http://ip-api.com/">IP Geolocation API</a> to get location information from the website URL that the models provided in order to create a more complete database. With a lot of these scrapers, there is no guarantee that we get the right information. Our data is far from perfect but it was what we could do with the data that is freely available in the time that we had.
 <br/><h4>Create a New Person (HTTP POST request)</h4><br />
 You can create a new person by utilizing this action. You can provide a JSON object with the first name, last name, title, city name or region name, profile image url, and homepage url.<br /><br />
 <h4>Create a New Organization (HTTP POST request)</h4><br />
@@ -112,8 +124,10 @@ After the first phase, our website had a purple background, default text, and a 
 
             
       </div>
-      <div class="outro">
-      © SWEatshop 2017
-    </div>
       </body>
+      <div class="outro">
+      <br/>
+      <p>© SWEatshop 2017</p>
+      <br/>
+    </div>
   </html>
