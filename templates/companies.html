@@ -47,7 +47,7 @@
         <div class="filters">
           <div class="ui-group">
             <button-text>Ownership Type</button-text>
-            <div class="button-group js-radio-button-group" data-filter-group="ownership-type">
+            <div class="button-group js-radio-button-group" data-filter-group="ownership-type" id="ownership-filters">
               <button class="button" data-filter="">Any</button>
               <button class="button" data-filter="PUBLIC">Public</button>
               <button class="button" data-filter="PRIVATE">Private</button>
@@ -194,6 +194,17 @@
         });
           
         /********** Update is-checked on page load **********/
+        
+        // Update the ownership type filter
+        var ownershipTypes = $('#ownership-filters').children('button');
+        var ownershipInitValue = filters['ownership-type'];
+        if (ownershipInitValue == null) {
+          ownershipInitValue = "";
+        }
+        for (var i in ownershipTypes)
+          if (typeof ownershipTypes[i] === "object" && $(ownershipTypes[i]).is('button'))
+            if (ownershipTypes[i].attributes['data-filter'].value == ownershipInitValue)
+              $(ownershipTypes[i]).addClass('is-checked');
           
         // Update the countries filter
         var countries = $('#country-filters').children('button');
