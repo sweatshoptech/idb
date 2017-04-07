@@ -201,11 +201,21 @@
         if (sortByValue == "null" || sortByValue == "") {
           sortByValue = "name";
         }
-        console.log(sortByVal)
         for (var i in sortByVals)
           if (typeof sortByVals[i] === "object" && $(sortByVals[i]).is('button'))
             if (sortByVals[i].attributes['data-sort-value'].value == sortByValue)
               $(sortByVals[i]).addClass('is-checked');
+          
+        // Updates the sort order by values
+        var sortOrderVals = $('#sort-order').children('button');
+        var sortOrderValue = sortOrder;
+        if (sortOrderValue == "null" || sortOrderValue == "") {
+          sortOrderValue = "asc";
+        }
+        for (var i in sortOrderVals)
+          if (typeof sortOrderVals[i] === "object" && $(sortOrderVals[i]).is('button'))
+            if (sortOrderVals[i].attributes['data-sort-value'].value == sortOrderValue)
+              $(sortOrderVals[i]).addClass('is-checked');
         
         // flatten object by concatting values
         function concatValues( obj ) {
