@@ -47,7 +47,7 @@
         <div class="filters">
          <div class="ui-group">
             <button-text>Country</button-text>
-            <div class="button-group js-radio-button-group" data-filter-group="country">
+            <div class="button-group js-radio-button-group" data-filter-group="country" id="country-filters">
               <button class="button" data-filter="">Any</button>
               <button class="button" data-filter="United States">USA</button>
               <button class="button" data-filter="United Kingdom">UK</button>
@@ -149,7 +149,6 @@
         // bind sort button click
         $('.sort-by-button-group').on( 'click', 'button', function() {
           var sortByValue = $(this).attr('data-sort-value');
-          $ascending = !$ascending;
           sortByVal = sortByValue;
           applyFilters();
         });
@@ -182,7 +181,23 @@
             $( this ).addClass('is-checked');
           });
         });
-
+          
+        // update is-checked on page load
+        var countries = $('#country-filters').children('button');
+        var countryInitValue = filters['country'];
+        if (countryInitValue == null) {
+          countryInitValue = "";
+        }
+        for (var i in countries) {
+          console.log((typeof countries[i]));
+          if (typeof countries[i] === "object" && $(countries[i]).is('button')) {
+            if (countries[i].attributes['data-filter'].value == countryInitValue) {
+              $(countries[i]).addClass('is-checked');
+              
+            }
+          }
+        }
+        
         // flatten object by concatting values
         function concatValues( obj ) {
           var value = '';
