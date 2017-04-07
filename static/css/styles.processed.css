@@ -181,6 +181,7 @@ button-text {
 .col-4 img {
   height: 200px;
   max-height: 200px !important;
+  max-width: 350px;
 }
 
 /* ---- member ---- */
