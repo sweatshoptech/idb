@@ -210,6 +210,11 @@ def run_tests():
     except subprocess.CalledProcessError, e:
         tests = e.output
     testout = tests.replace('\n', '<br/>')
+    with open(tests.out) as test_out:
+        for _ in range(0,5):
+            test_out.readline()
+        for _ in range(5, 12)
+            testout = testout + test_out.readline()
     return render_template('TestIDB.html', test=testout)
 
 if __name__ == '__main__':
