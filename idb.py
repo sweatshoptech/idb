@@ -225,5 +225,10 @@ def run_tests():
     testout = tests.replace('\n', '<br/>')
     return render_template('TestIDB.html', test=testout)
 
+@app.route('/visualization')
+@app.route('/visualization.html')
+def visualization():
+    return render_template('visualization.html')
+
 if __name__ == '__main__':
     app.run()
