@@ -1,34 +1,70 @@
 FORMAT: 1A
-HOST: http://sweatshop.tech/api
+HOST: http://www.sweatshop.tech/api
 
 # SWEatshop.tech
 
 SWEatshop is a simple API to retrieve centralized data regarding companies along with the people, investors and schools of everyone involved.
 
-## People Collection [/people]
+## People Collection [/person]
 
 ### List All People [GET]
 
 + Response 200 (application/json)
 
         [
-           {
-                "idnum": "1",
-                "name": "Deepak Sekar"
-            },
             {
-                "idnum": "2",
-                "name": "Alex Salazar"
-            },
-            {
-                "idnum": "3",
-                "name": "Dilip Keshu"
-            }
-                ]
+                "companies": [
+                    {
+                        "ceo_id": 1, 
+                        "country": "United States", 
+                        "crunch_id": null, 
+                        "description": "Chowbotics uses robots to solve several problems in food service including compromised cleanliness and inefficiency.", 
+                        "funding": 6300000, 
+                        "idnum": 1, 
+                        "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1489162423/uihtpjzpzdmjjfftpjwu.png", 
+                        "location": "San Jose", 
+                        "name": "Chowbotics", 
+                        "ownership_type": "PRIVATE", 
+                        "size": 2, 
+                        "website": "http://"
+                    }
+                ],
+                "country": "United States", 
+                "crunch_id": null, 
+                "description": null, 
+                "dob": "1975-06-02T00:00:00", 
+                "idnum": 1, 
+                "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1488973627/czyyg9bvkun0skdepnsn.png", 
+                "location": "San Jose", 
+                "name": "Deepak Sekar", 
+                "schools": [
+                    {
+                        "country": "India", 
+                        "description": "Indian Institute of Technology Madras", 
+                        "idnum": 1, 
+                        "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1415957687/v2l8rpjmlodkqqedmbpe.jpg", 
+                        "location": "Chennai", 
+                        "name": "Indian Institute of Technology Madras", 
+                        "size": 10000, 
+                        "website": "http://www.iitm.ac.in"
+                    }, 
+                    {
+                        "country": "United States", 
+                        "description": "The Georgia Institute of Technology is a public research university in Atlanta, Georgia, in the United States.", 
+                        "idnum": 2, 
+                        "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1452600927/wygblir8adecdfrokppd.jpg", 
+                        "location": "Atlanta", 
+                        "name": "Georgia Institute of Technology", 
+                        "size": 26806, 
+                        "website": "http://www.gatech.edu"
+                    }
+                ],
+                "title": "CEO", 
+                "website": "http://chowbotics.com"
             }
         ]
 
-## Specific Person [/people/{person_id}]
+## Specific Person [/person/{person_id}]
 
 + Parameters
     + person_id (number) - id of the requested person in the form of an integer
@@ -37,42 +73,107 @@ SWEatshop is a simple API to retrieve centralized data regarding companies along
 
 + Response 200 (application/json)
 
-        [
-            {
-                "idnum": "3",
-                "name": "Dilip Keshu",
-                "title": "CEO",
-                "location": "Princeton",
-                "dob": "1962-01-12 00:00:00",
-                "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1397632836/052828bcd0edb674d3c6176413d58b81.jpg",
-                "website": "http://borngroup.com",
-            }
-        ]
+        {
+            "companies": [
+                {
+                    "ceo_id": 1, 
+                    "country": "United States", 
+                    "crunch_id": null, 
+                    "description": "Chowbotics uses robots to solve several problems in food service including compromised cleanliness and inefficiency.", 
+                    "funding": 6300000, 
+                    "idnum": 1, 
+                    "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1489162423/uihtpjzpzdmjjfftpjwu.png", 
+                    "location": "San Jose", 
+                    "name": "Chowbotics", 
+                    "ownership_type": "PRIVATE", 
+                    "size": 2, 
+                    "website": "http://"
+                }
+            ],
+            "country": "United States", 
+            "crunch_id": null, 
+            "description": null, 
+            "dob": "1975-06-02T00:00:00", 
+            "idnum": 1, 
+            "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1488973627/czyyg9bvkun0skdepnsn.png", 
+            "location": "San Jose", 
+            "name": "Deepak Sekar", 
+            "schools": [
+                {
+                    "country": "India", 
+                    "description": "Indian Institute of Technology Madras", 
+                    "idnum": 1, 
+                    "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1415957687/v2l8rpjmlodkqqedmbpe.jpg", 
+                    "location": "Chennai", 
+                    "name": "Indian Institute of Technology Madras", 
+                    "size": 10000, 
+                    "website": "http://www.iitm.ac.in"
+                }, 
+                {
+                    "country": "United States", 
+                    "description": "The Georgia Institute of Technology is a public research university in Atlanta, Georgia, in the United States.", 
+                    "idnum": 2, 
+                    "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1452600927/wygblir8adecdfrokppd.jpg", 
+                    "location": "Atlanta", 
+                    "name": "Georgia Institute of Technology", 
+                    "size": 26806, 
+                    "website": "http://www.gatech.edu"
+                }
+            ],
+            "title": "CEO", 
+            "website": "http://chowbotics.com"
+        }
 
-## Company Collection [/companies]
+## Company Collection [/company]
 
 ### List All Companies [GET]
 
 + Response 200 (application/json)
 
         [
-           {
-                "idnum": "1",
-                "name": "Chowbotics"
-            },
             {
-                "idnum": "2",
-                "name": "Stormpath"
-            },
-            {
-                "idnum": "3",
-                "name": "BORN"
-            }
-                ]
+                "ceo_id": 1, 
+                "country": "United States", 
+                "crunch_id": null, 
+                "description": "Chowbotics uses robots to solve several problems in food service including compromised cleanliness and inefficiency.", 
+                "employees": [
+                    {
+                        "country": "United States", 
+                        "crunch_id": null, 
+                        "description": null, 
+                        "dob": "1975-06-02T00:00:00", 
+                        "idnum": 1, 
+                        "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1488973627/czyyg9bvkun0skdepnsn.png", 
+                        "location": "San Jose", 
+                        "name": "Deepak Sekar", 
+                        "title": "CEO", 
+                        "website": "http://chowbotics.com"
+                    }
+                ],
+                "funding": 6300000, 
+                "idnum": 1, 
+                "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1489162423/uihtpjzpzdmjjfftpjwu.png", 
+                "investors": [
+                    {
+                        "country": "United States", 
+                        "description": "The Geekdom Fund is a venture capital fund that invests in early stage IT startups in San Antonio, South Texas and beyond.", 
+                        "funding": 3458000, 
+                        "idnum": 1, 
+                        "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1407349059/czbs2zk9z5kz5dyvfbny.jpg", 
+                        "location": "San Antonio", 
+                        "name": "Geekdom Fund", 
+                        "website": "http://www.geekdomfund.com"
+                    }
+                ],
+                "location": "San Jose", 
+                "name": "Chowbotics", 
+                "ownership_type": "PRIVATE", 
+                "size": 2, 
+                "website": "http://"
             }
         ]
 
-## Specific Company [/companies/{company_id}]
+## Specific Company [/company/{company_id}]
 
 + Parameters
     + company_id (number) - id of the requested company in the form of an integer
@@ -81,45 +182,105 @@ SWEatshop is a simple API to retrieve centralized data regarding companies along
 
 + Response 200 (application/json)
 
-        [
-            {
-                "idnum": "1",
-                "name": "Chowbotics",
-                "location": "San Jose",
-                "ownership_type": PRIVATE,
-                "funding": 6300000,
-                "description": "Chowbotics uses robots to solve several problems in food service including compromised cleanliness and inefficiency.",
-                "ceo_id": 1,
-                "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1489162423/uihtpjzpzdmjjfftpjwu.png",
-                "size": 2,
-                "website": "http://www.chowbotics.com"
-            }
-        ]
+        {
+            "ceo_id": 1, 
+            "country": "United States", 
+            "crunch_id": null, 
+            "description": "Chowbotics uses robots to solve several problems in food service including compromised cleanliness and inefficiency.", 
+            "employees": [
+                {
+                    "country": "United States", 
+                    "crunch_id": null, 
+                    "description": null, 
+                    "dob": "1975-06-02T00:00:00", 
+                    "idnum": 1, 
+                    "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1488973627/czyyg9bvkun0skdepnsn.png", 
+                    "location": "San Jose", 
+                    "name": "Deepak Sekar", 
+                    "title": "CEO", 
+                    "website": "http://chowbotics.com"
+                }
+            ],
+            "funding": 6300000, 
+            "idnum": 1, 
+            "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1489162423/uihtpjzpzdmjjfftpjwu.png", 
+            "investors": [
+                {
+                    "country": "United States", 
+                    "description": "The Geekdom Fund is a venture capital fund that invests in early stage IT startups in San Antonio, South Texas and beyond.", 
+                    "funding": 3458000, 
+                    "idnum": 1, 
+                    "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1407349059/czbs2zk9z5kz5dyvfbny.jpg", 
+                    "location": "San Antonio", 
+                    "name": "Geekdom Fund", 
+                    "website": "http://www.geekdomfund.com"
+                }
+            ],
+            "location": "San Jose", 
+            "name": "Chowbotics", 
+            "ownership_type": "PRIVATE", 
+            "size": 2, 
+            "website": "http://"
+        }
 
-## Schools Collection [/schools]
+## Schools Collection [/school]
 
 ### List All Schools [GET]
 
 + Response 200 (application/json)
 
         [
-           {
-                "idnum": "1",
-                "name": "Indian Institute of Technology Madras"
-            },
             {
-                "idnum": "2",
-                "name": "Georgia Institute of Technology"
-            },
-            {
-                "idnum": "3",
-                "name": "Stanford University Graduate School of Business"
-            }
-                ]
+                "alumni": [
+                    {
+                        "country": "United States", 
+                        "crunch_id": null, 
+                        "description": null, 
+                        "dob": "1975-06-02T00:00:00", 
+                        "idnum": 1, 
+                        "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1488973627/czyyg9bvkun0skdepnsn.png", 
+                        "location": "San Jose", 
+                        "name": "Deepak Sekar", 
+                        "title": "CEO", 
+                        "website": "http://chowbotics.com"
+                    }, 
+                    {
+                        "country": "United States", 
+                        "crunch_id": null, 
+                        "description": null, 
+                        "dob": "1962-01-12T00:00:00", 
+                        "idnum": 3, 
+                        "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1397632836/052828bcd0edb674d3c6176413d58b81.jpg", 
+                        "location": "New York", 
+                        "name": "Dilip Keshu", 
+                        "title": "CEO", 
+                        "website": "http://borngroup.com"
+                    }
+                ],
+                "country": "India", 
+                "description": "Indian Institute of Technology Madras", 
+                "idnum": 1, 
+                "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1415957687/v2l8rpjmlodkqqedmbpe.jpg", 
+                "investors": [
+                    {
+                        "country": "United States", 
+                        "description": "Scale Venture Partners is a VC firm that invests in enterprise technology companies with a focus on SaaS and cloud infrastructure.", 
+                        "funding": 1234000, 
+                        "idnum": 3, 
+                        "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1397178826/f7ab3ffe2646afa0014c27dd1c036891.gif", 
+                        "location": "Foster City", 
+                        "name": "Scale Venture Partners", 
+                        "website": "http://www.scalevp.com"
+                    }
+                ],
+                "location": "Chennai", 
+                "name": "Indian Institute of Technology Madras", 
+                "size": 10000, 
+                "website": "http://www.iitm.ac.in"
             }
         ]
 
-## Specific School [/companies/{school_id}]
+## Specific School [/school/{school_id}]
 
 + Parameters
     + school_id (number) - id of the requested school in the form of an integer
@@ -128,42 +289,103 @@ SWEatshop is a simple API to retrieve centralized data regarding companies along
 
 + Response 200 (application/json)
 
-        [
-            {
-                "idnum": "1",
-                "name": "Indian Institute of Technology Madras",
-                "location": "Chennai",
-                "description": "Indian Institute of Technology Madras",
-                "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1415957687/v2l8rpjmlodkqqedmbpe.jpg",
-                "size": 10000,
-                "website": "http://www.iitm.ac.in/"
-            }
-        ]
+        {
+            "alumni": [
+                {
+                    "country": "United States", 
+                    "crunch_id": null, 
+                    "description": null, 
+                    "dob": "1975-06-02T00:00:00", 
+                    "idnum": 1, 
+                    "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1488973627/czyyg9bvkun0skdepnsn.png", 
+                    "location": "San Jose", 
+                    "name": "Deepak Sekar", 
+                    "title": "CEO", 
+                    "website": "http://chowbotics.com"
+                }, 
+                {
+                    "country": "United States", 
+                    "crunch_id": null, 
+                    "description": null, 
+                    "dob": "1962-01-12T00:00:00", 
+                    "idnum": 3, 
+                    "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1397632836/052828bcd0edb674d3c6176413d58b81.jpg", 
+                    "location": "New York", 
+                    "name": "Dilip Keshu", 
+                    "title": "CEO", 
+                    "website": "http://borngroup.com"
+                }
+            ],
+            "country": "India", 
+            "description": "Indian Institute of Technology Madras", 
+            "idnum": 1, 
+            "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1415957687/v2l8rpjmlodkqqedmbpe.jpg", 
+            "investors": [
+                {
+                    "country": "United States", 
+                    "description": "Scale Venture Partners is a VC firm that invests in enterprise technology companies with a focus on SaaS and cloud infrastructure.", 
+                    "funding": 1234000, 
+                    "idnum": 3, 
+                    "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1397178826/f7ab3ffe2646afa0014c27dd1c036891.gif", 
+                    "location": "Foster City", 
+                    "name": "Scale Venture Partners", 
+                    "website": "http://www.scalevp.com"
+                }
+            ],
+            "location": "Chennai", 
+            "name": "Indian Institute of Technology Madras", 
+            "size": 10000, 
+            "website": "http://www.iitm.ac.in"
+        }
 
-## Investors Collection [/investors]
+## Investors Collection [/investor]
 
 ### List All Investors [GET]
 
 + Response 200 (application/json)
 
         [
-           {
-                "idnum": "1",
-                "name": "Geekdom Fund"
-            },
             {
-                "idnum": "2",
-                "name": "Pelion Venture Partners"
-            },
-            {
-                "idnum": "3",
-                "name": "Scale Venture Partners"
-            }
-                ]
+                "companies": [
+                    {
+                        "ceo_id": 1, 
+                        "country": "United States", 
+                        "crunch_id": null, 
+                        "description": "Chowbotics uses robots to solve several problems in food service including compromised cleanliness and inefficiency.", 
+                        "funding": 6300000, 
+                        "idnum": 1, 
+                        "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1489162423/uihtpjzpzdmjjfftpjwu.png", 
+                        "location": "San Jose", 
+                        "name": "Chowbotics", 
+                        "ownership_type": "PRIVATE", 
+                        "size": 2, 
+                        "website": "http://"
+                    }
+                ],
+                "country": "United States", 
+                "description": "The Geekdom Fund is a venture capital fund that invests in early stage IT startups in San Antonio, South Texas and beyond.", 
+                "funding": 3458000, 
+                "idnum": 1, 
+                "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1407349059/czbs2zk9z5kz5dyvfbny.jpg", 
+                "location": "San Antonio", 
+                "name": "Geekdom Fund", 
+                "schools": [
+                    {
+                        "country": "United States", 
+                        "description": "Stanford University Graduate School of Business", 
+                        "idnum": 3, 
+                        "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1481309706/olvayk18i7e3t1mptejq.jpg", 
+                        "location": "Stanford", 
+                        "name": "Stanford University Graduate School of Business", 
+                        "size": 1000, 
+                        "website": "http://www.gsb.stanford.edu"
+                    }
+                ],
+                "website": "http://www.geekdomfund.com"
             }
         ]
 
-## Specific Investor [/companies/{investor_id}]
+## Specific Investor [/investor/{investor_id}]
 
 + Parameters
     + investor_id (number) - id of the requested investor in the form of an integer
@@ -172,14 +394,41 @@ SWEatshop is a simple API to retrieve centralized data regarding companies along
 
 + Response 200 (application/json)
 
-        [
-            {
-                "idnum": "2",
-                "name": "Pelion Venture Partners",
-                "location": "Salt Lake City",
-                "funding": 780000,
-                "description": "Formerly UV Partners Since 1986, Pelion Venture Partners has been helping entrepreneurs turn early-stage concepts into tomorrow.",
-                "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1397179667/c01cda23b1c8153e87bc37b324ec5fec.jpg",
-                "website": "http://pelionvp.com"
-            }
-        ]
+        {
+            "companies": [
+                {
+                    "ceo_id": 1, 
+                    "country": "United States", 
+                    "crunch_id": null, 
+                    "description": "Chowbotics uses robots to solve several problems in food service including compromised cleanliness and inefficiency.", 
+                    "funding": 6300000, 
+                    "idnum": 1, 
+                    "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1489162423/uihtpjzpzdmjjfftpjwu.png", 
+                    "location": "San Jose", 
+                    "name": "Chowbotics", 
+                    "ownership_type": "PRIVATE", 
+                    "size": 2, 
+                    "website": "http://"
+                }
+            ],
+            "country": "United States", 
+            "description": "The Geekdom Fund is a venture capital fund that invests in early stage IT startups in San Antonio, South Texas and beyond.", 
+            "funding": 3458000, 
+            "idnum": 1, 
+            "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1407349059/czbs2zk9z5kz5dyvfbny.jpg", 
+            "location": "San Antonio", 
+            "name": "Geekdom Fund", 
+            "schools": [
+                {
+                    "country": "United States", 
+                    "description": "Stanford University Graduate School of Business", 
+                    "idnum": 3, 
+                    "image_url": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1481309706/olvayk18i7e3t1mptejq.jpg", 
+                    "location": "Stanford", 
+                    "name": "Stanford University Graduate School of Business", 
+                    "size": 1000, 
+                    "website": "http://www.gsb.stanford.edu"
+                }
+            ],
+            "website": "http://www.geekdomfund.com"
+        }
