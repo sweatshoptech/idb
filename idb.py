@@ -225,7 +225,6 @@ def run_tests():
     testout = tests.replace('\n', '<br/>')
     return render_template('TestIDB.html', test=testout)
 
-
 @app.route('/search/<query>')
 def search(query):
     """
@@ -237,6 +236,11 @@ def search(query):
         i_results = models.Investor.query.whoosh_search(query, or_=True, like=True) 
         s_results = models.School.query.whoosh_search(query, or_=True, like=True) 
     return p_results.all()
+
+@app.route('/visualization')
+@app.route('/visualization.html')
+def visualization():
+    return render_template('visualization.html')
 
 if __name__ == '__main__':
     app.run()
