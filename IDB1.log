@@ -1,3 +1,77 @@
+commit 8198f8bc61a4abe03793efe45339ec656cc89889
+Merge: f4acab2 9575fef
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Apr 12 22:57:33 2017 +0000
+
+    merge? ahhhhhh
+
+commit f4acab2a176fc829f63f26f1eca36a263f741cf7
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Apr 12 22:53:49 2017 +0000
+
+    whoosh sudo
+
+commit 9575fef7a9885f266107ad264fda8a49606c3ee2
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Tue Apr 11 18:39:57 2017 -0500
+
+    Start of visualization page, reference #95
+
+commit 0d335275fce60204ea54ab609ba38ad74f36e13d
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Tue Apr 11 13:28:33 2017 -0500
+
+    Updated info to match API, closes #89
+
+commit ce74d3d844d7065218aa4725889e6b4ad374db1c
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 21:42:23 2017 -0500
+
+    heckin brackets
+
+commit c6d677d0d1647c6e3b604fb82db7feb19d41ed59
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 21:37:08 2017 -0500
+
+    School country added
+
+commit 1d0776d5203b89b789cff7165a74481f38b460b4
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 6 21:36:31 2017 -0500
+
+    Country added
+
+commit bd00fe42c11348f7bb467f23cddcc4760a2d5c79
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 21:29:17 2017 -0500
+
+    updated stats close #67
+
+commit 02a315029987de0714eb704c25684b142dcc8f21
+Merge: 61982b5 bd340c4
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Apr 7 02:21:29 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 61982b592bb51c12811e377c07d43d1e6c2802bb
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Apr 7 02:21:19 2017 +0000
+
+    turn in phase 2
+
+commit bd340c43da8e155549358df4153a9eecb2234424
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Thu Apr 6 21:18:36 2017 -0500
+
+    Fixed Jinja link from about page
+
+commit e8ff12dc34daa09819592a6022ae177b65fc9236
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Thu Apr 6 21:12:03 2017 -0500
+
+    ugh vishnu whyyyyy
+
 commit b458858f80b8b7e8ef73c46924d6f699dd2df072
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Thu Apr 6 21:09:28 2017 -0500

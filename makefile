@@ -32,6 +32,7 @@ pylint:
 	$(PYLINT) models.py
 
 coverage:
+	-rm -r whoosh-index/
 	$(COVERAGE) run    --branch tests.py > tests.out 2>&1
 	$(COVERAGE) report --include="models.py","config.py" >> tests.out
 	$(COVERAGE) report --include="models.py","config.py" > coverage.out
