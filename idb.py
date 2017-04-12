@@ -225,5 +225,18 @@ def run_tests():
     testout = tests.replace('\n', '<br/>')
     return render_template('TestIDB.html', test=testout)
 
+
+@app.route('/search/<query>')
+def search(query):
+    """
+    Search for keywords in all attributes of all tables
+    """
+    with models.APP.app_context():
+        p_results = models.Person.query.whoosh_search(query, or_=True, like=True) 
+        c_results = models.Company.query.whoosh_search(query, or_=True, like=True) 
+        i_results = models.Investor.query.whoosh_search(query, or_=True, like=True) 
+        s_results = models.School.query.whoosh_search(query, or_=True, like=True) 
+    return p_results.all()
+
 if __name__ == '__main__':
     app.run()
