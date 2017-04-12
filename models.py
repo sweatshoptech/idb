@@ -24,7 +24,7 @@ APP.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 APP.config['TESTING'] = True
 APP.config['WTF_CSRF_ENABLED'] = False
 
-if getpass.getuser() != 'ubuntu':  # pragma: no cover
+if getpass.getuser() == 'www-data':  # pragma: no cover
     APP.config['WHOOSH_BASE'] = '/home/ubuntu/idb/index-whoosh'
 
 db = SQLAlchemy(APP)
@@ -293,7 +293,8 @@ class Category(db.Model):
         """Get all category rows"""
         return cls.query.all()
 
-flask_whooshalchemyplus.init_app(APP)
+if getpass.getuser() == 'www-data':  # pragma: no cover
+    flask_whooshalchemyplus.init_app(APP)
 
 if __name__ == "__main__":  # pragma: no cover
     with APP.app_context():
