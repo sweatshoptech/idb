@@ -240,8 +240,8 @@ def search(query):
             query, or_=True, like=True)
         s_results = models.School.query.whoosh_search(
             query, or_=True, like=True)
-    return p_results.all()
-
+    #return str(len(p_results.all()))
+    return render_template('search_results.html', results=p_results.all())
 
 @app.route('/visualization')
 @app.route('/visualization.html')

@@ -24,8 +24,8 @@ APP.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 APP.config['TESTING'] = True
 APP.config['WTF_CSRF_ENABLED'] = False
 
-if getpass.getuser() == 'www-data':  # pragma: no cover
-    APP.config['WHOOSH_BASE'] = '/home/ubuntu/idb/index-whoosh'
+#if getpass.getuser() == 'www-data':  # pragma: no cover
+APP.config['WHOOSH_BASE'] = '/home/ubuntu/idb/index-whoosh'
 
 db = SQLAlchemy(APP)
 
@@ -138,7 +138,7 @@ class Company(db.Model):
     investors = db.relationship('Investor', secondary=investment,
                                 backref=db.backref('companies', lazy='dynamic'))
     crunch_id = db.Column(db.String(25), nullable=True)
-    __searchable__ = ['name', 'location', 'ownership_type',
+    __searchable__ = ['name', 'location',
                       'funding', 'website', 'country', 'description', 'investors']
 
     def __init__(self, name, location, ownership_type, funding, description,
@@ -293,8 +293,8 @@ class Category(db.Model):
         """Get all category rows"""
         return cls.query.all()
 
-if getpass.getuser() == 'www-data':  # pragma: no cover
-    flask_whooshalchemyplus.init_app(APP)
+#if getpass.getuser() == 'www-data':  # pragma: no cover
+flask_whooshalchemyplus.init_app(APP)
 
 if __name__ == "__main__":  # pragma: no cover
     with APP.app_context():
