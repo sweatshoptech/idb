@@ -36,7 +36,6 @@ def about():
 def companies(page):
     # Get page data
     page, per_page, offset = get_page_args()
-    per_page = 9
 
     # Get sort data
     sortBy = request.args.get('sort', type=str, default='name')
@@ -110,7 +109,6 @@ def investor_template(investor_id):
 def schools(page):
     # Get page data
     page, per_page, offset = get_page_args()
-    per_page = 9
 
     # Get sort data
     sortBy = request.args.get('sort', type=str, default='name')
@@ -140,7 +138,6 @@ def schools(page):
 def investors(page):
     # Get page data
     page, per_page, offset = get_page_args()
-    per_page = 9
 
     # Get sort data
     sortBy = request.args.get('sort', type=str, default='name')
@@ -170,7 +167,6 @@ def investors(page):
 def people(page):
     # Get page data
     page, per_page, offset = get_page_args()
-    per_page = 9
 
     # Get sort data
     sortBy = request.args.get('sort', type=str, default='name')
@@ -225,23 +221,35 @@ def run_tests():
     testout = tests.replace('\n', '<br/>')
     return render_template('TestIDB.html', test=testout)
 
-
-@app.route('/search/<query>')
-def search(query):
+@app.route('/search/<query>/page/<int:page>')
+@app.route('/search/<query>/', defaults={'page': 1})
+def search(query, page):
     """
     Search for keywords in all attributes of all tables
     """
+    # Get page data
+    page, per_page, offset = get_page_args()
+
     with models.APP.app_context():
         p_results = models.Person.query.whoosh_search(
             query, or_=True, like=True)
+        """
         c_results = models.Company.query.whoosh_search(
             query, or_=True, like=True)
         i_results = models.Investor.query.whoosh_search(
             query, or_=True, like=True)
         s_results = models.School.query.whoosh_search(
             query, or_=True, like=True)
-    #return str(len(p_results.all()))
-    return render_template('search_results.html', results=p_results.all())
+        """
+    total = len(p_results.all())
+    people = p_results.offset(offset).limit(per_page).all()
+
+    # Render with pagination
+    pagination = Pagination(
+        page=page, per_page=per_page, total=total, record_name='people found for <b>"{0}"</b>'.format(query))
+
+    return render_template('search_results.html', results=people, page=page,
+                           per_page=per_page, pagination=pagination)
 
 @app.route('/visualization')
 @app.route('/visualization.html')
