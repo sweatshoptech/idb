@@ -221,6 +221,7 @@ def run_tests():
     testout = tests.replace('\n', '<br/>')
     return render_template('TestIDB.html', test=testout)
 
+
 @app.route('/search/<query>/page/<int:page>')
 @app.route('/search/<query>/', defaults={'page': 1})
 def search(query, page):
@@ -250,6 +251,7 @@ def search(query, page):
 
     return render_template('search_results.html', results=people, page=page,
                            per_page=per_page, pagination=pagination)
+
 
 @app.route('/visualization')
 @app.route('/visualization.html')

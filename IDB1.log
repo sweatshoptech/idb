@@ -1,3 +1,27 @@
+commit c99a532e2b6f44e05c7ce6ed8ed0727013038a8a
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 13 00:56:33 2017 +0000
+
+    new page search results
+
+commit c387c9e2d46c98afe0deb6b21755f86495e2ff01
+Author: Vishnu Thiagarajan <vignesh.1996@utexas.edu>
+Date:   Thu Apr 13 00:14:18 2017 +0000
+
+    search results page
+
+commit 3e7c16e5765c141f8d32076c076630cc43b1932e
+Author: Vishnu Thiagarajan <vignesh.1996@utexas.edu>
+Date:   Thu Apr 13 00:13:37 2017 +0000
+
+    added search results template, closes #91
+
+commit 7e8939b5ca1e3fc148c543bd1d000036b6bf4e7b
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Wed Apr 12 23:36:32 2017 +0000
+
+    trying to ficks travis again
+
 commit 6f0ba13a41c7fb25b4646842fc5ec31bc8be2e38
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Wed Apr 12 23:29:54 2017 +0000
