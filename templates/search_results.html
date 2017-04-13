@@ -58,22 +58,12 @@
                   <img src="{{person.image_url}}" alt="Company Logo" /></div>
                 <div class="col-8" style="text-align: left;">
                   <br/>
-                  <h3>{{person.name | safe}}</h3><br/>
-                  <b>Primary Job Title: </b> {{person.title | safe}}<br/>
-                  <b>Companies: </b>
-                  {% for company in companies %}
-                    <a href="../../company/{{company.idnum}}">{{company.name| safe}} </a>
-                  {% endfor %}
-                  <br/>
-                  <b>Schools: </b>
-                  {% for school in schools %}
-                    <a href="../../school/{{school.idnum}}">{{school.name| safe}} </a>
-                  {% endfor %}
-                  <br/>
-                  <b>Location: </b>{{person.location|safe}}<br/>
-                  <b>Country: </b>{{person.country|safe}}<br/>
-                  <b>Website: </b><a href="{{person.website}}" target="_blank">{{person.website|safe}}</a><br/>
-                  <b>Description: </b>{{person.description|safe}}<br/>
+                  <h3>{{highlight_keys(person.name, keyword) | safe}}</h3><br/>
+                  <b>Primary Job Title: </b>{{highlight_keys(person.title, keyword) | safe}}<br/>
+                  <b>Location: </b>{{highlight_keys(person.location, keyword) | safe}}<br/>
+                  <b>Country: </b>{{highlight_keys(person.country, keyword) | safe}}<br/>
+                  <b>Website: </b><a href="{{person.website}}" target="_blank">{{highlight_keys(person.website, keyword) | safe}}</a><br/>
+                  <b>Description: </b>{{highlight_keys(person.description, keyword) | safe}}<br/>
                 </div>
               </div>
             </div>

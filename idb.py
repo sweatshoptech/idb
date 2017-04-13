@@ -8,6 +8,7 @@ import subprocess
 import tests
 import flask_restless
 import formatters
+import re
 
 app = Flask(__name__)
 manager = flask_restless.APIManager(app, flask_sqlalchemy_db=models.db)
@@ -250,13 +251,20 @@ def search(query, page):
         page=page, per_page=per_page, total=total, record_name='people found for <b>"{0}"</b>'.format(query))
 
     return render_template('search_results.html', results=people, page=page,
-                           per_page=per_page, pagination=pagination)
+                           per_page=per_page, pagination=pagination, keyword=query)
 
 
 @app.route('/visualization')
 @app.route('/visualization.html')
 def visualization():
     return render_template('visualization.html')
+
+@app.context_processor
+def utility_processor():
+    def highlight_keys(text, keyword):
+        pattern = re.compile('('+keyword+')', re.IGNORECASE)
+        return pattern.sub('<b style="background-color: yellow; color: #333;">{0}</b>'.format(r'\1'), text) if text else None
+    return dict(highlight_keys=highlight_keys)
 
 if __name__ == '__main__':
     app.run()
