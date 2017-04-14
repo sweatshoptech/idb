@@ -223,79 +223,64 @@ def run_tests():
     return render_template('TestIDB.html', test=testout)
 
 
+def get_search_results(query, model, rec, template):
+    """
+    Standard template to return search results for models
+    """
+    # Get page data
+    page, per_page, offset = get_page_args()
+
+    with models.APP.app_context():
+        results = model.query.whoosh_search(
+            query, or_=True, like=True)
+    
+    total = len(results.all())
+    orgs = results.offset(offset).limit(per_page).all()
+    pagination = Pagination(
+        page=page, per_page=per_page, total=total, record_name='{0} found for <b>"{1}"</b>'.format(rec, query))
+
+    return render_template(
+        template, page=page, per_page=per_page, keyword=query,
+                           pagination=pagination, results=orgs)
+
+
 @app.route('/search/<query>/')
 def search(query):
     """
     Search for keywords in all attributes of all tables
     """
-    # Get page data
-    page, per_page, offset = get_page_args()
-
-    with models.APP.app_context():
-        p_results = models.Person.query.whoosh_search(
-            query, or_=True, like=True)
-        c_results = models.Company.query.whoosh_search(
-            query, or_=True, like=True)
-        i_results = models.Investor.query.whoosh_search(
-            query, or_=True, like=True)
-        s_results = models.School.query.whoosh_search(
-            query, or_=True, like=True)
-
-    # People
-    total = len(p_results.all())
-    people = p_results.offset(offset).limit(per_page).all()
-    p_pagination = Pagination(
-        page=page, per_page=per_page, total=total, record_name='people found for <b>"{0}"</b>'.format(query))
-
-    # Companies
-    total = len(c_results.all())
-    companies = c_results.offset(offset).limit(per_page).all()
-    c_pagination = Pagination(
-        page=page, per_page=per_page, total=total, record_name='companies found for <b>"{0}"</b>'.format(query))
-
-    # Investors
-    total = len(i_results.all())
-    investors = i_results.offset(offset).limit(per_page).all()
-    i_pagination = Pagination(
-        page=page, per_page=per_page, total=total, record_name='investors found for <b>"{0}"</b>'.format(query))
-
-    # Schools
-    total = len(s_results.all())
-    schools = s_results.offset(offset).limit(per_page).all()
-    s_pagination = Pagination(
-        page=page, per_page=per_page, total=total, record_name='schools found for <b>"{0}"</b>'.format(query))
+    return search_people(query)
 
 
-    return render_template(
-        'search_results.html', page=page, per_page=per_page, keyword=query,
-                           p_pagination=p_pagination, p_results=people,
-                           i_pagination=i_pagination, i_results=investors,
-                           s_pagination=s_pagination, s_results=schools,
-                           c_pagination=c_pagination, c_results=companies)
+@app.route('/search/person/<query>/')
+def search_people(query):
+    """
+    Search for keywords in all attributes of people
+    """
+    return get_search_results(query, models.Person, 'people', 'person_results.html')
 
 
 @app.route('/search/company/<query>/')
 def search_companies(query):
     """
-    Search for keywords in all attributes of all tables
+    Search for keywords in all attributes of companies
     """
-    # Get page data
-    page, per_page, offset = get_page_args()
+    return get_search_results(query, models.Company, 'companies', 'company_results.html')
 
-    with models.APP.app_context():
-        c_results = models.Company.query.whoosh_search(
-            query, or_=True, like=True)
-    
-    # Companies
-    total = len(c_results.all())
-    companies = c_results.offset(offset).limit(per_page).all()
-    c_pagination = Pagination(
-        page=page, per_page=per_page, total=total, record_name='companies found for <b>"{0}"</b>'.format(query))
 
-    return render_template(
-        'company_results.html', page=page, per_page=per_page, keyword=query,
-                           c_pagination=c_pagination, c_results=companies)
+@app.route('/search/investor/<query>/')
+def search_investors(query):
+    """
+    Search for keywords in all attributes of investors
+    """
+    return get_search_results(query, models.Investor, 'investors', 'investor_results.html')
 
+@app.route('/search/school/<query>/')
+def search_schools(query):
+    """
+    Search for keywords in all attributes of schools
+    """
+    return get_search_results(query, models.School, 'schools', 'school_results.html')
 
 
 

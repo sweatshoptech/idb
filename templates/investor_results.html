@@ -50,8 +50,8 @@
       <div class="container" style="color: white;">
         <div class="tab">
           <a href="/search/person/{{keyword}}"><button class="tablinks">People</button></a>
-          <button class="tablinks active">Companies</button>
-          <a href="/search/investor/{{keyword}}"><button class="tablinks">Investors</button></a>
+          <a href="/search/company/{{keyword}}"><button class="tablinks">Companies</button></a>
+          <button class="tablinks active">Investors</button>
           <a href="/search/school/{{keyword}}"><button class="tablinks">Schools</button></a>
         </div>
         
@@ -59,7 +59,7 @@
           <div class="pag-container">{{ pagination.links }}</div> 
           {% for org in results %}
             <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
-              <a href="http://sweatshop.tech/company/{{org.idnum}}" style="color: #eee;">
+              <a href="http://sweatshop.tech/investor/{{org.idnum}}" style="color: #eee;">
               <div class="card-block">
                 <div class="row">
                   <div class="col-4">

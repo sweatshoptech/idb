@@ -49,8 +49,8 @@
       <h1 class="cover-heading">Search Results</h1>
       <div class="container" style="color: white;">
         <div class="tab">
-          <a href="/search/person/{{keyword}}"><button class="tablinks">People</button></a>
-          <button class="tablinks active">Companies</button>
+          <button class="tablinks active">People</button>
+          <a href="/search/company/{{keyword}}"><button class="tablinks">Companies</button></a>
           <a href="/search/investor/{{keyword}}"><button class="tablinks">Investors</button></a>
           <a href="/search/school/{{keyword}}"><button class="tablinks">Schools</button></a>
         </div>
@@ -59,7 +59,7 @@
           <div class="pag-container">{{ pagination.links }}</div> 
           {% for org in results %}
             <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
-              <a href="http://sweatshop.tech/company/{{org.idnum}}" style="color: #eee;">
+              <a href="http://sweatshop.tech/person/{{org.idnum}}" style="color: #eee;">
               <div class="card-block">
                 <div class="row">
                   <div class="col-4">
@@ -67,6 +67,7 @@
                   <div class="col-8" style="text-align: left;">
                     <br/>
                     <h3>{{highlight_keys(org.name, keyword) | safe}}</h3><br/>
+                    <b>Primary Job Title: </b>{{highlight_keys(org.title, keyword) | safe}}<br/>
                     <b>Location: </b>{{highlight_keys(org.location, keyword) | safe}}<br/>
                     <b>Country: </b>{{highlight_keys(org.country, keyword) | safe}}<br/>
                     <b>Website: </b><a href="{{org.website}}" target="_blank">{{highlight_keys(org.website, keyword) | safe}}</a><br/>
