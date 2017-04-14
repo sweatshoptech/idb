@@ -40,7 +40,7 @@
             <a class="nav-link" href="/schools.html">Schools</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="visualization.html">Visualization</a>
+            <a class="nav-link" href="/visualization.html">Visualization</a>
           </li>
         </ul>
       </div>
@@ -50,7 +50,7 @@
       <div class="container" style="color: white;">
         <div class="tab">
           <button class="tablinks active" onclick="openTab(event, 'People')">People</button>
-          <button class="tablinks" onclick="openTab(event, 'Companies')">Companies</button>
+          <a href="/search/company/{{keyword}}"><button class="tablinks">Companies</button></a>
           <button class="tablinks" onclick="openTab(event, 'Investors')">Investors</button>
           <button class="tablinks" onclick="openTab(event, 'Schools')">Schools</button>
         </div>
@@ -181,16 +181,6 @@
               evt.currentTarget.className += " active";
           }
         </script>
-
-
-
-
-
-
-                      </div>
-          <div role="tabpanel" class="tab-pane fade" id="companies">bbb</div>
-          <div role="tabpanel" class="tab-pane fade" id="investors">ccc</div>
-        </div-->
       </div>
     </div>
     <div class="outro">

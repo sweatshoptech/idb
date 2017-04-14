@@ -274,6 +274,31 @@ def search(query):
                            c_pagination=c_pagination, c_results=companies)
 
 
+@app.route('/search/company/<query>/')
+def search_companies(query):
+    """
+    Search for keywords in all attributes of all tables
+    """
+    # Get page data
+    page, per_page, offset = get_page_args()
+
+    with models.APP.app_context():
+        c_results = models.Company.query.whoosh_search(
+            query, or_=True, like=True)
+    
+    # Companies
+    total = len(c_results.all())
+    companies = c_results.offset(offset).limit(per_page).all()
+    c_pagination = Pagination(
+        page=page, per_page=per_page, total=total, record_name='companies found for <b>"{0}"</b>'.format(query))
+
+    return render_template(
+        'company_results.html', page=page, per_page=per_page, keyword=query,
+                           c_pagination=c_pagination, c_results=companies)
+
+
+
+
 @app.route('/visualization')
 @app.route('/visualization.html')
 def visualization():
