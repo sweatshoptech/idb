@@ -229,11 +229,12 @@ def get_search_results(query, model, rec, template):
     """
     # Get page data
     page, per_page, offset = get_page_args()
+    multi = request.args.get('multi', type=str, default='AND')
 
     with models.APP.app_context():
         results = model.query.whoosh_search(
-            query, or_=True, like=True)
-    
+            query, or_=(multi == 'OR'), like=True)
+
     total = len(results.all())
     orgs = results.offset(offset).limit(per_page).all()
     pagination = Pagination(
@@ -275,13 +276,13 @@ def search_investors(query):
     """
     return get_search_results(query, models.Investor, 'investors', 'investor_results.html')
 
+
 @app.route('/search/school/<query>/')
 def search_schools(query):
     """
     Search for keywords in all attributes of schools
     """
     return get_search_results(query, models.School, 'schools', 'school_results.html')
-
 
 
 @app.route('/visualization')
@@ -292,9 +293,13 @@ def visualization():
 
 @app.context_processor
 def utility_processor():
-    def highlight_keys(text, keyword):
-        pattern = re.compile('(' + keyword + ')', re.IGNORECASE)
-        return pattern.sub('<b style="background-color: yellow; color: #333;">{0}</b>'.format(r'\1'), text) if text else None
+    def highlight_keys(text, keywords):
+        keywords = keywords.split()
+        for keyword in keywords:
+            pattern = re.compile('(' + keyword + ')', re.IGNORECASE)
+            text = pattern.sub(
+                '<b style="background-color: yellow; color: #333;">{0}</b>'.format(r'\1'), text) if text else None
+        return text
     return dict(highlight_keys=highlight_keys)
 
 if __name__ == '__main__':

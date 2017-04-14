@@ -1,3 +1,21 @@
+commit 9565656e74bae883e5a0dc3fd056e56dcb3c53b3
+Author: Vishnu Thiagarajan <vignesh.1996@utexas.edu>
+Date:   Fri Apr 14 02:24:15 2017 +0000
+
+    pagination fixed, search results for all
+
+commit 9f554a05907f199a5477adca3118720ae9ca9ccf
+Author: Vishnu Thiagarajan <vignesh.1996@utexas.edu>
+Date:   Fri Apr 14 01:46:15 2017 +0000
+
+    company page search templates
+
+commit 395c8b6a73da1503b22e35298305aa19e835e6ab
+Author: Vishnu Thiagarajan <vignesh.1996@utexas.edu>
+Date:   Fri Apr 14 01:13:38 2017 +0000
+
+    now working with all models, jquery needed, #92
+
 commit 23be9885dfd28395637576dbad3ae13bded2be63
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Fri Apr 14 00:44:49 2017 +0000

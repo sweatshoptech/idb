@@ -53,6 +53,10 @@
           <button class="tablinks active">Companies</button>
           <a href="/search/investor/{{keyword}}"><button class="tablinks">Investors</button></a>
           <a href="/search/school/{{keyword}}"><button class="tablinks">Schools</button></a>
+          <div style="float: right;" id="multi-filters">
+            <a href="?"><button class="tablinks" data-filter="AND">AND</button></a>
+            <a href="?multi=OR"><button class="tablinks" data-filter="OR">OR</button></a>
+          </div>
         </div>
         
         <div id="Investors" class="tabcontent" style="display: block">
@@ -82,6 +86,30 @@
         </div>
 
       </div>
+      
+      <script>
+        function getParameterByName(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        var multiVal = getParameterByName('multi');
+        if(!multiVal)
+          multiVal = 'AND'
+
+        var multis = $('#multi-filters').children('a');
+        for (var i in multis) {
+          var but = $(multis[i]).children('button')[0];
+          if (but.attributes['data-filter'].value == multiVal)
+            $(but).addClass('active');  
+        }
+     </script>
+
     </div>
     <div class="outro">
       © SWEatshop 2017
