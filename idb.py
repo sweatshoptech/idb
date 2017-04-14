@@ -234,23 +234,44 @@ def search(query):
     with models.APP.app_context():
         p_results = models.Person.query.whoosh_search(
             query, or_=True, like=True)
-        """
         c_results = models.Company.query.whoosh_search(
             query, or_=True, like=True)
         i_results = models.Investor.query.whoosh_search(
             query, or_=True, like=True)
         s_results = models.School.query.whoosh_search(
             query, or_=True, like=True)
-        """
+
+    # People
     total = len(p_results.all())
     people = p_results.offset(offset).limit(per_page).all()
-
-    # Render with pagination
-    pagination = Pagination(
+    p_pagination = Pagination(
         page=page, per_page=per_page, total=total, record_name='people found for <b>"{0}"</b>'.format(query))
 
-    return render_template('search_results.html', results=people, page=page,
-                           per_page=per_page, pagination=pagination, keyword=query)
+    # Companies
+    total = len(c_results.all())
+    companies = c_results.offset(offset).limit(per_page).all()
+    c_pagination = Pagination(
+        page=page, per_page=per_page, total=total, record_name='companies found for <b>"{0}"</b>'.format(query))
+
+    # Investors
+    total = len(i_results.all())
+    investors = i_results.offset(offset).limit(per_page).all()
+    i_pagination = Pagination(
+        page=page, per_page=per_page, total=total, record_name='investors found for <b>"{0}"</b>'.format(query))
+
+    # Schools
+    total = len(s_results.all())
+    schools = s_results.offset(offset).limit(per_page).all()
+    s_pagination = Pagination(
+        page=page, per_page=per_page, total=total, record_name='schools found for <b>"{0}"</b>'.format(query))
+
+
+    return render_template(
+        'search_results.html', page=page, per_page=per_page, keyword=query,
+                           p_pagination=p_pagination, p_results=people,
+                           i_pagination=i_pagination, i_results=investors,
+                           s_pagination=s_pagination, s_results=schools,
+                           c_pagination=c_pagination, c_results=companies)
 
 
 @app.route('/visualization')

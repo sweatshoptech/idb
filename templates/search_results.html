@@ -56,8 +56,8 @@
         </div>
         
         <div id="People" class="tabcontent" style="display: block">
-          <div class="pag-container">{{ pagination.links }}</div> 
-          {% for person in results %}
+          <div class="pag-container">{{ p_pagination.links }}</div> 
+          {% for person in p_results %}
             <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
               <a href="http://sweatshop.tech/person/{{person.idnum}}" style="color: #eee;">
               <div class="card-block">
@@ -78,23 +78,86 @@
               </a>
             </div>
           {% endfor %}    
-          <div class="pag-container">{{ pagination.links }}</div> 
-          <button-text>{{ pagination.info }}</button-text>
+          <div class="pag-container">{{ p_pagination.links }}</div> 
+          <button-text>{{ p_pagination.info }}</button-text>
         </div>
         
         <div id="Companies" class="tabcontent">
-          <h3>Paris</h3>
-          <p>Paris is the capital of France.</p>
+          <div class="pag-container">{{ c_pagination.links }}</div> 
+          {% for company in c_results %}
+            <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
+              <a href="http://sweatshop.tech/company/{{company.idnum}}" style="color: #eee;">
+              <div class="card-block">
+                <div class="row">
+                  <div class="col-4">
+                    <img src="{{company.image_url}}" alt="Company Logo" /></div>
+                  <div class="col-8" style="text-align: left;">
+                    <br/>
+                    <h3>{{highlight_keys(company.name, keyword) | safe}}</h3><br/>
+                    <b>Location: </b>{{highlight_keys(company.location, keyword) | safe}}<br/>
+                    <b>Country: </b>{{highlight_keys(company.country, keyword) | safe}}<br/>
+                    <b>Website: </b><a href="{{company.website}}" target="_blank">{{highlight_keys(company.website, keyword) | safe}}</a><br/>
+                    <b>Description: </b>{{highlight_keys(company.description, keyword) | safe}}<br/>
+                  </div>
+                </div>
+              </div>
+              </a>
+            </div>
+          {% endfor %}    
+          <div class="pag-container">{{ c_pagination.links }}</div> 
+          <button-text>{{ c_pagination.info }}</button-text>
         </div>
         
         <div id="Investors" class="tabcontent">
-          <h3>Tokyo</h3>
-          <p>Tokyo is the capital of Japan.</p>
+          <div class="pag-container">{{ i_pagination.links }}</div>
+          {% for investor in i_results %}
+            <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
+              <a href="http://sweatshop.tech/investor/{{investor.idnum}}" style="color: #eee;">
+              <div class="card-block">
+                <div class="row">
+                  <div class="col-4">
+                    <img src="{{investor.image_url}}" alt="Company Logo" /></div>
+                  <div class="col-8" style="text-align: left;">
+                    <br/>
+                    <h3>{{highlight_keys(investor.name, keyword) | safe}}</h3><br/>
+                    <b>Location: </b>{{highlight_keys(investor.location, keyword) | safe}}<br/>
+                    <b>Country: </b>{{highlight_keys(investor.country, keyword) | safe}}<br/>
+                    <b>Website: </b><a href="{{investor.website}}" target="_blank">{{highlight_keys(investor.website, keyword) | safe}}</a><br/>
+                    <b>Description: </b>{{highlight_keys(investor.description, keyword) | safe}}<br/>
+                  </div>
+                </div>
+              </div>
+              </a>
+            </div>
+          {% endfor %}
+          <div class="pag-container">{{ i_pagination.links }}</div>
+          <button-text>{{ i_pagination.info }}</button-text>
         </div>
 
         <div id="Schools" class="tabcontent">
-          <h3>Tokyo</h3>
-          <p>Tokyo is the capital of Japan.</p>
+          <div class="pag-container">{{ s_pagination.links }}</div>
+          {% for school in s_results %}
+            <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
+              <a href="http://sweatshop.tech/school/{{school.idnum}}" style="color: #eee;">
+              <div class="card-block">
+                <div class="row">
+                  <div class="col-4">
+                    <img src="{{school.image_url}}" alt="Company Logo" /></div>
+                  <div class="col-8" style="text-align: left;">
+                    <br/>
+                    <h3>{{highlight_keys(school.name, keyword) | safe}}</h3><br/>
+                    <b>Location: </b>{{highlight_keys(school.location, keyword) | safe}}<br/>
+                    <b>Country: </b>{{highlight_keys(school.country, keyword) | safe}}<br/>
+                    <b>Website: </b><a href="{{school.website}}" target="_blank">{{highlight_keys(school.website, keyword) | safe}}</a><br/>
+                    <b>Description: </b>{{highlight_keys(school.description, keyword) | safe}}<br/>
+                  </div>
+                </div>
+              </div>
+              </a>
+            </div>
+          {% endfor %}
+          <div class="pag-container">{{ s_pagination.links }}</div>
+          <button-text>{{ s_pagination.info }}</button-text>
         </div>
         <script>
           function openTab(evt, tabName) {
