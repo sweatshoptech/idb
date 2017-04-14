@@ -1,3 +1,15 @@
+commit 16c62f43b1328610ea0bdfedacc6049b6f064a2d
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 13 01:39:19 2017 +0000
+
+    searching works with highlighting. #92, closes #97
+
+commit 6658ff7518cedbe82b81ce1a71a80420282530ac
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 13 00:58:03 2017 +0000
+
+    test fix
+
 commit c99a532e2b6f44e05c7ce6ed8ed0727013038a8a
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Thu Apr 13 00:56:33 2017 +0000

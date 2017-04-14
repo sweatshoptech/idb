@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/styles.processed.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
   </head>
@@ -47,50 +48,86 @@
     <div style="min-height:89vh"> 
       <h1 class="cover-heading">Search Results</h1>
       <div class="container" style="color: white;">
-        <button-text>{{ pagination.info }}</button-text>
-        <div class="pag-container">{{ pagination.links }}</div> 
-        {% for person in results %}
-          <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
-            <a href="http://sweatshop.tech/person/{{person.idnum}}" style="color: #eee;">
-            <div class="card-block">
-              <div class="row">
-                <div class="col-4">
-                  <img src="{{person.image_url}}" alt="Company Logo" /></div>
-                <div class="col-8" style="text-align: left;">
-                  <br/>
-                  <h3>{{highlight_keys(person.name, keyword) | safe}}</h3><br/>
-                  <b>Primary Job Title: </b>{{highlight_keys(person.title, keyword) | safe}}<br/>
-                  <b>Location: </b>{{highlight_keys(person.location, keyword) | safe}}<br/>
-                  <b>Country: </b>{{highlight_keys(person.country, keyword) | safe}}<br/>
-                  <b>Website: </b><a href="{{person.website}}" target="_blank">{{highlight_keys(person.website, keyword) | safe}}</a><br/>
-                  <b>Description: </b>{{highlight_keys(person.description, keyword) | safe}}<br/>
+        <div class="tab">
+          <button class="tablinks active" onclick="openTab(event, 'People')">People</button>
+          <button class="tablinks" onclick="openTab(event, 'Companies')">Companies</button>
+          <button class="tablinks" onclick="openTab(event, 'Investors')">Investors</button>
+          <button class="tablinks" onclick="openTab(event, 'Schools')">Schools</button>
+        </div>
+        
+        <div id="People" class="tabcontent" style="display: block">
+          <div class="pag-container">{{ pagination.links }}</div> 
+          {% for person in results %}
+            <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
+              <a href="http://sweatshop.tech/person/{{person.idnum}}" style="color: #eee;">
+              <div class="card-block">
+                <div class="row">
+                  <div class="col-4">
+                    <img src="{{person.image_url}}" alt="Company Logo" /></div>
+                  <div class="col-8" style="text-align: left;">
+                    <br/>
+                    <h3>{{highlight_keys(person.name, keyword) | safe}}</h3><br/>
+                    <b>Primary Job Title: </b>{{highlight_keys(person.title, keyword) | safe}}<br/>
+                    <b>Location: </b>{{highlight_keys(person.location, keyword) | safe}}<br/>
+                    <b>Country: </b>{{highlight_keys(person.country, keyword) | safe}}<br/>
+                    <b>Website: </b><a href="{{person.website}}" target="_blank">{{highlight_keys(person.website, keyword) | safe}}</a><br/>
+                    <b>Description: </b>{{highlight_keys(person.description, keyword) | safe}}<br/>
+                  </div>
                 </div>
               </div>
+              </a>
             </div>
-            </a>
-          </div>
-        {% endfor %}    
-        <div class="pag-container">{{ pagination.links }}</div> 
-        <script>
-        // init Isotope
-        var $grid = $('.grid').isotope({
-            itemSelector: '.grid-item',
-            layoutMode: 'fitRows',
-            masonry: {
-              columnWidth: 100
-            }
-       });
-       </script>
-        <div class="grid">
-          <div class="grid-item"></div>
-          <div class="grid-item"></div>
-          <div class="grid-item"></div>
-          <div class="grid-item"></div>
-          <div class="grid-item"></div>
-          <div class="grid-item"></div>
-          <div class="grid-item"></div>
-          <div class="grid-item"></div>
+          {% endfor %}    
+          <div class="pag-container">{{ pagination.links }}</div> 
+          <button-text>{{ pagination.info }}</button-text>
         </div>
+        
+        <div id="Companies" class="tabcontent">
+          <h3>Paris</h3>
+          <p>Paris is the capital of France.</p>
+        </div>
+        
+        <div id="Investors" class="tabcontent">
+          <h3>Tokyo</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div id="Schools" class="tabcontent">
+          <h3>Tokyo</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+        <script>
+          function openTab(evt, tabName) {
+              // Declare all variables
+              var i, tabcontent, tablinks;
+          
+              // Get all elements with class="tabcontent" and hide them
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+              }
+          
+              // Get all elements with class="tablinks" and remove the class "active"
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+          
+              // Show the current tab, and add an "active" class to the button that opened the tab
+              document.getElementById(tabName).style.display = "block";
+              evt.currentTarget.className += " active";
+          }
+        </script>
+
+
+
+
+
+
+                      </div>
+          <div role="tabpanel" class="tab-pane fade" id="companies">bbb</div>
+          <div role="tabpanel" class="tab-pane fade" id="investors">ccc</div>
+        </div-->
       </div>
     </div>
     <div class="outro">

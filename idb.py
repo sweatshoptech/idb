@@ -12,10 +12,10 @@ import re
 
 app = Flask(__name__)
 manager = flask_restless.APIManager(app, flask_sqlalchemy_db=models.db)
-manager.create_api(models.Person, methods=['GET', 'POST'])
-manager.create_api(models.Company, methods=['GET', 'POST'])
-manager.create_api(models.Investor, methods=['GET', 'POST'])
-manager.create_api(models.School, methods=['GET', 'POST'])
+manager.create_api(models.Person, methods=['GET'])
+manager.create_api(models.Company, methods=['GET'])
+manager.create_api(models.Investor, methods=['GET'])
+manager.create_api(models.School, methods=['GET'])
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -223,9 +223,8 @@ def run_tests():
     return render_template('TestIDB.html', test=testout)
 
 
-@app.route('/search/<query>/page/<int:page>')
-@app.route('/search/<query>/', defaults={'page': 1})
-def search(query, page):
+@app.route('/search/<query>/')
+def search(query):
     """
     Search for keywords in all attributes of all tables
     """
@@ -259,10 +258,11 @@ def search(query, page):
 def visualization():
     return render_template('visualization.html')
 
+
 @app.context_processor
 def utility_processor():
     def highlight_keys(text, keyword):
-        pattern = re.compile('('+keyword+')', re.IGNORECASE)
+        pattern = re.compile('(' + keyword + ')', re.IGNORECASE)
         return pattern.sub('<b style="background-color: yellow; color: #333;">{0}</b>'.format(r'\1'), text) if text else None
     return dict(highlight_keys=highlight_keys)
 
