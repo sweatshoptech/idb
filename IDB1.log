@@ -1,3 +1,15 @@
+commit 06bacffad764f7f8964be9a78bf85924dd756b0a
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Apr 14 19:07:39 2017 +0000
+
+    fixing all visualization stuff
+
+commit 57cb4e7b96acce02f02cf70f37814c6da7384054
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Fri Apr 14 03:11:45 2017 +0000
+
+    Search complete, closes #92
+
 commit 9565656e74bae883e5a0dc3fd056e56dcb3c53b3
 Author: Vishnu Thiagarajan <vignesh.1996@utexas.edu>
 Date:   Fri Apr 14 02:24:15 2017 +0000

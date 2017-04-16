@@ -1,0 +1,15 @@
+languages:
+  Python: true
+  CSS: false
+
+engines:
+  duplication:
+    enabled: true
+    checks:
+      Similar code:
+        enabled: false
+  radon:
+    enabled: true
+    checks:
+      Complexity:
+        enabled: false

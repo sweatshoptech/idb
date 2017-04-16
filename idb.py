@@ -215,7 +215,7 @@ def run_tests():
         tests = subprocess.check_output(
             ['python', '-W', 'ignore', '/home/ubuntu/idb/tests.py'],
             stderr=subprocess.STDOUT)
-    except subprocess.CalledProcessError, e:
+    except subprocess.CalledProcessError as e:
         tests = e.output
     with open('/home/ubuntu/idb/coverage.out') as coverage:
         tests = tests + coverage.read()
