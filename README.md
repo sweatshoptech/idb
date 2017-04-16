@@ -1,4 +1,4 @@
-# sweatshop.tech [![Build Status](https://travis-ci.org/sweatshoptech/idb.svg?branch=master)](https://travis-ci.org/sweatshoptech/idb)[![Code Climate](https://codeclimate.com/github/sweatshoptech/idb.png)](https://codeclimate.com/github/sweatshoptech/idb.png)
+# sweatshop.tech [![Build Status](https://travis-ci.org/sweatshoptech/idb.svg?branch=master)](https://travis-ci.org/sweatshoptech/idb)  [![Code Climate](https://codeclimate.com/github/sweatshoptech/idb.png)](https://codeclimate.com/github/sweatshoptech/idb.png)
 
 ## The Problem
 Have you ever had a brilliant idea and wanted to create your own company but didn’t know if a similar business already existed? Have you ever wanted to quickly find potential investors to fund your idea? Have you ever been curious about which schools had the most notable graduates from which you could recruit employees? SWEatshop aims to aggregate, organize, and display helpful data about companies, people, investors, and schools in order to ease the process from having an idea to getting your startup up and running! 
