@@ -9,6 +9,7 @@ import tests
 import flask_restless
 import formatters
 import re
+import responses
 
 app = Flask(__name__)
 manager = flask_restless.APIManager(app, flask_sqlalchemy_db=models.db)
