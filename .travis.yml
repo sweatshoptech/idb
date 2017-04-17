@@ -34,6 +34,5 @@ script:
     - ls -al
     - make test
 
-addons:
-    code_climate:
-        repo_token: b587e799964870daedc7f4c0ee9e4dff047d3d2e8142a5ce6483d6b651583aa5
+after_success:
+  - CODECLIMATE_REPO_TOKEN=b587e799964870daedc7f4c0ee9e4dff047d3d2e8142a5ce6483d6b651583aa5 codeclimate-test-reporter
