@@ -288,7 +288,7 @@ def search_schools(query):
 @app.route('/visualization')
 @app.route('/visualization.html')
 def visualization():
-    response = request.get('http://foodcloseto.me/Food_Types')
+    response = requests.get('http://foodcloseto.me/Food_Types')
     types_food = response.json()
     type_count = list()
     for type_food in types_food :
