@@ -23,6 +23,7 @@
     <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/lines/lines.js"></script>
     <script>
       $(document).ready(function () {
+  console.log({{type_count|tojson}});
   var bubbleChart = new d3.svg.BubbleChart({
     supportResponsive: true,
     //container: => use @default
@@ -36,7 +37,12 @@
     //intersectInc: use @default
     //circleColor: use @default
     data: {
-      items: {{type_count|tojson}},
+      items: {{type_count|tojson}}
+      /*[
+        {text: "Java", count: 236},
+        {text: "ASda", count: 216},
+        {text: "dfva", count: 23}
+      ]*/,
       eval: function (item) {return item.count;},
       classed: function (item) {return item.text.split(" ").join("");}
     },

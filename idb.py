@@ -10,7 +10,6 @@ import flask_restless
 import formatters
 import requests
 import re
-import responses
 
 app = Flask(__name__)
 manager = flask_restless.APIManager(app, flask_sqlalchemy_db=models.db)
@@ -290,10 +289,15 @@ def search_schools(query):
 @app.route('/visualization')
 @app.route('/visualization.html')
 def visualization():
-    response = requests.get('http://foodcloseto.me/API/Food_Types')
+    response = requests.get('http://foodcloseto.me/API/Food_Types?sortby=number_restaurants')
     types_food = response.json()
+    types_food.reverse()
     type_count = []
+    topnum = 10
     for type_food in types_food:
+        topnum -= 1
+        if topnum < 0:
+            break
         food = type_food["food_type_display_name"]
         num_rest = type_food["number_restaurants"]
         type_count += [{'text': food, 'count':num_rest}]
