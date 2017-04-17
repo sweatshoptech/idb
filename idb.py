@@ -223,7 +223,7 @@ def run_tests():
     return render_template('TestIDB.html', test=testout)
 
 
-def get_search_results(query, model, rec, template, multi='AND'):
+def get_search_results(query, model, rec, template):
     """
     Standard template to return search results for models
     """
