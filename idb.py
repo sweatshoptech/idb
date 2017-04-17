@@ -294,7 +294,7 @@ def visualization():
     types_food = response.json()
     type_count = []
     for type_food in types_food:
-        food = type_food["food_type"]
+        food = type_food["food_type_display_name"]
         num_rest = type_food["number_restaurants"]
         type_count += [{'text': food, 'count':num_rest}]
 

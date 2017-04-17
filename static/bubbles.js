@@ -1,4 +1,5 @@
 function myFunction(types_food) {
+
   var bubbleChart = new d3.svg.BubbleChart({
     supportResponsive: true,
     //container: => use @default
@@ -11,16 +12,18 @@ function myFunction(types_food) {
     //intersectDelta: use @default
     //intersectInc: use @default
     //circleColor: use @default
-    data: {
-      items: types_food,
+ data: {
+         items: types_food, 
+      // items: [
+      // ],
       eval: function (item) {return item.count;},
       classed: function (item) {return item.text.split(" ").join("");}
     },
-    plugins: [
+        plugins: [
       {
-        name: "central-click",
+        name: "central-click", 
         options: {
-          text: "(See types of foods)",
+          text: "(See types of food)",
           style: {
             "font-size": "12px",
             "font-style": "italic",
@@ -31,7 +34,7 @@ function myFunction(types_food) {
           },
           attr: {dy: "65px"},
           centralClick: function() {
-            alert("Here is more details!!");
+            alert("Click to see more!");
           }
         }
       },
@@ -83,4 +86,4 @@ function myFunction(types_food) {
         }
       }]
   });
-});
+}
