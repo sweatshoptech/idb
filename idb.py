@@ -8,6 +8,7 @@ import subprocess
 import tests
 import flask_restless
 import formatters
+import requests
 import re
 
 app = Flask(__name__)
@@ -290,11 +291,11 @@ def search_schools(query):
 def visualization():
     response = requests.get('http://foodcloseto.me/API/Food_Types')
     types_food = response.json()
-    type_count = list()
-    for type_food in types_food :
-        food = type_food[1]
-        num_rest = type_food[5]
-        typre_count += [{'text': food, 'count':num_rest}]
+    type_count = []
+    for type_food in types_food:
+        food = type_food["food_type"]
+        num_rest = type_food["number_restaurants"]
+        type_count += [{'text': food, 'count':num_rest}]
 
     return render_template('visualization.html', type_count=type_count)
 
