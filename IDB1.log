@@ -1,3 +1,65 @@
+commit 94f3de008967ce576354c42eaa597de00da2cbe2
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 17 00:19:07 2017 +0000
+
+    try again
+
+commit c1a3eaefd8440d3d87baf5fe755200fcd8b36181
+Merge: 7bb7220 33023da
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 17 00:04:08 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 7bb72205dee590c120ac483d6d197319725669ff
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 17 00:04:00 2017 +0000
+
+    coverage code climate
+
+commit 33023da89415a4ee8307b24784f0a341335750c3
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sun Apr 16 18:39:21 2017 -0500
+
+    better badges
+
+commit 1aff537d4a573b1319b025ebe951b68aaf7cd8bc
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sun Apr 16 18:25:19 2017 -0500
+
+    some space
+
+commit 417af8b22b19a2615233e651c0b2b2a12e274e1b
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sun Apr 16 18:24:43 2017 -0500
+
+    Code climate badge
+
+commit 5e24e51637d4995ef2c13bd5d91472cb979298e6
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sun Apr 16 23:09:08 2017 +0000
+
+    climate yml fixes
+
+commit a27de99bacf12a34821904516b767e2375c707bb
+Merge: 9e044f2 d4cdb89
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sun Apr 16 22:59:34 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 9e044f2973f8c7d5c2201a157e516ffb2cb18686
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sun Apr 16 22:59:21 2017 +0000
+
+    clean up and code climate
+
+commit d4cdb8957d02bfb9ffe1a7d9eb850e3b6e94d584
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sun Apr 16 17:37:57 2017 -0500
+
+    Report intro as basic README
+
 commit 06bacffad764f7f8964be9a78bf85924dd756b0a
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Fri Apr 14 19:07:39 2017 +0000

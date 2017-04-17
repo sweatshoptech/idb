@@ -295,10 +295,10 @@ def visualization():
 def utility_processor():
     def highlight_keys(text, keywords):
         keywords = keywords.split()
-        for keyword in keywords:
-            pattern = re.compile('(' + keyword + ')', re.IGNORECASE)
-            text = pattern.sub(
-                '<b style="background-color: yellow; color: #333;">{0}</b>'.format(r'\1'), text) if text else None
+        keyword_string = '|'.join(keywords)
+        pattern = re.compile('(' + keyword_string + ')', re.IGNORECASE)
+        text = pattern.sub(
+            '<b style="background-color: yellow; color: #333;">{0}</b>'.format(r'\1'), text) if text else None
         return text
     return dict(highlight_keys=highlight_keys)
 
