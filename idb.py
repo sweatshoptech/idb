@@ -314,7 +314,8 @@ def visualization():
         loc_ratings.append(loc_rating)
 
     with open('/home/ubuntu/idb/static/data.tsv', 'w') as output_file:
-        dw = csv.DictWriter(output_file, sorted(loc_ratings[0].keys()), delimiter='\t')
+        dw = csv.DictWriter(
+            output_file, sorted(loc_ratings[0].keys()), delimiter='\t')
         dw.writeheader()
         dw.writerows(loc_ratings)
 

@@ -1,3 +1,15 @@
+commit 188b0b21c0c8574469a1dcbc67a27616034ecb01
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Tue Apr 18 01:23:37 2017 +0000
+
+    visualization done, some permissions changes, closes #95
+
+commit 385b015c194d37ca16f38193eb2d09fdfe0a58e6
+Author: Vishnu Thiagarajan <vignesh.1996@utexas.edu>
+Date:   Tue Apr 18 00:14:15 2017 +0000
+
+    added description snippet for search, closes #101
+
 commit 688c6d535482c7a15dfef986655c5dd521e03637
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Mon Apr 17 23:37:27 2017 +0000
