@@ -1,6 +1,6 @@
 #!flask/bin/python
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_paginate import Pagination, get_page_args
 import models
@@ -250,7 +250,7 @@ def get_search_results(query, model, rec, template):
 
 @app.route('/search', methods=['GET'])
 def search_request():
-    return search(request.args.get('query', type=str, default=''))
+    return redirect("/search/{0}".format(request.args.get('query', type=str, default='')), code=302)
 
 
 @app.route('/search/<query>/')
