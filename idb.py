@@ -11,6 +11,7 @@ import formatters
 import requests
 import json
 import re
+import csv
 
 app = Flask(__name__)
 manager = flask_restless.APIManager(app, flask_sqlalchemy_db=models.db)
@@ -303,6 +304,19 @@ def visualization():
         food = type_food["food_type_display_name"]
         num_rest = type_food["number_restaurants"]
         type_count += [{'text': food, 'count': num_rest}]
+    response = requests.get('http://foodcloseto.me/API/Locations')
+    locs = response.json()
+    loc_ratings = []
+    for loc in locs:
+        loc_rating = {}
+        loc_rating["letter"] = loc["zipcode"]
+        loc_rating["frequency"] = loc["average_rating"]
+        loc_ratings.append(loc_rating)
+
+    with open('/home/ubuntu/idb/static/data.tsv', 'w') as output_file:
+        dw = csv.DictWriter(output_file, sorted(loc_ratings[0].keys()), delimiter='\t')
+        dw.writeheader()
+        dw.writerows(loc_ratings)
 
     return render_template('visualization.html', type_count=type_count)
 

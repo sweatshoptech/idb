@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-    <script src="http://phuonghuynh.github.io/js/bower_components/jquery/dist/jquery.min.js"></script>
+    <!--script src="http://phuonghuynh.github.io/js/bower_components/jquery/dist/jquery.min.js"></script-->
     <script src="http://phuonghuynh.github.io/js/bower_components/d3/d3.min.js"></script>
     <script src="http://phuonghuynh.github.io/js/bower_components/d3-transform/src/d3-transform.js"></script>
     <script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/extarray.js"></script>
@@ -19,7 +19,7 @@
     <script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/micro-observer.js"></script>
     <script src="http://phuonghuynh.github.io/js/bower_components/microplugin/src/microplugin.js"></script>
     <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/bubble-chart.js"></script>
-    <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/central-click/central-click.js"></script>
+    <script src="/static/js/central-click.js"></script>
     <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/lines/lines.js"></script>
     <script>
       $(document).ready(function () {
@@ -37,12 +37,7 @@
     //intersectInc: use @default
     //circleColor: use @default
     data: {
-      items: {{type_count|tojson}}
-      /*[
-        {text: "Java", count: 236},
-        {text: "ASda", count: 216},
-        {text: "dfva", count: 23}
-      ]*/,
+      items: {{type_count|tojson}},
       eval: function (item) {return item.count;},
       classed: function (item) {return item.text.split(" ").join("");}
     },
@@ -50,19 +45,18 @@
       {
         name: "central-click",
         options: {
-          text: "(See more detail)",
+//          text: "(See more detail)",
           style: {
             "font-size": "12px",
             "font-style": "italic",
             "font-family": "Source Sans Pro, sans-serif",
-            //"font-weight": "700",
             "text-anchor": "middle",
             "fill": "white"
           },
-          attr: {dy: "65px"},
-          centralClick: function() {
+          attr: {dy: "65px"}
+  /*        centralClick: function() {
             alert("Here is more details!!");
-          }
+          }*/
         }
       },
       {
@@ -123,9 +117,6 @@
         height: 700px;
         margin: 0 auto;
       }
-      .bubbleChart svg{
-        background: #000000;
-      }
     </style>
   </head>
   <body class="gradient-bg">
@@ -163,11 +154,142 @@
     <div style="min-height:89vh"> 
       <h1 class="cover-heading">Visualization</h1>
       <div class="container" style="color: white;">
-        <div class="bubbleChart"/>
+  
+        <style>
+        
+        .axis text {
+          font: 10px sans-serif;
+        }
+        
+        .x .tick text{
+          font-size: 4px;
+        }
+
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+          shape-rendering: crispEdges;
+        }
+        
+        .bar {
+          fill: steelblue;
+          fill-opacity: .9;
+        }
+        
+        .x.axis path {
+          display: none;
+        }
+        
+        </style>
+        <h3>Average Rating by Zipcode</h3>
+        <label><input type="checkbox"> Sort by Rating/Zipcode</label>
+        <div id="d32"></div>
+        <script>
+          var margin = {top: 20, right: 20, bottom: 30, left: 40},
+              width = 960 - margin.left - margin.right,
+              height = 500 - margin.top - margin.bottom;
+          
+          var x = d3.scale.ordinal()
+              .rangeRoundBands([0, width], .1, 1);
+          
+          var y = d3.scale.linear()
+              .range([height, 0]);
+          
+          var xAxis = d3.svg.axis()
+              .scale(x)
+              .orient("bottom");
+          
+          var yAxis = d3.svg.axis()
+              .scale(y)
+              .orient("left")
+          
+          var svg = d3.select("#d32").append("svg")
+              .attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+              .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+          
+          d3.tsv("{{ url_for('static', filename='data.tsv') }}", function(error, data) {
+          
+            data.forEach(function(d) {
+              d.frequency = +d.frequency;
+            });
+          
+            x.domain(data.map(function(d) { return d.letter; }));
+            y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
+          
+            svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis)
+               .append("text")
+                .attr("y", 6)
+                .attr("dy", ".71em")
+                .style("text-anchor", "end")
+                .text("Zipcode");
+          
+            svg.append("g")
+                .attr("class", "y axis")
+                .call(yAxis)
+              .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 6)
+                .attr("dy", ".71em")
+                .style("text-anchor", "end")
+                .text("Average Rating");
+          
+            svg.selectAll(".bar")
+                .data(data)
+              .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", function(d) { return x(d.letter); })
+                .attr("width", x.rangeBand())
+                .attr("y", function(d) { return y(d.frequency); })
+                .attr("height", function(d) { return height - y(d.frequency); });
+          
+            d3.select("input").on("change", change);
+          
+            var sortTimeout = setTimeout(function() {
+              d3.select("input").property("checked", true).each(change);
+            }, 2000);
+          
+            function change() {
+              clearTimeout(sortTimeout);
+          
+              // Copy-on-write since tweens are evaluated after a delay.
+              var x0 = x.domain(data.sort(this.checked
+                  ? function(a, b) { return b.frequency - a.frequency; }
+                  : function(a, b) { return d3.ascending(a.letter, b.letter); })
+                  .map(function(d) { return d.letter; }))
+                  .copy();
+          
+              svg.selectAll(".bar")
+                  .sort(function(a, b) { return x0(a.letter) - x0(b.letter); });
+          
+              var transition = svg.transition().duration(750),
+                  delay = function(d, i) { return i * 50; };
+          
+              transition.selectAll(".bar")
+                  .delay(delay)
+                  .attr("x", function(d) { return x0(d.letter); });
+          
+              transition.select(".x.axis")
+                  .call(xAxis)
+                .selectAll("g")
+                  .delay(delay);
+            }
+          });
+        
+        </script>
+        <br/><br/>
+        <h3>Top 10 Food Types</h3>
+        <div class="bubbleChart"></div>
+        <br/><br/>
       </div>
     </div>
     <div class="outro">
       © SWEatshop 2017
     </div>
-  </body>
+ </body>
 </html>
