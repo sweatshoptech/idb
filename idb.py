@@ -248,6 +248,11 @@ def get_search_results(query, model, rec, template):
                            pagination=pagination, results=orgs)
 
 
+@app.route('/search', methods=['GET'])
+def search_request():
+    return search(request.args.get('query', type=str, default=''))
+
+
 @app.route('/search/<query>/')
 def search(query):
     """
@@ -341,6 +346,8 @@ def utility_processor():
         if not text:
             return text
         f_match = re.search(pattern, text, flags=0)
+        if not f_match:
+            return text
         if(f_match.start() < 175):
             if len(text) > 175:
                 ellipse = True
