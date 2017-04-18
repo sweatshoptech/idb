@@ -1,3 +1,122 @@
+commit 688c6d535482c7a15dfef986655c5dd521e03637
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 17 23:37:27 2017 +0000
+
+    adding sample data
+
+commit 113167363beefd8290b2cb7a2db76dfdae4664f2
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 17 22:28:28 2017 +0000
+
+    config
+
+commit 4147f128d05bdcfa9c28620b02a0cf6e6f5f95b2
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 17 22:14:00 2017 +0000
+
+    top 10 d3
+
+commit a78a551187ca6645d6a6ea3f85bb696593774ce4
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Mon Apr 17 16:59:42 2017 -0500
+
+    Moving js to html file, referencews #95
+
+commit c039aa6ed36251f37de25833921f1a806c11aa8a
+Merge: a47b4d9 8b88fac
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Mon Apr 17 16:46:41 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 8b88facc33e853009c7e4e06219d50abee2fecbd
+Author: adityapalnitkar <adityapalnitkar@gmail.com>
+Date:   Mon Apr 17 16:46:19 2017 -0500
+
+    Changed food type display name
+
+commit 26c08f78e561ac0ba8a5b8aad3d595669440e2f3
+Author: adityapalnitkar <adityapalnitkar@gmail.com>
+Date:   Mon Apr 17 16:43:19 2017 -0500
+
+    modified bubbles.js
+
+commit a47b4d99005e1747df91ce32b3e86a32407f15b2
+Merge: a4b2879 a54f299
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Mon Apr 17 16:31:51 2017 -0500
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit a54f2993e55620f13b919a1cda74b2a1cc9abeb4
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 17 21:30:40 2017 +0000
+
+    visualization fixes
+
+commit a4b287989ceead349b27f052f7674c4378298b06
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Mon Apr 17 16:27:36 2017 -0500
+
+    Import responses, references #95
+
+commit 407b7c61b06681b519bd95764ec17a5599ec84bc
+Merge: f8a2ab2 f45eb4e
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 17 21:26:47 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit f45eb4e6280f86cd45dd4ec2aa8e2659f4b2826e
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Mon Apr 17 16:25:33 2017 -0500
+
+    Added API to url, references #95
+
+commit f8a2ab23dfaed1b99b54a0d3a69f9c360122f06a
+Merge: ab82ae3 d4e1257
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 17 21:20:32 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit d4e1257c495c48f54b83a2e69c9aec738471131a
+Author: adityapalnitkar <adityapalnitkar@gmail.com>
+Date:   Mon Apr 17 16:18:46 2017 -0500
+
+    Fixed typo
+
+commit ab82ae3286d845dbd668e751f8d5ad60b99bffb6
+Merge: 170db28 936d8ca
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 17 21:13:32 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 170db2811df44fdec2aeecc74c7a61716e8af6af
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 17 21:13:30 2017 +0000
+
+    removing overridden default
+
+commit 936d8cac7010ade38a6cc0ab09c305dd09938dda
+Author: Brenda Salazar <bsalazar96@utexas.edu>
+Date:   Mon Apr 17 16:09:12 2017 -0500
+
+    Test visualization page, reference #95
+
+commit 9efea941aa4ba1ce03cc9968086cc76318a221c6
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 17 16:25:58 2017 +0000
+
+    not sure if anything changed but works
+
+commit 488ac2fed5282bf32044ef6724d3aaad0d7cd8c1
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Mon Apr 17 15:55:33 2017 +0000
+
+    fixed multi word search, closes #100
+
 commit 94f3de008967ce576354c42eaa597de00da2cbe2
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Mon Apr 17 00:19:07 2017 +0000

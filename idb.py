@@ -9,6 +9,7 @@ import tests
 import flask_restless
 import formatters
 import requests
+import json
 import re
 
 app = Flask(__name__)
@@ -289,7 +290,8 @@ def search_schools(query):
 @app.route('/visualization')
 @app.route('/visualization.html')
 def visualization():
-    response = requests.get('http://foodcloseto.me/API/Food_Types?sortby=number_restaurants')
+    response = requests.get(
+        'http://foodcloseto.me/API/Food_Types?sortby=number_restaurants')
     types_food = response.json()
     types_food.reverse()
     type_count = []
@@ -300,7 +302,7 @@ def visualization():
             break
         food = type_food["food_type_display_name"]
         num_rest = type_food["number_restaurants"]
-        type_count += [{'text': food, 'count':num_rest}]
+        type_count += [{'text': food, 'count': num_rest}]
 
     return render_template('visualization.html', type_count=type_count)
 
@@ -314,7 +316,54 @@ def utility_processor():
         text = pattern.sub(
             '<b style="background-color: yellow; color: #333;">{0}</b>'.format(r'\1'), text) if text else None
         return text
-    return dict(highlight_keys=highlight_keys)
+
+    def highlight_keys_desc(text, keywords):
+        keywords = keywords.split()
+        if len(keywords) > 175:
+            keywords = keywords[0:175]
+        keyword_string = '|'.join(keywords)
+        pattern = re.compile('(' + keyword_string + ')', re.IGNORECASE)
+        if not text:
+            return text
+        f_match = re.search(pattern, text, flags=0)
+        if(f_match.start() < 175):
+            if len(text) > 175:
+                ellipse = True
+            else:
+                ellipse = False
+            text = text[0:f_match.start() + len(keyword_string) + 175 if f_match.start() + len(
+                keyword_string) + 175 < len(text) else len(text)]
+            if ellipse:
+                text = text + '...'
+        elif(f_match.start() > len(text) - 175):
+            if len(text) - 175 - len(keyword_string) > 0:
+                ellipse = True
+            else:
+                ellipse = False
+            text = text[len(text) - 175 - len(keyword_string) if len(
+                text) - 175 - len(keyword_string) > 0 else 0:len(text)]
+            if ellipse:
+                text = '...' + text
+        else:
+            if len(text) - 175 - len(keyword_string) > 0:
+                ellipse = True
+            else:
+                ellipse = False
+            if f_match.start() + len(keywords) < len(text):
+                lellipse = True
+            else:
+                lellipse = False
+            text = text[f_match.start() - 175:f_match.start() + 175]
+            if ellipse:
+                text = '...' + text
+            if lellipse:
+                text = text + '...'
+        pattern = re.compile('(' + keyword_string + ')', re.IGNORECASE)
+        text = pattern.sub(
+            '<b style="background-color: yellow; color: #333;">{0}</b>'.format(r'\1'), text) if text else None
+        return text
+
+    return dict(highlight_keys=highlight_keys, highlight_keys_desc=highlight_keys_desc)
 
 if __name__ == '__main__':
     app.run()
