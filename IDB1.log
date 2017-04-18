@@ -1,3 +1,15 @@
+commit 176ba1acc2253d2b3e396885e11bd71dc66d7a3b
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Tue Apr 18 03:36:02 2017 +0000
+
+    visualization improvements and travis build fix
+
+commit e2766f4e5155f8315eb597f4a91b6db42cc7478c
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Tue Apr 18 01:24:15 2017 +0000
+
+    formatting
+
 commit 188b0b21c0c8574469a1dcbc67a27616034ecb01
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Tue Apr 18 01:23:37 2017 +0000
