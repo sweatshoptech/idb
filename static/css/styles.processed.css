@@ -586,7 +586,7 @@ member-body {
 }
 
 
-/* TABS */
+/* ---- tabs ---- */
 
 /* Style the tab */
 div.tab {
@@ -622,3 +622,49 @@ div.tab button.active {
     padding: 6px 12px;
 }
 
+
+/* ---- visualization ---- */
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.x .tick text{
+  font-size: 4px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+  fill-opacity: .9;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.bar:hover {
+  fill: dodgerblue;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+ 
+.bubbleChart {
+  min-width: 100px;
+  max-width: 700px;
+  height: 700px;
+  margin: 0 auto;
+}       

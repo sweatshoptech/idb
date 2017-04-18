@@ -21,103 +21,91 @@
     <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/bubble-chart.js"></script>
     <script src="/static/js/central-click.js"></script>
     <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/lines/lines.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
     <script>
       $(document).ready(function () {
-  console.log({{type_count|tojson}});
-  var bubbleChart = new d3.svg.BubbleChart({
-    supportResponsive: true,
-    //container: => use @default
-    size: 600,
-    //viewBoxSize: => use @default
-    innerRadius: 600 / 3.5,
-    //outerRadius: => use @default
-    radiusMin: 50,
-    //radiusMax: use @default
-    //intersectDelta: use @default
-    //intersectInc: use @default
-    //circleColor: use @default
-    data: {
-      items: {{type_count|tojson}},
-      eval: function (item) {return item.count;},
-      classed: function (item) {return item.text.split(" ").join("");}
-    },
-    plugins: [
-      {
-        name: "central-click",
-        options: {
-//          text: "(See more detail)",
-          style: {
-            "font-size": "12px",
-            "font-style": "italic",
-            "font-family": "Source Sans Pro, sans-serif",
-            "text-anchor": "middle",
-            "fill": "white"
+        var bubbleChart = new d3.svg.BubbleChart({
+          supportResponsive: true,
+          //container: => use @default
+          size: 600,
+          //viewBoxSize: => use @default
+          innerRadius: 600 / 3.5,
+          //outerRadius: => use @default
+          radiusMin: 50,
+          //radiusMax: use @default
+          //intersectDelta: use @default
+          //intersectInc: use @default
+          //circleColor: use @default
+          data: {
+            items: {{type_count|tojson}},
+            eval: function (item) {return item.count;},
+            classed: function (item) {return item.text.split(" ").join("");}
           },
-          attr: {dy: "65px"}
-  /*        centralClick: function() {
-            alert("Here is more details!!");
-          }*/
-        }
-      },
-      {
-        name: "lines",
-        options: {
-          format: [
-            {// Line #0
-              textField: "count",
-              classed: {count: true},
-              style: {
-                "font-size": "28px",
-                "font-family": "Source Sans Pro, sans-serif",
-                "text-anchor": "middle",
-                fill: "white"
-              },
-              attr: {
-                dy: "0px",
-                x: function (d) {return d.cx;},
-                y: function (d) {return d.cy;}
+          plugins: [
+            {
+              name: "central-click",
+              options: {
+                style: {
+                  "font-size": "12px",
+                  "font-style": "italic",
+                  "font-family": "Source Sans Pro, sans-serif",
+                  "text-anchor": "middle",
+                  "fill": "white"
+                },
+                attr: {dy: "65px"}
               }
             },
-            {// Line #1
-              textField: "text",
-              classed: {text: true},
-              style: {
-                "font-size": "14px",
-                "font-family": "Source Sans Pro, sans-serif",
-                "text-anchor": "middle",
-                fill: "white"
-              },
-              attr: {
-                dy: "20px",
-                x: function (d) {return d.cx;},
-                y: function (d) {return d.cy;}
+            {
+              name: "lines",
+              options: {
+                format: [
+                  {// Line #0
+                    textField: "count",
+                    classed: {count: true},
+                    style: {
+                      "font-size": "28px",
+                      "font-family": "Source Sans Pro, sans-serif",
+                      "text-anchor": "middle",
+                      fill: "white"
+                    },
+                    attr: {
+                      dy: "0px",
+                      x: function (d) {return d.cx;},
+                      y: function (d) {return d.cy;}
+                    }
+                  },
+                  {// Line #1
+                    textField: "text",
+                    classed: {text: true},
+                    style: {
+                      "font-size": "14px",
+                      "font-family": "Source Sans Pro, sans-serif",
+                      "text-anchor": "middle",
+                      fill: "white"
+                    },
+                    attr: {
+                      dy: "20px",
+                      x: function (d) {return d.cx;},
+                      y: function (d) {return d.cy;}
+                    }
+                  }
+                ],
+                centralFormat: [
+                  {// Line #0
+                    style: {"font-size": "50px"},
+                    attr: {}
+                  },
+                  {// Line #1
+                    style: {"font-size": "30px"},
+                    attr: {dy: "40px"}
+                  }
+                ]
               }
-            }
-          ],
-          centralFormat: [
-            {// Line #0
-              style: {"font-size": "50px"},
-              attr: {}
-            },
-            {// Line #1
-              style: {"font-size": "30px"},
-              attr: {dy: "40px"}
-            }
-          ]
-        }
-      }]
-  });
-});
-
-    </script>
-    <style>
-      .bubbleChart {
-        min-width: 100px;
-        max-width: 700px;
-        height: 700px;
-        margin: 0 auto;
-      }
-    </style>
+            }]
+        });
+      });
+      
+    </script> 
   </head>
   <body class="gradient-bg">
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse-opacity">
@@ -153,36 +141,8 @@
     </nav>
     <div style="min-height:89vh"> 
       <h1 class="cover-heading">Visualization</h1>
-      <div class="container" style="color: white;">
-  
-        <style>
-        
-        .axis text {
-          font: 10px sans-serif;
-        }
-        
-        .x .tick text{
-          font-size: 4px;
-        }
-
-        .axis path,
-        .axis line {
-          fill: none;
-          stroke: #000;
-          shape-rendering: crispEdges;
-        }
-        
-        .bar {
-          fill: steelblue;
-          fill-opacity: .9;
-        }
-        
-        .x.axis path {
-          display: none;
-        }
-        
-        </style>
-        <h3>Average Rating by Zipcode</h3>
+      <div class="container" style="color: white;">  
+       <h3>Average Rating by Zipcode</h3>
         <label><input type="checkbox"> Sort by Rating/Zipcode</label>
         <div id="d32"></div>
         <script>
@@ -203,13 +163,22 @@
           var yAxis = d3.svg.axis()
               .scale(y)
               .orient("left")
-          
+           
+          var tip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function(d) {
+              return "<strong>Zipcode:</strong> <span style='color:dodgerblue'>" +d.letter + "</span></br><strong>Average Rating:</strong> <span style='color:dodgerblue'>" + d.frequency + "</span>" ;
+            })
+
           var svg = d3.select("#d32").append("svg")
               .attr("width", width + margin.left + margin.right)
               .attr("height", height + margin.top + margin.bottom)
             .append("g")
               .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
           
+          svg.call(tip);         
+ 
           d3.tsv("{{ url_for('static', filename='data.tsv') }}", function(error, data) {
           
             data.forEach(function(d) {
@@ -246,8 +215,10 @@
                 .attr("x", function(d) { return x(d.letter); })
                 .attr("width", x.rangeBand())
                 .attr("y", function(d) { return y(d.frequency); })
-                .attr("height", function(d) { return height - y(d.frequency); });
-          
+                .attr("height", function(d) { return height - y(d.frequency); })
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide);
+
             d3.select("input").on("change", change);
           
             var sortTimeout = setTimeout(function() {

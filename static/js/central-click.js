@@ -11,7 +11,6 @@ d3.svg.BubbleChart.define("central-click", function (options) {
       self.event.on("click", function(node) {
         if (node.selectAll("text.central-click")[0].length === 1) {
           console.log("clicked");
-          alert("Hello there!\nCentral bubble is not clicked.");
         }
       });
       return fn;
