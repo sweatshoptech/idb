@@ -339,8 +339,6 @@ def utility_processor():
 
     def highlight_keys_desc(text, keywords):
         keywords = keywords.split()
-        if len(keywords) > 175:
-            keywords = keywords[0:175]
         keyword_string = '|'.join(keywords)
         pattern = re.compile('(' + keyword_string + ')', re.IGNORECASE)
         if not text:
