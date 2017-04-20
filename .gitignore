@@ -2,3 +2,5 @@
 *.pyc
 .coverage
 static/etc/config.py
+index-whoosh/
+whoosh_index/

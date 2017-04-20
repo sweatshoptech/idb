@@ -11,7 +11,9 @@ Note: Pylint does not work well with SQLAlchemy since it is
 # pylint: disable=invalid-name
 
 from datetime import date
+import getpass
 from enum import Enum
+import flask_whooshalchemyplus
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import config
@@ -22,6 +24,8 @@ APP.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 APP.config['TESTING'] = True
 APP.config['WTF_CSRF_ENABLED'] = False
 
+if getpass.getuser() == 'www-data':  # pragma: no cover
+    APP.config['WHOOSH_BASE'] = '/home/ubuntu/idb/index-whoosh'
 
 db = SQLAlchemy(APP)
 
@@ -81,6 +85,8 @@ class Person(db.Model):
     crunch_id = db.Column(db.String(25), nullable=True)
     country = db.Column(db.String(50), nullable=True)
     description = db.Column(db.String(10000), nullable=True)
+    __searchable__ = ['name', 'title', 'location', 'website',
+                      'companies', 'schools', 'country', 'description']
 
     def __init__(self, name, title, location, dob, image_url, website):
         """Initializes a Person, pass in dob as datetime object"""
@@ -132,6 +138,8 @@ class Company(db.Model):
     investors = db.relationship('Investor', secondary=investment,
                                 backref=db.backref('companies', lazy='dynamic'))
     crunch_id = db.Column(db.String(25), nullable=True)
+    __searchable__ = ['name', 'location',
+                      'funding', 'website', 'country', 'description', 'investors']
 
     def __init__(self, name, location, ownership_type, funding, description,
                  ceo_id, image_url, size, website):
@@ -185,6 +193,8 @@ class School(db.Model):
     country = db.Column(db.String(200), nullable=True)
     investors = db.relationship('Investor', secondary=school_investment,
                                 backref=db.backref('schools', lazy='dynamic'))
+    __searchable__ = [
+        'name', 'location', 'website', 'country', 'investors', 'description']
 
     def __init__(self, name, location, description, image_url, size, website):
         """Initializes School"""
@@ -229,6 +239,8 @@ class Investor(db.Model):
     image_url = db.Column(db.String(512), nullable=True)
     country = db.Column(db.String(50), nullable=True)
     website = db.Column(db.String(512), nullable=True)
+    __searchable__ = [
+        'name', 'location', 'funding', 'website', 'country', 'description']
 
     def __init__(self, name, location, funding, description, image_url, website):
         """Initializes Investor"""
@@ -280,3 +292,10 @@ class Category(db.Model):
     def get_all_rows(cls):
         """Get all category rows"""
         return cls.query.all()
+
+if getpass.getuser() == 'www-data':  # pragma: no cover
+    flask_whooshalchemyplus.init_app(APP)
+
+if __name__ == "__main__":  # pragma: no cover
+    with APP.app_context():
+        flask_whooshalchemyplus.index_all(APP)

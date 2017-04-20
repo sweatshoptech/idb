@@ -38,6 +38,10 @@
         <li class="nav-item">
           <a class="nav-link" href="/schools.html">Schools</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/visualization.html">Visualization</a>
+        </li>
+        <li><a href="#search"><img src="http://www.freeiconspng.com/uploads/search-icon-png-4.png" style="height: 35px;"></a></li>
       </ul>
     </div>
   </nav>
@@ -81,4 +85,26 @@
     © SWEatshop 2017
   </div>
 </body>
+  <div id="search">
+      <button type="button" class="close">×</button>
+      <form action="/search" method="get">
+          <input type="search" name="query" value="" placeholder="type keyword(s) here" />
+          <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+  </div>
+  <script>
+    $(function () {
+        $('a[href="#search"]').on('click', function(event) {
+            event.preventDefault();
+            $('#search').addClass('open');
+            $('#search > form > input[type="search"]').focus();
+        });
+        
+        $('#search, #search button.close').on('click keyup', function(event) {
+            if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
+                $(this).removeClass('open');
+            }
+        });
+    });
+  </script>
 </html>

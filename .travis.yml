@@ -21,6 +21,8 @@ install:
     - pip install SQLAlchemy
     - pip install flask_table
     - pip install psycopg2
+    - pip install flask_whooshalchemyplus
+    - pip install codeclimate-test-reporter
 
 before_script:
     - uname -a
@@ -31,3 +33,6 @@ script:
     - date
     - ls -al
     - make test
+
+after_success:
+  - CODECLIMATE_REPO_TOKEN=b587e799964870daedc7f4c0ee9e4dff047d3d2e8142a5ce6483d6b651583aa5 codeclimate-test-reporter

@@ -37,11 +37,16 @@
           <li class="nav-item">
             <a class="nav-link" href="schools.html">Schools</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="visualization.html">Visualization</a>
+          </li>
+          <li><a href="#search"><img src="http://www.freeiconspng.com/uploads/search-icon-png-4.png" style="height: 35px;"></a></li>
         </ul>
       </div>
     </nav>
-    <div class="container"  style="min-height: 89vh; min-width: 500px;">
-      <div class="card rounded-opacity card-animation align-middle" style="margin-bottom: 0rem;">
+    <div class="container"  style="min-height: 89vh">
+      <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <div class="card rounded-opacity card-animation" style="margin-bottom: 0rem; align-self: center">
           <h1 class="cover-heading" style="color: white; margin-top: 160px; padding-top: 0px; padding-bottom: 40px; transition: .5s ease;" >Hello, World!</h1>
           <div id="carouselContent" class="carousel slide" data-ride="carousel" style="margin-bottom: 3rem;">
             <div class="carousel-inner" role="listbox">
@@ -76,4 +81,26 @@
     <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js"></script>
     <script src="js/app.processed.js"></script>
   </body>
+  <div id="search">
+      <button type="button" class="close">×</button>
+      <form action="/search" method="get">
+          <input type="search" name="query" value="" placeholder="type keyword(s) here" />
+          <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+  </div>
+  <script>
+    $(function () {
+        $('a[href="#search"]').on('click', function(event) {
+            event.preventDefault();
+            $('#search').addClass('open');
+            $('#search > form > input[type="search"]').focus();
+        });
+        
+        $('#search, #search button.close').on('click keyup', function(event) {
+            if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
+                $(this).removeClass('open');
+            }
+        });
+    });
+  </script>
 </html>
