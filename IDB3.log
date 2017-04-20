@@ -1,3 +1,47 @@
+commit 5ddabc6f9c7d3d6ec67dc65fa8a52d18f56408bd
+Merge: b24aaa2 b5168b2
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 20 22:49:55 2017 +0000
+
+    heckin merge conflict AAAAAAARGH
+
+commit b24aaa28f3d6d09bb4db3080338a615ed708419a
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 20 22:46:06 2017 +0000
+
+    report cleanup if it is even possible, closes #103 for now
+
+commit b5168b24c9448638430eb31299cdd4f68ca74b69
+Author: adityapalnitkar <adityapalnitkar@gmail.com>
+Date:   Thu Apr 20 17:30:30 2017 -0500
+
+    Added more planit description
+
+commit bbd7f4f3c9b9a2c5e9a845a0b53b194804f747a9
+Author: adityapalnitkar <adityapalnitkar@gmail.com>
+Date:   Thu Apr 20 17:29:11 2017 -0500
+
+    Update design.html
+
+commit 0fff521018c57b941a6df86a98fe0fd249ab0f69
+Merge: 2bed563 a9c85c8
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 20 22:18:18 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit 2bed5630cf6dab61c30630bbfe7a88c64b117937
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 20 22:18:11 2017 +0000
+
+    documentation check just in case
+
+commit a9c85c86cc4a181cb9d6e0bf1955e7661e535c82
+Author: adityapalnitkar <adityapalnitkar@gmail.com>
+Date:   Thu Apr 20 16:59:44 2017 -0500
+
+    Update design.html
+
 commit f5bc56780f9aa439dc2be72db8fb1caa090401b7
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Thu Apr 20 21:59:17 2017 +0000
