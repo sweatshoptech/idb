@@ -15,6 +15,7 @@ import csv
 
 app = Flask(__name__)
 
+
 @app.after_request
 def add_cors_headers(response):
     response.headers['Access-Control-Allow-Origin'] = '*'
@@ -26,6 +27,7 @@ manager.create_api(models.Person, methods=['GET'])
 manager.create_api(models.Company, methods=['GET'])
 manager.create_api(models.Investor, methods=['GET'])
 manager.create_api(models.School, methods=['GET'])
+
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
