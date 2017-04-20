@@ -178,10 +178,24 @@ button-text {
   margin: 24px 0% 12px 0%;
 }
 
-.col-4 img {
+.col-lg-4 img {
   height: 200px;
   max-height: 200px !important;
   max-width: 350px;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+  .col-lg-4 img {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .col-lg-4 img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100% !important;
+  }
 }
 
 /* ---- member ---- */

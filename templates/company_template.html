@@ -47,9 +47,10 @@
     <div class="card" style="background-color: #333; border-color: #333; color: #eee;">
       <div class="card-block">
         <div class="row">
-          <div class="col-4">
-            <img src="{{company.image_url}}" alt="Company Logo" /></div>
-          <div class="col-8" style="text-align: left;">
+          <div class="col-sm-12 col-lg-4">
+            <img src="{{company.image_url}}" alt="Company Logo" />
+          </div>
+          <div class="col-sm-12 col-lg-8" style="text-align: left;">
             <b>Ownership  Type: </b>{{company.ownership_type}}<br/>
             <b>CEO: </b><a href="../../person/{{ceo.idnum}}">{{ceo.name}}</a><br/>
             <b>Location: </b>{{company.location}}<br/>
