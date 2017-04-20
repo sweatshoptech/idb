@@ -228,9 +228,12 @@ def run_tests():
             stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as e:
         tests = e.output
+
+    # Add coverage data
     with open('/home/ubuntu/idb/coverage.out') as coverage:
         tests = tests + coverage.read()
     testout = tests.replace('\n', '<br/>')
+
     return render_template('TestIDB.html', test=testout)
 
 
@@ -242,10 +245,12 @@ def get_search_results(query, model, rec, template):
     page, per_page, offset = get_page_args()
     multi = request.args.get('multi', type=str, default='AND')
 
+    # Find results for model
     with models.APP.app_context():
         results = model.query.whoosh_search(
             query, or_=(multi == 'OR'), like=True)
 
+    # Results for page
     total = len(results.all())
     orgs = results.offset(offset).limit(per_page).all()
     pagination = Pagination(
@@ -304,6 +309,7 @@ def search_schools(query):
 @app.route('/visualization')
 @app.route('/visualization.html')
 def visualization():
+    # Top 10 Food Types
     response = requests.get(
         'http://foodcloseto.me/API/Food_Types?sortby=number_restaurants')
     types_food = response.json()
@@ -317,6 +323,8 @@ def visualization():
         food = type_food["food_type_display_name"]
         num_rest = type_food["number_restaurants"]
         type_count += [{'text': food, 'count': num_rest}]
+
+    # Find rating for zipcodes
     response = requests.get('http://foodcloseto.me/API/Locations')
     locs = response.json()
     loc_ratings = []
@@ -326,6 +334,7 @@ def visualization():
         loc_rating["frequency"] = loc["average_rating"]
         loc_ratings.append(loc_rating)
 
+    # Write data to file
     with open('/home/ubuntu/idb/static/data.tsv', 'w') as output_file:
         dw = csv.DictWriter(
             output_file, sorted(loc_ratings[0].keys()), delimiter='\t')
@@ -338,6 +347,9 @@ def visualization():
 @app.context_processor
 def utility_processor():
     def highlight_keys(text, keywords):
+        """
+        Highlight search keywords
+        """
         keywords = keywords.split()
         keyword_string = '|'.join(keywords)
         pattern = re.compile('(' + keyword_string + ')', re.IGNORECASE)
@@ -346,15 +358,22 @@ def utility_processor():
         return text
 
     def highlight_keys_desc(text, keywords):
+        """
+        Highlight search keys snippet
+        """
         keywords = keywords.split()
         keyword_string = '|'.join(keywords)
         pattern = re.compile('(' + keyword_string + ')', re.IGNORECASE)
+
+        # Find first match
         if not text:
             return text
         f_match = re.search(pattern, text, flags=0)
         if not f_match:
             return text
+
         if(f_match.start() < 175):
+            # Match in beginning
             if len(text) > 175:
                 ellipse = True
             else:
@@ -364,6 +383,7 @@ def utility_processor():
             if ellipse:
                 text = text + '...'
         elif(f_match.start() > len(text) - 175):
+            # Match at end of string
             if len(text) - 175 - len(keyword_string) > 0:
                 ellipse = True
             else:
@@ -373,6 +393,7 @@ def utility_processor():
             if ellipse:
                 text = '...' + text
         else:
+            # Snippet both sides
             if len(text) - 175 - len(keyword_string) > 0:
                 ellipse = True
             else:
@@ -386,7 +407,7 @@ def utility_processor():
                 text = '...' + text
             if lellipse:
                 text = text + '...'
-        pattern = re.compile('(' + keyword_string + ')', re.IGNORECASE)
+
         text = pattern.sub(
             '<b style="background-color: yellow; color: #333;">{0}</b>'.format(r'\1'), text) if text else None
         return text

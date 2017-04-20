@@ -1,3 +1,27 @@
+commit f5bc56780f9aa439dc2be72db8fb1caa090401b7
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 20 21:59:17 2017 +0000
+
+    favicon added to main pages, basically done
+
+commit 0d041dd7a07f0f48346643c64c6e5223c214f5e2
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 20 16:53:57 2017 -0500
+
+    new favicon
+
+commit 6f299cb81ff74d1a2b42bb1313946fd93dc551f7
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 20 16:50:24 2017 -0500
+
+    Favicon upload
+
+commit 3cffd73e6761e874e1485935f3bb9f272fee24e8
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 20 21:45:41 2017 +0000
+
+    stats updated, ready to turn in, closes #104
+
 commit 7c3a4bc89d3ffaa68a8f260ab656c7ac874a97cc
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
 Date:   Thu Apr 20 21:35:04 2017 +0000

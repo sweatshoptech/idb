@@ -23,10 +23,10 @@ format:
 
 html:
 	pydoc -w models
-	mv models.html IDB1.html
+	mv models.html IDB3.html
 
 log:
-	git log > IDB1.log
+	git log > IDB3.log
 
 pylint:
 	$(PYLINT) models.py
