@@ -7,42 +7,53 @@ class App extends React.Component {
     }
 
     render() {
+      const textStyle = {
+        color: 'white',
+      };
+      const contentStyle = {
+        marginBottom: 3 + 'rem',
+      };
+      const headingStyle = {
+        color: 'white',
+        marginTop: 160 + 'px',
+        paddingTop: 0 + 'px',
+        paddingBottom: 40 + 'px',
+        transition: '.5s ease'
+      };
+      const cardStyle = {
+        marginBottom: 0 + 'rem',
+        alignSelf: 'center',
+      }
       return (
-        <div class="container"  style="min-height: 89vh">
-          <br /><br /><br /><br /><br /><br /><br /><br /><br />
-          <div class="card rounded-opacity card-animation" style="margin-bottom: 0rem; align-self: center">
-              <h1 class="cover-heading" style="color: white; margin-top: 160px; padding-top: 0px; padding-bottom: 40px; transition: .5s ease;" >Hello, World!</h1>
-              <div id="carouselContent" class="carousel slide" data-ride="carousel" style="margin-bottom: 3rem;">
-                <div class="carousel-inner" role="listbox">
-                  <div class="carousel-item active text-center" style="color: white">
-                    <h3>discover great companies</h3>
-                  </div>
-                  <div class="carousel-item text-center" style="color: white">
-                    <h3>discover great people</h3>
-                  </div>
-                  <div class="carousel-item text-center" style="color: white">
-                    <h3>discover great investors</h3>
-                  </div>
-                  <div class="carousel-item text-center" style="color: white">
-                    <h3>discover great schools</h3>
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-          </div>
-        </div>
-        <div class="outro">
-          © SWEatshop 2017
-        </div>
+        <div className="card rounded-opacity card-animation" style={cardStyle}> 
+            <h1 className="cover-heading" style={headingStyle}>Hello, World!</h1> 
+            <div id="carouselContent" className="carousel slide" data-ride="carousel" style={contentStyle}> 
+              <div className="carousel-inner" role="listbox"> 
+                <div className="carousel-item active text-center" style={textStyle}> 
+                  <h3>discover great companies</h3> 
+                </div> 
+                <div className="carousel-item text-center" style={textStyle}> 
+                  <h3>discover great people</h3> 
+                </div> 
+                <div className="carousel-item text-center" style={textStyle}> 
+                  <h3>discover great investors</h3> 
+                </div> 
+                <div className="carousel-item text-center" style={textStyle}> 
+                  <h3>discover great schools</h3> 
+                </div> 
+              </div> 
+              <a className="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev"> 
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span> 
+                <span className="sr-only">Previous</span> 
+              </a> 
+              <a className="carousel-control-next" href="#carouselContent" role="button" data-slide="next"> 
+                <span className="carousel-control-next-icon" aria-hidden="true"></span> 
+                <span className="sr-only">Next</span> 
+              </a> 
+            </div> 
+        </div> 
       );
     }
 };
 
-ReactDOM.render(<App />, document.querySelector('body'));
+ReactDOM.render(React.createElement(App), document.getElementById('app'));
