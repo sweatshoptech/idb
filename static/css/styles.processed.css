@@ -9,6 +9,11 @@ body {
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.1);
 }
 
+.vertical-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .black {
   color: black !important; 
 }
