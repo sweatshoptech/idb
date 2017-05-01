@@ -99,15 +99,14 @@
               </div>
               <div class="card-block">
                 <h4 class="card-title name">{{person.name}}</h4>
-                <div class="list-group-item">
-                  {{"".join(person.description[:350].split("\\r\\n")) if person.description}}
-                </div>
-                <a href="/person/{{person.idnum}}" class="btn btn-primary">More Information</a>
+                <ul class="list-group list-group-flush;">
+                  <li class="list-group-item funding">Title: {{person.title}}</li>
+                  <li class="list-group-item">Location: {{person.location}}</li>
+                  <li class="list-group-item">
+                    {{"".join(person.description[:350].split("\\r\\n")) if person.description}}
+                  </li>
+                </ul>
               </div>
-              <ul class="list-group list-group-flush;">
-                <li class="list-group-item funding" style="background-color: #333; border-color: #333;">Title: {{person.title}}</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{person.location}}</li>
-              </ul>
             </div>
           </div>
           </a>

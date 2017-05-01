@@ -14,6 +14,22 @@ body {
   vertical-align: middle;
 }
 
+.blur {
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -o-filter: blur(20px);
+  -ms-filter: blur(20px);
+  filter: blur(20px);
+}
+
+.the-navbar {
+  background-color: rgba(0,0,0,0);
+  position:fixed;
+  border-color: #e7e7e7;  
+  z-index: 202020;
+  width: 100%;
+}
+
 .black {
   color: black !important; 
 }
@@ -448,6 +464,8 @@ member-body {
 
 .card-title {
   margin-bottom: 0;
+  padding-bottom: 1rem;
+  text-align: left;
 }
 
 .list-group-item {
@@ -456,6 +474,7 @@ member-body {
   border-color: #333; 
   color: #FFF;
   display: block;
+  text-align: left;
 }
 
 .card-animation:hover .cover-heading {

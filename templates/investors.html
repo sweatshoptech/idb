@@ -87,15 +87,14 @@
               </div>
               <div class="card-block">
                 <h4 class="card-title name">{{investor.name}}</h4>
-                <div class="list-group-item">
-                  {{"".join(investor.description[:350].split("\\r\\n")) if investor.description}}
-                </div>
-                <a href="/investor/{{investor.idnum}}" class="btn btn-primary">More Information</a>
+                <ul class="list-group list-group-flush;">  
+                  <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investor.location}}</li>
+                  <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: {{investor.country}}</li>
+                  <li class="list-group-item">
+                    {{"".join(investor.description[:350].split("\\r\\n")) if investor.description}}
+                  </li>
+                </ul>
               </div>
-              <ul class="list-group list-group-flush;">  
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{investor.location}}</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: {{investor.country}}</li>
-              </ul>
             </div>
           </div>
           </a>

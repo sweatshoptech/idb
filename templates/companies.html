@@ -95,15 +95,14 @@
               </div>
               <div class="card-block">
                 <h4 class="card-title name">{{company.name}}</h4>
-                <div class="list-group-item">
-                  {{"".join(company.description[:350].split("\\r\\n")) if company.description}}
-                </div>
-                <a href="/company/{{company.idnum}}" class="btn btn-primary">More Information</a>
+                <ul class="list-group list-group-flush;">
+                  <li class="list-group-item">Ownership Type: {{company.ownership_type}}</li>
+                  <li class="list-group-item">Location: {{company.location}}</li>
+                  <li class="list-group-item">
+                    {{"".join(company.description[:350].split("\\r\\n")) if company.description}}
+                  </li>
+                </ul>
               </div>
-              <ul class="list-group list-group-flush;">
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Ownership Type: {{company.ownership_type}}</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{company.location}}</li>
-              </ul>
             </div>
           </div>
           </a>

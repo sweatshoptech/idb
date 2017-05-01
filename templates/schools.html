@@ -87,15 +87,14 @@
               </div>
               <div class="card-block">
                 <h4 class="card-title name">{{school.name}}</h4>
-                <div class="list-group-item">
-                  {{"".join(school.description[:350].split("\\r\\n")) if school.description}}
-                </div>
-                <a href="/school/{{school.idnum}}" class="btn btn-primary">More Information</a>
+                <ul class="list-group list-group-flush">  
+                  <li class="list-group-item">Location: {{school.location}}</li>
+                  <li class="list-group-item">Country: {{school.country}}</li>
+                  <li class="list-group-item">
+                    {{"".join(school.description[:350].split("\\r\\n")) if school.description}}
+                  </li>
+                </ul>
               </div>
-              <ul class="list-group list-group-flush;">  
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Location: {{school.location}}</li>
-                <li class="list-group-item" style="background-color: #333; border-color: #333;">Country: {{school.country}}</li>
-              </ul>
             </div>
           </div>
           </a>
