@@ -1,3 +1,47 @@
+commit 9102e8d06edc06751be06e5a0babcd2dc920ea36
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Tue Apr 25 14:04:30 2017 -0500
+
+    auto vertically aligns stuff now close #105
+
+commit 0ec81c5d064ff4012f931df652a90bdab53b4fcc
+Merge: 1f3dfdd a1a4847
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Tue Apr 25 13:04:57 2017 -0500
+
+    Merge branch 'master' of github.com:sweatshoptech/idb
+
+commit 1f3dfdd87b012dc71c441f08b67c4d45cfa5094e
+Author: DonaldMcRonald <raunak1997@utexas.edu>
+Date:   Tue Apr 25 13:04:54 2017 -0500
+
+    modified img and increased bottom margin on about
+
+commit a1a48472697e0bf1ef63d4b16cb2090269a57085
+Merge: f5c00e2 4ce3020
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sun Apr 23 19:12:19 2017 +0000
+
+    Merge branch 'master' of https://github.com/sweatshoptech/idb
+
+commit f5c00e22f03f78fab2a27dbe3e0fde5a8abe3dcf
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Sun Apr 23 19:12:09 2017 +0000
+
+    why was this here
+
+commit 4ce3020ff2140e114e55e71fff6ddf5b0493289d
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 20 18:04:16 2017 -0500
+
+    React usage specified
+
+commit b35722e8216b2689792c0986c41721b294268d5e
+Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>
+Date:   Thu Apr 20 22:52:31 2017 +0000
+
+    phase 3 complete
+
 commit 5ddabc6f9c7d3d6ec67dc65fa8a52d18f56408bd
 Merge: b24aaa2 b5168b2
 Author: Vishnu Thiagarajan <thiagarajanvishnu@gmail.com>

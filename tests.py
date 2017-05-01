@@ -1,36 +1,16 @@
-#!/usr/bin/env python -W ignore::ExtDeprecationWarning
 from __future__ import print_function
 from unittest import main, TestCase
 import unittest
+import getpass
 from datetime import date
 import models
 from models import db
-import flask
-import sys
 
 
 # depends on flask, flask_sqlalchemy, flask_table, psycopg2
 # to run coverage:
 # coverage-3.5 run tests.py
 # coverage-3.5 report -m --include="models.py","config.py"
-
-    ################   IMPORTANT   ################
-    # Because we auto-increment when adding       #
-    # categories, the category tests failed with  #
-    #                                             #
-    # DETAIL:  Key (idnum)=(1) already exists.    #
-    # [SQL: 'INSERT INTO category (name) VALUES   #
-    # (%(name)s) RETURNING category.idnum']       #
-    # [parameters: {'name': 'test_category_1'}]   #
-    #                                             #
-    # until the tests were run 8 times, and the   #
-    # final "Key (idnum)=(20)" error was thrown.  #
-    # Then all the category tests started passing #
-    # since the autoincremented id became more    #
-    # than the 20 categories we have currently in #
-    # the database. If more categories are added, #
-    # the category tests may begin failing again. #
-    ###############################################
 
 #
 # Person Unit Tests
@@ -440,5 +420,7 @@ class TestModels (TestCase):
 # ----
 
 if __name__ == "__main__":  # pragma: no cover
+    if getpass.getuser() == 'www-data':
+        models.APP.config['WHOOSH_BASE'] = '/home/ubuntu/idb/whoosh-index'
     main()
-
+    models.APP.config['WHOOSH_BASE'] = '/home/ubuntu/idb/index-whoosh'
